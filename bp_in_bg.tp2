@@ -1,15 +1,31 @@
 BACKUP ~bp_in_bg/backup~
 AUTHOR ~SubtleD~
 
-VERSION ~0.1.1~ 
+VERSION ~0.2~ 
+
+LANGUAGE
+  ~English~
+  ~english~
+  ~bp_in_bg/lang/english/setup.tra~
 
 //do stuff__________________________________________________________________________
 //
-BEGIN ~add access to the Black Pits in BGEE~
+BEGIN @100
+DESIGNATED 100
+REQUIRE_PREDICATE GAME_IS ~bgee eet~ @101
 
-COMPILE ~%MOD_FOLDER%/data/baeloth.d~
-COMPILE ~%MOD_FOLDER%/data/baelothp.d~
-COMPILE ~%MOD_FOLDER%/data/bpnajim.d~
-COMPILE ~%MOD_FOLDER%/data/bpbaelot.d~
+ACTION_IF (GAME_IS ~eet~) BEGIN
+  COMPILE ~%MOD_FOLDER%/data/eet/baeloth.d~
+  COMPILE ~%MOD_FOLDER%/data/eet/baelothp.d~
+  COMPILE ~%MOD_FOLDER%/data/eet/bpnajim.d~
+  COMPILE ~%MOD_FOLDER%/data/eet/bpbaelot.d~
+END
+ELSE BEGIN
+  COMPILE ~%MOD_FOLDER%/data/bgee/baeloth.d~
+  COMPILE ~%MOD_FOLDER%/data/bgee/baelothp.d~
+  COMPILE ~%MOD_FOLDER%/data/bgee/bpnajim.d~
+  COMPILE ~%MOD_FOLDER%/data/bgee/bpbaelot.d~
+END
+
 COMPILE ~%MOD_FOLDER%/data/BPINBG0.baf~
 

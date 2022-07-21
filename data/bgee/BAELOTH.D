@@ -30,7 +30,7 @@ END
 
 IF ~~ THEN BEGIN 3 // from: 2.0
   SAY #31865 /* ~Greetings, friendly, ah, surface-dweller. You wouldn't happen to know the direction of the nearest entrance to the Underdark, would you?~ [bab005] */
-  IF ~~ THEN REPLY ~I don't, but I would be interested in knowing that myself. I hear there are great adventures to be had in the Underdark.~ GOTO 51
+  IF ~~ THEN REPLY @201 /* ~I don't, but I would be interested in knowing that as well! I hear there are great adventures to be had there.~ */ GOTO 51
   IF ~  !InParty("NEERA")
 
 ~ THEN REPLY #31866 /* ~I'm afraid I don't.~ */ GOTO 5
@@ -53,7 +53,7 @@ END
 
 IF ~~ THEN BEGIN 4 // from: 3.1 3.4
   SAY #31869 /* ~From the Underdark. Was that not clear? Goodness, are you blind? Eugh, I hadn't realized how sickly you surfacer sort are.~ [bab006] */
-  IF ~~ THEN REPLY ~Ah. I am actually interested in the Underdark. I hear there are great adventures to be had there. Did you know I am a close personal one-time acquaintance of Drizzt the ranger?~ GOTO 51
+  IF ~~ THEN REPLY @202 /* ~Ah. I am actually interested in the Underdark. I hear there are great adventures to be had there!~ */ GOTO 51
   IF ~  !InParty("NEERA")
 
 ~ THEN REPLY #31870 /* ~As pleasant as you are, I'm afraid I don't know where an Underdark entrance can be located.~ */ GOTO 5
@@ -326,17 +326,17 @@ Enemy()
 END
 
 IF ~~ THEN BEGIN 51 // from: 3.0 4.0
-  SAY ~Riiiight... um, adventures, you say? Why yes, I believe I can provide you with, er, adventures. Riches, glory, fame, that sort of thing? Cheering masses and adoring fans? Surely that's what you are interested in, yes? I have a device here which can whisk you away to such rewards. It is all very consensual, I assure you. It only works if you 'opt in.'~ 
-  IF ~~ THEN REPLY ~Yes, that sounds great.~ GOTO 52
-  IF ~~ THEN REPLY ~On second thought, that all sounds a bit too exciting for me. I'm not sure I'm willing to go along with you.~ GOTO 5
+  SAY @203 /* ~Riiight... um, adventures, you say? Why yes, I believe I can provide you with, er, adventures. Riches, glory, fame, that sort of thing? Cheering masses and adoring fans? Surely that's what you are interested in, yes? I have a device here which can whisk you away to such rewards. It is all very consensual, I assure you. It only works if you 'opt in.'~ */ 
+  IF ~~ THEN REPLY @204 /* ~Yes, that sounds great.~ */ GOTO 52
+  IF ~~ THEN REPLY @205 /* ~On second thought, that all sounds a bit too exciting for me. I'm not sure I'm willing to go along with you.~ */ GOTO 5
 END
 
 IF ~~ THEN BEGIN 52 // from: 51.0
-  SAY ~Fantastic! Oh, this recruiting trip was much quicker than I expected. Now be good dears and just grab hold of this perfectly harmless glowing gem. All at once, yes, that's it. And away we go!~ 
+  SAY @206 /* ~Fantastic! Oh, this recruiting trip was much quicker than I expected. Now be good dears and just grab hold of this perfectly harmless glowing gem. All at once, yes, that's it. And away we go!~ */ 
   IF ~~ THEN DO ~SetGlobal("BPINBG","GLOBAL",1) 
+SetGlobal("BPINTRO","GLOBAL",2)
 ClearAllActions()
 StartCutSceneMode()
 StartCutScene("BPINBG0") 
 ~ EXIT
 END
-
