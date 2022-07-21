@@ -1,0 +1,467 @@
+IF
+	Global("SPAWN_ACTORS","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("SPAWN_ACTORS","GLOBAL",1)
+		SetAreaRestFlag(1)
+		FadeToColor([1.0],0)
+		Explore()
+		SetGlobal("BP_TRIGGER_DIALOG","GLOBAL",1)
+		CreateCreature("BPBAELOT",[956.509],S)  // Baeloth
+		CreateCreature("BPMAGDA",[670.468],SE)  // Magda
+		CreateCreature("BPTHARDE",[710.436],SE)  // Thardek
+		CreateCreature("BPGORCH",[1060.733],NW)  // Gorch the Armorer
+		CreateCreature("BPBRENDA",[914.829],NW)  // Brendak
+		CreateCreature("BPCONCOC",[948.400],S)  // Concocter
+		CreateCreature("BPBELLOW",[987.452],S)  // Bellowgulp Bluefingers
+		CreateCreature("BPDINGUE",[886.400],S)  // Dinguer the Mad
+		CreateCreature("BPXITHIS",[1192.580],SWW)  // Xithiss
+		CreateCreature("BPELAN",[1210.638],SWW)  // Elan Garaq
+		CreateCreature("BPDEVLIN",[560.550],SE)  // Devlin Taralon
+		CreateCreature("BPNAJIM",[848.612],S)  // Najim
+		CreateCreature("BPGHLOUR",[671.192],S)  // Ghlouralk
+		CreateCreature("BPSPY01",[174.430],S)  // No such index
+		CreateCreature("BPSPY02",[387.252],S)  // No such index
+		Deactivate("BPSPY01")  // No such index
+		Deactivate("BPSPY02")  // No such index
+		ActionOverride("BPBAELOT",MakeGlobal())
+		ActionOverride("BPNAJIM",MakeGlobal())
+		ActionOverride("BPMAGDA",MakeGlobal())
+		ActionOverride("BPBRENDA",MakeGlobal())
+		ActionOverride("BPDEVLIN",MakeGlobal())
+		ActionOverride("BPBELLOW",MakeGlobal())
+		ActionOverride("BPXITHIS",MakeGlobal())
+		ActionOverride("BPDINGUE",MakeGlobal())
+		MoveViewObject("BPBAELOT",INSTANT)  // Baeloth
+		ClearAllActions()
+		SmallWait(1)
+		Deactivate("BPNAJIM")  // Najim
+		StartCutSceneMode()
+		StartCutScene("CUTBP01")
+END
+
+IF
+	NumInPartyAlive(0)
+THEN
+	RESPONSE #100
+		GameOver(-1)  // No such index
+END
+
+IF
+	StateCheck(Player1,STATE_REALLY_DEAD)
+	GlobalLT("ResistedBaeloth","GLOBAL",1)
+THEN
+	RESPONSE #100
+		ApplySpell(Player1,CLERIC_RESURRECTION)  // SPPR712.SPL (Resurrection)
+END
+
+IF
+	StateCheck(Player2,STATE_REALLY_DEAD)
+	GlobalLT("ResistedBaeloth","GLOBAL",1)
+THEN
+	RESPONSE #100
+		ApplySpell(Player2,CLERIC_RESURRECTION)  // SPPR712.SPL (Resurrection)
+END
+
+IF
+	StateCheck(Player3,STATE_REALLY_DEAD)
+	GlobalLT("ResistedBaeloth","GLOBAL",1)
+THEN
+	RESPONSE #100
+		ApplySpell(Player3,CLERIC_RESURRECTION)  // SPPR712.SPL (Resurrection)
+END
+
+IF
+	StateCheck(Player4,STATE_REALLY_DEAD)
+	GlobalLT("ResistedBaeloth","GLOBAL",1)
+THEN
+	RESPONSE #100
+		ApplySpell(Player4,CLERIC_RESURRECTION)  // SPPR712.SPL (Resurrection)
+END
+
+IF
+	StateCheck(Player5,STATE_REALLY_DEAD)
+	GlobalLT("ResistedBaeloth","GLOBAL",1)
+THEN
+	RESPONSE #100
+		ApplySpell(Player5,CLERIC_RESURRECTION)  // SPPR712.SPL (Resurrection)
+END
+
+IF
+	StateCheck(Player6,STATE_REALLY_DEAD)
+	GlobalLT("ResistedBaeloth","GLOBAL",1)
+THEN
+	RESPONSE #100
+		ApplySpell(Player6,CLERIC_RESURRECTION)  // SPPR712.SPL (Resurrection)
+END
+
+IF
+	Global("BP_AUTOSAVE","GLOBAL",1)
+	AreaCheckObject("OH9360",Player1)
+THEN
+	RESPONSE #100
+		SetGlobal("BP_AUTOSAVE","GLOBAL",2)
+		SetGlobal("BP_TRIGGER_DIALOG","GLOBAL",1)
+		Wait(1)
+		ApplySpellRES("BPDISPEL",Player1)  // Dispel Magic
+		ApplySpellRES("BPDISPEL",Player2)  // Dispel Magic
+		ApplySpellRES("BPDISPEL",Player3)  // Dispel Magic
+		ApplySpellRES("BPDISPEL",Player4)  // Dispel Magic
+		ApplySpellRES("BPDISPEL",Player5)  // Dispel Magic
+		ApplySpellRES("BPDISPEL",Player6)  // Dispel Magic
+		ActionOverride("BPBAELOT",ApplySpell("BPBAELOT",RESTORE_FULL_HEALTH))  // Baeloth
+		ActionOverride("BPNAJIM",ApplySpell("BPNAJIM",RESTORE_FULL_HEALTH))  // Najim
+		ActionOverride(Player1,ApplySpell(Player1,RESTORE_FULL_HEALTH))  // SPIN746.SPL (No such index)
+		ActionOverride(Player2,ApplySpell(Player2,RESTORE_FULL_HEALTH))  // SPIN746.SPL (No such index)
+		ActionOverride(Player3,ApplySpell(Player3,RESTORE_FULL_HEALTH))  // SPIN746.SPL (No such index)
+		ActionOverride(Player4,ApplySpell(Player4,RESTORE_FULL_HEALTH))  // SPIN746.SPL (No such index)
+		ActionOverride(Player5,ApplySpell(Player5,RESTORE_FULL_HEALTH))  // SPIN746.SPL (No such index)
+		ActionOverride(Player6,ApplySpell(Player6,RESTORE_FULL_HEALTH))  // SPIN746.SPL (No such index)
+		ApplySpellRES("SPSREST",Player1)  // No such index
+		ApplySpellRES("SPSREST",Player2)  // No such index
+		ApplySpellRES("SPSREST",Player3)  // No such index
+		ApplySpellRES("SPSREST",Player4)  // No such index
+		ApplySpellRES("SPSREST",Player5)  // No such index
+		ApplySpellRES("SPSREST",Player6)  // No such index
+END
+
+IF
+	OR(24)
+		HPPercentLT("BPMAGDA",100)  // Magda
+		HPPercentLT("BPTHARDE",100)  // Thardek
+		HPPercentLT("BPGORCH",100)  // Gorch the Armorer
+		HPPercentLT("BPBRENDA",100)  // Brendak
+		HPPercentLT("CONCOCTOR",100)  // Concocter
+		HPPercentLT("BPBELLOW",100)  // Bellowgulp Bluefingers
+		HPPercentLT("BPDINGUE",100)  // Dinguer the Mad
+		HPPercentLT("BPXITHIS",100)  // Xithiss
+		HPPercentLT("BPELAN",100)  // Elan Garaq
+		HPPercentLT("BPDEVLIN",100)  // Devlin Taralon
+		HPPercentLT("BPGHLOUR",100)  // Ghlouralk
+		HPPercentLT("BPKRANCO",100)  // Krancor the Old
+		HPPercentLT("BPSAMJOH",100)  // SamJohn BrightWalker
+		HPPercentLT("BPWYLLIA",100)  // Wylliam Brand
+		HPPercentLT("BPCARLOS",100)  // Carlos Nuez
+		HPPercentLT("BPCIRIL",100)  // Ciril
+		HPPercentLT("BPOWYN",100)  // Owyn
+		HPPercentLT("bpaluena",100)  // Thespia
+		HPPercentLT("bpalueno",100)  // Treacle
+		HPPercentLT("BPTHBKGD",100)  // Lucille
+		HPPercentLT("BPTHCL",100)  // Lucius
+		HPPercentLT("BPTHBARB",100)  // Voadikka
+		HPPercentLT("BPTHTHF",100)  // Red Tom
+		HPPercentLT("BPGIAFIR",100)  // Hogarl
+THEN
+	RESPONSE #100
+		SetGlobal("ResistedBaeloth","GLOBAL",1)
+END
+
+IF
+	Global("SPAWN_ACTORS","GLOBAL",1)
+	Global("BAELOTH_FACING","GLOBAL",1)
+	AreaCheckObject("OH9360","BPBAELOT")  // Baeloth
+THEN
+	RESPONSE #100
+		SetGlobal("BAELOTH_FACING","GLOBAL",2)
+		FadeFromColor([80.0],0)
+		SmallWait(60)
+		ActionOverride("BPBAELOT",FaceObject(Player1))
+		ActionOverride("BPNAJIM",Face(S))
+		SetCutSceneLite(FALSE)
+		Continue()
+END
+
+IF
+	Global("TIER","GLOBAL",1)
+	Global("OTHER_PARTY_TRANSITION","OH9360",0)
+THEN
+	RESPONSE #100
+		CreateCreature("BPKRANCO",[293.485],S)  // Krancor the Old
+		CreateCreature("BPSAMJOH",[211.422],S)  // SamJohn BrightWalker
+		CreateCreature("BPWYLLIA",[203.447],S)  // Wylliam Brand
+		CreateCreature("BPCARLOS",[148.379],S)  // Carlos Nuez
+		CreateCreature("BPCIRIL",[142.453],S)  // Ciril
+		CreateCreature("BPOWYN",[189.353],S)  // Owyn
+		SetGlobal("OTHER_PARTY_TRANSITION","OH9360",1)
+END
+
+IF
+	Global("TIER","GLOBAL",2)
+	Global("OTHER_PARTY_TRANSITION","OH9360",1)
+THEN
+	RESPONSE #100
+		CreateCreature("bpaluena",[483.304],S)  // Thespia
+		ChangeEnemyAlly("bpaluena",NEUTRAL)  // Thespia
+		ActionOverride("bpaluena",ChangeAIScript("",OVERRIDE))
+		ActionOverride("bpaluena",ChangeAIScript("",CLASS))
+		ActionOverride("bpaluena",ChangeAIScript("",RACE))
+		CreateCreature("bpalueno",[411.294],S)  // Treacle
+		ChangeEnemyAlly("bpalueno",NEUTRAL)  // Treacle
+		ActionOverride("bpalueno",ChangeAIScript("",OVERRIDE))
+		ActionOverride("bpalueno",ChangeAIScript("",CLASS))
+		ActionOverride("bpalueno",ChangeAIScript("",RACE))
+		CreateCreature("BPTHBKGD",[437.263],S)  // Lucille
+		ChangeEnemyAlly("BPTHBKGD",NEUTRAL)  // Lucille
+		ActionOverride("BPTHBKGD",ChangeAIScript("",OVERRIDE))
+		ActionOverride("BPTHBKGD",ChangeAIScript("",CLASS))
+		ActionOverride("BPTHBKGD",ChangeAIScript("",RACE))
+		CreateCreature("BPTHCL",[376.207],S)  // Lucius
+		ChangeEnemyAlly("BPTHCL",NEUTRAL)  // Lucius
+		ActionOverride("BPTHCL",ChangeAIScript("",OVERRIDE))
+		ActionOverride("BPTHCL",ChangeAIScript("",CLASS))
+		ActionOverride("BPTHCL",ChangeAIScript("",RACE))
+		CreateCreature("BPTHBARB",[308.265],S)  // Voadikka
+		ChangeEnemyAlly("BPTHBARB",NEUTRAL)  // Voadikka
+		ActionOverride("BPTHBARB",ChangeAIScript("",OVERRIDE))
+		ActionOverride("BPTHBARB",ChangeAIScript("",CLASS))
+		ActionOverride("BPTHBARB",ChangeAIScript("",RACE))
+		CreateCreature("BPTHTHF",[307.212],S)  // Red Tom
+		ChangeEnemyAlly("BPTHTHF",NEUTRAL)  // Red Tom
+		ActionOverride("BPTHTHF",ChangeAIScript("",OVERRIDE))
+		ActionOverride("BPTHTHF",ChangeAIScript("",CLASS))
+		ActionOverride("BPTHTHF",ChangeAIScript("",RACE))
+		ActionOverride("BPKRANCO",DestroySelf())
+		ActionOverride("BPSAMJOH",DestroySelf())
+		ActionOverride("BPWYLLIA",DestroySelf())
+		ActionOverride("BPCARLOS",DestroySelf())
+		ActionOverride("BPCIRIL",DestroySelf())
+		ActionOverride("BPOWYN",DestroySelf())
+		SetGlobal("OTHER_PARTY_TRANSITION","OH9360",2)
+END
+
+IF
+	Global("TIER","GLOBAL",3)
+	Global("OTHER_PARTY_TRANSITION","OH9360",2)
+THEN
+	RESPONSE #100
+		CreateCreature("BPGIAFIR",[284.481],S)  // Hogarl
+		ChangeEnemyAlly("BPGIAFIR",NEUTRAL)  // Hogarl
+		ActionOverride("BPGIAFIR",ChangeAIScript("",OVERRIDE))
+		ActionOverride("BPGIAFIR",ChangeAIScript("",CLASS))
+		ActionOverride("BPGIAFIR",ChangeAIScript("",RACE))
+		ActionOverride("bpaluena",DestroySelf())
+		ActionOverride("bpalueno",DestroySelf())
+		ActionOverride("BPTHBKGD",DestroySelf())
+		ActionOverride("BPTHBARB",DestroySelf())
+		ActionOverride("BPTHCL",DestroySelf())
+		ActionOverride("BPTHTHF",DestroySelf())
+		SetGlobal("OTHER_PARTY_TRANSITION","OH9360",3)
+END
+
+IF
+	Global("TIER","GLOBAL",3)
+	Global("OTHER_PARTY_TRANSITION","OH9360",3)
+	GlobalGT("LAST_BATTLE","GLOBAL",303)
+THEN
+	RESPONSE #100
+		ActionOverride("BPGIAFIR",DestroySelf())
+		SetGlobal("OTHER_PARTY_TRANSITION","OH9360",4)
+END
+
+IF
+	Global("TIER","GLOBAL",2)
+	GlobalLT("BPBAELOT_DIALOG","GLOBAL",20)
+THEN
+	RESPONSE #100
+		ActionOverride("BPBAELOT",StartDialogueNoSet(Player1))
+END
+
+IF
+	Global("TIER","GLOBAL",2)
+	Global("BPBAELOT_DIALOG","GLOBAL",20)
+	GlobalLT("BPNAJIM_DIALOG","GLOBAL",20)
+	!IsActive("BPNAJIM")  // Najim
+THEN
+	RESPONSE #100
+		StartCutSceneMode()
+		CreateVisualEffectObject("spdimndr","BPNAJIM")  // Najim
+		PlaySound("EFF_M13")
+		Wait(4)
+		Activate("BPNAJIM")  // Najim
+		EndCutSceneMode()
+		ActionOverride("BPNAJIM",StartDialogueNoSet(Player1))
+END
+
+IF
+	Global("TIER","GLOBAL",3)
+	GlobalLT("BPBAELOT_DIALOG","GLOBAL",30)
+THEN
+	RESPONSE #100
+		ActionOverride("BPBAELOT",StartDialogueNoSet(Player1))
+END
+
+IF
+	Global("TIER","GLOBAL",3)
+	Global("BPBAELOT_DIALOG","GLOBAL",30)
+	GlobalLT("BPNAJIM_DIALOG","GLOBAL",30)
+	AreaCheck("OH9360")
+	IsActive("BPNAJIM")  // Najim
+THEN
+	RESPONSE #100
+		ActionOverride("BPNAJIM",StartDialogueNoSet(Player1))
+END
+
+IF
+	Global("TIER","GLOBAL",3)
+	Global("BPBAELOT_DIALOG","GLOBAL",30)
+	Global("BPNAJIM_DIALOG","GLOBAL",30)
+	AreaCheck("OH9360")
+	!IsActive("BPNAJIM")  // Najim
+	Global("T3_B2","GLOBAL",2)
+THEN
+	RESPONSE #100
+		StartCutSceneMode()
+		CreateVisualEffectObject("spdimndr","BPNAJIM")  // Najim
+		PlaySound("EFF_M13")
+		Wait(4)
+		Activate("BPNAJIM")  // Najim
+		EndCutSceneMode()
+END
+
+IF
+	Global("TIER","GLOBAL",3)
+	Global("BPBAELOT_DIALOG","GLOBAL",30)
+	GlobalLT("BPNAJIM_DIALOG","GLOBAL",30)
+	!IsActive("BPNAJIM")  // Najim
+THEN
+	RESPONSE #100
+		StartCutSceneMode()
+		CreateVisualEffectObject("spdimndr","BPNAJIM")  // Najim
+		PlaySound("EFF_M13")
+		Wait(4)
+		Activate("BPNAJIM")  // Najim
+		EndCutSceneMode()
+		ActionOverride("BPNAJIM",StartDialogueNoSet(Player1))
+END
+
+IF
+	Global("START_BATTLE","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("BATTLE_COMPLETE","GLOBAL",0)
+		ClearAllActions()
+		StartCutSceneMode()
+		LockScroll()
+		StartCutScene("CUTBP02")
+		Continue()
+END
+
+IF
+	Global("START_BATTLE","GLOBAL",1)
+	OR(9)
+		Global("T0_B1","GLOBAL",1)
+		Global("T1_B0","GLOBAL",1)
+		Global("T1_B1","GLOBAL",1)
+		Global("T1_B2","GLOBAL",1)
+		Global("T1_B4","GLOBAL",1)
+		Global("T2_B4","GLOBAL",1)
+		Global("T3_B2","GLOBAL",1)
+		Global("T3_B4","GLOBAL",1)
+		Global("T3_B5","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("START_BATTLE","GLOBAL",2)
+		SmallWait(75)
+		StorePartyLocations()
+		FadeToColor([1.0],0)
+		ActionOverride(Player1,LeaveAreaLUAPanic("OH9310","",[906.702],NW))
+		ActionOverride(Player1,LeaveAreaLUA("OH9310","",[906.702],NW))
+		ActionOverride(Player2,LeaveAreaLUA("OH9310","",[839.761],NW))
+		ActionOverride(Player3,LeaveAreaLUA("OH9310","",[999.692],NW))
+		ActionOverride(Player4,LeaveAreaLUA("OH9310","",[903.753],NW))
+		ActionOverride(Player5,LeaveAreaLUA("OH9310","",[959.714],NW))
+		ActionOverride(Player6,LeaveAreaLUA("OH9310","",[974.764],NW))
+		ActionOverride(Player1,CreateVisualEffectObject("spdimndr",Player1))
+		ActionOverride(Player2,CreateVisualEffectObject("spdimndr",Player2))
+		ActionOverride(Player3,CreateVisualEffectObject("spdimndr",Player3))
+		ActionOverride(Player4,CreateVisualEffectObject("spdimndr",Player4))
+		ActionOverride(Player5,CreateVisualEffectObject("spdimndr",Player5))
+		ActionOverride(Player6,CreateVisualEffectObject("spdimndr",Player6))
+		MoveGlobal("OH9310","BPBAELOT",[627.534])  // Baeloth
+		SetCutSceneLite(TRUE)
+		EndCutSceneMode()
+		Wait(2)
+		SetMasterArea("OH9310")
+END
+
+IF
+	Global("START_BATTLE","GLOBAL",1)
+	OR(9)
+		Global("T0_B2","GLOBAL",1)
+		Global("T1_B3","GLOBAL",1)
+		Global("T1_B5","GLOBAL",1)
+		Global("T2_B1","GLOBAL",1)
+		Global("T2_B2","GLOBAL",1)
+		Global("T2_B3","GLOBAL",1)
+		Global("T2_B5","GLOBAL",1)
+		Global("T3_B1","GLOBAL",1)
+		Global("T3_B3","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("START_BATTLE","GLOBAL",2)
+		SmallWait(75)
+		StorePartyLocations()
+		FadeToColor([1.0],0)
+		ActionOverride(Player1,LeaveAreaLUAPanic("OH9350","",[906.702],NW))
+		ActionOverride(Player1,LeaveAreaLUA("OH9350","",[906.702],NW))
+		ActionOverride(Player2,LeaveAreaLUA("OH9350","",[839.761],NW))
+		ActionOverride(Player3,LeaveAreaLUA("OH9350","",[999.692],NW))
+		ActionOverride(Player4,LeaveAreaLUA("OH9350","",[903.753],NW))
+		ActionOverride(Player5,LeaveAreaLUA("OH9350","",[959.714],NW))
+		ActionOverride(Player6,LeaveAreaLUA("OH9350","",[974.764],NW))
+		ActionOverride(Player1,CreateVisualEffectObject("spdimndr",Player1))
+		ActionOverride(Player2,CreateVisualEffectObject("spdimndr",Player2))
+		ActionOverride(Player3,CreateVisualEffectObject("spdimndr",Player3))
+		ActionOverride(Player4,CreateVisualEffectObject("spdimndr",Player4))
+		ActionOverride(Player5,CreateVisualEffectObject("spdimndr",Player5))
+		ActionOverride(Player6,CreateVisualEffectObject("spdimndr",Player6))
+		MoveGlobal("OH9350","BPBAELOT",[627.490])  // Baeloth
+		SetCutSceneLite(TRUE)
+		EndCutSceneMode()
+		Wait(2)
+		SetMasterArea("OH9350")
+END
+
+IF
+	Global("BRENDAK_REVEAL","GLOBAL",2)
+	!IsActive("BPBAELOT")  // Baeloth
+THEN
+	RESPONSE #100
+		CreateVisualEffectObject("spdimndr","BPBAELOT")  // Baeloth
+		SmallWait(15)
+		Activate("BPBAELOT")  // Baeloth
+END
+
+IF
+	Global("BAELOTH_LEAVE","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetSequence(SEQ_CAST)
+		SmallWait(15)
+		PlaySound("EFF_E07")
+		CreateVisualEffectObject("mmagich","BPBAELOT")  // Baeloth
+		SmallWait(15)
+		ActionOverride("BPBAELOT",CreateVisualEffectObject("spdimndr","BPBAELOT"))  // Baeloth
+		SmallWait(15)
+		MoveGlobal("OH9360","BPBAELOT",[0.0])  // Baeloth
+END
+
+IF
+	Global("BAELOTH_LEAVE","GLOBAL",-1)
+THEN
+	RESPONSE #100
+		MoveGlobal("OH9360","BPBAELOT",[1147.417])  // Baeloth
+		ActionOverride("BPBAELOT",CreateVisualEffectObject("spdimndr","BPBAELOT"))  // Baeloth
+END
+
+IF
+	Global("BP_AUTOSAVE","GLOBAL",2)
+	AreaCheckObject("OH9360",Player1)
+THEN
+	RESPONSE #100
+		SetGlobal("BP_AUTOSAVE","GLOBAL",3)
+		MoveViewObject(Player1,INSTANT)
+		Wait(1)
+		SaveGame(0)
+END
+
