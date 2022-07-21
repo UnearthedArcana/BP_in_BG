@@ -16,69 +16,21 @@ THEN
 		LeaveAreaLUAPanic("OH9310","",[906.702],N)
 		LeaveAreaLUA("OH9310","",[906.702],N)
 		CreateVisualEffectObject("spdimndr",Myself)
+		CreateItem("BPRNG1",0,0,0)  // Slave Ring
+		FillSlot(SLOT_RING_RIGHT)
 		Explore()
-		SetMasterArea("OH9310")
-		ActionOverride(Player1,ApplySpellRES("CUTHIDE",Player1))  // No such index
-		ActionOverride(Player2,ApplySpellRES("CUTHIDE",Player2))  // No such index
-		ActionOverride(Player3,ApplySpellRES("CUTHIDE",Player3))  // No such index
-		ActionOverride(Player4,ApplySpellRES("CUTHIDE",Player4))  // No such index
-		ActionOverride(Player5,ApplySpellRES("CUTHIDE",Player5))  // No such index
-		ActionOverride(Player6,ApplySpellRES("CUTHIDE",Player6))  // No such index
-		ActionOverride(Player1,Face(NNW))
-		ActionOverride(Player2,Face(NNW))
-		ActionOverride(Player3,Face(NNW))
-		ActionOverride(Player4,Face(NNW))
-		ActionOverride(Player5,Face(NNW))
-		ActionOverride(Player6,Face(NNW))
-		ActionOverride(Player1,ApplySpellRES("OHLOST",Player1))  // Find Familiar
-		TakePartyGold(2147483647)
-		CreateCreatureDoor("BPTAVE01",[545.472],NNW)  // Tavern Patron
-		CreateCreatureDoor("BPTAVE02",[739.392],NNW)  // Tavern Bully
-		CreateCreatureDoor("BPTAVE03",[372.574],NNW)  // Tavern Bouncer
-		CreateCreature("BPTAVE04",[897.323],NNW)  // Tavern Bully
-		CreateCreature("BPTAVE05",[798.632],NNW)  // Tavern Bully
-		CreateCreature("BPTAVE06",[152.548],NNW)  // Tavern Bully
-		ActionOverride("BPTAVE04",Kill(Myself))
-		ActionOverride("BPTAVE05",Kill(Myself))
-		ActionOverride("BPTAVE06",Kill(Myself))
+		EndCutSceneMode()
 		CreateCreature("BPREFF01",[603.538],S)  // Referee - No such index
 		CreateCreature("BPREFF01",[443.391],S)  // Referee - No such index
 		CreateCreature("BPREFF01",[382.634],S)  // Referee - No such index
 		CreateCreature("BPREFF01",[805.644],S)  // Referee - No such index
 		CreateCreature("BPREFF01",[802.412],S)  // Referee - No such index
-		MoveViewObject("BPTAVE01",INSTANT)  // Tavern Patron
-		SmallWait(1)
-		SetGlobal("OH9310_ENTERED","OH9310",1)
-		CreateItem("BPRNG1",0,0,0)  // Slave Ring
-		FillSlot(SLOT_RING_RIGHT)
-		Wait(3)
-		ActionOverride("BPTAVE01",DisplayStringWait("BPTAVE01",29958))  // What? What? Where are we?
-		Wait(2)
-		ActionOverride("BPTAVE02",DisplayStringWait("BPTAVE02",29959))  // Who spiked me drink? I was just in the tavern, talking to Myrna. Hey, I saw those folks there too.
-		Wait(7)
-		SmallWait(5)
 		CreateVisualEffect("spsdimpa",[472.400])
 		CreateCreature("BPTASL01",[472.400],S)  // Tasloi
 		CreateVisualEffect("spsdimpa",[472.400])
 		CreateCreature("BPTASL02",[472.400],S)  // Tasloi
 		CreateVisualEffect("spsdimpa",[472.400])
 		CreateCreature("BPTASL03",[472.400],S)  // Tasloi
-		PlaySound("EFF_M31C")
-		ActionOverride("BPTAVE03",DisplayStringWait("BPTAVE03",29960))  // We're in some kind of fighting pit. Look out! Monsters!
-		Wait(3)
-		ActionOverride("BPTASL01",Attack("BPTAVE03"))  // Tavern Bouncer
-		ActionOverride("BPTASL02",Attack("BPTAVE02"))  // Tavern Bully
-		ActionOverride("BPTASL03",Attack("BPTAVE01"))  // Tavern Patron
-		SmallWait(1)
-		ActionOverride("BPTAVE03",Attack("BPTASL01"))  // Tasloi
-		ActionOverride("BPTAVE02",Attack("BPTASL02"))  // Tasloi
-		ActionOverride("BPTAVE01",Attack("BPTASL03"))  // Tasloi
-		MoveViewObject(Player1,5)
-		Wait(3)
-		EndCutSceneMode()
-		SetGlobal("BPINTRO","GLOBAL",2)
-		MultiPlayerSync()
-		SmallWait(4)
 END
 
 IF

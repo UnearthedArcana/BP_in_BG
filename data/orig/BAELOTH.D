@@ -1,9 +1,3 @@
-// creator  : /Applications/Baldur's Gate - Siege of Dragonspear/00806/NearInfinity.app/Contents/MacOS/NearInfinity.jar (v2.1-20180531)
-// game     : /Applications/Baldur's Gate - Siege of Dragonspear/00806
-// resource : BAELOTH.DLG
-// source   : data/Dialog.bif
-// dialog   : lang/en_US/dialog.tlk
-// dialogF  : (none)
 
 BEGIN ~BAELOTH~
 
@@ -339,6 +333,10 @@ END
 
 IF ~~ THEN BEGIN 52 // from: 51.0
   SAY ~Fantastic! Oh, this recruiting trip was much quicker than I expected. Now be good dears and just grab hold of this perfectly harmless glowing gem. All at once, yes, that's it. And away we go!~ 
-  IF ~~ THEN DO ~SetGlobal("BPINBG","GLOBAL",1) /* and move the viewport and/or party to OH9310.ARE */ ~ EXIT
+  IF ~~ THEN DO ~SetGlobal("BPINBG","GLOBAL",1) 
+ClearAllActions()
+StartCutSceneMode()
+StartCutScene("BPINBG0") 
+~ EXIT
 END
 

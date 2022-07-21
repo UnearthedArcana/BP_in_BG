@@ -1,14 +1,15 @@
 BACKUP ~bp_in_bg/backup~
 AUTHOR ~SubtleD~
 
+VERSION ~0.1.1~ 
 
 //do stuff__________________________________________________________________________
 //
 BEGIN ~add access to the Black Pits in BGEE~
 
 COMPILE ~%MOD_FOLDER%/data/baeloth.d~
+COMPILE ~%MOD_FOLDER%/data/baelothp.d~
 COMPILE ~%MOD_FOLDER%/data/bpnajim.d~
 COMPILE ~%MOD_FOLDER%/data/bpbaelot.d~
 COMPILE ~%MOD_FOLDER%/data/BPINBG0.baf~
-//COMPILE ~%MOD_FOLDER%/data/BPINBG1.baf~
 
