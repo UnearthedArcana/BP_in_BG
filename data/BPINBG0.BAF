@@ -18,6 +18,9 @@ THEN
 		CreateVisualEffectObject("spdimndr",Myself)
 		CreateItem("BPRNG1",0,0,0)  // Slave Ring
 		FillSlot(SLOT_RING_RIGHT)
+		ActionOverride(Player1,ApplySpellRES("OHLOST",Player1))  // Find Familiar
+		TakePartyGold(2147483647)
+		SetGlobal("OH9310_ENTERED","OH9310",1)
 		Explore()
 		EndCutSceneMode()
 		CreateCreature("BPREFF01",[603.538],S)  // Referee - No such index

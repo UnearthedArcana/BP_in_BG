@@ -175,7 +175,7 @@ SetGlobal("LAST_BATTLE","GLOBAL",1)
 
 SetCutSceneLite(TRUE)
 
-StartCutSceneEx("CUTBP03",FALSE)
+StartCutScene("CUTBP03")
 
 ~ EXIT
 END
@@ -223,7 +223,7 @@ SetGlobal("TIER","GLOBAL",1)
 
 SetCutSceneLite(TRUE)
 
-StartCutSceneEx("CUTBP03",FALSE)
+StartCutScene("CUTBP03")
 
 ~ EXIT
 END
@@ -253,14 +253,14 @@ SetGlobal("T1_B1","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)
 SetGlobal("LAST_BATTLE","GLOBAL",101)
 SetCutSceneLite(TRUE)
-StartCutSceneEx("CUTBP03",FALSE)
+StartCutScene("CUTBP03")
 ~ EXIT
   IF ~ Global("BPINBG","GLOBAL",1) ~ THEN DO ~GiveGoldForce(1750)
 SetGlobal("T1_B1","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)
 SetGlobal("LAST_BATTLE","GLOBAL",101)
 SetCutSceneLite(TRUE)
-StartCutSceneEx("CUTBP03",FALSE)
+StartCutScene("CUTBP03")
 ~ EXIT
 END
 
@@ -279,13 +279,13 @@ AddexperienceParty(7300)
 SetGlobal("T1_B1","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)
 SetCutSceneLite(TRUE)
-StartCutSceneEx("CUTBP03",FALSE)
+StartCutScene("CUTBP03")
 ~ EXIT
   IF ~ Global("BPINBG","GLOBAL",1) ~ THEN DO ~GiveGoldForce(875)
 SetGlobal("T1_B1","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)
 SetCutSceneLite(TRUE)
-StartCutSceneEx("CUTBP03",FALSE)
+StartCutScene("CUTBP03")
 ~ EXIT
 END
 
@@ -314,13 +314,14 @@ SetGlobal("T1_B2","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)
 SetGlobal("LAST_BATTLE","GLOBAL",102)
 SetCutSceneLite(TRUE)
-StartCutSceneEx("CUTBP03",FALSE)
+StartCutScene("CUTBP03")
 ~ EXIT
-  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN DO ~GiveGoldForce(875)
-SetGlobal("T1_B1","GLOBAL",-1)
+  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN DO ~GiveGoldForce(2000)
+SetGlobal("T1_B2","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)
+SetGlobal("LAST_BATTLE","GLOBAL",102)
 SetCutSceneLite(TRUE)
-StartCutSceneEx("CUTBP03",FALSE)
+StartCutScene("CUTBP03")
 ~ EXIT
 END
 
@@ -339,13 +340,13 @@ AddexperienceParty(9125)
 SetGlobal("T1_B2","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)
 SetCutSceneLite(TRUE)
-StartCutSceneEx("CUTBP03",FALSE)
+StartCutScene("CUTBP03")
 ~ EXIT
   IF ~ Global("BPINBG","GLOBAL",1) ~ THEN DO ~GiveGoldForce(1000)
 SetGlobal("T1_B2","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)
 SetCutSceneLite(TRUE)
-StartCutSceneEx("CUTBP03",FALSE)
+StartCutScene("CUTBP03")
 ~ EXIT
 END
 
@@ -374,14 +375,14 @@ SetGlobal("T1_B3","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)
 SetGlobal("LAST_BATTLE","GLOBAL",103)
 SetCutSceneLite(TRUE)
-StartCutSceneEx("CUTBP03",FALSE)
+StartCutScene("CUTBP03")
 ~ EXIT
   IF ~ Global("BPINBG","GLOBAL",1) ~ THEN DO ~GiveGoldForce(2250)
 SetGlobal("T1_B3","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)
 SetGlobal("LAST_BATTLE","GLOBAL",103)
 SetCutSceneLite(TRUE)
-StartCutSceneEx("CUTBP03",FALSE)
+StartCutScene("CUTBP03")
 ~ EXIT
 END
 
@@ -400,13 +401,13 @@ AddexperienceParty(12167)
 SetGlobal("T1_B3","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)
 SetCutSceneLite(TRUE)
-StartCutSceneEx("CUTBP03",FALSE)
+StartCutScene("CUTBP03")
 ~ EXIT
   IF ~ Global("BPINBG","GLOBAL",1) ~ THEN DO ~GiveGoldForce(1125)
 SetGlobal("T1_B3","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)
 SetCutSceneLite(TRUE)
-StartCutSceneEx("CUTBP03",FALSE)
+StartCutScene("CUTBP03")
 ~ EXIT
 END
 
@@ -435,14 +436,14 @@ SetGlobal("T1_B4","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)
 SetGlobal("LAST_BATTLE","GLOBAL",104)
 SetCutSceneLite(TRUE)
-StartCutSceneEx("CUTBP03",FALSE)
+StartCutScene("CUTBP03")
 ~ EXIT
   IF ~ Global("BPINBG","GLOBAL",1) ~ THEN DO ~GiveGoldForce(2500)
 SetGlobal("T1_B4","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)
 SetGlobal("LAST_BATTLE","GLOBAL",104)
 SetCutSceneLite(TRUE)
-StartCutSceneEx("CUTBP03",FALSE)
+StartCutScene("CUTBP03")
 ~ EXIT
 END
 
@@ -461,13 +462,13 @@ AddexperienceParty(18250)
 SetGlobal("T1_B4","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)
 SetCutSceneLite(TRUE)
-StartCutSceneEx("CUTBP03",FALSE)
+StartCutScene("CUTBP03")
 ~ EXIT
   IF ~ Global("BPINBG","GLOBAL",1) ~ THEN DO ~GiveGoldForce(1250)
 SetGlobal("T1_B4","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)
 SetCutSceneLite(TRUE)
-StartCutSceneEx("CUTBP03",FALSE)
+StartCutScene("CUTBP03")
 ~ EXIT
 END
 
@@ -497,7 +498,7 @@ SetGlobal("TIER","GLOBAL",2)
 GiveGoldForce(3000)
 AddexperienceParty(18250)
 SetCutSceneLite(TRUE)
-StartCutSceneEx("CUTBP03",FALSE)
+StartCutScene("CUTBP03")
 ~ EXIT
   IF ~ Global("BPINBG","GLOBAL",1) ~ THEN DO ~SetGlobal("START_BATTLE","GLOBAL",0)
 SetGlobal("LAST_BATTLE","GLOBAL",105)
@@ -505,7 +506,7 @@ SetGlobal("T1_B5","GLOBAL",-1)
 SetGlobal("TIER","GLOBAL",2)
 GiveGoldForce(3000)
 SetCutSceneLite(TRUE)
-StartCutSceneEx("CUTBP03",FALSE)
+StartCutScene("CUTBP03")
 ~ EXIT
 END
 
@@ -524,13 +525,13 @@ AddexperienceParty(18250)
 GiveGoldForce(1500)
 SetGlobal("START_BATTLE","GLOBAL",0)
 SetCutSceneLite(TRUE)
-StartCutSceneEx("CUTBP03",FALSE)
+StartCutScene("CUTBP03")
 ~ EXIT
   IF ~ Global("BPINBG","GLOBAL",1) ~ THEN DO ~SetGlobal("T1_B5","GLOBAL",-1)
 GiveGoldForce(1500)
 SetGlobal("START_BATTLE","GLOBAL",0)
 SetCutSceneLite(TRUE)
-StartCutSceneEx("CUTBP03",FALSE)
+StartCutScene("CUTBP03")
 ~ EXIT
 END
 
@@ -587,14 +588,14 @@ SetGlobal("T2_B1","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)
 SetGlobal("LAST_BATTLE","GLOBAL",201)
 SetCutSceneLite(TRUE)
-StartCutSceneEx("CUTBP03",FALSE)
+StartCutScene("CUTBP03")
 ~ EXIT
   IF ~ Global("BPINBG","GLOBAL",1) ~ THEN DO ~GiveGoldForce(4000)
 SetGlobal("T2_B1","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)
 SetGlobal("LAST_BATTLE","GLOBAL",201)
 SetCutSceneLite(TRUE)
-StartCutSceneEx("CUTBP03",FALSE)
+StartCutScene("CUTBP03")
 ~ EXIT
 END
 
@@ -613,13 +614,13 @@ AddexperienceParty(26032)
 SetGlobal("T2_B1","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)
 SetCutSceneLite(TRUE)
-StartCutSceneEx("CUTBP03",FALSE)
+StartCutScene("CUTBP03")
 ~ EXIT
   IF ~ Global("BPINBG","GLOBAL",1) ~ THEN DO ~GiveGoldForce(2000)
 SetGlobal("T2_B1","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)
 SetCutSceneLite(TRUE)
-StartCutSceneEx("CUTBP03",FALSE)
+StartCutScene("CUTBP03")
 ~ EXIT
 END
 
@@ -648,14 +649,14 @@ SetGlobal("T2_B2","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)
 SetGlobal("LAST_BATTLE","GLOBAL",202)
 SetCutSceneLite(TRUE)
-StartCutSceneEx("CUTBP03",FALSE)
+StartCutScene("CUTBP03")
 ~ EXIT
   IF ~ Global("BPINBG","GLOBAL",1) ~ THEN DO ~GiveGoldForce(4500)
 SetGlobal("T2_B2","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)
 SetGlobal("LAST_BATTLE","GLOBAL",202)
 SetCutSceneLite(TRUE)
-StartCutSceneEx("CUTBP03",FALSE)
+StartCutScene("CUTBP03")
 ~ EXIT
 END
 
@@ -674,13 +675,13 @@ AddexperienceParty(32540)
 SetGlobal("T2_B2","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)
 SetCutSceneLite(TRUE)
-StartCutSceneEx("CUTBP03",FALSE)
+StartCutScene("CUTBP03")
 ~ EXIT
   IF ~ Global("BPINBG","GLOBAL",1) ~ THEN DO ~GiveGoldForce(2250)
 SetGlobal("T2_B2","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)
 SetCutSceneLite(TRUE)
-StartCutSceneEx("CUTBP03",FALSE)
+StartCutScene("CUTBP03")
 ~ EXIT
 END
 
@@ -718,7 +719,7 @@ TriggerActivation("ARROWTRAP6",FALSE)
 TriggerActivation("STINKYTRAP",FALSE)
 TriggerActivation("JERKTRAP",FALSE)
 SetCutSceneLite(TRUE)
-StartCutSceneEx("CUTBP03",FALSE)
+StartCutScene("CUTBP03")
 ~ EXIT
   IF ~ Global("BPINBG","GLOBAL",1) ~ THEN DO ~GiveGoldForce(5000)
 SetGlobal("T2_B3","GLOBAL",-1)
@@ -734,7 +735,7 @@ TriggerActivation("ARROWTRAP6",FALSE)
 TriggerActivation("STINKYTRAP",FALSE)
 TriggerActivation("JERKTRAP",FALSE)
 SetCutSceneLite(TRUE)
-StartCutSceneEx("CUTBP03",FALSE)
+StartCutScene("CUTBP03")
 ~ EXIT
 END
 
@@ -762,7 +763,7 @@ TriggerActivation("ARROWTRAP6",FALSE)
 TriggerActivation("STINKYTRAP",FALSE)
 TriggerActivation("JERKTRAP",FALSE)
 SetCutSceneLite(TRUE)
-StartCutSceneEx("CUTBP03",FALSE)
+StartCutScene("CUTBP03")
 ~ EXIT
   IF ~ Global("BPINBG","GLOBAL",1) ~ THEN DO ~GiveGoldForce(2500)
 SetGlobal("T2_B3","GLOBAL",-1)
@@ -777,7 +778,7 @@ TriggerActivation("ARROWTRAP6",FALSE)
 TriggerActivation("STINKYTRAP",FALSE)
 TriggerActivation("JERKTRAP",FALSE)
 SetCutSceneLite(TRUE)
-StartCutSceneEx("CUTBP03",FALSE)
+StartCutScene("CUTBP03")
 ~ EXIT
 END
 
@@ -806,14 +807,14 @@ SetGlobal("T2_B4","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)
 SetGlobal("LAST_BATTLE","GLOBAL",204)
 SetCutSceneLite(TRUE)
-StartCutSceneEx("CUTBP03",FALSE)
+StartCutScene("CUTBP03")
 ~ EXIT
   IF ~ Global("BPINBG","GLOBAL",1) ~ THEN DO ~GiveGoldForce(5500)
 SetGlobal("T2_B4","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)
 SetGlobal("LAST_BATTLE","GLOBAL",204)
 SetCutSceneLite(TRUE)
-StartCutSceneEx("CUTBP03",FALSE)
+StartCutScene("CUTBP03")
 ~ EXIT
 END
 
@@ -832,13 +833,13 @@ AddexperienceParty(65079)
 SetGlobal("T2_B4","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)
 SetCutSceneLite(TRUE)
-StartCutSceneEx("CUTBP03",FALSE)
+StartCutScene("CUTBP03")
 ~ EXIT
   IF ~ Global("BPINBG","GLOBAL",1) ~ THEN DO ~GiveGoldForce(2750)
 SetGlobal("T2_B4","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)
 SetCutSceneLite(TRUE)
-StartCutSceneEx("CUTBP03",FALSE)
+StartCutScene("CUTBP03")
 ~ EXIT
 END
 
@@ -871,7 +872,7 @@ SetGlobal("TIER","GLOBAL",3)
 
 SetCutSceneLite(TRUE)
 
-StartCutSceneEx("CUTBP03",FALSE)
+StartCutScene("CUTBP03")
 
 ~ EXIT
 END
@@ -892,14 +893,14 @@ SetGlobal("T2_B5","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)
 SetGlobal("TIER","GLOBAL",3)
 SetCutSceneLite(TRUE)
-StartCutSceneEx("CUTBP03",FALSE)
+StartCutScene("CUTBP03")
 ~ EXIT
   IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #229194 /* ~What happened to all the alliteration? I hope we haven't broken Baeloth.~ */ DO ~GiveGoldForce(3000)
 SetGlobal("T2_B5","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)
 SetGlobal("TIER","GLOBAL",3)
 SetCutSceneLite(TRUE)
-StartCutSceneEx("CUTBP03",FALSE)
+StartCutScene("CUTBP03")
 ~ EXIT
 END
 
@@ -965,13 +966,13 @@ AddexperienceParty(152712)
 SetGlobal("T3_B1","GLOBAL",-1)
 SetGlobal("LAST_BATTLE","GLOBAL",301)
 SetCutSceneLite(TRUE)
-StartCutSceneEx("CUTBP03",FALSE)
+StartCutScene("CUTBP03")
 ~ EXIT
   IF ~ Global("BPINBG","GLOBAL",1) ~ THEN DO ~GiveGoldForce(8000)
 SetGlobal("T3_B1","GLOBAL",-1)
 SetGlobal("LAST_BATTLE","GLOBAL",301)
 SetCutSceneLite(TRUE)
-StartCutSceneEx("CUTBP03",FALSE)
+StartCutScene("CUTBP03")
 ~ EXIT
 END
 
@@ -982,13 +983,13 @@ AddexperienceParty(152712)
 SetGlobal("T3_B1","GLOBAL",-1)
 SetGlobal("LAST_BATTLE","GLOBAL",301)
 SetCutSceneLite(TRUE)
-StartCutSceneEx("CUTBP03",FALSE)
+StartCutScene("CUTBP03")
 ~ EXIT
   IF ~ Global("BPINBG","GLOBAL",1) ~ THEN DO ~GiveGoldForce(8000)
 SetGlobal("T3_B1","GLOBAL",-1)
 SetGlobal("LAST_BATTLE","GLOBAL",301)
 SetCutSceneLite(TRUE)
-StartCutSceneEx("CUTBP03",FALSE)
+StartCutScene("CUTBP03")
 ~ EXIT
 END
 
@@ -1007,13 +1008,13 @@ AddexperienceParty(152712)
 SetGlobal("T3_B1","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)
 SetCutSceneLite(TRUE)
-StartCutSceneEx("CUTBP03",FALSE)
+StartCutScene("CUTBP03")
 ~ EXIT
   IF ~ Global("BPINBG","GLOBAL",1) ~ THEN DO ~GiveGoldForce(4000)
 SetGlobal("T3_B1","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)
 SetCutSceneLite(TRUE)
-StartCutSceneEx("CUTBP03",FALSE)
+StartCutScene("CUTBP03")
 ~ EXIT
 END
 
@@ -1111,14 +1112,14 @@ SetGlobal("T3_B3","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)
 SetGlobal("LAST_BATTLE","GLOBAL",303)
 SetCutSceneLite(TRUE)
-StartCutSceneEx("CUTBP03",FALSE)
+StartCutScene("CUTBP03")
 ~ EXIT
   IF ~ Global("BPINBG","GLOBAL",1) ~ THEN DO ~GiveGoldForce(12000)
 SetGlobal("T3_B3","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)
 SetGlobal("LAST_BATTLE","GLOBAL",303)
 SetCutSceneLite(TRUE)
-StartCutSceneEx("CUTBP03",FALSE)
+StartCutScene("CUTBP03")
 ~ EXIT
 END
 
@@ -1137,13 +1138,13 @@ AddexperienceParty(229068)
 SetGlobal("T3_B3","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)
 SetCutSceneLite(TRUE)
-StartCutSceneEx("CUTBP03",FALSE)
+StartCutScene("CUTBP03")
 ~ EXIT
   IF ~ Global("BPINBG","GLOBAL",1) ~ THEN DO ~GiveGoldForce(6000)
 SetGlobal("T3_B3","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)
 SetCutSceneLite(TRUE)
-StartCutSceneEx("CUTBP03",FALSE)
+StartCutScene("CUTBP03")
 ~ EXIT
 END
 
@@ -1172,14 +1173,14 @@ SetGlobal("T3_B4","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)
 SetGlobal("LAST_BATTLE","GLOBAL",304)
 SetCutSceneLite(TRUE)
-StartCutSceneEx("CUTBP03",FALSE)
+StartCutScene("CUTBP03")
 ~ EXIT
   IF ~ Global("BPINBG","GLOBAL",1) ~ THEN DO ~GiveGoldForce(14000)
 SetGlobal("T3_B4","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)
 SetGlobal("LAST_BATTLE","GLOBAL",304)
 SetCutSceneLite(TRUE)
-StartCutSceneEx("CUTBP03",FALSE)
+StartCutScene("CUTBP03")
 ~ EXIT
 END
 
@@ -1198,13 +1199,13 @@ AddexperienceParty(305423)
 SetGlobal("T3_B4","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)
 SetCutSceneLite(TRUE)
-StartCutSceneEx("CUTBP03",FALSE)
+StartCutScene("CUTBP03")
 ~ EXIT
   IF ~ Global("BPINBG","GLOBAL",1) ~ THEN DO ~GiveGoldForce(7000)
 SetGlobal("T3_B4","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)
 SetCutSceneLite(TRUE)
-StartCutSceneEx("CUTBP03",FALSE)
+StartCutScene("CUTBP03")
 ~ EXIT
 END
 
