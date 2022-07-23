@@ -1,0 +1,68 @@
+IF
+	True()
+THEN
+	RESPONSE #100
+		CutSceneId(Player1)
+		ActionOverride(Player2,LeaveAreaLUA("BG2300","",[1185.3625],N))
+		ActionOverride(Player2,CreateVisualEffectObject("spdimndr",Player2))
+		ActionOverride(Player3,LeaveAreaLUA("BG2300","",[1055.3650],N))
+		ActionOverride(Player3,CreateVisualEffectObject("spdimndr",Player3))
+		ActionOverride(Player4,LeaveAreaLUA("BG2300","",[1145.3685],N))
+		ActionOverride(Player4,CreateVisualEffectObject("spdimndr",Player4))
+		ActionOverride(Player5,LeaveAreaLUA("BG2300","",[1015.3720],N))
+		ActionOverride(Player5,CreateVisualEffectObject("spdimndr",Player5))
+		ActionOverride(Player6,LeaveAreaLUA("BG2300","",[1095.3745],N))
+		ActionOverride(Player6,CreateVisualEffectObject("spdimndr",Player6))
+		LeaveAreaLUAPanic("BG2300","",[1100.3600],N)
+		LeaveAreaLUA("BG2300","",[1100.3600],N)
+		CreateVisualEffectObject("spdimndr",Myself)
+		DestroyItem("BPRNG1")
+		AddXPObject(Player1,12500)
+		AddXPObject(Player2,12500)
+		AddXPObject(Player3,12500)
+		AddXPObject(Player4,12500)
+		AddXPObject(Player5,12500)
+		AddXPObject(Player6,12500)
+		ActionOverride(Player1,ApplySpellRES("OHLOST",Player1))  // Find Familiar
+		EndCutSceneMode()
+END
+
+IF
+	True()
+THEN
+	RESPONSE #100
+		CutSceneId(Player2)
+		DestroyItem("BPRNG1")
+END
+
+IF
+	True()
+THEN
+	RESPONSE #100
+		CutSceneId(Player3)
+		DestroyItem("BPRNG1")
+END
+
+IF
+	True()
+THEN
+	RESPONSE #100
+		CutSceneId(Player4)
+		DestroyItem("BPRNG1")
+END
+
+IF
+	True()
+THEN
+	RESPONSE #100
+		CutSceneId(Player5)
+		DestroyItem("BPRNG1")
+END
+
+IF
+	True()
+THEN
+	RESPONSE #100
+		CutSceneId(Player6)
+		DestroyItem("BPRNG1")
+END

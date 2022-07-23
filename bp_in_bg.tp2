@@ -1,7 +1,7 @@
 BACKUP ~bp_in_bg/backup~
 AUTHOR ~SubtleD~
 
-VERSION ~0.2~ 
+VERSION ~0.3~ 
 
 LANGUAGE
   ~English~
@@ -19,12 +19,14 @@ ACTION_IF (GAME_IS ~eet~) BEGIN
   COMPILE ~%MOD_FOLDER%/data/eet/baelothp.d~
   COMPILE ~%MOD_FOLDER%/data/eet/bpnajim.d~
   COMPILE ~%MOD_FOLDER%/data/eet/bpbaelot.d~
+  COMPILE ~%MOD_FOLDER%/data/eet/BPINBGZ.baf~
 END
 ELSE BEGIN
   COMPILE ~%MOD_FOLDER%/data/bgee/baeloth.d~
   COMPILE ~%MOD_FOLDER%/data/bgee/baelothp.d~
   COMPILE ~%MOD_FOLDER%/data/bgee/bpnajim.d~
   COMPILE ~%MOD_FOLDER%/data/bgee/bpbaelot.d~
+  COMPILE ~%MOD_FOLDER%/data/bgee/BPINBGZ.baf~
 END
 
 COMPILE ~%MOD_FOLDER%/data/BPINBG0.baf~

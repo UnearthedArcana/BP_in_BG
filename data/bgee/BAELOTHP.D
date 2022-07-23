@@ -61,6 +61,7 @@ IF ~~ THEN BEGIN 12 // from: 11.0
   IF ~~ THEN DO ~SetGlobal("BPINBG","GLOBAL",1) 
 SetGlobal("BPINTRO","GLOBAL",2)
 ClearAllActions()
+StartMovie("BLACKPIT")
 StartCutSceneMode()
 StartCutScene("BPINBG0") 
 ~ EXIT

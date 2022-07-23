@@ -5,17 +5,17 @@ IF ~  GlobalLT("BPNAJIM_DIALOG","GLOBAL",1)
 
 ~ THEN BEGIN 0 // from: 
   SAY #229787 /* ~As my master commands, take these coins. Speak with the dealers gathered here to equip yourselves. Once you are prepared, report to Master Baeloth. Do not attempt to escape lest he command me to snuff out your life.~ [BPA105] */
-  IF ~~ THEN REPLY #229788 /* ~Where are we? What's going on? I demand an explanation!~ */ DO ~GiveGoldForce(2500)
+  IF ~~ THEN REPLY #229788 /* ~Where are we? What's going on? I demand an explanation!~ */ DO ~GiveGoldForce(2000)
 
 SetGlobal("BPNAJIM_DIALOG","GLOBAL",1)
 
 ~ GOTO 1
-  IF ~~ THEN REPLY #229789 /* ~Very well, I shall do as you ask.~ */ DO ~GiveGoldForce(2500)
+  IF ~~ THEN REPLY #229789 /* ~Very well, I shall do as you ask.~ */ DO ~GiveGoldForce(2000)
 
 SetGlobal("BPNAJIM_DIALOG","GLOBAL",1)
 
 ~ GOTO 4
-  IF ~~ THEN REPLY #229790 /* ~Try it, and you'll be the one who's snuffed.~ */ DO ~GiveGoldForce(2500)
+  IF ~~ THEN REPLY #229790 /* ~Try it, and you'll be the one who's snuffed.~ */ DO ~GiveGoldForce(2000)
 
 SetGlobal("BPNAJIM_DIALOG","GLOBAL",1)
 
@@ -95,7 +95,7 @@ IF ~~ THEN BEGIN 6 // from: 5.0
   SAY #229804 /* ~No. Baeloth has tasked me with giving you this reward for your outstanding performance. Take it, and prepare for your next battle.~ [BPL206] */
   IF ~ Global("BPINBG","GLOBAL",0) ~ THEN DO ~ClearAllActions()
 StartCutSceneMode()
-GiveGoldForce(20000)
+GiveGoldForce(4000)
 AddexperienceParty(21693)
 CreateVisualEffectObject("spdimndr","BPNAJIM")
 PlaySound("EFF_M13")
@@ -105,7 +105,7 @@ EndCutSceneMode()
 ~ EXIT
   IF ~ Global("BPINBG","GLOBAL",1) ~ THEN DO ~ClearAllActions()
 StartCutSceneMode()
-GiveGoldForce(20000)
+GiveGoldForce(4000)
 CreateVisualEffectObject("spdimndr","BPNAJIM")
 PlaySound("EFF_M13")
 Wait(4)
@@ -118,7 +118,7 @@ IF ~~ THEN BEGIN 7 // from: 5.1
   SAY #229805 /* ~You overestimate your abilities, <RACE>. Baeloth has tasked me with giving you this reward for your outstanding performance. Take it, and prepare for your next battle.~ [BPL207] */
   IF ~ Global("BPINBG","GLOBAL",0) ~ THEN DO ~ClearAllActions()
 StartCutSceneMode()
-GiveGoldForce(20000)
+GiveGoldForce4000)
 AddexperienceParty(21693)
 CreateVisualEffectObject("spdimndr","BPNAJIM")
 PlaySound("EFF_M13")
@@ -128,7 +128,7 @@ EndCutSceneMode()
 ~ EXIT
   IF ~ Global("BPINBG","GLOBAL",1) ~ THEN DO ~ClearAllActions()
 StartCutSceneMode()
-GiveGoldForce(20000)
+GiveGoldForce(4000)
 CreateVisualEffectObject("spdimndr","BPNAJIM")
 PlaySound("EFF_M13")
 Wait(4)
@@ -141,7 +141,7 @@ IF ~~ THEN BEGIN 8 // from: 5.2
   SAY #229806 /* ~Baeloth has tasked me with giving you this reward for your outstanding performance. Take it, and prepare for your next battle.~ [BPL208] */
   IF ~ Global("BPINBG","GLOBAL",0) ~ THEN DO ~ClearAllActions()
 StartCutSceneMode()
-GiveGoldForce(20000)
+GiveGoldForce(4000)
 AddexperienceParty(21693)
 CreateVisualEffectObject("spdimndr","BPNAJIM")
 PlaySound("EFF_M13")
@@ -151,7 +151,7 @@ EndCutSceneMode()
 ~ EXIT
   IF ~ Global("BPINBG","GLOBAL",1) ~ THEN DO ~ClearAllActions()
 StartCutSceneMode()
-GiveGoldForce(20000)
+GiveGoldForce(4000)
 CreateVisualEffectObject("spdimndr","BPNAJIM")
 PlaySound("EFF_M13")
 Wait(4)
@@ -174,11 +174,11 @@ GlobalLT("BPNAJIM_DIALOG","GLOBAL",30)
 ~ THEN BEGIN 10 // from: 
   SAY #229808 /* ~Never have I witnessed a mortal fret Baeloth so. I must confess to taking a certain pleasure in witnessing his dismay. Take this gift. I have added something extra. Perhaps you will have a better chance than Baeloth intends.~ [BPL304] */
   IF ~ Global("BPINBG","GLOBAL",0) ~ THEN REPLY #229809 /* ~What is Baeloth planning for me? What will happen if I defeat his challenges?~ */ DO ~SetGlobal("BPNAJIM_DIALOG","GLOBAL",30)
-GiveGoldForce(40000)
+GiveGoldForce(6000)
 AddexperienceParty(130896)
 ~ GOTO 11
   IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #229809 /* ~What is Baeloth planning for me? What will happen if I defeat his challenges?~ */ DO ~SetGlobal("BPNAJIM_DIALOG","GLOBAL",30)
-GiveGoldForce(40000)
+GiveGoldForce(6000)
 ~ GOTO 11
 END
 
@@ -246,7 +246,7 @@ Global("T3_B2","GLOBAL",2)
 
 ~ THEN BEGIN 13 // from: 
   SAY #229815 /* ~No, my master. I obey your every command. If anyone counsels them, I assure you it is not I.~ [BPT3B203] */
-  IF ~ Global("BPINBG","GLOBAL",0) ~ THEN DO ~GiveGoldForce(10000)
+  IF ~ Global("BPINBG","GLOBAL",0) ~ THEN DO ~GiveGoldForce(3000)
 AddexperienceParty(183254)
 SetGlobal("T3_B2","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)
@@ -256,7 +256,7 @@ StartCutSceneEx("CUTBP03",FALSE)
 Wait(2)
 Deactivate("BPNAJIM")
 ~ EXIT
-  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN DO ~GiveGoldForce(10000)
+  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN DO ~GiveGoldForce(3000)
 SetGlobal("T3_B2","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)
 SetGlobal("LAST_BATTLE","GLOBAL",302)
@@ -270,7 +270,7 @@ Deactivate("BPNAJIM")
 OR(2)
 Global("LAST_BATTLE","GLOBAL",302)
 GlobalGT("LAST_BATTLE","GLOBAL",302)
-~ THEN DO ~GiveGoldForce(5000)
+~ THEN DO ~GiveGoldForce(2000)
 AddexperienceParty(183254)
 SetGlobal("T3_B2","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)
@@ -284,7 +284,7 @@ Deactivate("BPNAJIM")
 OR(2)
 Global("LAST_BATTLE","GLOBAL",302)
 GlobalGT("LAST_BATTLE","GLOBAL",302)
-~ THEN DO ~GiveGoldForce(5000)
+~ THEN DO ~GiveGoldForce(2000)
 SetGlobal("T3_B2","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)
 SetCutSceneLite(TRUE)
@@ -328,14 +328,15 @@ GlobalLT("BPNAJIM_DIALOG","GLOBAL",50)
 
 ~ THEN BEGIN 16 // from: 
   SAY #229821 /* ~Are you ready to leave the Black Pits?~ [BPTZ104] */
-  IF ~~ THEN REPLY #229822 /* ~Najim, I'm ready to depart.~ */ DO ~SetGlobal("BLACK_PITS_VICTORY","GLOBAL",1)
-
+  IF ~Global("BPINBG","GLOBAL",0)~ THEN REPLY #229822 /* ~Najim, I'm ready to depart.~ */ DO ~SetGlobal("BLACK_PITS_VICTORY","GLOBAL",1)
 SaveGame(0)
-
 TextScreen("BPENDA")
-
 GoToStartScreen()
-
+~ EXIT
+  IF ~Global("BPINBG","GLOBAL",1)~ THEN REPLY #229822 /* ~Najim, I'm ready to depart.~ */ DO ~SetGlobal("BLACK_PITS_VICTORY","GLOBAL",1)
+ClearAllActions()
+StartCutSceneMode()
+StartCutScene("BPINBGZ") 
 ~ EXIT
   IF ~~ THEN REPLY #229823 /* ~Aren't there supposed to be three wishes or something?~ */ GOTO 17
   IF ~~ THEN REPLY #229824 /* ~Not yet, Najim.~ */ EXIT
@@ -343,14 +344,15 @@ END
 
 IF ~~ THEN BEGIN 17 // from: 16.1
   SAY #229825 /* ~Do not test my patience, mortal.~ [BPTZ105] */
-  IF ~~ THEN REPLY #229822 /* ~Najim, I'm ready to depart.~ */ DO ~SetGlobal("BLACK_PITS_VICTORY","GLOBAL",1)
-
+  IF ~Global("BPINBG","GLOBAL",0)~ THEN REPLY #229822 /* ~Najim, I'm ready to depart.~ */ DO ~SetGlobal("BLACK_PITS_VICTORY","GLOBAL",1)
 SaveGame(0)
-
 TextScreen("BPENDA")
-
 GoToStartScreen()
-
+~ EXIT
+  IF ~Global("BPINBG","GLOBAL",1)~ THEN REPLY #229822 /* ~Najim, I'm ready to depart.~ */ DO ~SetGlobal("BLACK_PITS_VICTORY","GLOBAL",1)
+ClearAllActions()
+StartCutSceneMode()
+StartCutScene("BPINBGZ") 
 ~ EXIT
   IF ~~ THEN REPLY #229826 /* ~I'll get back to you in a little while.~ */ EXIT
 END
@@ -378,14 +380,15 @@ END
 
 IF ~~ THEN BEGIN 19 // from: 
   SAY #229828 /* ~I would think that your kind would be eager to leave here. Come, let us leave this place!~ [BPTZ120] */
-  IF ~~ THEN REPLY #229829 /* ~Yes, I wish to leave.~ */ DO ~SetGlobal("BLACK_PITS_VICTORY","GLOBAL",1)
-
+  IF ~Global("BPINBG","GLOBAL",0)~ THEN REPLY #229829 /* ~Yes, I wish to leave.~ */ DO ~SetGlobal("BLACK_PITS_VICTORY","GLOBAL",1)
 SaveGame(0)
-
 TextScreen("BPENDA")
-
 GoToStartScreen()
-
+~ EXIT
+  IF ~Global("BPINBG","GLOBAL",1)~ THEN REPLY #229829 /* ~Yes, I wish to leave.~ */ DO ~SetGlobal("BLACK_PITS_VICTORY","GLOBAL",1)
+ClearAllActions()
+StartCutSceneMode()
+StartCutScene("BPINBGZ") 
 ~ EXIT
   IF ~~ THEN REPLY #229830 /* ~The duergar owe me a reward, and I will take it!~ */ EXIT
 END
