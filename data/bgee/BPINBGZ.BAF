@@ -23,6 +23,7 @@ THEN
 		AddXPObject(Player4,12500)
 		AddXPObject(Player5,12500)
 		AddXPObject(Player6,12500)
+		Deactivate("BAELOTH")
 		ActionOverride(Player1,ApplySpellRES("OHLOST",Player1))  // Find Familiar
 		EndCutSceneMode()
 END

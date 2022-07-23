@@ -118,7 +118,7 @@ IF ~~ THEN BEGIN 7 // from: 5.1
   SAY #229805 /* ~You overestimate your abilities, <RACE>. Baeloth has tasked me with giving you this reward for your outstanding performance. Take it, and prepare for your next battle.~ [BPL207] */
   IF ~ Global("BPINBG","GLOBAL",0) ~ THEN DO ~ClearAllActions()
 StartCutSceneMode()
-GiveGoldForce4000)
+GiveGoldForce(4000)
 AddexperienceParty(21693)
 CreateVisualEffectObject("spdimndr","BPNAJIM")
 PlaySound("EFF_M13")
