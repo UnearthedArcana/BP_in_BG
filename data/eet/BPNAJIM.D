@@ -95,7 +95,7 @@ IF ~~ THEN BEGIN 6 // from: 5.0
   SAY #229804 /* ~No. Baeloth has tasked me with giving you this reward for your outstanding performance. Take it, and prepare for your next battle.~ [BPL206] */
   IF ~ Global("BPINBG","GLOBAL",0) ~ THEN DO ~ClearAllActions()
 StartCutSceneMode()
-GiveGoldForce(4000)
+GiveGoldForce(20000)
 AddexperienceParty(21693)
 CreateVisualEffectObject("spdimndr","BPNAJIM")
 PlaySound("EFF_M13")
@@ -118,7 +118,7 @@ IF ~~ THEN BEGIN 7 // from: 5.1
   SAY #229805 /* ~You overestimate your abilities, <RACE>. Baeloth has tasked me with giving you this reward for your outstanding performance. Take it, and prepare for your next battle.~ [BPL207] */
   IF ~ Global("BPINBG","GLOBAL",0) ~ THEN DO ~ClearAllActions()
 StartCutSceneMode()
-GiveGoldForce(4000)
+GiveGoldForce(20000)
 AddexperienceParty(21693)
 CreateVisualEffectObject("spdimndr","BPNAJIM")
 PlaySound("EFF_M13")
@@ -141,7 +141,7 @@ IF ~~ THEN BEGIN 8 // from: 5.2
   SAY #229806 /* ~Baeloth has tasked me with giving you this reward for your outstanding performance. Take it, and prepare for your next battle.~ [BPL208] */
   IF ~ Global("BPINBG","GLOBAL",0) ~ THEN DO ~ClearAllActions()
 StartCutSceneMode()
-GiveGoldForce(4000)
+GiveGoldForce(20000)
 AddexperienceParty(21693)
 CreateVisualEffectObject("spdimndr","BPNAJIM")
 PlaySound("EFF_M13")
@@ -174,7 +174,7 @@ GlobalLT("BPNAJIM_DIALOG","GLOBAL",30)
 ~ THEN BEGIN 10 // from: 
   SAY #229808 /* ~Never have I witnessed a mortal fret Baeloth so. I must confess to taking a certain pleasure in witnessing his dismay. Take this gift. I have added something extra. Perhaps you will have a better chance than Baeloth intends.~ [BPL304] */
   IF ~ Global("BPINBG","GLOBAL",0) ~ THEN REPLY #229809 /* ~What is Baeloth planning for me? What will happen if I defeat his challenges?~ */ DO ~SetGlobal("BPNAJIM_DIALOG","GLOBAL",30)
-GiveGoldForce(6000)
+GiveGoldForce(40000)
 AddexperienceParty(130896)
 ~ GOTO 11
   IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #229809 /* ~What is Baeloth planning for me? What will happen if I defeat his challenges?~ */ DO ~SetGlobal("BPNAJIM_DIALOG","GLOBAL",30)
@@ -246,7 +246,7 @@ Global("T3_B2","GLOBAL",2)
 
 ~ THEN BEGIN 13 // from: 
   SAY #229815 /* ~No, my master. I obey your every command. If anyone counsels them, I assure you it is not I.~ [BPT3B203] */
-  IF ~ Global("BPINBG","GLOBAL",0) ~ THEN DO ~GiveGoldForce(3000)
+  IF ~ Global("BPINBG","GLOBAL",0) ~ THEN DO ~GiveGoldForce(10000)
 AddexperienceParty(183254)
 SetGlobal("T3_B2","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)
@@ -270,7 +270,7 @@ Deactivate("BPNAJIM")
 OR(2)
 Global("LAST_BATTLE","GLOBAL",302)
 GlobalGT("LAST_BATTLE","GLOBAL",302)
-~ THEN DO ~GiveGoldForce(2000)
+~ THEN DO ~GiveGoldForce(5000)
 AddexperienceParty(183254)
 SetGlobal("T3_B2","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)

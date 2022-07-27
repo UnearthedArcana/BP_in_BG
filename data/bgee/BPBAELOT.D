@@ -247,7 +247,7 @@ GlobalLT("LAST_BATTLE","GLOBAL",101)
 
 ~ THEN BEGIN 16 // from: 
   SAY #29170 /* ~Congratulations, you have slain a bunch of boozy bumblers. Najim shall ensure that you are awarded appropriately.~ [BPT1B102] */
-  IF ~ Global("BPINBG","GLOBAL",0) ~ THEN DO ~GiveGoldForce(750)
+  IF ~ Global("BPINBG","GLOBAL",0) ~ THEN DO ~GiveGoldForce(1750)
 AddexperienceParty(7300)
 SetGlobal("T1_B1","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)
@@ -281,7 +281,7 @@ SetGlobal("START_BATTLE","GLOBAL",0)
 SetCutSceneLite(TRUE)
 StartCutSceneEx("CUTBP03",FALSE)
 ~ EXIT
-  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN DO ~GiveGoldForce(875)
+  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN DO ~GiveGoldForce(575)
 SetGlobal("T1_B1","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)
 SetCutSceneLite(TRUE)
@@ -308,7 +308,7 @@ GlobalLT("LAST_BATTLE","GLOBAL",102)
 
 ~ THEN BEGIN 19 // from: 
   SAY #29172 /* ~Goodness! The look on their faces when they realized they would never again see those disgusting dens they call home. I think that deserves a bonus.~ [BPT1B202] */
-  IF ~ Global("BPINBG","GLOBAL",0) ~ THEN DO ~GiveGoldForce(1000)
+  IF ~ Global("BPINBG","GLOBAL",0) ~ THEN DO ~GiveGoldForce(2000)
 AddexperienceParty(9125)
 SetGlobal("T1_B2","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)
@@ -342,7 +342,7 @@ SetGlobal("START_BATTLE","GLOBAL",0)
 SetCutSceneLite(TRUE)
 StartCutSceneEx("CUTBP03",FALSE)
 ~ EXIT
-  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN DO ~GiveGoldForce(1000)
+  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN DO ~GiveGoldForce(600)
 SetGlobal("T1_B2","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)
 SetCutSceneLite(TRUE)
@@ -369,7 +369,7 @@ GlobalLT("LAST_BATTLE","GLOBAL",103)
 
 ~ THEN BEGIN 22 // from: 
   SAY #29174 /* ~Uncanny! You seem to have a knack for killing things that are already dead. If only you displayed a little more flair and enthusiasm for your work.~ [BPT1B302] */
-  IF ~ Global("BPINBG","GLOBAL",0) ~ THEN DO ~GiveGoldForce(1250)
+  IF ~ Global("BPINBG","GLOBAL",0) ~ THEN DO ~GiveGoldForce(2250)
 AddexperienceParty(12167)
 SetGlobal("T1_B3","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)
@@ -377,7 +377,7 @@ SetGlobal("LAST_BATTLE","GLOBAL",103)
 SetCutSceneLite(TRUE)
 StartCutSceneEx("CUTBP03",FALSE)
 ~ EXIT
-  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN DO ~GiveGoldForce(1250)
+  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN DO ~GiveGoldForce(950)
 SetGlobal("T1_B3","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)
 SetGlobal("LAST_BATTLE","GLOBAL",103)
@@ -403,7 +403,7 @@ SetGlobal("START_BATTLE","GLOBAL",0)
 SetCutSceneLite(TRUE)
 StartCutSceneEx("CUTBP03",FALSE)
 ~ EXIT
-  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN DO ~GiveGoldForce(1125)
+  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN DO ~GiveGoldForce(725)
 SetGlobal("T1_B3","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)
 SetCutSceneLite(TRUE)
@@ -430,7 +430,7 @@ GlobalLT("LAST_BATTLE","GLOBAL",104)
 
 ~ THEN BEGIN 25 // from: 
   SAY #29176 /* ~Well, you may be able to take a hit, but you certainly won't make one fighting such dull brutes. I must provide a more engaging foe for our next fracas!~ [BPT1B402] */
-  IF ~ Global("BPINBG","GLOBAL",0) ~ THEN DO ~GiveGoldForce(1500)
+  IF ~ Global("BPINBG","GLOBAL",0) ~ THEN DO ~GiveGoldForce(2500)
 AddexperienceParty(18250)
 SetGlobal("T1_B4","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)
@@ -438,7 +438,7 @@ SetGlobal("LAST_BATTLE","GLOBAL",104)
 SetCutSceneLite(TRUE)
 StartCutSceneEx("CUTBP03",FALSE)
 ~ EXIT
-  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN DO ~GiveGoldForce(1500)
+  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN DO ~GiveGoldForce(1200)
 SetGlobal("T1_B4","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)
 SetGlobal("LAST_BATTLE","GLOBAL",104)
@@ -464,7 +464,7 @@ SetGlobal("START_BATTLE","GLOBAL",0)
 SetCutSceneLite(TRUE)
 StartCutSceneEx("CUTBP03",FALSE)
 ~ EXIT
-  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN DO ~GiveGoldForce(1250)
+  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN DO ~GiveGoldForce(950)
 SetGlobal("T1_B4","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)
 SetCutSceneLite(TRUE)
@@ -495,7 +495,7 @@ GlobalLT("LAST_BATTLE","GLOBAL",105)
 SetGlobal("LAST_BATTLE","GLOBAL",105)
 SetGlobal("T1_B5","GLOBAL",-1)
 SetGlobal("TIER","GLOBAL",2)
-GiveGoldForce(1500)
+GiveGoldForce(3000)
 AddexperienceParty(18250)
 SetCutSceneLite(TRUE)
 StartCutSceneEx("CUTBP03",FALSE)
@@ -528,7 +528,7 @@ SetCutSceneLite(TRUE)
 StartCutSceneEx("CUTBP03",FALSE)
 ~ EXIT
   IF ~ Global("BPINBG","GLOBAL",1) ~ THEN DO ~SetGlobal("T1_B5","GLOBAL",-1)
-GiveGoldForce(1500)
+GiveGoldForce(1000)
 SetGlobal("START_BATTLE","GLOBAL",0)
 SetCutSceneLite(TRUE)
 StartCutSceneEx("CUTBP03",FALSE)
@@ -582,7 +582,7 @@ GlobalLT("LAST_BATTLE","GLOBAL",201)
 
 ~ THEN BEGIN 35 // from: 
   SAY #29185 /* ~After that last contest, I don't know whether to call you a gladiator or an exterminator.~ [BPT2B102] */
-  IF ~ Global("BPINBG","GLOBAL",0) ~ THEN DO ~GiveGoldForce(1500)
+  IF ~ Global("BPINBG","GLOBAL",0) ~ THEN DO ~GiveGoldForce(4000)
 AddexperienceParty(26032)
 SetGlobal("T2_B1","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)
@@ -609,14 +609,14 @@ GlobalGT("LAST_BATTLE","GLOBAL",201)
 
 ~ THEN BEGIN 36 // from: 
   SAY #29185 /* ~After that last contest, I don't know whether to call you a gladiator or an exterminator.~ [BPT2B102] */
-  IF ~ Global("BPINBG","GLOBAL",0) ~ THEN DO ~GiveGoldForce(1250)
+  IF ~ Global("BPINBG","GLOBAL",0) ~ THEN DO ~GiveGoldForce(2000)
 AddexperienceParty(26032)
 SetGlobal("T2_B1","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)
 SetCutSceneLite(TRUE)
 StartCutSceneEx("CUTBP03",FALSE)
 ~ EXIT
-  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN DO ~GiveGoldForce(1250)
+  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN DO ~GiveGoldForce(1000)
 SetGlobal("T2_B1","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)
 SetCutSceneLite(TRUE)
@@ -643,7 +643,7 @@ GlobalLT("LAST_BATTLE","GLOBAL",202)
 
 ~ THEN BEGIN 38 // from: 
   SAY #29187 /* ~Again, you prove yourself a skilled swatter of insects. Perhaps what you need are some enemies with real backbone!~ [BPT2B202] */
-  IF ~ Global("BPINBG","GLOBAL",0) ~ THEN DO ~GiveGoldForce(1500)
+  IF ~ Global("BPINBG","GLOBAL",0) ~ THEN DO ~GiveGoldForce(4500)
 AddexperienceParty(32540)
 SetGlobal("T2_B2","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)
@@ -670,7 +670,7 @@ GlobalGT("LAST_BATTLE","GLOBAL",202)
 
 ~ THEN BEGIN 39 // from: 
   SAY #29187 /* ~Again, you prove yourself a skilled swatter of insects. Perhaps what you need are some enemies with real backbone!~ [BPT2B202] */
-  IF ~ Global("BPINBG","GLOBAL",0) ~ THEN DO ~GiveGoldForce(1250)
+  IF ~ Global("BPINBG","GLOBAL",0) ~ THEN DO ~GiveGoldForce(2250)
 AddexperienceParty(32540)
 SetGlobal("T2_B2","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)
@@ -704,7 +704,7 @@ GlobalLT("LAST_BATTLE","GLOBAL",203)
 
 ~ THEN BEGIN 41 // from: 
   SAY #29189 /* ~Hmm... I didn't think you'd sidestep all those traps I instructed them to set up. You should be a pile of constituent body parts right now! Bah, take your reward and choke on it.~ [BPT2B302] */
-  IF ~ Global("BPINBG","GLOBAL",0) ~ THEN DO ~GiveGoldForce(2000)
+  IF ~ Global("BPINBG","GLOBAL",0) ~ THEN DO ~GiveGoldForce(5000)
 AddexperienceParty(44386)
 SetGlobal("T2_B3","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)
@@ -749,7 +749,7 @@ GlobalGT("LAST_BATTLE","GLOBAL",203)
 
 ~ THEN BEGIN 42 // from: 
   SAY #29189 /* ~Hmm... I didn't think you'd sidestep all those traps I instructed them to set up. You should be a pile of constituent body parts right now! Bah, take your reward and choke on it.~ [BPT2B302] */
-  IF ~ Global("BPINBG","GLOBAL",0) ~ THEN DO ~GiveGoldForce(1500)
+  IF ~ Global("BPINBG","GLOBAL",0) ~ THEN DO ~GiveGoldForce(2500)
 AddexperienceParty(44386)
 SetGlobal("T2_B3","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)
@@ -801,7 +801,7 @@ GlobalLT("LAST_BATTLE","GLOBAL",204)
 
 ~ THEN BEGIN 44 // from: 
   SAY #29191 /* ~That was hardly fair, routing your rival's reinforcements. But you have given me a great idea. What this contest needs are some fresh faces, and I have just the plan to provide some.~ [BPT2B402] */
-  IF ~ Global("BPINBG","GLOBAL",0) ~ THEN DO ~GiveGoldForce(1500)
+  IF ~ Global("BPINBG","GLOBAL",0) ~ THEN DO ~GiveGoldForce(5500)
 AddexperienceParty(65079)
 SetGlobal("T2_B4","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)
@@ -828,7 +828,7 @@ GlobalGT("LAST_BATTLE","GLOBAL",204)
 
 ~ THEN BEGIN 45 // from: 
   SAY #29191 /* ~That was hardly fair, routing your rival's reinforcements. But you have given me a great idea. What this contest needs are some fresh faces, and I have just the plan to provide some.~ [BPT2B402] */
-  IF ~ Global("BPINBG","GLOBAL",0) ~ THEN DO ~GiveGoldForce(1250)
+  IF ~ Global("BPINBG","GLOBAL",0) ~ THEN DO ~GiveGoldForce(2750)
 AddexperienceParty(65079)
 SetGlobal("T2_B4","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)
@@ -887,7 +887,7 @@ GlobalGT("LAST_BATTLE","GLOBAL",205)
 
 ~ THEN BEGIN 48 // from: 
   SAY #29193 /* ~Get. Out. Get out! GET OUT OF MY SIGHT BEFORE I BURN YOUR EYES FROM THEIR SOCKETS!~ [BPT2B502] */
-  IF ~ Global("BPINBG","GLOBAL",0) ~ THEN REPLY #229194 /* ~What happened to all the alliteration? I hope we haven't broken Baeloth.~ */ DO ~GiveGoldForce(1000)
+  IF ~ Global("BPINBG","GLOBAL",0) ~ THEN REPLY #229194 /* ~What happened to all the alliteration? I hope we haven't broken Baeloth.~ */ DO ~GiveGoldForce(3000)
 AddexperienceParty(130896)
 SetGlobal("T2_B5","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)
@@ -961,7 +961,7 @@ GlobalLT("LAST_BATTLE","GLOBAL",301)
 
 ~ THEN BEGIN 54 // from: 
   SAY #29202 /* ~Oh, this is no fun! Your neck remains unscathed and your pantaloons are rapidly drying! What a waste of good slimes...~ [BPT3B104] */
-  IF ~ Global("BPINBG","GLOBAL",0) ~ THEN DO ~GiveGoldForce(2000)
+  IF ~ Global("BPINBG","GLOBAL",0) ~ THEN DO ~GiveGoldForce(8000)
 AddexperienceParty(152712)
 SetGlobal("T3_B1","GLOBAL",-1)
 SetGlobal("LAST_BATTLE","GLOBAL",301)
@@ -978,7 +978,7 @@ END
 
 IF ~~ THEN BEGIN 55 // from: 
   SAY #29202 /* ~Oh, this is no fun! Your neck remains unscathed and your pantaloons are rapidly drying! What a waste of good slimes...~ [BPT3B104] */
-  IF ~ Global("BPINBG","GLOBAL",0) ~ THEN DO ~GiveGoldForce(2000)
+  IF ~ Global("BPINBG","GLOBAL",0) ~ THEN DO ~GiveGoldForce(8000)
 AddexperienceParty(152712)
 SetGlobal("T3_B1","GLOBAL",-1)
 SetGlobal("LAST_BATTLE","GLOBAL",301)
@@ -1003,7 +1003,7 @@ GlobalGT("LAST_BATTLE","GLOBAL",301)
 
 ~ THEN BEGIN 56 // from: 
   SAY #29202 /* ~Oh, this is no fun! Your neck remains unscathed and your pantaloons are rapidly drying! What a waste of good slimes...~ [BPT3B104] */
-  IF ~ Global("BPINBG","GLOBAL",0) ~ THEN DO ~GiveGoldForce(2000)
+  IF ~ Global("BPINBG","GLOBAL",0) ~ THEN DO ~GiveGoldForce(4000)
 AddexperienceParty(152712)
 SetGlobal("T3_B1","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)
@@ -1106,7 +1106,7 @@ GlobalLT("LAST_BATTLE","GLOBAL",303)
 
 ~ THEN BEGIN 62 // from: 
   SAY #29206 /* ~Confound it! Once more, you have anticipated my surprise! How does this keep happening?~ [BPT3B302] */
-  IF ~ Global("BPINBG","GLOBAL",0) ~ THEN DO ~GiveGoldForce(3000)
+  IF ~ Global("BPINBG","GLOBAL",0) ~ THEN DO ~GiveGoldForce(12000)
 AddexperienceParty(229068)
 SetGlobal("T3_B3","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)
@@ -1133,7 +1133,7 @@ GlobalGT("LAST_BATTLE","GLOBAL",303)
 
 ~ THEN BEGIN 63 // from: 
   SAY #29206 /* ~Confound it! Once more, you have anticipated my surprise! How does this keep happening?~ [BPT3B302] */
-  IF ~ Global("BPINBG","GLOBAL",0) ~ THEN DO ~GiveGoldForce(2000)
+  IF ~ Global("BPINBG","GLOBAL",0) ~ THEN DO ~GiveGoldForce(6000)
 AddexperienceParty(229068)
 SetGlobal("T3_B3","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)
@@ -1167,7 +1167,7 @@ GlobalLT("LAST_BATTLE","GLOBAL",304)
 
 ~ THEN BEGIN 65 // from: 
   SAY #29208 /* ~Heh huh... it appears I have miscalculated once again. I grow tired of this game. Begone, <RACE>! You are beginning to bother me.~ [BPT3B402] */
-  IF ~ Global("BPINBG","GLOBAL",0) ~ THEN DO ~GiveGoldForce(3000)
+  IF ~ Global("BPINBG","GLOBAL",0) ~ THEN DO ~GiveGoldForce(14000)
 AddexperienceParty(305423)
 SetGlobal("T3_B4","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)
@@ -1194,7 +1194,7 @@ GlobalGT("LAST_BATTLE","GLOBAL",304)
 
 ~ THEN BEGIN 66 // from: 
   SAY #29208 /* ~Heh huh... it appears I have miscalculated once again. I grow tired of this game. Begone, <RACE>! You are beginning to bother me.~ [BPT3B402] */
-  IF ~ Global("BPINBG","GLOBAL",0) ~ THEN DO ~GiveGoldForce(2000)
+  IF ~ Global("BPINBG","GLOBAL",0) ~ THEN DO ~GiveGoldForce(7000)
 AddexperienceParty(305423)
 SetGlobal("T3_B4","GLOBAL",-1)
 SetGlobal("START_BATTLE","GLOBAL",0)

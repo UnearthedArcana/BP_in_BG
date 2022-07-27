@@ -1,0 +1,257 @@
+
+DEFINE_ACTION_FUNCTION adjust_stores BEGIN
+
+//
+// add bp-in-bg versions of stores, with  fewer copies of stuff
+//
+
+COPY ~%MOD_FOLDER%/data/stores/d5bren01.sto~ ~override~
+COPY ~%MOD_FOLDER%/data/stores/d5bren02.sto~ ~override~
+COPY ~%MOD_FOLDER%/data/stores/d5bren03.sto~ ~override~
+COPY ~%MOD_FOLDER%/data/stores/d5conc01.sto~ ~override~
+COPY ~%MOD_FOLDER%/data/stores/d5conc02.sto~ ~override~
+COPY ~%MOD_FOLDER%/data/stores/d5conc03.sto~ ~override~
+COPY ~%MOD_FOLDER%/data/stores/d5devl01.sto~ ~override~
+COPY ~%MOD_FOLDER%/data/stores/d5devl02.sto~ ~override~
+COPY ~%MOD_FOLDER%/data/stores/d5devl03.sto~ ~override~
+COPY ~%MOD_FOLDER%/data/stores/d5elan01.sto~ ~override~
+COPY ~%MOD_FOLDER%/data/stores/d5elan02.sto~ ~override~
+COPY ~%MOD_FOLDER%/data/stores/d5elan03.sto~ ~override~
+COPY ~%MOD_FOLDER%/data/stores/d5gorc01.sto~ ~override~
+COPY ~%MOD_FOLDER%/data/stores/d5gorc02.sto~ ~override~
+COPY ~%MOD_FOLDER%/data/stores/d5gorc03.sto~ ~override~
+COPY ~%MOD_FOLDER%/data/stores/d5magd01.sto~ ~override~
+COPY ~%MOD_FOLDER%/data/stores/d5magd02.sto~ ~override~
+COPY ~%MOD_FOLDER%/data/stores/d5magd03.sto~ ~override~
+COPY ~%MOD_FOLDER%/data/stores/d5thar01.sto~ ~override~
+COPY ~%MOD_FOLDER%/data/stores/d5thar02.sto~ ~override~
+COPY ~%MOD_FOLDER%/data/stores/d5thar03.sto~ ~override~
+COPY ~%MOD_FOLDER%/data/stores/d5xith01.sto~ ~override~
+COPY ~%MOD_FOLDER%/data/stores/d5xith02.sto~ ~override~
+COPY ~%MOD_FOLDER%/data/stores/d5xith03.sto~ ~override~
+
+//
+// remove some high-end stuff from bp-in-bg stores
+//
+
+COPY_EXISTING ~d5bren03.sto~ ~override~
+  REMOVE_STORE_ITEM ~leat07~
+  REMOVE_STORE_ITEM ~shld28~
+
+/* this guy is fine
+COPY_EXISTING ~d5conc03.sto~ ~override~
+  REMOVE_STORE_ITEM ~~
+*/
+
+COPY_EXISTING ~d5devl03.sto~ ~override~
+  REMOVE_STORE_ITEM ~dart05~
+  REMOVE_STORE_ITEM ~bow16~
+  REMOVE_STORE_ITEM ~bow17~
+  REMOVE_STORE_ITEM ~quiver01~
+  REMOVE_STORE_ITEM ~quiver02~
+  REMOVE_STORE_ITEM ~quiver03~
+
+COPY_EXISTING ~d5elan01.sto~ ~override~
+  REMOVE_STORE_ITEM ~belt03~
+  REMOVE_STORE_ITEM ~boot03~
+  REMOVE_STORE_ITEM ~boot05~
+  REMOVE_STORE_ITEM ~brac04~
+  REMOVE_STORE_ITEM ~brac07~
+
+COPY_EXISTING ~d5elan02.sto~ ~override~
+  REMOVE_STORE_ITEM ~belt03~
+  REMOVE_STORE_ITEM ~boot01~
+  REMOVE_STORE_ITEM ~boot03~
+  REMOVE_STORE_ITEM ~boot05~
+  REMOVE_STORE_ITEM ~belt06~
+  REMOVE_STORE_ITEM ~brac07~
+  REMOVE_STORE_ITEM ~brac06~
+  REMOVE_STORE_ITEM ~clck24~
+
+COPY_EXISTING ~d5elan03.sto~ ~override~
+  REMOVE_STORE_ITEM ~belt03~
+  REMOVE_STORE_ITEM ~boot03~
+  REMOVE_STORE_ITEM ~boot05~
+  REMOVE_STORE_ITEM ~belt07~
+  REMOVE_STORE_ITEM ~brac07~
+  REMOVE_STORE_ITEM ~brac06~
+  REMOVE_STORE_ITEM ~clck24~
+  REMOVE_STORE_ITEM ~clck31~
+
+COPY_EXISTING ~d5gorc02.sto~ ~override~
+  REMOVE_STORE_ITEM ~plat02~
+
+COPY_EXISTING ~d5gorc03.sto~ ~override~
+  REMOVE_STORE_ITEM ~plat02~
+  REMOVE_STORE_ITEM ~plat05~
+  REMOVE_STORE_ITEM ~shld19~
+  REMOVE_STORE_ITEM ~shld29~
+
+COPY_EXISTING ~d5magd03.sto~ ~override~
+  REMOVE_STORE_ITEM ~ax1h03~
+  REMOVE_STORE_ITEM ~blun13~
+  REMOVE_STORE_ITEM ~blun15~
+  REMOVE_STORE_ITEM ~blun21~
+  REMOVE_STORE_ITEM ~halb03~
+  REMOVE_STORE_ITEM ~hamm03~
+  REMOVE_STORE_ITEM ~sw1h41~
+  REMOVE_STORE_ITEM ~sw1h42~
+  REMOVE_STORE_ITEM ~sw2h11~
+  REMOVE_STORE_ITEM ~sper05~
+
+COPY_EXISTING ~d5thar03.sto~ ~override~
+  REMOVE_STORE_ITEM ~dagg03~
+  REMOVE_STORE_ITEM ~staf18~
+  REMOVE_STORE_ITEM ~sw1h09~
+  REMOVE_STORE_ITEM ~sw1h23~
+  REMOVE_STORE_ITEM ~sw1h55~
+
+COPY_EXISTING ~d5xith01.sto~ ~override~
+  REMOVE_STORE_ITEM ~amul14~
+  REMOVE_STORE_ITEM ~amul16~
+  REMOVE_STORE_ITEM ~ring02~
+
+COPY_EXISTING ~d5xith02.sto~ ~override~
+  REMOVE_STORE_ITEM ~amul16~
+  REMOVE_STORE_ITEM ~amul22~
+  REMOVE_STORE_ITEM ~amul25~
+  REMOVE_STORE_ITEM ~ring05~
+  REMOVE_STORE_ITEM ~ring09~
+  REMOVE_STORE_ITEM ~ring20~
+  REMOVE_STORE_ITEM ~ring22~
+  REMOVE_STORE_ITEM ~ring34~
+  REMOVE_STORE_ITEM ~wand04~
+  REMOVE_STORE_ITEM ~wand10~
+
+COPY_EXISTING ~d5xith03.sto~ ~override~
+  REMOVE_STORE_ITEM ~amul01~
+  REMOVE_STORE_ITEM ~amul15~
+  REMOVE_STORE_ITEM ~amul16~
+  REMOVE_STORE_ITEM ~amul21~
+  REMOVE_STORE_ITEM ~ring05~
+  REMOVE_STORE_ITEM ~ring07~
+  REMOVE_STORE_ITEM ~ring09~
+  REMOVE_STORE_ITEM ~ring22~
+  REMOVE_STORE_ITEM ~ring27~
+  REMOVE_STORE_ITEM ~ring31~
+  REMOVE_STORE_ITEM ~wa2amu~
+  REMOVE_STORE_ITEM ~wand13~
+
+//
+// add iwd items to stores
+//
+
+COPY_EXISTING ~d5bren03.sto~ ~override~
+  ADD_STORE_ITEM ~usltr2a~ LAST #0 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~stout~ LAST #0 #0 #0 ~IDENTIFIED~ #1
+
+COPY_EXISTING ~d5conc03.sto~ ~override~
+  ADD_STORE_ITEM ~uspot1a~ LAST #0 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~uspot3c~ LAST #0 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~uspot4b~ LAST #0 #0 #0 ~IDENTIFIED~ #1
+
+COPY_EXISTING ~d5devl03.sto~ ~override~
+  ADD_STORE_ITEM ~ulbow3c~ LAST #0 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~uhxbw3a~ LAST #0 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~ulxbw3a~ LAST #0 #0 #0 ~IDENTIFIED~ #1
+//  ADD_STORE_ITEM ~slinged~ LAST #0 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~uarow2a~ LAST #20 #0 #0 ~IDENTIFIED~ #3
+  ADD_STORE_ITEM ~holdfst~ LAST #20 #0 #0 ~IDENTIFIED~ #3
+  ADD_STORE_ITEM ~trnbolt~ LAST #20 #0 #0 ~IDENTIFIED~ #3
+  ADD_STORE_ITEM ~force~ LAST #20 #0 #0 ~IDENTIFIED~ #3
+  ADD_STORE_ITEM ~udart3b~ LAST #20 #0 #0 ~IDENTIFIED~ #3
+  ADD_STORE_ITEM ~bardic~ LAST #5 #0 #0 ~IDENTIFIED~ #1
+  PATCH_IF (FILE_EXISTS_IN_GAME ~~) BEGIN
+    ADD_STORE_ITEM ~cittern~ LAST #0 #0 #0 ~IDENTIFIED~ #1
+  END
+  ADD_STORE_ITEM ~lyre~ LAST #0 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~mhorn~ LAST #0 #0 #0 ~IDENTIFIED~ #1
+
+COPY_EXISTING ~d5elan03.sto~ ~override~
+  PATCH_IF (FILE_EXISTS_IN_GAME ~~) BEGIN
+    ADD_STORE_ITEM ~beltbon~ LAST #0 #0 #0 ~IDENTIFIED~ #1
+  END
+  ADD_STORE_ITEM ~bootman~ LAST #0 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~bootmoa~ LAST #0 #0 #0 ~IDENTIFIED~ #1
+//  ADD_STORE_ITEM ~shboots~ LAST #0 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~ohbrac01~ LAST #0 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~clckbs~ LAST #0 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~urobe1a~ LAST #0 #0 #0 ~IDENTIFIED~ #1
+  PATCH_IF (FILE_EXISTS_IN_GAME ~~) BEGIN
+    ADD_STORE_ITEM ~cone~ LAST #5 #0 #0 ~IDENTIFIED~ #1
+  END
+  ADD_STORE_ITEM ~ohioun02~ LAST #0 #0 #0 ~IDENTIFIED~ #1
+
+COPY_EXISTING ~d5gorc03.sto~ ~override~
+  ADD_STORE_ITEM ~umhulk~ LAST #0 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~beetshld~ LAST #0 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~cdrelm~ LAST #0 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~helmpat~ LAST #0 #0 #0 ~IDENTIFIED~ #1
+
+COPY_EXISTING ~d5magd03.sto~ ~override~
+  ADD_STORE_ITEM ~erevain~ LAST #0 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~intrces~ LAST #0 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~turodah~ LAST #0 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~kreswrd~ LAST #0 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~u1ham2a~ LAST #0 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~bess~ LAST #0 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~umstr2b~ LAST #0 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~uflal2a~ LAST #0 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~zzm5mh~ LAST #0 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~fkiller~ LAST #0 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~u1hax4B~ LAST #0 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~poker~ LAST #0 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~biteme~ LAST #0 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~uhalb3a~ LAST #0 #0 #0 ~IDENTIFIED~ #1
+
+COPY_EXISTING ~d5thar03.sto~ ~override~
+  ADD_STORE_ITEM ~udagg2a~ LAST #0 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~spine~ LAST #0 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~diver~ LAST #0 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~zze6pe~ LAST #0 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~lucky~ LAST #0 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~dazer~ LAST #0 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~peaceke~ LAST #0 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~zzs6sc~ LAST #0 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~nature~ LAST #5 #5 #0 ~IDENTIFIED~ #1
+//  ADD_STORE_ITEM ~shstaf~ LAST #0 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~stafhmg~ LAST #0 #0 #0 ~IDENTIFIED~ #1
+
+COPY_EXISTING ~d5xith03.sto~ ~override~
+//  ADD_STORE_ITEM ~amulbar~ LAST #5 #0 #0 ~IDENTIFIED~ #1
+  PATCH_IF (FILE_EXISTS_IN_GAME ~~) BEGIN
+    ADD_STORE_ITEM ~amulbra~ LAST #0 #0 #0 ~IDENTIFIED~ #1
+  END
+  ADD_STORE_ITEM ~boneam~ LAST #0 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~bwtalis~ LAST #0 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~corello~ LAST #0 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~solonor~ LAST #0 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~uring3b~ LAST #0 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~wandmis~ LAST #10 #0 #0 ~IDENTIFIED~ #1
+
+//
+// replace dialogues to use these stores if bp-in-bg
+//
+
+ACTION_IF (GAME_IS ~eet~) BEGIN
+  COMPILE ~%MOD_FOLDER%/data/eet/bpbellow.d~
+  COMPILE ~%MOD_FOLDER%/data/eet/bpbrenda.d~
+  COMPILE ~%MOD_FOLDER%/data/eet/bpdevlin.d~
+  COMPILE ~%MOD_FOLDER%/data/eet/bpelan.d~
+  COMPILE ~%MOD_FOLDER%/data/eet/bpgorch.d~
+  COMPILE ~%MOD_FOLDER%/data/eet/bpmagda.d~
+  COMPILE ~%MOD_FOLDER%/data/eet/bptharde.d~
+  COMPILE ~%MOD_FOLDER%/data/eet/bpxithis.d~
+END
+ELSE BEGIN
+  COMPILE ~%MOD_FOLDER%/data/bgee/bpbellow.d~
+  COMPILE ~%MOD_FOLDER%/data/bgee/bpbrenda.d~
+  COMPILE ~%MOD_FOLDER%/data/bgee/bpdevlin.d~
+  COMPILE ~%MOD_FOLDER%/data/bgee/bpelan.d~
+  COMPILE ~%MOD_FOLDER%/data/bgee/bpgorch.d~
+  COMPILE ~%MOD_FOLDER%/data/bgee/bpmagda.d~
+  COMPILE ~%MOD_FOLDER%/data/bgee/bptharde.d~
+  COMPILE ~%MOD_FOLDER%/data/bgee/bpxithis.d~
+END
+
+END	//	end define function

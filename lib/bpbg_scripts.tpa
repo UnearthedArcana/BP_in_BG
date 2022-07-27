@@ -1,0 +1,34 @@
+
+DEFINE_ACTION_FUNCTION scripts_dialogues BEGIN
+
+//
+// replace dialogues for getting to BP and for gold/XP rewards when there
+//
+
+ACTION_IF (GAME_IS ~eet~) BEGIN
+  COMPILE ~%MOD_FOLDER%/data/eet/baeloth.d~
+  COMPILE ~%MOD_FOLDER%/data/eet/baelothp.d~
+  COMPILE ~%MOD_FOLDER%/data/eet/bpnajim.d~
+  COMPILE ~%MOD_FOLDER%/data/eet/bpbaelot.d~
+  COMPILE ~%MOD_FOLDER%/data/eet/BPINBGZ.baf~
+END
+ELSE BEGIN
+  COMPILE ~%MOD_FOLDER%/data/bgee/baeloth.d~
+  COMPILE ~%MOD_FOLDER%/data/bgee/baelothp.d~
+  COMPILE ~%MOD_FOLDER%/data/bgee/bpnajim.d~
+  COMPILE ~%MOD_FOLDER%/data/bgee/bpbaelot.d~
+  COMPILE ~%MOD_FOLDER%/data/bgee/BPINBGZ.baf~
+END
+
+COMPILE ~%MOD_FOLDER%/data/BPINBG0.baf~
+
+ACTION_IF (FILE_EXISTS_IN_GAME ~bdbaelot.dlg~) BEGIN
+  ACTION_IF (GAME_IS ~eet~) BEGIN
+    COMPILE ~%MOD_FOLDER%/data/eet/bdbaelot.d~
+  END
+  ELSE BEGIN
+    COMPILE ~%MOD_FOLDER%/data/bgee/bdbaelot.d~
+  END
+END
+
+END	//	end define function

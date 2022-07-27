@@ -13,11 +13,950 @@
 //
 @201 = ~I don't, but I would be interested in knowing that as well! I hear there are great adventures to be had there.~
 @202 = ~Ah. I am actually interested in the Underdark. I hear there are great adventures to be had there!~
-@203 = ~Riiight... um, adventures, you say? Why yes, I believe I can provide you with, er, adventures. Riches, glory, fame, that sort of thing? Cheering masses and adoring fans? Surely that's what you are interested in, yes? I have a device here which can whisk you away to such rewards. It is all very consensual, I assure you. It only works if you 'opt in.'~
+@203 = ~Riiight... um, adventures, you say? Why yes, I believe I can provide you with, er, astounding adventures! Riches, recognition, righteous reward, that sort of thing? Cheering crowds and fawning fans? Surely that's what you are interested in, yes? I have a device here which can whisk you there in the wink of an eye. It is all very consensual, I assure you. It only works if you 'opt in.'~
 @204 = ~Yes, that sounds great.~
 @205 = ~On second thought, that all sounds a bit too exciting for me. I'm not sure I'm willing to go along with you.~
-@206 = ~Fantastic! Oh, this recruiting trip was much quicker than I expected. Now be good dears and just grab hold of this perfectly harmless glowing gem. All at once, yes, that's it. And away we go!~
+@206 = ~Fantastic! Oh, this recruiting trip was much quicker than I expected. Now be a good dear and just grab hold of this perfectly harmless glowing gem. All at once, yes, that's it. And away we go!~
 @207 = ~When last we met, I think you mentioned something about adventuring in the underdark?~
-@208 = ~Why... yes! I believe I can provide you with, er, adventures. Riches, glory, fame, that sort of thing? Cheering masses and adoring fans? Surely that's what you are interested in, yes? I have a device here which can whisk you away to such rewards. It is all very consensual, I assure you. It only works if you 'opt in.'~
+@208 = ~Why... yes! I believe I can provide you with, er, astounding adventures! Riches, recognition, righteous reward, that sort of thing? Cheering crowds and fawning fans? Surely that's what you are interested in, yes? I have a device here which can whisk you there in the wink of an eye. It is all very consensual, I assure you. It only works if you 'opt in.'~
 @209 = ~~
 @210 = ~~
+//
+// IWD items
+// 
+// iwd item text
+
+@1011 = ~Barrier Amulet~
+@1012 = ~This powerful amulet was crafted by the enchanter Celemon of Calimport in 727 DR. He crafted ten such amulets on commission before jealous rivals killed him and attempted to duplicate the procedure. His colleagues were not as talented as Celemon and destroyed their laboratory and themselves when a mishap occurred. The formula was destroyed as well. This particular amulet was owned by the elven warrior-mage Pelan Rainwind. It was lost when he was killed by giants in the Spine of the World somewhere around 840 DR.
+
+STATISTICS:
+
+Charge abilities:
+– Stoneskin and Minor Globe Of Invulnerability
+  Stoneskin absorbs up to 1d4+2 physical blows; the globe prevents spells up to 3rd level from entering
+  Duration: Stoneskin lasts 8 hours; the globe lasts 8 rounds
+  Area of Effect: The user
+
+Weight: 1~
+@1021 = ~Badge of the Brave~
+@1022 = ~This simple steel amulet was consecrated by priests of Tempus for use by a warrior named Teln Graham. Teln was a powerful warrior, but he was easily unnerved in large battles. This badge, which he wore over his heart, allowed him to overcome his sudden panic attacks during important conflicts. It left Teln's possession when the Tempurans decided that he was an unredeemable coward. Teln is believed to have retired from adventuring to become a farmer.
+
+STATISTICS:
+
+Charge abilities:
+– Emotion, Courage once per day
+  Allies gain +1 to hit, +3 to damage, +5 temporary HP, and immunity to fear
+  Range: 50 ft.
+  Duration: 1 hour
+  Area of Effect: 8-ft. radius
+
+Weight: 1~
+@1031 = ~Bardic Horn of Valhalla~
+@1032 = ~This horn was created by the respected bard of a now-dead Reghed barbarian tribe. The bard was called Beogin, and his songs are sung by many of the northern tribes. He carried this horn with him when he observed many titanic battles. The chief of his tribe gave him the instrument with instructions to blow it if he was ever in mortal danger. Beogin, too proud to ever call on his tribesmen for help, was killed in battle, the horn hidden under his cloak.
+
+STATISTICS:
+
+Charge abilities:
+– Summon 2-4 berserkers once per day
+  Range: 20 ft.
+  Duration: 1 hour
+
+Weight: 1~
+@1041 = ~Rhino Beetle Shield~
+@1042 = ~This shield was crafted from the exoskeleton of a giant rhinoceros beetle. Naturally tough, it has been cured and reinforced by skilled duergar craftsmen. It looks and functions like a tower shield crafted from wood and metal, though it weighs much less.
+
+STATISTICS:
+
+Equipped abilities:
+– Armor Class: +1, an extra +1 vs. missile attacks
+
+Requires:
+ 15 Strength
+
+Weight: 8~
+@1051 = ~Belt of Bones~
+@1052 = ~This grim item was fashioned by priests of Myrkul, god of the dead. The heavy leather belt is set with metal plates and hoops that hold human bones. The original owner was a deadly warrior named Proud Keth. Keth rode across battlefields without fear, smashing whoever got in his way. On those rare occasions when he was surrounded, the belt came in handy. Unfortunately for Keth, his opponents eventually decided to take him down using polearms and long spears. When he was killed, his belt was buried with him. It was only a matter of time before thieves came to Keth's grave in order to loot it. One of the thieves sold Keth's belt to a practical mage from Urmlaspyr. The wizard, Isanan by name, found the belt to be very useful during his travels. When he retired, he sold the belt to a grateful priest of Myrkul named Ben-Karad. Ben-Karad is believed to have been killed somewhere in the sewers of Waterdeep.
+
+STATISTICS:
+
+Charge abilities:
+– Circle of Bones once per day
+  Creatures within 3 ft. of the wearer take 1d6 crushing and 1d6 slashing damage; wearer cannot move for spell duration
+  Duration: 3 rounds
+
+– Animate Dead once per day
+  Summons 1d6 skeletons or zombies
+  Range: 20 ft.
+  Duration: 8 hours
+
+Weight: 2~
+@1061 = ~Spear of Kerish +3~
+@1062 = ~This spear is of unusual construction. The haft is crystal clear and is made of some unknown material. The spearhead itself appears to be an icicle surrounded by an aura of frost. A fine mist of ice crystals surrounds the entire weapon.
+
+STATISTICS:
+
+Equipped abilities:
+– Fire Resistance: +10%
+
+Combat abilities:
+– 5% chance of dealing +1d6 cold damage
+
+THAC0: +3
+Damage: 1d8+3 (piercing)
+Speed Factor: 5
+Proficiency Type: Spear
+Type: Two-handed
+Requires:
+ 5 Strength
+
+Weight: 2~
+@1071 = ~Bone Talisman~
+@1072 = ~Bone talismans are highly coveted among practitioners of necromancy. The charm is created from a piece of bone taken from the remains of a slain vampire. Usually fashioned into a necklace or ring, the fey magic contained within the talisman enables the wearer to drain the life force from any living creature he or she touches.
+
+STATISTICS:
+
+Charge abilities:
+– Vampiric Touch once per day
+
+Weight: 3~
+@1081 = ~Boots of Many Paths~
+@1082 = ~Created by a gnomish illusionist in 931 DR, the Boots of Many Paths have been worn by a number of adventurers who have sold the items through legitimate means for many, many years. According to their maker, Weldy Baker, the boots rely not only on the power of illusion, but the power of "potential time weave cutting and microscopic changes to minutiae in the environment that have macroscopic effects."
+
+STATISTICS:
+
+Charge abilities:
+– Blur once per day
+  Armor Class +3 and Saving Throws +1
+  Duration: 7 rounds
+  Area of Effect: The wearer
+
+Weight: 4~
+@1091 = ~Boots of Moander~
+@1092 = ~These patchwork boots of red and black leather were created by cultists of Moander, an ancient god of rot and decay. The boots were used by a number of the Darkbringer's faithful when they fought against Moander's numerous foes, many of whom worshipped nature deities. The boots were last claimed by Aldarra of Chauntea, who in turn gave them to a half-elven ranger friend, Liberon Twelvetrees.
+
+STATISTICS:
+
+Equipped abilities:
+– Immunity to entanglement
+
+Weight: 4~
+@1101 = ~Black Wolf Talisman~
+@1102 = ~This crude talisman appears to be nothing more than a flat piece of stone with a wolf's paw painted on it. Despite its simple appearance, the Black Wolf Talisman contains powerful beneficial magic.
+
+STATISTICS:
+
+Equipped abilities:
+– Armor Class: +1
+– Save vs. Breath: +1
+– Cold Resistance: +10%
+– Maximum Hit Points: +10
+
+Weight: 1~
+@1111 = ~Remorhaz Shell Helm~
+@1112 = ~Crafted from chitinous scales, this heavy helmet retains some of the natural resistances of the remorhaz from which it was made.
+
+STATISTICS:
+
+Equipped abilities:
+– Protects against critical hits
+– Armor Class: +1
+– Magic Resistance: +10%
+– Magic Damage Resistance: +20%
+
+Weight: 10~
+@1121 = ~The Cittern of War~
+@1122 = ~One of the only musical instruments actively approved of by the church of Tempus, the Cittern of War was constructed by a halfling instrument maker named Relias Blackseed. Priests of Arvoreen the Defender blessed the cittern with its impressive power. Relias never intended to play his magnificent creation. He eventually sold the ruddy instrument to a bard named Gallow Deely. Gallow was a lanky, slender man often found in the company of adventurers. Though ill-suited for battle, Gallow was exceptionally gifted at putting tales of heroism to music. With the aid of the cittern, he helped the Company of Frozen Trees defeat a young green dragon in 1013 DR. His song, commemorating the occasion, was a rollicking tune called "The Fight of Green Thirteen." It is played in central and western taverns to this day.
+
+STATISTICS:
+
+Charge abilities:
+– Emotion, Courage twice per day
+  Allies receive +1 to hit, +3 to damage, +5 to temporary HP, and immunity to fear
+  Range: 0
+  Duration: 1 hour
+  Area of Effect: 7-ft. radius
+
+Weight: 3~
+@1131 = ~Cloak of Burdened Spirits~
+@1132 = ~This incredibly heavy cloak was a gift from Sister Calliana for saving the soul of the Voice of Durdel Anatha. It was originally worn by a penitent necromancer who was ashamed at how he had abused the souls of the dead. The cloak is dark gray and made of five layers of thick, heavy wool.
+
+STATISTICS:
+
+Equipped abilities:
+– Wisdom: +1
+
+Weight: 80~
+@1141 = ~Cyclocone~
+@1142 = ~Properly a hat, not a helm, the Cyclocone is a wizardly item of impressive power. The wizard Bemban of Immersea was known to be quite fond of these pointed hats both for their appearance and their power. Many wizards sought their own Cyclocones, but their distinctive appearance soon became the butt of many jokes among adventurers. Bemban grew senile in his later years, and left most of his fortune to private mages in the hope that they would continue to make his favorite magical hat.
+
+STATISTICS:
+
+Equipped abilities:
+– Armor Class: +1
+
+Charge abilities:
+– Whirlwind
+  Creates a whirlwind that deals 2d8 crushing and 2d8 slashing damage; creatures in its path must also save vs. Breath or be stunned for 2 rounds. Creatures with 2 or fewer Hit Dice are instantly killed; elementals and other huge creatures are unaffected.
+  Range: 100 ft.
+  Area of Effect: Special
+
+Weight: 1~
+@1151 = ~Symbol of Corellon Larethian~
+@1152 = ~This magical symbol of the elven god Corellon Larethian was given to many of the warriors in the Hand of the Seldarine. This symbol is a reminder of the epic battle Corellon fought against Gruumsh One-Eye. Anyone wearing this will find special focus while battling orcs.
+
+STATISTICS:
+
+Equipped abilities:
+– THAC0: +2
+
+Weight: 1~
+@1161 = ~Dazer~
+@1162 = ~A powerful weapon created by the wizard Retland of Westgate, Dazer was typically used by thugs in said wizard's employ. Despite Retland's high education, he was little more than a racketeering boss and thug. His gang, the Cobble Boys, intimidated and oppressed various neighborhoods of Westgate for a decade until a wizard in service of Tyr, Alistar Lavell, rallied his allies against Retland's cronies. When Alistar defeated Retland and his gang, he turned Dazer over to the church of Tyr, where it was given to a traveling priest.
+
+STATISTICS:
+
+Combat abilities:
+– 5% chance target is stunned for 2 rounds
+
+THAC0: +1
+Damage: 1d6+1 (crushing)
+Speed Factor: 4
+Proficiency Type: Club
+Type: One-handed
+Requires:
+ 5 Strength
+
+Weight: 3~
+@1171 = ~Spell Diver +2~
+@1172 = ~The spellsword Naradon of Thesk was known for his ability to quickly and efficiently defeat enemy mages even when outnumbered. He earned this reputation with the help of three items: potions of speed, boots of speed, and his trusted short sword, Spell Diver. Unlike many other magical weapons, Spell Diver does not have a dark, murderous history. Naradon retired from adventuring when he was thirty-two. His fondness for potions of speed caught up with him when he died of old age four years later. His only heir had no desires to be an adventurer. He sold the weapon to a known cat burglar a few years after his father's death. The sword can be recognized by the kingfisher stamped into the ricasso.
+
+STATISTICS:
+
+Equipped abilities:
+– Save vs. Spell: +1
+– Magic Resistance: +5%
+
+Combat abilities:
+– 50% of all hits nullify the target's ability to cast spells for 2 rounds
+
+THAC0: +2
+Damage: 1d6+2 (piercing)
+Speed Factor: 1
+Proficiency Type: Short Sword
+Type: One-handed
+Requires:
+ 5 Strength
+
+Weight: 1~
+@1181 = ~Erevain's Broad Sword +2~
+@1182 = ~This broad sword used to belong to Erevain Blacksheaf, a wandering elf from Evereska. It was made in 1221 DR by Evereskan Greycloaks. Erevain's sword was unusual among his people, who normally favor lighter swords.
+
+STATISTICS:
+
+Equipped abilities:
+– Save vs. Wand: +2
+– Acid Resistance: +10%
+
+THAC0: +2
+Damage: 2d4+2 (slashing)
+Speed Factor: 5
+Proficiency Type: Long Sword
+Type: One-handed
+Requires:
+ 6 Strength
+
+Weight: 4~
+@1191 = ~Faith Killer +2~
+@1192 = ~This deceptively mundane-looking battle axe has a short but strange history. According to philosophers of magic, Faith Killer was enchanted by the non-belief of its owner, the warrior Erion the Skeptic. A rarity in Faerûn, Erion was a man who denied the existence of holy magic and the gods themselves. He was known for his attempts to prove that priests were charlatans and holy magic was, in actuality, a different form of standard magic. Sages believe that Erion's intense opposition to holy men and women actually generated sympathetic magical powers in his weapon. Priests of Selûne in Westgate confiscated the axe when they killed Erion in self-defense. It is currently believed that Erion is one of the unbelievers used as a building block in Myrkul's Bone Castle.
+
+STATISTICS:
+
+Equipped abilities:
+– Magic Resistance: +5%
+
+Combat abilities:
+– 5% chance to Dispel Magic on a successful hit
+
+THAC0: +2
+Damage: 1d8+2 (slashing)
+Speed Factor: 5
+Proficiency Type: Axe
+Type: One-handed
+Requires:
+ 10 Strength
+
+Weight: 5~
+@1201 = ~Force Bullet +2~
+@1202 = ~A popular weapon among priests, Force Bullets allow the user to restrain opponents without causing excessive harm. They are particularly well liked by the churches of Helm, Eldath and Ilmater.
+
+STATISTICS:
+
+Combat abilities:
+– Target must Save vs. Spell or be enclosed by Otiluke's Resilient Sphere for 7 rounds
+
+Damage: 1d4+3 (missile)
+Launcher: Sling
+
+Weight: 0~
+@1211 = ~Holdfast Arrow +1~
+@1212 = ~Employed almost exclusively by Eldathyn rangers in the western heartlands of Faerûn, Holdfast Arrows are prized for their ability to subdue a target with little harm. The arrows are commonly used on rampaging animals but are quite effective against malicious humanoids. They are typically adorned with blue and green ribbons and flowers to show that they were created by the peacekeepers of Eldath. This makes them somewhat less effective in combat.
+
+STATISTICS:
+
+Combat abilities:
+– Hit target is entangled for 4 rounds
+
+THAC0: -1
+Damage: 1d6-1 (missile)
+Damage Type: Missile
+Launcher: Bow
+
+Weight: 0~
+@1221 = ~Intercession +1~
+@1222 = ~This long sword was crafted for the well-traveled ranger Kelhanion of Soubar in 1272. Wearing light armor and no shield, Kelhanion wanted a weapon that would protect him in combat. Intercession was made for him by an acquaintance, the wizard Peth of Elturel. The weapon itself is rather mundane in appearance, which is exactly how Kelhanion wanted it to look. It has a plain steel blade that meets a similar guard. The grip of the weapon is wrapped in dark, oiled ogre skin. The sword has a mild form of empathetic instinct, turning in the wielder's hand to impose itself in the path of melee weapons. Intercession was lost with Kelhanion when he was slaughtered by over a dozen trolls in the Trollbark Forest.
+
+STATISTICS:
+
+Equipped abilities:
+– Armor Class: +2, except vs. missile attacks
+
+THAC0: +1
+Damage: 1d8+1 (slashing)
+Speed Factor: 4
+Proficiency Type: Long Sword
+Type: One-handed
+Requires:
+ 6 Strength
+
+Weight: 4~
+@1231 = ~Kresselack's Sword +1~
+@1232 = ~Kresselack, the barbarian king, once wielded this sword to aid him in his conquest of the northern lands. It is not known, however, how he originally acquired the weapon. Most scholars believe Kresselack simply found the weapon in one of his many conquests. However, rumors do persist that the sword was the creation of some powerful wizard and was commissioned by Kresselack himself. The truth of the matter will never be known.
+
+STATISTICS:
+
+Equipped abilities:
+– Cold Resistance: +10%
+
+THAC0: +1
+Damage: 1d10+1 (slashing)
+Speed Factor: 8
+Proficiency Type: Two-handed Sword
+Type: Two-handed
+Requires:
+ 14 Strength
+
+Weight: 12~
+@1241 = ~The Lucky Scimitar +2~
+@1242 = ~This weapon was used by a well-known Zakharan gambler named Kadan Ibn-Kadur. It is believed that the blade helped Kadan win many foolish bets that he should have lost. Kadan parted with the weapon, however, when he crossed paths with the infamous Nido Ochita Inazuma in western Faerûn. Inazuma was the son of a Cormyrean knight and a Kara-Turian noblewoman. He claimed that his mother was struck by lightning twice while she was pregnant with Inazuma—once when she learned she had conceived and again immediately before she gave birth. Legends say that Inazuma was born on the edge of the Fateful Coin, the mystical method by which Tymora and Beshaba decide whether a person will have good or bad luck throughout his or her life. Sages believe that Inazuma's coin landed on edge, making him immune to the effects of weal and woe. When he came across Kadan and his scimitar, it was only a matter of time before the Zakharan gambled his scimitar and his life into Inazuma's hands.
+
+STATISTICS:
+
+Equipped abilities:
+– Luck (+1 to all rolls)
+
+Charge abilities:
+– Luck once per day
+  Range: 15 ft.
+  Duration: 3 rounds
+  Area of Effect: 1 creature
+
+THAC0: +2
+Damage: 1d8+2 (slashing)
+Proficiency Type: Scimitar/Wakizashi/Ninjatō
+Speed Factor: 4
+Type: One-handed
+Requires:
+ 8 Strength
+
+Weight: 4~
+@1251 = ~Lyre of Progression~
+@1252 = ~The Lyre of Progression was created by the bard Sedini Paletto. Sedini was a teacher of young aspiring bards during difficult times. This instrument, held close at all times, helped Sedini fight off those who would attack him or his students. When Sedini grew old, he passed it on to his best student, Galwen Alaman. Galwen continued teaching for a few years before setting out into the wilderness on a life of adventure. It is believed that he lost the lyre when he accidentally dropped it in a marsh.
+
+STATISTICS:
+
+Equipped abilities:
+– Held under the left arm, this instrument allows a Bard to memorize two extra 2nd-level spells and one extra 3rd-level spell
+
+Weight: 2~
+@1261 = ~The Merry Shorthorn~
+@1262 = ~The Merry Shorthorn was once owned by the half-elven bard Prophia Copperfire. She took the small instrument everywhere. Despite its rather meager powers, the Merry Shorthorn is among the most well-traveled magic items in Faerûn. It is believed that Prophia took it with her to a number of elemental planes, to Elysium and Baator, and from the Spine of the World to the distant reaches of Wa. It entertained pashas in Calimshan, quelled the anger of holy slayers in Zakhara, and bolstered a crew of sailors in the Sea of Fallen Stars. The Merry Shorthorn was lost when Prophia accidentally dropped it somewhere in the great desert Anauroch.
+
+STATISTICS:
+
+Charge abilities:
+– Bless once per day
+  Allies receive +1 to hit, +1 to saves vs. fear effects, and increased morale
+  Range: 0
+  Duration: 6 rounds
+  Area of Effect: 15-ft. radius
+
+Weight: 1~
+@1271 = ~Staff of Nature's Wrath +1~
+@1272 = ~A particularly militant group of Silvanite druids created this ironshod staff to mete out nature's punishment on those who defile forests and show disrespect towards druidic orders. Silvanites typically used the staff on priests of Malar and the other Gods of Fury.
+
+STATISTICS:
+
+Charge abilities:
+– Entangle (Save vs. Spell each round negates)
+  Range: Visual range of the caster
+  Duration: 1 turn
+  Area of Effect: 12-ft. radius
+
+– Flame Strike 
+  Damage: 6d8 fire (Save vs. Spell for half)
+  Range: Visual range of the caster
+  Area of Effect: 5-ft. radius
+
+THAC0: +1
+Damage: 1d6+1 (crushing)
+Speed Factor: 3
+Proficiency Type: Quarterstaff
+Type: Two-handed
+Requires:
+ 5 Strength
+
+Weight: 3~
+@1281 = ~The Flaming Fists of Lin Mei~
+@1282 = ~Lin Mei was described as a woman of exquisite beauty and a hellish temper. When her family urged her to find a husband, she issued a challenge to the men of the land: Whoever could make her yield in single combat could have her hand. The suitors gathered from all across Kara-Tur to test their skill, and although she fought with no weapons but her open hands, she bested every single one of them. Disappointed, all suitors left but one—a young man with kind eyes and a pair of gilded bracers, which he presented to her as a gift. "No one can hope to tame your passions," he said, "and those who would try will never understand your heart. May these trinkets serve as a reminder that your temper is your own and not to be controlled." Lin Mei did not marry that man, but she left home with him that day to seek adventure, and together they spent the rest of their lives in closer partnership than any husband and wife. Eventually the pair retired, and Lin Mei quietly disappeared from the annals of history. All that remains of her story are the bracers she wore, still burning with the fire of her untamed passion.
+
+STATISTICS:
+
+Combat abilities:
+– THAC0: +2 when attacking with fists
+– 25% chance of inflicting 1d2 points of fire damage when attacking with fists
+
+Charge abilities:
+– Burning Hands once per day
+
+Weight: 2~
+@1291 = ~Scarlet/Blue Ioun Stone~
+@1292 = ~Many stories have been told about Chief Geraq's rise to power within his tribe of Swivelback goblins. Some point to his talent for strategy, feeding his tribe for weeks on the spoils of a single raid, while others look to his knowledge of obscure lore. The truth is both less interesting and more: the source of Geraq's power was a strange stone, which the goblin carried everywhere he went. Where he found the stone is a mystery, as well as where it went after Geraq's mysterious disappearance, but holding it in one's hand, one can hear the whispers of Geraq's expertise sounding across the centuries. Of course, the whispers are all spoken in the language of goblins, making them more or less useless to the humanoid races; even so, the stone bestows greater knowledge on any who possess it.
+
+STATISTICS:
+
+Equipped abilities:
+– Intelligence: +1
+
+Weight: 0~
+@1301 = ~Peacekeeper +3~
+@1302 = ~A tough bartender in Westgate named Righteous Tad commissioned the creation of this weapon to deal with his rowdier patrons. Tad would normally pound the club against the bar if things got out of hand, but he frequently had to join the brawl to restore "order." He is said to have clubbed so many thieves over the head with the stick that no major criminal in Westgate could honestly claim they had never felt Peacekeeper's sting. One such criminal, a thug named Hellpin, took offense at the beating he received. Hellpin trained his dogs on Righteous Tad one foggy night. Tad managed to kill more than half of the canines before he was overborne and done in. Hellpin kept the club as a trophy in his hangout as a warning to those who might cross him.
+
+STATISTICS:
+
+THAC0: +3
+Damage: 1d6+3 (crushing)
+Speed Factor: 2
+Proficiency Type: Club
+Type: One-handed
+Requires:
+ 5 Strength
+
+Weight: 1~
+@1311 = ~Puny's Poker +3~
+@1312 = ~Puny was the smallest goblin of one of the most pathetic goblin tribes know to ever exist. Although short, he made up for his lack of height in his cleverness. During a goblin raid of a merchant caravan, he found a magic spear within one of the wagons. He took the spear and made some modifications that would inflict deeper wounds upon striking its target.
+
+STATISTICS:
+
+THAC0: +3
+Damage: 1d8+3 (piercing)
+Speed Factor: 8
+Proficiency Type: Spear
+Type: Two-handed
+Requires:
+ 5 Strength
+
+Weight: 5~
+@1321 = ~Shadowed Boots~
+@1322 = ~Upon closer inspection of these boots, the fabric seems to be made of some incorporeal material. Wearing these boots causes the user to take on an almost shadowed or ghostly appearance. Additionally, sound becomes eerily muffled, as if heard from a distance.
+
+STATISTICS:
+
+Equipped abilities:
+– Armor Class: +1
+– Move Silently: +15%
+– Hide In Shadows: +15%
+
+Weight: 5~
+@1331 = ~Staff of the Hand +3~
+@1332 = ~Made during the golden age between the elves of the Seldarine's Hand and the dwarves of Dorn's Deep. This staff was carved and shaped with the utmost care and then etched with elven runes across its length. Although most of the Hand's wizards chose not to engage in melee combat, they wielded this staff as a symbol of power and unity.
+
+STATISTICS:
+
+THAC0: +3
+Damage: 1d6+3 (crushing)
+Speed Factor: 4
+Proficiency Type: Quarterstaff
+Type: Two-handed
+Requires:
+ 5 Strength
+
+Weight: 4~
+@1341 = ~Edley's Sling +3~
+@1342 = ~The halfling warrior-rogue Edley Bramble was the owner of this fine weapon. Edley was a villain to some, but a hero to many more. Despite the fact that most halflings publicly regard Edley as a scoundrel and bad influence on halfling culture, many secretly revere and admire him. Edley's pranks and adventures among humans and elves are recorded in some of the folk songs created by Waren Blackbird.
+
+STATISTICS:
+
+THAC0: +3
+Damage: +2 (missile)
+Speed Factor: 4
+Proficiency Type: Sling
+Type: One-handed
+Requires:
+ 3 Strength
+
+Weight: 0~
+@1351 = ~Symbol of Solonor Thelandira~
+@1352 = ~This magical symbol of the elven god Solonor Thelandira was given to many of the archers in the Hand of the Seldarine. Wearing it would increase the archer's prowess to strike true on its target.
+
+STATISTICS:
+
+Equipped abilities:
+– Missile THAC0: +2
+
+Weight: 0~
+@1361 = ~Spinesheath +1~
+@1362 = ~The ghastly name of this weapon is taken from its first owner's fondness for burying it in the backs of his enemies. The long stiletto blade was designed specifically to punch through armor. The assassin Beledor of Calimport used this weapon to kill dozens of people before he succumbed to the poison of an easily bribed servant.
+
+STATISTICS:
+
+THAC0: +5
+Damage: 1d4+1 (piercing)
+Speed Factor: 1
+Proficiency Type: Dagger
+Type: One-handed
+Requires:
+ 4 Strength
+
+Weight: 1~
+@1371 = ~Staff of the Hanged Man's Glee +1~
+@1372 = ~This grim staff, of a most despicable repute, was originally carved from the wood of Dead Man's Tree: an ancient black willow that stood on the outskirts of a forgotten hamlet of the Moonshae's, from which criminals were hung. All manner of bandits, murderers, rapists, and other worthies were left dangling from its knotty limbs; and all to the delight of the gravedigger Mordigan. For Mordigan, a secret practitioner of the necromantic arts, saw ample opportunity in which to ply his trade. Interring the remains of the evil men within close proximity of the tree, Mordigan called upon the dark powers of the negative material to perform a baleful act upon the black willow. It was given a sort of semi-sentience, and the ability to feed upon the remains of those who had so recently swung from its branches. Black roots descended into rotting flesh; and alarmingly enough, the tortured visages of the slain began to appear in the twisted knots of the black willow's bole before its burning. But, to the surprise of the villagers, the potently ensorcelled staff carved by the hands of the evil Mordigan did indeed prove to be their undoing. And thus did the hanged men of Dead Man's Tree have their revenge.
+
+STATISTICS:
+
+Equipped abilities:
+– Charisma: -2
+
+Charge abilities:
+– Animate Dead three times per day
+  Summons 1d6 skeletons or zombies
+  Range: 20 ft.
+  Duration: 8 hours
+
+THAC0: +1
+Damage: 1d6+1 (crushing)
+Speed Factor: 4
+Proficiency Type: Quarterstaff
+Type: Two-handed
+Requires:
+ 5 Strength
+
+Weight: 2~
+@1381 = ~Stoutward +1~
+@1382 = ~This small shield was created as a gift from the leader of Clan Battlehammer to one of his trusted servants. The servant, Wurdar Stoutbrew, protected the clan leader's family from being killed and eaten by yeti. Wurdar wore the shield proudly for ten years before he was killed by orcs in the Spine of the World. His sacrifice allowed a few key members of the Battlehammer clan to escape to safety.
+
+STATISTICS:
+
+Equipped abilities:
+– Armor Class: +2
+– No protection against missile attacks
+
+Requires:
+ 4 Strength
+
+Weight: 4~
+@1391 = ~Tranquil Bolt +1~
+@1392 = ~These crossbow bolts are easy for magic scholars to recognize because of their purpose and their colorful decoration. The infamous Band of the Key was a group of occultist fighters who dedicated themselves to taking evil magical texts out of the hands of those who would use them to cause harm. The Band favored using crossbows over bows for their ability to remain cocked and ready for long periods of time. The leader of the Band, a thin, mustachioed man named Heglyf, enlisted some Deneirrath priests to craft these special bolts in large quantities. They can be easily recognized by their distinctive yellow and green fletching.
+
+STATISTICS:
+
+Combat abilities:
+– Hit target is silenced (Save vs. Spell negates)
+
+THAC0: +1
+Damage: 1d8+1 (missile)
+Launcher: Crossbow
+
+Weight: 0~
+@1401 = ~Turodahel +2~
+@1402 = ~Crafted in 1021 DR for the warrior Makael the Lean, Turodahel has a bloody military history. Makael was a mercenary who sold his services to anyone with the right amount of coin. Shrewd and crafty by reputation, Makael applied his skills and the power of Turodahel carefully for over three decades. It wasn't until after Makael died of a magical disease that legends about the man started to spring up. It is believed by modern sages that Makael is likely to have killed over five hundred men with his sword over the years. It was widely known that Makael was neither especially strong nor tough. People assumed that it must have been the power of the sword that made his deeds possible. Makael's grave was robbed within a few years of his burial.
+
+For the next few decades, warriors and thieves from all over the Moonsea and Dalelands schemed and murdered to get hold of Makael's legendary sword. One priest of Bane, curious about the sword's powers, stole Makael's skull for divination. When questioned about the magical abilities of the weapon, Makael's spirit answered from beyond the grave with one word, "turodahel." The Banite searched through his books for months before he discovered the origins of the word in a Netherese lexicon. Roughly translated, "turodahel" is a compound noun meaning "the power of discretion."
+
+STATISTICS:
+
+Equipped abilities:
+– Intelligence: +1
+
+THAC0: +2
+Damage: 1d8+2 (slashing)
+Speed Factor: 3
+Proficiency Type: Long Sword
+Type: One-handed
+Requires:
+ 6 Strength
+
+Weight: 5~
+@1411 = ~Sanctified War Hammer +1~
+@1412 = ~Like others of its type, this war hammer is made entirely of steel, with a bone-crushing hammer mounted upon an eighteen-inch shaft. It has also been bestowed with a small number of magical properties, however, making it more effective in combat. 
+
+STATISTICS:
+
+Equipped abilities:
+– Can cast one extra 1st-level priest spell
+
+THAC0: +1
+Damage: 1d4+2 (crushing)
+Speed Factor: 3
+Proficiency Type: War Hammer
+Type: One-handed
+Requires:
+ 9 Strength
+
+Weight: 6~
+@1421 = ~Hammer Arrow~
+@1422 = ~Besides its superb craftsmanship, tiny runes of power can be seen etched all along the surface. It's obvious a lot of time and effort went into its creation, and although not apparent at first, a slight blue glow can be seen emanating from the runes.
+
+STATISTICS:
+
+Damage: 1d2, +1d6 crushing damage
+Damage Type: Missile
+Launcher: Bow
+
+Weight: 0~
+@1431 = ~Static Dagger +1~
+@1432 = ~Like most typical daggers, this dagger has a pointed, double-edged blade. It has also been imbued with magical abilities which have increased its usefulness. 
+
+STATISTICS:
+
+Combat abilities:
+– 50% chance of dealing +1d3 electrical damage
+
+THAC0: +1
+Damage: 1d4+1 (piercing)
+Speed Factor: 2 
+Proficiency Type: Dagger
+Type: One-handed
+Requires:
+ 3 Strength
+
+Weight: 1~
+@1441 = ~Blinding Dart +2~
+@1442 = ~The dart is a small, easily concealable missile weapon that is thrown rather than fired from a bow or other launcher. Tiny silver runes have been carved into the surface to enhance the performance of these darts.
+
+STATISTICS:
+
+Combat abilities:
+– 25% chance target is blinded for 2 rounds
+
+THAC0: +2
+Damage: 1d3+2 (missile)
+Speed Factor: 2
+Proficiency Type: Dart
+Type: One-handed
+
+Weight: 0~
+@1451 = ~Crooked Flail +1~
+@1452 = ~The flail is a sturdy wooden handle attached to an iron rod, a wooden rod with spikes, or a spiked iron ball. Between the handle and its implement is either a hinge or chain link. The weapon was originally used as a tool for threshing grain.
+
+STATISTICS:
+
+Combat abilities:
+– 50% chance of dealing +1d4 piercing damage
+
+THAC0: +1
+Damage: 1d6+2 (crushing)
+Speed Factor: 7
+Proficiency Type: Flail/Morning Star
+Type: One-handed
+Requires:
+ 11 Strength
+
+Weight: 15~
+@1461 = ~Halberd +1: Defender~
+@1462 = ~Like others of its type, this halberd consists of a cleaver-like axe blade mounted on a staff approximately six feet in length. It has also been bestowed with a small number of magical properties, however, thus making it more effective in combat. Its keen blade, for instance, will shear through your opponent's flesh to find the bone while its barbed tip will seek out gaps in their armor.
+
+STATISTICS:
+
+Equipped abilities:
+– Armor Class: +1
+– Piercing Resistance: +10%
+– Slashing Resistance: +10%
+
+THAC0: +1
+Damage: 1d10+1 (piercing)
+Speed Factor: 8
+Proficiency Type: Halberd
+Type: Two-handed
+Requires:
+ 13 Strength
+
+Weight: 14~
+@1471 = ~Heavy Crossbow of Defense +2~
+@1472 = ~A crossbow is a bow mounted crosswise on a wooden or metal shaft, the latter called a tiller. The bow is usually made of ash or yew. The crossbow fires a quarrel (also called a bolt). A slight blue glow can be seen emanating from the crossbar.
+
+STATISTICS:
+
+Equipped abilities:
+– Armor Class: +1
+– Missile Resistance: +10%
+
+THAC0: +4
+Damage: +4 (missile)
+Speed Factor: 9
+Proficiency Type: Crossbow
+Type: Two-handed
+Requires:
+ 11 Strength
+
+Weight: 12~
+@1481 = ~Longbow of Action +2~
+@1482 = ~The longbow is similar to the shortbow, except that the staff is about as tall as the archer is, usually six to six-and-a-half feet. It has better range and accuracy than the shortbow, but a slower Speed Factor. This one has been enhanced with magical properties, giving it an air of perfection.
+
+STATISTICS:
+
+Equipped abilities:
+– Dexterity: +1
+
+THAC0: +3
+Damage: +2 (missile)
+Speed Factor: 6
+Proficiency Type: Longbow
+Type: Two-handed
+Requires:
+ 12 Strength
+
+Weight: 3~
+@1491 = ~Light Crossbow of Defense +2~
+@1492 = ~A crossbow is a bow mounted crosswise on a wooden or metal shaft, the latter called a tiller. The bow is usually made of ash or yew. The crossbow fires a quarrel (also called a bolt). A slight blue glow can be seen emanating from the crossbar.
+
+STATISTICS:
+
+Equipped abilities:
+– Armor Class: +1
+– Missile Resistance: +10%
+
+THAC0: +4
+Damage: +2 (missile)
+Speed Factor: 5
+Proficiency Type: Crossbow
+Type: Two-handed
+Requires:
+ 8 Strength
+
+Weight: 7~
+@1501 = ~Umber Hulk Plate~
+@1502 = ~The hard plates that protect umber hulks are reasonably easy to craft into humanoid armor. This dark suit of armor was fashioned into plate mail by duergar smiths. The dark dwarves, skilled in handling umber hulk exoskeletons, cured and reinforced the armor.
+
+STATISTICS:
+
+Armor Class: 2 (-2 vs. slashing)
+
+Requires:
+ 12 Strength
+
+Weight: 40~
+@1511 = ~Lesser Static Star +1~
+@1512 = ~The morning star is a wooden shaft topped with a metal head covered by a spiked iron sheath. Morning stars have an overall length of about four feet. This particular one is mounted with a golden head that has been magically enhanced so as to improve performance and escape the malleability of gold.
+
+STATISTICS:
+
+Combat abilities:
+– 50% chance of dealing +1d3 electrical damage
+– 10% chance target is stunned for 3 seconds
+
+THAC0: +1
+Damage: 2d4+1 (crushing)
+Speed Factor: 6
+Proficiency Type: Flail/Morning Star
+Type: One-handed
+Requires:
+ 11 Strength
+
+Weight: 10~
+@1521 = ~Ring of Strength~
+@1522 = ~A ring is a small band of precious metal that is used as jewelry. Some rare rings have had enchantments placed upon them that confer various magical abilities. These rings are highly sought after, especially by those of the adventuring profession. For no apparent reason, this ring feels warm to the touch.
+
+STATISTICS:
+
+Equipped abilities:
+– Strength: +1
+– Dexterity: -1
+
+Weight: 0~
+@1531 = ~Robe of Enfusing~
+@1532 = ~Since the age of Netheril, mages have learned to bestow a wide variety of magical properties upon the everyday objects that surround them. A favorite item of such enchantment is the common robe. It is lightweight, affordable, and holds its enchantment well, thereby making it ideal equipment for a mage. Due to their magical heritage, however, only single-, dual-, and multi-class mages may wear these enchanted robes.
+
+STATISTICS:
+
+Equipped abilities:
+– Armor Class: +2
+– Magic Resistance: +5%
+– Lore: +5
+– Can cast one extra 1st-level wizard spell
+
+Weight: 4~
+@1541 = ~Reinforced Leather +1~
+@1542 = ~Studded leather armor has little in common with normal leather armor. While leather armor is a hardened shell, studded leather armor is soft and supple with hundreds of metal rivets affixed. The rivets are so close together that they form a flexible coating of hard metal that turns aside slashing and cutting attacks. The soft leather backing is little more than a means of securing the rivets in place.
+
+STATISTICS:
+
+Equipped abilities:
+– Crushing Resistance: +35%
+
+Armor Class: 6 (5 vs. piercing and missile, 4 vs. slashing)
+Requires:
+ 6 Strength
+
+Weight: 15~
+@1551 = ~Potion of Action Transference~
+@1552 = ~Potions are typically found in ceramic, crystal, glass, or metal flasks or vials. Flasks or other containers generally contain enough fluid to provide one person with one complete dose to achieve the effects of the potion. 
+
+STATISTICS:
+
+Charisma: +1
+Dexterity: -1
+Duration: Permanent
+
+Weight: 1~
+@1561 = ~Potion of Strength Transference~
+@1562 = ~Potions are typically found in ceramic, crystal, glass, or metal flasks or vials. Flasks or other containers generally contain enough fluid to provide one person with one complete dose to achieve the effects of the potion. 
+
+STATISTICS:
+
+Dexterity: +1
+Strength: -1
+Duration: Permanent
+
+Weight: 1~
+@1571 = ~Potion of Life Transference~
+@1572 = ~Potions are typically found in ceramic, crystal, glass, or metal flasks or vials. Flasks or other containers generally contain enough fluid to provide one person with one complete dose to achieve the effects of the potion. 
+
+STATISTICS:
+
+Strength: +1
+Constitution: -1
+Duration: Permanent
+
+Weight: 1~
+@1581 = ~Pemby's Wand of Many Missiles~
+@1582 = ~Merry by reputation and promiscuous by nature, the half-elven enchantress Pemby Cloudsilk created a great number of wands and staves in her time on Faerûn. Pemby kept this wand for herself for personal protection. When she was killed by a jealous lover in 1103 DR, she left the wand to one of her many other suitors, the thief Tamlock of Waterdeep. Tamlock avenged Pemby's death several years later when he killed her murderer with an imperceptibly poisoned blade in a duel.
+
+STATISTICS:
+
+Charge abilities:
+– Magic Missile
+  Creates 3 missiles, each inflicting 1d4+1 magic damage
+  Range: 70 ft.
+  Area of Effect: 1 creature
+
+Requires:
+ 9 Intelligence
+
+Weight: 1~
+@1591 = ~Pig's Eye +2~
+@1592 = ~A beautiful weapon with a mocking name, Pig's Eye is an elven blade dedicated to the slaying of orcs. Although its proper name is Gruumshacan, most people who know of the blade refer to it as Pig's Eye. The name is an allusion to the fateful blow which Corellon Larethian, patron of the elven race, inflicted upon Gruumsh, head of the orc pantheon. The glass-encased orc eye that rests in the hilt makes it easy to recognize.
+
+The blade was crafted in 239 DR by an elven enchanter and weaponsmith named Shenarr Caith. After he had finished imbuing the weapon with its power, he gave it to his cousin, the ranger Velaic Caith, who put it to extensive use against orcs near Cormanthyr. His son, Tredain, and his grandson, Galesic, also employed the blade for hundreds of years without misfortune. Eventually, the Caith family decided to make the long migration to Evermeet. As Gruumshacan was not the family's moonblade, the Caiths decided to trade the weapon for some of the funds necessary to transform their ancient uncle Shenarr into a baelnorn. The last recorded remarks from Shenarr indicate that he was more than slightly amused at how the little blade had helped him defy death.
+
+STATISTICS:
+
+Combat abilities:
+– 50% of all hits blind orcs for 8 seconds
+
+THAC0: +2, +4 vs. orcs
+Damage: 1d6+2, +4 vs. orcs
+Damage Type: Piercing
+Speed Factor: 1
+Proficiency Type: Short Sword
+Type: One-handed
+Requires:
+ 5 Strength
+
+Weight: 3~
+@1601 = ~Misery's Herald +3~
+@1602 = ~This flail was consecrated by priests of the great orc god Gruumsh for use against the various elven and dwarven foes that his armies fought against. It was held by the high priest of the Bone Legion until he fell while leading his people against the elven forces at the Hand of the Seldarine. The flail is simple in design. The shaft is crafted to resemble an elven femur and wrapped in tanned elf skin. A stout chain connects the shaft to a spiked ball. The entire creation is forged out of meteoric iron. It is a testament to the potential of orcish craftsmanship.
+
+STATISTICS:
+
+Combat abilities:
+– 10% chance hit target will panic for 4 rounds (Save vs. Spell negates)
+– Can strike creatures that require cold iron to hit
+
+THAC0: +3, +4 vs. elves
+Damage: 1d6+4, +5 vs. elves
+Damage Type: Crushing
+Speed Factor: 5
+Proficiency Type: Flail/Morning Star
+Type: One-handed
+Requires:
+ 13 Strength
+
+Weight: 13~
+@1611 = ~Spider Crusher of Doom +2~
+@1612 = ~This weapon was made by a halfling priest of Brandobaris who was terribly afraid of spiders. The halfling's name was Caligope, and his greatest enemy was an evil elven wizard named Eil-Makar. The wizard's tower was surrounded by a hedge maze filled with giant spiders. The elf's tower was also filled with a variety of abnormal spiders. For over a year, Caligope refused to even look at the tower. Eventually, he decided to construct a club to deal with his fear. The resulting weapon was named the Evil Spider Crusher of Doom. Caligope succeeded in his quest to rob Eil-Makar blind, and he left dozens of dead spiders in his wake.
+
+STATISTICS:
+
+THAC0: +2, +4 vs. spiders
+Damage: 1d6+2, +4 vs. spiders
+Damage Type: Crushing
+Speed Factor: 3
+Proficiency Type: Club
+Type: One-handed
+Requires:
+ 5 Strength
+
+Weight: 2~
+@1621 = ~Benorg's Truth +3~
+@1622 = ~Besides its superb craftsmanship, tiny runes of power can be seen etched all along the surface. It's obvious a lot of time and effort went into its creation, and although not apparent at first, a slight blue glow can be seen emanating from the runes.
+
+STATISTICS:
+
+Equipped abilities:
+– Armor Class: +1
+
+Combat abilities:
+– 10% chance target is stunned for 4 seconds
+
+THAC0: +3
+Damage: 1d8+3 (slashing)
+Speed Factor: 4
+Proficiency Type: Axe
+Type: One-handed
+Requires:
+ 10 Strength
+
+Weight: 7~
+@1631 = ~Patriot Helm~
+@1632 = ~This helm was worn by the dwarven warrior Danel Silverfrost, king and martyr of the lost dwarven city-state of Silverrock. Danel's deeds are not as well known as those of many other heroic dwarves, but that is perhaps because his kingdom died with him. His nation suffered heavy losses when trolls and giants attacked it over a thousand years ago in the nearly forgotten "War of Curdling Blood." The war between the tribes of monsters and the kingdom of Silverrock was waged over fifteen years. Danel never attempted to flee his kingdom, seek the aid of neighboring countries, or abandon his people. Despite the fact that many of his subjects did indeed flee, Danel remained in Silverrock until the very end. Before the final battle of the terrible war, Danel told his people, "When ye see this plume on me head fall, I want ye to make sure that our people don't bow, like gold, but that they break, like iron." 
+
+Almost as soon as the battle was joined, Danel charged to the front of the fray and leapt into the talons of a dozen trolls. The moment his plume disappeared from sight, every man, woman, and child remaining in Silverrock poured out of the fortified caverns and dragged down as many trolls and giants as they could. Barrels of flaming oil were dumped all over Danel's palace and the common areas of the city, consuming as many dwarves as trolls and terrible frost giants. In the end, the monsters had achieved a Pyrrhic victory. The dwarven city was a smoldering ruin from which little treasure, no slaves, and no food could be taken. Many trolls died of starvation that winter, and when they turned on their giant allies for sustenance, the entire army fell into disarray forever.
+
+STATISTICS:
+
+Equipped abilities:
+– Armor Class: +2
+
+Weight: 4~
+@1641 = ~The Love of Black Bess +3~
+@1642 = ~This fell weapon was crafted by a beautiful and cruel wizardess who worshipped the lady of misfortune, Beshaba. Her name was Redani, and she was known both for her powers as an enchanter and a seductress. The Love of Black Bess was always given to her favored consort at any particular time. Unknown to her lovers, she would place a Ring of Readiness on the mace, saving the matching ring for a special time. When she grew tired of her consorts, as she always did, she would give the matching ring to a new lover and send the young man out to kill her old paramour. The new lover would simply call upon the ring and the mace would fly to his hand. 
+
+Unfortunately, Redani was done in when she trusted the wrong man to kill her old lover. Gural of Chessenta, a well-disguised priest of Hoar, took it upon himself to gain vengeance for a man whose skull he had picked up by the side of a road. Unluckily for Redani, priests of Hoar will go to any length to avenge the dead, even if it means animating all of her dead lovers to tear her limb from limb.
+
+STATISTICS:
+
+Combat abilities:
+– 10% of all hits cause the target to lose 4 points of luck
+
+THAC0: +3
+Damage: 1d6+4 (crushing)
+Speed Factor: 5
+Proficiency Type: Mace
+Type: One-handed
+Requires:
+ 10 Strength
+
+Weight: 7~
+//
+//
+
