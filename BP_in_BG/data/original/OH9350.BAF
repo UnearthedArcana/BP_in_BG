@@ -1,0 +1,799 @@
+IF
+	Delay(5)
+	Global("BPISDEAD","OH9350",0)
+	!StoryModeOn()
+	OR(2)
+		!HPGT(Player1,1)
+		Allegiance(Player1,EVILBUTBLUE)
+	OR(2)
+		!HPGT(Player2,1)
+		Allegiance(Player2,EVILBUTBLUE)
+	OR(2)
+		!HPGT(Player3,1)
+		Allegiance(Player3,EVILBUTBLUE)
+	OR(2)
+		!HPGT(Player4,1)
+		Allegiance(Player4,EVILBUTBLUE)
+	OR(2)
+		!HPGT(Player5,1)
+		Allegiance(Player5,EVILBUTBLUE)
+	OR(2)
+		!HPGT(Player6,1)
+		Allegiance(Player6,EVILBUTBLUE)
+THEN
+	RESPONSE #100
+		SetGlobal("BPISDEAD","OH9350",1)
+		GameOver(-1)  // No such index
+END
+
+IF
+	!StoryModeOn()
+	HPLT(Player1,2)
+	OR(3)
+		StateCheck(Player1,STATE_CHARMED)
+		StateCheck(Player1,STATE_PANIC)
+		StateCheck(Player1,STATE_BERSERK)
+THEN
+	RESPONSE #100
+		ActionOverride(Player1,ApplySpell(Myself,FORCE_DISPEL_MAGIC))  // SPIN866.SPL (Dispel Magic)
+		ActionOverride(Player1,MakeUnselectable(5000))
+		ActionOverride(Player1,ChangeEnemyAlly(Myself,NOTGOOD))
+		ActionOverride(Player1,PlayDeadInterruptable(9999))
+		Continue()
+END
+
+IF
+	!StoryModeOn()
+	HPLT(Player2,2)
+	OR(3)
+		StateCheck(Player2,STATE_CHARMED)
+		StateCheck(Player2,STATE_PANIC)
+		StateCheck(Player2,STATE_BERSERK)
+THEN
+	RESPONSE #100
+		ActionOverride(Player2,ApplySpell(Myself,FORCE_DISPEL_MAGIC))  // SPIN866.SPL (Dispel Magic)
+		ActionOverride(Player2,MakeUnselectable(5000))
+		ActionOverride(Player2,ChangeEnemyAlly(Myself,NOTGOOD))
+		ActionOverride(Player2,PlayDeadInterruptable(9999))
+		Continue()
+END
+
+IF
+	!StoryModeOn()
+	HPLT(Player3,2)
+	OR(3)
+		StateCheck(Player3,STATE_CHARMED)
+		StateCheck(Player3,STATE_PANIC)
+		StateCheck(Player3,STATE_BERSERK)
+THEN
+	RESPONSE #100
+		ActionOverride(Player3,ApplySpell(Myself,FORCE_DISPEL_MAGIC))  // SPIN866.SPL (Dispel Magic)
+		ActionOverride(Player3,MakeUnselectable(5000))
+		ActionOverride(Player3,ChangeEnemyAlly(Myself,NOTGOOD))
+		ActionOverride(Player3,PlayDeadInterruptable(9999))
+		Continue()
+END
+
+IF
+	!StoryModeOn()
+	HPLT(Player4,2)
+	OR(3)
+		StateCheck(Player4,STATE_CHARMED)
+		StateCheck(Player4,STATE_PANIC)
+		StateCheck(Player4,STATE_BERSERK)
+THEN
+	RESPONSE #100
+		ActionOverride(Player4,ApplySpell(Myself,FORCE_DISPEL_MAGIC))  // SPIN866.SPL (Dispel Magic)
+		ActionOverride(Player4,MakeUnselectable(5000))
+		ActionOverride(Player4,ChangeEnemyAlly(Myself,NOTGOOD))
+		ActionOverride(Player4,PlayDeadInterruptable(9999))
+		Continue()
+END
+
+IF
+	!StoryModeOn()
+	HPLT(Player5,2)
+	OR(3)
+		StateCheck(Player5,STATE_CHARMED)
+		StateCheck(Player5,STATE_PANIC)
+		StateCheck(Player5,STATE_BERSERK)
+THEN
+	RESPONSE #100
+		ActionOverride(Player5,ApplySpell(Myself,FORCE_DISPEL_MAGIC))  // SPIN866.SPL (Dispel Magic)
+		ActionOverride(Player5,MakeUnselectable(5000))
+		ActionOverride(Player5,ChangeEnemyAlly(Myself,NOTGOOD))
+		ActionOverride(Player5,PlayDeadInterruptable(9999))
+		Continue()
+END
+
+IF
+	!StoryModeOn()
+	HPLT(Player6,2)
+	OR(3)
+		StateCheck(Player6,STATE_CHARMED)
+		StateCheck(Player6,STATE_PANIC)
+		StateCheck(Player6,STATE_BERSERK)
+THEN
+	RESPONSE #100
+		ActionOverride(Player6,ApplySpell(Myself,FORCE_DISPEL_MAGIC))  // SPIN866.SPL (Dispel Magic)
+		ActionOverride(Player6,MakeUnselectable(5000))
+		ActionOverride(Player6,ChangeEnemyAlly(Myself,NOTGOOD))
+		ActionOverride(Player6,PlayDeadInterruptable(9999))
+		Continue()
+END
+
+IF
+	Global("OH9350_ENTERED","OH9350",0)
+THEN
+	RESPONSE #100
+		Explore()
+		SetGlobal("OH9350_ENTERED","OH9350",1)
+		CreateCreatureEffect("BPREFF01","",[603.538],S)  // Referee - No such index
+		CreateCreatureEffect("BPREFF01","",[443.391],S)  // Referee - No such index
+		CreateCreatureEffect("BPREFF01","",[382.634],S)  // Referee - No such index
+		CreateCreatureEffect("BPREFF01","",[805.644],S)  // Referee - No such index
+		CreateCreatureEffect("BPREFF01","",[802.412],S)  // Referee - No such index
+		CreateCreatureEffect("BPNAJIM","",[616.368],S)  // Najim
+		Deactivate("BPNAJIM")  // Najim
+		TriggerActivation("GREASETRAP",FALSE)
+		TriggerActivation("ARROWTRAP1",FALSE)
+		TriggerActivation("ARROWTRAP2",FALSE)
+		TriggerActivation("ARROWTRAP3",FALSE)
+		TriggerActivation("ARROWTRAP4",FALSE)
+		TriggerActivation("ARROWTRAP5",FALSE)
+		TriggerActivation("ARROWTRAP6",FALSE)
+		TriggerActivation("STINKYTRAP",FALSE)
+		TriggerActivation("JERKTRAP",FALSE)
+		Continue()
+END
+
+IF
+	Global("BAELOT_INIT_BATTLE","GLOBAL",0)
+	Global("START_BATTLE","GLOBAL",2)
+	OR(6)
+		AreaCheckObject("OH9350",Player1)
+		AreaCheckObject("OH9350",Player2)
+		AreaCheckObject("OH9350",Player3)
+		AreaCheckObject("OH9350",Player4)
+		AreaCheckObject("OH9350",Player5)
+		AreaCheckObject("OH9350",Player6)
+THEN
+	RESPONSE #100
+		FadeToColor([1.0],0)
+		MoveViewObject("BPBAELOT",INSTANT)  // Baeloth
+		StartCutSceneMode()
+		Wait(2)
+		ActionOverride("BPBAELOT",FaceObject(Player1))
+		FadeFromColor([80.0],0)
+		SmallWait(60)
+		EndCutSceneMode()
+		ActionOverride("BPBAELOT",StartDialogueNoSet(Player1))
+		SetGlobal("BAELOT_INIT_BATTLE","GLOBAL",1)
+		SetMasterArea("OH9350")
+		MultiPlayerSync()
+END
+
+IF
+	OR(6)
+		AreaCheckObject("OH9350",Player1)
+		AreaCheckObject("OH9350",Player2)
+		AreaCheckObject("OH9350",Player3)
+		AreaCheckObject("OH9350",Player4)
+		AreaCheckObject("OH9350",Player5)
+		AreaCheckObject("OH9350",Player6)
+	Global("START_BATTLE","GLOBAL",3)
+THEN
+	RESPONSE #100
+		SetGlobal("START_BATTLE","GLOBAL",4)
+		SetGlobal("BP_HOSTILE","GLOBAL",5)
+		SetGlobal("BATTLE_COMPLETE","GLOBAL",0)
+		PlaySound("EFF_E07")
+		CreateVisualEffectObject("spdimndr","BPBAELOT")  // Baeloth
+		Wait(4)
+		Deactivate("BPBAELOT")  // Baeloth
+END
+
+IF
+	OR(6)
+		AreaCheckObject("OH9350",Player1)
+		AreaCheckObject("OH9350",Player2)
+		AreaCheckObject("OH9350",Player3)
+		AreaCheckObject("OH9350",Player4)
+		AreaCheckObject("OH9350",Player5)
+		AreaCheckObject("OH9350",Player6)
+	Global("START_BATTLE","GLOBAL",5)
+	Global("BATTLE_COMPLETE","GLOBAL",0)
+	!AreaCheckAllegiance(ENEMY)
+THEN
+	RESPONSE #100
+		SetGlobal("BAELOT_INIT_BATTLE","GLOBAL",0)
+		SetGlobal("BATTLE_COMPLETE","GLOBAL",1)
+		Continue()
+END
+
+IF
+	Global("T0_B2","GLOBAL",1)
+	Global("START_BATTLE","GLOBAL",4)
+THEN
+	RESPONSE #100
+		StartCutSceneMode()
+		CreateCreature("BPGIBB03",[473.453],SSW)  // Healthy Gibberling
+		CreateVisualEffect("spsdimpa",[473.453])
+		CreateCreature("BPGIBB03",[475.455],SSW)  // Healthy Gibberling
+		CreateVisualEffect("spsdimpa",[475.455])
+		CreateCreature("BPGIBB03",[478.458],SSW)  // Healthy Gibberling
+		CreateVisualEffect("spsdimpa",[478.458])
+		CreateCreature("BPGIBB03",[479.450],SSW)  // Healthy Gibberling
+		CreateVisualEffect("spsdimpa",[479.450])
+		CreateCreature("BPGIBB03",[470.440],SSW)  // Healthy Gibberling
+		CreateVisualEffect("spsdimpa",[470.440])
+		CreateCreature("BPGIBB03",[471.445],SSW)  // Healthy Gibberling
+		CreateVisualEffect("spsdimpa",[471.445])
+		CreateCreature("BPGIBB03",[473.450],SSW)  // Healthy Gibberling
+		CreateVisualEffect("spsdimpa",[473.450])
+		PlaySound("EFF_M31C")
+		SetGlobal("T0_B2","GLOBAL",2)
+		SetGlobal("START_BATTLE","GLOBAL",5)
+		Wait(1)
+		EndCutSceneMode()
+END
+
+IF
+	Global("T1_B3","GLOBAL",1)
+	Global("START_BATTLE","GLOBAL",4)
+THEN
+	RESPONSE #50
+		StartCutSceneMode()
+		SetGlobalTimer("SKEL_SPAWN","OH9350",THREE_MINUTES)
+		CreateCreature("BPLLYRK",[233.501],SSW)  // Llyrk
+		CreateVisualEffect("spsdimpa",[233.501])
+		CreateCreature("BPSKEL",[137.654],SSW)  // Crumbling Skeleton
+		CreateVisualEffect("spsdimpa",[137.654])
+		CreateCreature("BPSKEL",[233.618],SSW)  // Crumbling Skeleton
+		CreateVisualEffect("spsdimpa",[233.618])
+		CreateCreature("BPSKEL",[311.629],SSW)  // Crumbling Skeleton
+		CreateVisualEffect("spsdimpa",[311.629])
+		CreateCreature("BPSKEL",[360.667],SSW)  // Crumbling Skeleton
+		CreateVisualEffect("spsdimpa",[360.667])
+		CreateCreature("BPSKEL",[344.736],SSW)  // Crumbling Skeleton
+		CreateVisualEffect("spsdimpa",[344.736])
+		CreateCreature("BPSKEL",[281.763],SSW)  // Crumbling Skeleton
+		CreateVisualEffect("spsdimpa",[281.763])
+		CreateCreature("BPSKEL",[297.666],SSW)  // Crumbling Skeleton
+		CreateVisualEffect("spsdimpa",[297.666])
+		PlaySound("EFF_M31C")
+		SetGlobal("T1_B3","GLOBAL",2)
+		SetGlobal("START_BATTLE","GLOBAL",5)
+		ActionOverride("BPLLYRK",Enemy())
+		Wait(1)
+		EndCutSceneMode()
+		ActionOverride("BPLLYRK",ApplySpell(Myself,WIZARD_STONE_SKIN))  // SPWI408.SPL (Stoneskin)
+		ActionOverride("BPLLYRK",ApplySpell(Myself,WIZARD_SHIELD))  // SPWI114.SPL (Shield)
+		ActionOverride("BPLLYRK",ApplySpell(Myself,WIZARD_MINOR_SPELL_DEFLECTION))  // SPWI318.SPL (Minor Spell Deflection)
+	RESPONSE #50
+		StartCutSceneMode()
+		SetGlobalTimer("SKEL_SPAWN","OH9350",TWO_MINUTES)
+		CreateCreature("BPLLYRK",[937.320],SSW)  // Llyrk
+		CreateVisualEffect("spsdimpa",[937.320])
+		CreateCreature("BPSKEL",[842.307],SSW)  // Crumbling Skeleton
+		CreateVisualEffect("spsdimpa",[842.307])
+		CreateCreature("BPSKEL",[841.353],SSW)  // Crumbling Skeleton
+		CreateVisualEffect("spsdimpa",[841.353])
+		CreateCreature("BPSKEL",[904.400],SSW)  // Crumbling Skeleton
+		CreateVisualEffect("spsdimpa",[904.400])
+		CreateCreature("BPSKEL",[987.405],SSW)  // Crumbling Skeleton
+		CreateVisualEffect("spsdimpa",[987.405])
+		CreateCreature("BPSKEL",[886.259],SSW)  // Crumbling Skeleton
+		CreateVisualEffect("spsdimpa",[886.259])
+		CreateCreature("BPSKEL",[1032.354],SSW)  // Crumbling Skeleton
+		CreateVisualEffect("spsdimpa",[1032.354])
+		CreateCreature("BPSKEL",[887.354],SSW)  // Crumbling Skeleton
+		CreateVisualEffect("spsdimpa",[887.354])
+		PlaySound("EFF_M31C")
+		SetGlobal("T1_B3","GLOBAL",2)
+		SetGlobal("START_BATTLE","GLOBAL",5)
+		ActionOverride("BPLLYRK",Enemy())
+		Wait(1)
+		EndCutSceneMode()
+		ActionOverride("BPLLYRK",ApplySpell(Myself,WIZARD_STONE_SKIN))  // SPWI408.SPL (Stoneskin)
+		ActionOverride("BPLLYRK",ApplySpell(Myself,WIZARD_SHIELD))  // SPWI114.SPL (Shield)
+		ActionOverride("BPLLYRK",ApplySpell(Myself,WIZARD_MINOR_SPELL_DEFLECTION))  // SPWI318.SPL (Minor Spell Deflection)
+END
+
+IF
+	Global("T1_B5","GLOBAL",1)
+	Global("START_BATTLE","GLOBAL",4)
+THEN
+	RESPONSE #60
+		StartCutSceneMode()
+		CreateCreature("BPOWY2",[681.571],SSW)  // Owyn
+		CreateVisualEffect("spsdimpa",[681.571])
+		CreateCreature("BPKRANC2",[708.536],SSW)  // Krancor the Old
+		CreateVisualEffect("spsdimpa",[708.536])
+		CreateCreature("BPCIRI2",[661.213],SSW)  // Ciril
+		CreateVisualEffect("spsdimpa",[661.213])
+		CreateCreature("BPWYLLI2",[683.434],SSW)  // Wylliam Brand
+		CreateVisualEffect("spsdimpa",[683.434])
+		CreateCreature("BPSAMJO2",[588.481],SSW)  // SamJohn BrightWalker
+		CreateVisualEffect("spsdimpa",[588.481])
+		CreateCreature("BPCARLO2",[482.524],SSW)  // Carlos Nuez
+		CreateVisualEffect("spsdimpa",[482.524])
+		PlaySound("EFF_M31C")
+		SetGlobal("T1_B5","GLOBAL",2)
+		SetGlobal("START_BATTLE","GLOBAL",5)
+		Wait(1)
+		EndCutSceneMode()
+		ActionOverride("BPWYLLIA",ApplySpell(Myself,WIZARD_MIRROR_IMAGE))  // SPWI212.SPL (Mirror Image)
+		ActionOverride("BPWYLLIA",ApplySpell(Myself,WIZARD_SHIELD))  // SPWI114.SPL (Shield)
+		ActionOverride("BPWYLLIA",ApplySpell(Myself,WIZARD_MINOR_SPELL_TURNING))  // SPWI522.SPL (Minor Spell Turning)
+	RESPONSE #20
+		StartCutSceneMode()
+		CreateCreature("BPOWY2",[679.329],SSW)  // Owyn
+		CreateVisualEffect("spsdimpa",[679.329])
+		CreateCreature("BPKRANC2",[729.303],SSW)  // Krancor the Old
+		CreateVisualEffect("spsdimpa",[729.303])
+		CreateCreature("BPCIRI2",[648.257],SSW)  // Ciril
+		CreateVisualEffect("spsdimpa",[648.257])
+		CreateCreature("BPWYLLI2",[712.259],SSW)  // Wylliam Brand
+		CreateVisualEffect("spsdimpa",[712.259])
+		CreateCreature("BPSAMJO2",[662.293],SSW)  // SamJohn BrightWalker
+		CreateVisualEffect("spsdimpa",[662.293])
+		CreateCreature("BPCARLO2",[777.271],SSW)  // Carlos Nuez
+		CreateVisualEffect("spsdimpa",[777.271])
+		PlaySound("EFF_M31C")
+		SetGlobal("T1_B5","GLOBAL",2)
+		SetGlobal("START_BATTLE","GLOBAL",5)
+		Wait(1)
+		EndCutSceneMode()
+		ActionOverride("BPWYLLIA",ApplySpell(Myself,WIZARD_MIRROR_IMAGE))  // SPWI212.SPL (Mirror Image)
+		ActionOverride("BPWYLLIA",ApplySpell(Myself,WIZARD_SHIELD))  // SPWI114.SPL (Shield)
+		ActionOverride("BPWYLLIA",ApplySpell(Myself,WIZARD_MINOR_SPELL_TURNING))  // SPWI522.SPL (Minor Spell Turning)
+	RESPONSE #20
+		StartCutSceneMode()
+		CreateCreature("BPOWY2",[377.571],SSW)  // Owyn
+		CreateVisualEffect("spsdimpa",[377.571])
+		CreateCreature("BPKRANC2",[331.546],SSW)  // Krancor the Old
+		CreateVisualEffect("spsdimpa",[331.546])
+		CreateCreature("BPCIRI2",[296.619],SSW)  // Ciril
+		CreateVisualEffect("spsdimpa",[296.619])
+		CreateCreature("BPWYLLI2",[281.619],SSW)  // Wylliam Brand
+		CreateVisualEffect("spsdimpa",[281.619])
+		CreateCreature("BPSAMJO2",[263.535],SSW)  // SamJohn BrightWalker
+		CreateVisualEffect("spsdimpa",[263.535])
+		CreateCreature("BPCARLO2",[329.592],SSW)  // Carlos Nuez
+		CreateVisualEffect("spsdimpa",[329.592])
+		PlaySound("EFF_M31C")
+		SetGlobal("T1_B5","GLOBAL",2)
+		SetGlobal("START_BATTLE","GLOBAL",5)
+		Wait(1)
+		EndCutSceneMode()
+		ActionOverride("BPWYLLIA",ApplySpell(Myself,WIZARD_MIRROR_IMAGE))  // SPWI212.SPL (Mirror Image)
+		ActionOverride("BPWYLLIA",ApplySpell(Myself,WIZARD_SHIELD))  // SPWI114.SPL (Shield)
+		ActionOverride("BPWYLLIA",ApplySpell(Myself,WIZARD_MINOR_SPELL_TURNING))  // SPWI522.SPL (Minor Spell Turning)
+END
+
+IF
+	Global("T2_B1","GLOBAL",1)
+	Global("START_BATTLE","GLOBAL",4)
+THEN
+	RESPONSE #50
+		StartCutSceneMode()
+		SetGlobal("T2_B1","GLOBAL",2)
+		SetGlobal("START_BATTLE","GLOBAL",5)
+		CreateCreatureObjectOffset("BPANKHE1",Player1,[0.100])  // Rabid Ankheg
+		CreateCreatureObjectOffset("BPANKHE1",Player1,[100.0])  // Rabid Ankheg
+		Wait(2)
+		EndCutSceneMode()
+		Wait(4)
+		CreateCreatureObjectOffset("BPANKHE1",Player1,[100.100])  // Rabid Ankheg
+		CreateCreatureObjectOffset("BPANKHE1",Player1,[100.0])  // Rabid Ankheg
+		Wait(4)
+		CreateCreatureObjectOffset("BPANKHE1",Player1,[100.100])  // Rabid Ankheg
+	RESPONSE #50
+		SetGlobal("T2_B1","GLOBAL",2)
+		SetGlobal("START_BATTLE","GLOBAL",5)
+		StartCutSceneMode()
+		CreateCreatureObjectOffset("BPANKHE1",Player1,[0.100])  // Rabid Ankheg
+		CreateCreatureObjectOffset("BPANKHE1",Player1,[100.0])  // Rabid Ankheg
+		Wait(4)
+		EndCutSceneMode()
+		Wait(4)
+		CreateCreatureObjectOffset("BPANKHE1",Player1,[100.0])  // Rabid Ankheg
+		Wait(4)
+		CreateCreatureObjectOffset("BPANKHE1",Player1,[100.100])  // Rabid Ankheg
+		CreateCreatureObjectOffset("BPANKHE1",Player1,[100.0])  // Rabid Ankheg
+END
+
+IF
+	Global("T2_B2","GLOBAL",1)
+	Global("START_BATTLE","GLOBAL",4)
+THEN
+	RESPONSE #50
+		SetGlobal("T2_B2","GLOBAL",2)
+		SetGlobal("START_BATTLE","GLOBAL",5)
+		StartCutSceneMode()
+		CreateCreature("BPERWEN",[681.571],SSW)  // Parker
+		CreateVisualEffect("spsdimpa",[681.571])
+		CreateCreature("BPSPID03",[591.499],SSW)  // Sword Spider
+		CreateVisualEffect("spsdimpa",[591.499])
+		PlaySound("EFF_M31C")
+		Wait(1)
+		CreateCreatureObject("BPSPID01","BPERWEN",0,0,0)  // Spider
+		CreateCreatureObject("BPSPID01","BPERWEN",0,0,0)  // Spider
+		CreateCreatureObject("BPSPID01","BPERWEN",0,0,0)  // Spider
+		CreateCreatureObject("BPSPID01","BPERWEN",0,0,0)  // Spider
+		CreateCreatureObject("BPSPID01","BPERWEN",0,0,0)  // Spider
+		CreateCreatureObject("BPSPID01","BPERWEN",0,0,0)  // Spider
+		CreateCreatureObject("BPSPID01","BPERWEN",0,0,0)  // Spider
+		Wait(1)
+		EndCutSceneMode()
+	RESPONSE #50
+		SetGlobal("T2_B2","GLOBAL",2)
+		SetGlobal("START_BATTLE","GLOBAL",5)
+		StartCutSceneMode()
+		CreateCreature("BPERWEN",[681.571],SSW)  // Parker
+		CreateVisualEffect("spsdimpa",[681.571])
+		CreateCreature("BPSPID02",[819.455],SSW)  // Giant Spider
+		CreateVisualEffect("spsdimpa",[819.455])
+		PlaySound("EFF_M31C")
+		SmallWait(5)
+		CreateCreatureObject("BPSPID01","BPSPID02",0,0,0)  // Spider
+		CreateCreatureObject("BPSPID01","BPSPID02",0,0,0)  // Spider
+		CreateCreature("BPSPID02",[502.668],SSW)  // Giant Spider
+		CreateVisualEffect("spsdimpa",[502.668])
+		SmallWait(5)
+		CreateCreatureObject("BPSPID01","BPSPID02",0,0,0)  // Spider
+		CreateCreatureObject("BPSPID01","BPSPID02",0,0,0)  // Spider
+		SmallWait(5)
+		CreateCreatureObject("BPSPID01","BPERWEN",0,0,0)  // Spider
+		CreateCreatureObject("BPSPID01","BPERWEN",0,0,0)  // Spider
+		CreateCreatureObject("BPSPID01","BPERWEN",0,0,0)  // Spider
+		CreateCreatureObject("BPSPID01","BPERWEN",0,0,0)  // Spider
+		CreateCreatureObject("BPSPID01","BPERWEN",0,0,0)  // Spider
+		CreateCreatureObject("BPSPID01","BPERWEN",0,0,0)  // Spider
+		Wait(1)
+		EndCutSceneMode()
+END
+
+IF
+	Global("T2_B3","GLOBAL",1)
+	Global("START_BATTLE","GLOBAL",4)
+THEN
+	RESPONSE #70
+		TriggerActivation("ARROWTRAP1",TRUE)
+		Continue()
+	RESPONSE #30
+		Continue()
+END
+
+IF
+	Global("T2_B3","GLOBAL",1)
+	Global("START_BATTLE","GLOBAL",4)
+THEN
+	RESPONSE #70
+		TriggerActivation("ARROWTRAP2",TRUE)
+		Continue()
+	RESPONSE #30
+		Continue()
+END
+
+IF
+	Global("T2_B3","GLOBAL",1)
+	Global("START_BATTLE","GLOBAL",4)
+THEN
+	RESPONSE #70
+		TriggerActivation("ARROWTRAP3",TRUE)
+		Continue()
+	RESPONSE #30
+		Continue()
+END
+
+IF
+	Global("T2_B3","GLOBAL",1)
+	Global("START_BATTLE","GLOBAL",4)
+THEN
+	RESPONSE #70
+		TriggerActivation("ARROWTRAP4",TRUE)
+		Continue()
+	RESPONSE #30
+		Continue()
+END
+
+IF
+	Global("T2_B3","GLOBAL",1)
+	Global("START_BATTLE","GLOBAL",4)
+THEN
+	RESPONSE #70
+		TriggerActivation("ARROWTRAP5",TRUE)
+		Continue()
+	RESPONSE #30
+		Continue()
+END
+
+IF
+	Global("T2_B3","GLOBAL",1)
+	Global("START_BATTLE","GLOBAL",4)
+THEN
+	RESPONSE #70
+		TriggerActivation("ARROWTRAP6",TRUE)
+		Continue()
+	RESPONSE #30
+		Continue()
+END
+
+IF
+	Global("T2_B3","GLOBAL",1)
+	Global("START_BATTLE","GLOBAL",4)
+THEN
+	RESPONSE #70
+		TriggerActivation("JERKTRAP",TRUE)
+		Continue()
+	RESPONSE #30
+		Continue()
+END
+
+IF
+	Global("T2_B3","GLOBAL",1)
+	Global("START_BATTLE","GLOBAL",4)
+THEN
+	RESPONSE #100
+		SetGlobal("T2_B3","GLOBAL",2)
+		SetGlobal("START_BATTLE","GLOBAL",5)
+		TriggerActivation("GREASETRAP",TRUE)
+		TriggerActivation("STINKYTRAP",TRUE)
+		StartCutSceneMode()
+		CreateCreature("BPAMBT1",[204.468],SWW)  // Night Knives Thief
+		CreateCreature("BPAMBT2",[300.390],SWW)  // Night Knives Thief
+		CreateVisualEffect("spsdimpa",[204.468])
+		CreateVisualEffect("spsdimpa",[300.390])
+		CreateCreature("BPAMBT1",[885.251],SSE)  // Night Knives Thief
+		CreateCreature("BPAMBT2",[1044.314],SSE)  // Night Knives Thief
+		CreateVisualEffect("spsdimpa",[885.251])
+		CreateVisualEffect("spsdimpa",[1044.314])
+		CreateCreature("BPAMBT1",[526.592],SSW)  // Night Knives Thief
+		CreateCreature("BPAMBT2",[793.419],SSW)  // Night Knives Thief
+		CreateVisualEffect("spsdimpa",[526.592])
+		CreateVisualEffect("spsdimpa",[793.419])
+		CreateCreature("BPSHADOW",[623.298],SSW)  // Shadow
+		CreateCreature("BPSHADOW",[393.400],SSW)  // Shadow
+		CreateVisualEffect("spsdimpa",[623.298])
+		CreateVisualEffect("spsdimpa",[393.400])
+		PlaySound("EFF_M31C")
+		Wait(1)
+		EndCutSceneMode()
+END
+
+IF
+	Global("T2_B5","GLOBAL",1)
+	Global("START_BATTLE","GLOBAL",4)
+THEN
+	RESPONSE #100
+		SetGlobal("T2_B5","GLOBAL",2)
+		SetGlobal("START_BATTLE","GLOBAL",5)
+		StartCutSceneMode()
+		CreateCreature("BPTHTHF",[594.482],SSW)  // Red Tom
+		CreateVisualEffect("spsdimpa",[594.482])
+		CreateCreature("BPTHCL",[598.537],SSW)  // Lucius
+		CreateVisualEffect("spsdimpa",[598.537])
+		CreateCreature("BPTHBKGD",[679.457],SSW)  // Lucille
+		CreateVisualEffect("spsdimpa",[679.457])
+		CreateCreature("BPTHBARB",[670.540],SSW)  // Voadikka
+		CreateVisualEffect("spsdimpa",[670.540])
+		CreateCreature("bpalueno",[504.655],SSW)  // Treacle
+		CreateVisualEffect("spsdimpa",[504.655])
+		CreateCreature("bpaluena",[879.401],SSW)  // Thespia
+		CreateVisualEffect("spsdimpa",[879.401])
+		PlaySound("EFF_M31C")
+		Wait(1)
+		EndCutSceneMode()
+		ActionOverride("BPALUENA",ApplySpell("BPALUENA",WIZARD_STONE_SKIN))  // Thespia
+		ActionOverride("BPALUENA",ApplySpell("BPALUENA",WIZARD_MINOR_GLOBE_OF_INVULNERABILITY))  // Thespia
+		ActionOverride("BPALUENA",ApplySpell("BPALUENA",WIZARD_MINOR_SPELL_DEFLECTION))  // Thespia
+		ActionOverride("BPALUENO",ApplySpell("BPALUENO",WIZARD_PROTECTION_FROM_FIRE))  // Treacle
+		ActionOverride("BPALUENO",ApplySpell("BPALUENO",WIZARD_MIRROR_IMAGE))  // Treacle
+		ActionOverride("BPALUENO",ApplySpell("BPALUENO",WIZARD_MINOR_GLOBE_OF_INVULNERABILITY))  // Treacle
+		ActionOverride("BPALUENO",ApplySpell("BPALUENO",WIZARD_PROTECTION_FROM_NORMAL_MISSILES))  // Treacle
+		ActionOverride("BPALUENO",ApplySpell("BPALUENO",WIZARD_PROTECTION_FROM_FIRE))  // Treacle
+END
+
+IF
+	Global("T3_B1","GLOBAL",1)
+	Global("START_BATTLE","GLOBAL",4)
+THEN
+	RESPONSE #100
+		SetGlobal("T3_B1","GLOBAL",2)
+		SetGlobal("START_BATTLE","GLOBAL",5)
+		StartCutSceneMode()
+		CreateCreature("BPTROLL",[664.329],SSW)  // Troll
+		CreateVisualEffect("spsdimpa",[664.329])
+		CreateCreature("BPTROLL",[569.774],SSW)  // Troll
+		CreateVisualEffect("spsdimpa",[569.774])
+		CreateCreature("BPSLFS01",[664.329],SSW)  // Fission Slime
+		CreateVisualEffect("spsdimpa",[664.329])
+		CreateCreature("BPSLFS01",[569.774],SSW)  // Fission Slime
+		CreateVisualEffect("spsdimpa",[569.774])
+		PlaySound("EFF_M31C")
+		Wait(2)
+		EndCutSceneMode()
+END
+
+IF
+	Global("T3_B3","GLOBAL",1)
+	Global("START_BATTLE","GLOBAL",4)
+THEN
+	RESPONSE #100
+		SetGlobal("T3_B3","GLOBAL",2)
+		SetGlobal("START_BATTLE","GLOBAL",5)
+		SetGlobalTimer("T3B5_Blizzard","OH9350",ONE_MINUTE)
+		StartCutSceneMode()
+		CreateCreature("BPICESAL",[664.329],SSW)  // Ice Salamander
+		CreateVisualEffect("spsdimpa",[664.329])
+		CreateCreature("BPICESAL",[569.774],SSW)  // Ice Salamander
+		CreateVisualEffect("spsdimpa",[569.774])
+		CreateCreature("BPICESAL",[842.632],SSW)  // Ice Salamander
+		CreateVisualEffect("spsdimpa",[842.632])
+		CreateCreature("BPICESAL",[1021.442],SSW)  // Ice Salamander
+		CreateVisualEffect("spsdimpa",[1021.442])
+		CreateCreature("bpicescl",[478.286],SSW)  // Ice Salamander Cleric
+		CreateVisualEffect("spsdimpa",[478.286])
+		CreateCreature("BPICESAL",[385.603],SSW)  // Ice Salamander
+		ActionOverride("bpicescl",ApplySpell("bpicescl",CLERIC_RIGHTEOUS_MAGIC))  // Ice Salamander Cleric
+		ActionOverride("bpicescl",ApplySpell("bpicescl",CLERIC_ARMOR_OF_FAITH))  // Ice Salamander Cleric
+		CreateVisualEffect("spsdimpa",[385.603])
+		PlaySound("EFF_M31C")
+		Wait(1)
+		EndCutSceneMode()
+END
+
+IF
+	Global("T3_B3","GLOBAL",2)
+	Global("START_BATTLE","GLOBAL",5)
+	GlobalTimerExpired("T3B5_Blizzard","OH9350")
+	Global("BATTLE_COMPLETE","GLOBAL",0)
+THEN
+	RESPONSE #20
+		ReallyForceSpellPoint([491.312],WIZARD_ICE_STORM)  // SPWI404.SPL (Ice Storm)
+		SetGlobalTimer("T3B5_Blizzard","OH9350",FOUR_ROUNDS)
+	RESPONSE #20
+		ReallyForceSpellPoint([408.682],WIZARD_ICE_STORM)  // SPWI404.SPL (Ice Storm)
+		SetGlobalTimer("T3B5_Blizzard","OH9350",FOUR_ROUNDS)
+	RESPONSE #20
+		ReallyForceSpellPoint([638.483],WIZARD_ICE_STORM)  // SPWI404.SPL (Ice Storm)
+		SetGlobalTimer("T3B5_Blizzard","OH9350",FOUR_ROUNDS)
+	RESPONSE #20
+		ReallyForceSpellPoint([988.645],WIZARD_ICE_STORM)  // SPWI404.SPL (Ice Storm)
+		SetGlobalTimer("T3B5_Blizzard","OH9350",FOUR_ROUNDS)
+	RESPONSE #20
+		ReallyForceSpellPoint([912.319],WIZARD_ICE_STORM)  // SPWI404.SPL (Ice Storm)
+		SetGlobalTimer("T3B5_Blizzard","OH9350",FOUR_ROUNDS)
+END
+
+IF
+	OR(6)
+		AreaCheckObject("OH9350",Player1)
+		AreaCheckObject("OH9350",Player2)
+		AreaCheckObject("OH9350",Player3)
+		AreaCheckObject("OH9350",Player4)
+		AreaCheckObject("OH9350",Player5)
+		AreaCheckObject("OH9350",Player6)
+	Global("BATTLE_COMPLETE","GLOBAL",1)
+	OR(6)
+		StateCheck(Player1,STATE_REALLY_DEAD)
+		StateCheck(Player2,STATE_REALLY_DEAD)
+		StateCheck(Player3,STATE_REALLY_DEAD)
+		StateCheck(Player4,STATE_REALLY_DEAD)
+		StateCheck(Player5,STATE_REALLY_DEAD)
+		StateCheck(Player6,STATE_REALLY_DEAD)
+THEN
+	RESPONSE #100
+		SetGlobal("BATTLE_COMPLETE","GLOBAL",2)
+		SetGlobal("BP_AUTOSAVE","GLOBAL",1)
+		LockScroll()
+		MoveViewPoint([627.490],INSTANT)
+		CreateVisualEffect("spdimndr",[627.490])
+		PlaySound("EFF_M13")
+		SmallWait(65)
+		Activate("BPBAELOT")  // Baeloth
+		SmallWait(15)
+		DisplayStringHead("BPBAELOT",29945)  // No sleeping on the job! And don't forget to collect your equipment. Anything left in the arena will be fed to the otyugh.
+		ActionOverride("BPBAELOT",SetSequence(SEQ_CAST))
+		SmallWait(15)
+		PlaySound("EFF_M07")
+		CreateVisualEffectObject("spbaserd","BPBAELOT")  // Baeloth
+		MultiPlayerSync()
+		UnlockScroll()
+END
+
+IF
+	Global("BATTLE_COMPLETE","GLOBAL",2)
+	StateCheck(Player1,STATE_REALLY_DEAD)
+THEN
+	RESPONSE #100
+		ApplySpell(Player1,CLERIC_RAISE_DEAD)  // SPPR504.SPL (Raise Dead)
+		Continue()
+END
+
+IF
+	Global("BATTLE_COMPLETE","GLOBAL",2)
+	StateCheck(Player2,STATE_REALLY_DEAD)
+THEN
+	RESPONSE #100
+		ApplySpell(Player2,CLERIC_RAISE_DEAD)  // SPPR504.SPL (Raise Dead)
+		Continue()
+END
+
+IF
+	Global("BATTLE_COMPLETE","GLOBAL",2)
+	StateCheck(Player3,STATE_REALLY_DEAD)
+THEN
+	RESPONSE #100
+		ApplySpell(Player3,CLERIC_RAISE_DEAD)  // SPPR504.SPL (Raise Dead)
+		Continue()
+END
+
+IF
+	Global("BATTLE_COMPLETE","GLOBAL",2)
+	StateCheck(Player4,STATE_REALLY_DEAD)
+THEN
+	RESPONSE #100
+		ApplySpell(Player4,CLERIC_RAISE_DEAD)  // SPPR504.SPL (Raise Dead)
+		Continue()
+END
+
+IF
+	Global("BATTLE_COMPLETE","GLOBAL",2)
+	StateCheck(Player5,STATE_REALLY_DEAD)
+THEN
+	RESPONSE #100
+		ApplySpell(Player5,CLERIC_RAISE_DEAD)  // SPPR504.SPL (Raise Dead)
+		Continue()
+END
+
+IF
+	Global("BATTLE_COMPLETE","GLOBAL",2)
+	StateCheck(Player6,STATE_REALLY_DEAD)
+THEN
+	RESPONSE #100
+		ApplySpell(Player6,CLERIC_RAISE_DEAD)  // SPPR504.SPL (Raise Dead)
+		Continue()
+END
+
+IF
+	OR(6)
+		AreaCheckObject("OH9350",Player1)
+		AreaCheckObject("OH9350",Player2)
+		AreaCheckObject("OH9350",Player3)
+		AreaCheckObject("OH9350",Player4)
+		AreaCheckObject("OH9350",Player5)
+		AreaCheckObject("OH9350",Player6)
+	Global("BATTLE_COMPLETE","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("BATTLE_COMPLETE","GLOBAL",2)
+		SetGlobal("BP_AUTOSAVE","GLOBAL",1)
+		SetGlobal("BAELOTH_FACING","GLOBAL",1)
+		TriggerActivation("GREASETRAP",FALSE)
+		TriggerActivation("ARROWTRAP1",FALSE)
+		TriggerActivation("ARROWTRAP2",FALSE)
+		TriggerActivation("ARROWTRAP3",FALSE)
+		TriggerActivation("ARROWTRAP4",FALSE)
+		TriggerActivation("ARROWTRAP5",FALSE)
+		TriggerActivation("ARROWTRAP6",FALSE)
+		TriggerActivation("STINKYTRAP",FALSE)
+		TriggerActivation("JERKTRAP",FALSE)
+		SetGlobal("BPTRAP01_TRIGGERED","OH9350",0)
+		SetGlobal("BPTRAP03_TRIGGERED","OH9350",0)
+		SetGlobal("BPTRAP04_TRIGGERED","OH9350",0)
+		ClearAllActions()
+		StartCutSceneMode()
+		LockScroll()
+		MoveViewPoint([627.490],INSTANT)
+		CreateVisualEffect("spdimndr",[627.490])
+		PlaySound("EFF_M13")
+		SmallWait(70)
+		Activate("BPBAELOT")  // Baeloth
+		MultiPlayerSync()
+		ActionOverride("BPBAELOT",StartDialogueNoSet(Player1))
+		SmallWait(5)
+END
+

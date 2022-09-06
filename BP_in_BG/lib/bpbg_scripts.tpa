@@ -11,6 +11,8 @@ ACTION_IF (GAME_IS ~eet~) BEGIN
   COMPILE ~%MOD_FOLDER%/data/eet/bpnajim.d~
   COMPILE ~%MOD_FOLDER%/data/eet/bpbaelot.d~
   COMPILE ~%MOD_FOLDER%/data/eet/BPINBGZ.baf~
+  COMPILE ~%MOD_FOLDER%/data/eet/OH9310.baf~
+  COMPILE ~%MOD_FOLDER%/data/eet/OH9350.baf~
 END
 ELSE BEGIN
   COMPILE ~%MOD_FOLDER%/data/bgee/baeloth.d~
@@ -18,6 +20,8 @@ ELSE BEGIN
   COMPILE ~%MOD_FOLDER%/data/bgee/bpnajim.d~
   COMPILE ~%MOD_FOLDER%/data/bgee/bpbaelot.d~
   COMPILE ~%MOD_FOLDER%/data/bgee/BPINBGZ.baf~
+  COMPILE ~%MOD_FOLDER%/data/bgee/OH9310.baf~
+  COMPILE ~%MOD_FOLDER%/data/bgee/OH9350.baf~
 END
 
 COMPILE ~%MOD_FOLDER%/data/BPINBG0.baf~
