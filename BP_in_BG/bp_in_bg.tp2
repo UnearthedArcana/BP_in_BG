@@ -1,7 +1,7 @@
-BACKUP ~bp_in_bg/backup~
+BACKUP ~weidu_external/backup/bp_in_bg~
 AUTHOR ~SubtleD~
 
-VERSION ~0.6.2~ 
+VERSION ~0.7~ 
 
 LANGUAGE
   ~English~
@@ -14,6 +14,8 @@ BEGIN @100
 DESIGNATED 100
 REQUIRE_PREDICATE GAME_IS ~bgee eet~ @101
 
+INCLUDE ~%MOD_FOLDER%/lib/misc_functions.tpa~
+
 INCLUDE ~%MOD_FOLDER%/lib/bpbg_scripts.tpa~
 
 LAF scripts_dialogues END
@@ -25,3 +27,8 @@ LAF import_iwd_items END
 INCLUDE ~%MOD_FOLDER%/lib/alter_vendors.tpa~
 
 LAF adjust_stores END
+
+INCLUDE ~%MOD_FOLDER%/lib/bpbg_ring.tpa~
+
+LAF adjust_rings END
+
