@@ -22,18 +22,25 @@ THEN
 		TakePartyGold(200000)
 		SetGlobal("OH9310_ENTERED","OH9310",1)
 		Explore()
+		CreateVisualEffect("spsdimpa",[472.400])
+		CreateCreature("BPDUER02",[472.400],S)  // Duergar
+		CreateVisualEffect("spsdimpa",[472.400])
+		CreateCreature("BPDUER02",[472.400],S)  // Duergar
+		CreateVisualEffect("spsdimpa",[472.400])
+		CreateCreature("BPDUER02",[472.400],S)  // Duergar
+		CreateVisualEffect("spsdimpa",[472.400])
+		CreateCreature("BPDUER02",[472.400],S)  // Duergar
+		CreateVisualEffect("spsdimpa",[472.400])
+		CreateCreature("BPDUER02",[472.400],S)  // Duergar
+		CreateVisualEffect("spsdimpa",[472.400])
+		CreateCreature("BPDUER02",[472.400],S)  // Duergar
 		EndCutSceneMode()
 		CreateCreature("BPREFF01",[603.538],S)  // Referee - No such index
 		CreateCreature("BPREFF01",[443.391],S)  // Referee - No such index
 		CreateCreature("BPREFF01",[382.634],S)  // Referee - No such index
 		CreateCreature("BPREFF01",[805.644],S)  // Referee - No such index
 		CreateCreature("BPREFF01",[802.412],S)  // Referee - No such index
-		CreateVisualEffect("spsdimpa",[472.400])
-		CreateCreature("BPDUER02",[472.400],S)  // Duergar
-		CreateVisualEffect("spsdimpa",[472.400])
-		CreateCreature("BPDUER02",[472.400],S)  // Duergar
-		CreateVisualEffect("spsdimpa",[472.400])
-		CreateCreature("BPDUER02",[472.400],S)  // Duergar
+		SetGlobal("BPINTRO","GLOBAL",2)
 END
 
 IF
