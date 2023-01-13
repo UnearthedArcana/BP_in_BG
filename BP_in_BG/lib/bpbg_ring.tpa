@@ -7,7 +7,7 @@ DEFINE_ACTION_FUNCTION adjust_rings BEGIN
 LAF d5_resolve_state STR_VAR new_state_id = ~D5_BP_DEAD~ RET new_state_ind END
 OUTER_SET bp_dead_state = %new_state_ind%
 
-APPEND ~splprot.2da~ ~D5_CURHP_LESS%TAB%0%TAB%-1%TAB%2~ UNLESS ~D5_KIT_IS~
+APPEND ~splprot.2da~ ~D5_CURHP_LESS%TAB%0%TAB%-1%TAB%2~ UNLESS ~D5_CURHP_LESS~
 
 COPY_EXISTING ~splprot.2da~ ~override~
   COUNT_2DA_COLS cols
@@ -37,19 +37,28 @@ CREATE EFF ~d5bprng1~
 COPY ~%MOD_FOLDER%/data/d5_base.spl~ ~override/d5bprng1.spl~
   LPF ALTER_SPELL_HEADER INT_VAR target = 5 END
   LPF ADD_SPELL_EFFECT INT_VAR opcode = 326 target = 1 parameter1 = 3 parameter2 = %curhp_less_row% timing = 1 STR_VAR resource = ~d5bprng2~ END
-  LPF ADD_SPELL_EFFECT INT_VAR opcode = 326 target = 1 parameter1 = %bp_dead_state% parameter2 = 110 timing = 1 STR_VAR resource = ~d5bprng3~ END
+//  LPF ADD_SPELL_EFFECT INT_VAR opcode = 326 target = 1 parameter1 = %bp_dead_state% parameter2 = 110 timing = 1 STR_VAR resource = ~d5bprng3~ END
+  LPF ADD_SPELL_EFFECT INT_VAR insert_point = 0 opcode = 318 target = 1 parameter1 = %bp_dead_state% parameter2 = 110 timing = 0 duration = 1 STR_VAR resource = ~d5bprng1~ END
 
 COPY ~%MOD_FOLDER%/data/d5_base.spl~ ~override/d5bprng2.spl~
   LPF ALTER_SPELL_HEADER INT_VAR target = 5 END
   LPF ADD_SPELL_EFFECT INT_VAR opcode = 39 target = 1 parameter2 = 1 timing = 0 duration = 126144000 END
   LPF ADD_SPELL_EFFECT INT_VAR opcode = 328 target = 1 parameter2 = %bp_dead_state% timing = 0 duration = 126144000 special = 1 END
   LPF ADD_SPELL_EFFECT INT_VAR opcode = 100 target = 1 parameter2 = 2 timing = 0 duration = 126144000 END
+  LPF ADD_SPELL_EFFECT INT_VAR opcode = 206 target = 1 parameter1 = (0 - 1) timing = 0 duration = 9 STR_VAR resource = ~d5bprng1~ END
+  LPF ADD_SPELL_EFFECT INT_VAR insert_point = 0 opcode = 318 target = 1 parameter1 = %bp_dead_state% parameter2 = 110 timing = 0 duration = 1 STR_VAR resource = ~d5bprng2~ END
 
-COPY ~%MOD_FOLDER%/data/d5_base.spl~ ~override/d5bprng3.spl~
-  LPF ALTER_SPELL_HEADER INT_VAR target = 5 END
-  WRITE_BYTE 0x18 (THIS BOR 0b00000001)
+COPY ~%MOD_FOLDER%/data/d5_base.spl~ ~override/d5bpres.spl~
+  LPF ALTER_SPELL_HEADER INT_VAR target = 1 END
+//  WRITE_BYTE 0x20 (THIS BOR 0b00000001)
   LPF ADD_SPELL_EFFECT INT_VAR opcode = 321 target = 1 timing = 1 STR_VAR resource = ~d5bprng2~ END
-  LPF ADD_SPELL_EFFECT INT_VAR opcode = 146 target = 1 parameter2 = 1 timing = 1 STR_VAR resource = ~sppr607~ END
-  LPF ADD_SPELL_EFFECT INT_VAR opcode = 321 target = 1 parameter1 = (0 - 1) timing = 0 duration = 9 STR_VAR resource = ~d5bprng3~ END
+  LPF ADD_SPELL_EFFECT INT_VAR opcode = 146 target = 1 parameter2 = 1 timing = 4 duration = 1 STR_VAR resource = ~sppr607~ END
+//  LPF ADD_SPELL_EFFECT INT_VAR opcode = 206 target = 1 parameter1 = (0 - 1) timing = 0 duration = 9 STR_VAR resource = ~d5bprng3~ END
+
+
+COPY ~%MOD_FOLDER%/data/BPHUB.baf~ ~weidu_external/BP_in_BG/compile/BPHUB.baf~
+  REPLACE_TEXTUALLY ~D5_BP_DEAD~ ~%bp_dead_state%~
+
+COMPILE ~weidu_external/BP_in_BG/compile/BPHUB.baf~
 
 END	//	end define function
