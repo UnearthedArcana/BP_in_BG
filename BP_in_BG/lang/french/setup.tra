@@ -1,0 +1,1069 @@
+@1     = ~~
+@2     = ~~
+@3     = ~~
+@4     = ~~
+@5     = ~~
+@6     = ~...~
+@7     = ~ ~
+//
+@100   = ~Ajouter l'acces aux Fosses noires dans BGEE / EET~
+@101   = ~Ce mod doit être installe dans un jeu incluant la campagne des Fosses noires.~
+// 
+// Baeloth teleportation dialogue pieces
+//
+@201   = ~Aucune idée, mais je serais curieux d'en connaître le chemin ! Il paraît qu'il y a de grandes aventures à vivre là-bas.~ ~Aucune idée, mais je serais curieuse d'en connaître le chemin ! Il paraît qu'il y a de grandes aventures à vivre là-bas.~
+@202   = ~Oh. Et bien, je suis très intéressé par l'Ombre-Terre. Il paraît que ce lieu regorge d'aventures !~ ~Oh. Et bien, je suis très intéressée par l'Ombre-Terre. Il paraît que ce lieu regorge d'aventures !~
+@203   = ~Tout à fait... euh, des aventures, vous dites ? Pourquoi pas, oui en effet, je pourrais être en mesure de vous proposer... et bien, des aventures époustouflantes ! Richesse, gloire et autres récompenses fabuleuses, ce genre de choses vous tente ? Une foule d'admirateurs en liesse ? Oh oui, cela vous plairait sûrement, n'est-ce pas ?  J'ai ici un dispositif qui permet de vous y rendre en un battement de cils. Cela dépend de vous, je vous le certifie. Ça ne peut fonctionner que si vous êtes « consentant ».~ ~Tout à fait... euh, des aventures, vous dites ? Pourquoi pas, oui en effet, je pourrais être en mesure de vous proposer... et bien, des aventures époustouflantes ! Richesse, gloire et autres récompenses fabuleuses, ce genre de choses vous tente ? Une foule d'admirateurs en liesse ? Oh oui, cela vous plairait sûrement, n'est-ce pas ?  J'ai ici un dispositif qui permet de vous y rendre en un battement de cils. Cela dépend de vous, je vous le certifie. Ça ne peut fonctionner que si vous êtes « consentante ».~
+@204   = ~Bien sûr, ça m'a l'air fantastique.~
+@205   = ~Après réflexion, tout cela me semble un peu trop exaltant. Je n'ai pas vraiment envie de vous suivre dans cette aventure.~
+@206   = ~Formidable ! Oh, ce voyage de recrutement a été beaucoup plus rapide que prévu. Maintenant, sois un bon garçon et attrape cette jolie gemme brillante et parfaitement inoffensive. À pleines mains, oui... parfait. Et c'est parti !~ ~Formidable ! Oh, ce voyage de recrutement a été beaucoup plus rapide que prévu. Maintenant, sois une bonne fille et attrape cette jolie gemme brillante et parfaitement inoffensive. À pleines mains, oui... parfait. Et c'est parti !~
+@207   = ~Lors de notre dernière rencontre, vous évoquiez une aventure en Ombre-Terre, il me semble ?~
+@208   = ~Pourquoi... mais OUI ! Je suis en mesure de vous proposer... et bien, des aventures époustouflantes ! Richesse, gloire et autres récompenses fabuleuses, ce genre de choses vous tente ? Une foule d'admirateurs en liesse ? Oh oui, cela vous plairait sûrement, n'est-ce pas ?  J'ai ici un dispositif qui permet de s'y rendre d'un battement de cils. Cela dépend de vous, je vous le certifie. Ça ne peut fonctionner que si vous êtes « consentant ».~ ~Pourquoi... mais OUI ! Je suis en mesure de vous proposer... et bien, des aventures époustouflantes ! Richesse, gloire et autres récompenses fabuleuses, ce genre de choses vous tente ? Une foule d'admirateurs en liesse ? Oh oui, cela vous plairait sûrement, n'est-ce pas ?  J'ai ici un dispositif qui permet de s'y rendre d'un battement de cils. Cela dépend de vous, je vous le certifie. Ça ne peut fonctionner que si vous êtes « consentante ».~
+@209   = ~~
+@210   = ~~
+//
+// IWD items
+// 
+// iwd item text
+
+@1011  = ~Amulette-Barrière~
+@1012  = ~L'Amulette-Barrière
+Cette puissante amulette a été créée par l'enchanteur Célémon de Calimport en 727 CV. Il en confectionna dix sur demande avant que des rivaux jaloux ne l'assassinent et ne tentent de reproduire sa procédure. Mais ses concurrents n'étaient pas aussi doués que lui, et leur laboratoire explosa lors d'une expérience ratée. La formule disparut du même coup. Cette amulette bien particulière appartenait au guerrier-mage elfe Pelan Ventdepluie. Elle fut perdue lorsqu'il s'est fait tuer par des géants sur les pentes de l'Épine Dorsale du Monde, aux alentours de 840 CV.
+
+PARAMÈTRES :
+
+Capacités de charge :
+- Peau de pierre et Globe mineur d'invulnérabilité
+  Effet : Peau de pierre absorbe 1d4 +2 attaques physiques, Globe mineur d'invulnérabilité bloque tous les sorts jusqu'au niveau 3
+  Durée : la Peau de pierre dure 8 heures, le Globe mineur d'invulnérabilité dure 8 rounds
+  Zone d'effet : l'utilisateur
+
+Poids : 1~
+@1021  = ~Broche des braves~
+@1022  = ~La Broche des Braves
+Ce petit talisman en acier a été consacré par les prêtres de Tempus pour un guerrier du nom de Teln Graham, combattant d'exception qui perdait souvent ses moyens dans les grandes batailles. Cette broche, qu'il portait sur son cœur, lui permettait de vaincre les poussées d'angoisse qui le prenaient lors des conflits d'importance. Les prêtres de Tempus la lui ôtèrent après avoir décidé qu'il resterait éternellement un lâche. Teln aurait pris sa retraite pour devenir fermier.
+
+PARAMÈTRES :
+
+Capacités de charge :
+- Émotion, courage une fois par jour 
+  Les alliés gagnent +1 au TAC0, +3 aux dégâts, +5 points de vie temporaires et sont immunisés à la terreur
+  Portée : 15 mètres
+  Durée : 1 heure
+  Zone d'effet : rayon de 2,40 mètres
+
+Poids : 1~
+@1031  = ~Cor de barde du Valhalla~
+@1032  = ~Le Cor de Barde du Valhalla
+Ce cor bien précis fut créé par un barde respecté de la tribu des Regheds, qui a depuis disparu. Le ménestrel s'appelait Béogin, et nombre de tribus du Nord chantent encore ses ballades. Ce cor ne le quittait pas quand il assistait aux batailles d'importance. Le chef de son clan le lui avait donné en lui disant de souffler dedans s'il se retrouvait en danger. Trop fier pour demander l'aide de ses frères, Béogin périt au combat, le cor rangé sous sa cape.
+
+PARAMÈTRES :
+
+Capacités de charge :
+- invoque 2 à 4 berserkers qui combattent pour le possesseur de l'objet
+  Portée : 6 mètres
+  Durée : 1 heure
+
+Poids : 1~
+@1041  = ~Bouclier scarabée rhinocéros~
+@1042  = ~Ce bouclier a été taillé dans la carapace d'un scarabée rhinocéros géant. Naturellement résistant, il a été traité et renforcé par les artisans duergars. Il fonctionne comme un pavois de bois et de métal, bien que beaucoup plus léger.
+
+PARAMÈTRES :
+
+Capacités d'équipement :
+- classe d'armure : +1, bonus de +1 contre les projectiles
+
+Nécessite : 15 en force
+
+Poids : 5~
+@1051  = ~Ceinture d'os~
+@1052  = ~La Ceinture d'Os
+Cet objet inquiétant a été confectionné par des prêtres de Myrkul, le dieu de la Mort. Il s'agit d'une lourde ceinture de cuir ornée de plaques métalliques et d'os humains. Son premier possesseur fut un terrible guerrier appelé Keth l'Orgueilleux. Il traversait le champ de bataille sans connaître la moindre peur, éliminant quiconque se dressait devant lui. La ceinture lui servit lors des rares fois où il se retrouva encerclé. Malheureusement pour lui, ses adversaires finirent par l'abattre à l'aide de piques et autres arme d'hast. À sa mort, il fut enterré avec sa ceinture, mais les pillards ne se firent pas attendre. L'un de ces voleurs vendit la ceinture à un mage d'Urmlaspyr. Ce dernier, qui se nommait Isanan, eut maintes fois l'occasion de se servir de cet objet au cours de ses voyages. Quand il prit sa retraite, il vendit la ceinture à un prêtre de Myrkul reconnaissant, Ben-Karad. On pense que celui-ci aurait péri dans les égouts d'Eauprofonde.
+
+PARAMÈTRES :
+
+Capacités de charge :
+- Cercle d'ossements une fois par jour (les créatures à moins de 3 mètres de l'utilisateur subissent 1d6 dégâts contondants et 1d6 dégâts tranchants ; l'utilisateur ne peut pas se déplacer pendant la durée du sort)
+  Durée : 3 rounds
+
+- Animation des mors une fois par jour (invoque 1d6 squelettes ou zombies)
+  Portée : 6 mètres
+  Durée : 8 heures
+
+Poids : 2~
+@1061  = ~Lance de Kerish +3~
+@1062  = ~La Lance de Kerish
+Cette lance est pour le moins étrange. Transparente comme du cristal, son manche est constitué d'une matière inconnue. Le « fer » ressemble à une pointe de glace entourée d'une aura de givre. Une fine brume de cristaux de neige enveloppe toute l'arme.
+
+PARAMÈTRES :
+
+Capacités d'équipement :
+- résistance au feu : +10 %
+
+Capacités de combat :
+- 5 % de chances d'infliger +1d6 points de dégâts de froid à chaque coup au but
+
+TAC0 : +3
+Dégâts : 1d8 +3 (perforant)
+Facteur de vitesse : 5
+Type de compétence : lance
+Type : arme à deux mains
+Nécessite : 5 en force
+
+Poids : 2~
+@1071  = ~Talisman d'os~
+@1072  = ~Les talismans d'os sont très recherchés par les nécromanciens. Ces charmes sont créés à partir d'un os pris sur le cadavre d'un vampire abattu. On leur donne souvent la forme d'un anneau ou d'un collier, et ils permettent à leur utilisateur d'absorber l'énergie vitale des créatures vivantes qu'il touche.
+
+PARAMÈTRES :
+
+Lance le sort Toucher vampirique (5 charges)
+Poids : 3
+
+Non-utilisable par :
+Personnages d'alignement bon
+~
+@1081  = ~Bottes des voies multiples~
+@1082  = ~Les Bottes des Voies Multiples
+Confectionnées en 931 CV par un illusionniste gnome, les bottes des voies multiples ont été portées par de nombreux aventuriers, qui se les sont procurées en les achetant tout à fait légitimement. S'il faut en croire leur créateur, Weldy Baker, le pouvoir de ces bottes ne repose pas uniquement sur la puissance des illusions, mais aussi sur « les changements microscopiques qui se traduisent par des effets macroscopiques au niveau de l'environnement ».
+
+PARAMÈTRES :
+
+Capacités de charge :
+- Flou une fois par jour (+3 à la classe d'armure et +1 aux jets de sauvegarde)
+  Durée : 7 rounds
+  Zone d'effet : l'utilisateur
+
+Poids : 4~
+@1091  = ~Bottes de Moander~
+@1092  = ~Les Bottes de Moander
+Ces bottes disparates de cuir rouge et noir ont été confectionnées par des disciples de Moander, ancien dieu du Pourrissement. Elles furent utilisées par un grand nombre de ses fidèles lorsque ceux-ci affrontaient les nombreux ennemis de leur divin seigneur, qui vénéraient pour la plupart des dieux de la nature. Les bottes furent finalement récupérées par Aldarra de Chauntéa, qui les donna à un rôdeur demi-elfe du nom de Liberon Douzarbre.
+
+PARAMÈTRES :
+
+Capacités d'équipement :
+- immunité au sort d'Enchevêtrement
+
+Poids : 4~
+@1101  = ~Talisman du loup noir~
+@1102  = ~Le Talisman du Loup Noir
+Ce talisman grossier prend la forme d'une pierre plate sur laquelle on a peint une patte de loup. Malgré son aspect simpliste, le talisman du Loup Noir est extrêmement puissant et bénéfique.
+
+PARAMÈTRES :
+
+Capacités d'équipement :
+- classe d'armure : +1
+- jets de sauvegarde contre les souffles : +1
+- points de vie : +10
+- résistance au froid : +10 %
+
+Poids : 1~
+@1111  = ~Casque en écailles de remorhaz~
+@1112  = ~Conçu à partir des écailles chitineuses d'un remorhaz, ce lourd heaume conserve une partie des résistances naturelles de la créature à partir duquel il a été fabriqué.
+
+PARAMÈTRES:
+
+Capacités d'équipement :
+- protège contre les coups critiques
+- classe d'armure : +1
+- résistance à la magie : +10 %
+- résistance aux dégâts magiques : +20 %
+
+Poids : 10~
+@1121  = ~Rebec de la guerre~
+@1122  = ~Le Rebec de la Guerre
+Le Rebec de la Guerre est l'un des rares instruments ayant reçu l'approbation du clergé de Tempus. On le doit à un luthier petit-homme du nom de Rélias Noiregraine. Les prêtres d'Arvoreen, le Défenseur, ont béni le luth, lui conférant ainsi ses impressionnants pouvoirs. Rélias n'avait pas l'intention de jouer de son merveilleux instrument, qu'il vendit finalement à un barde, Gallow Deely. Ce dernier était un humain dégingandé qui fréquentait assidûment les aventuriers. Bien qu'inapte au combat, il était exceptionnellement doué pour ce qui était de composer des chants héroïques. Le rebec lui permit d'aider la Compagnie des Arbres Gelés à vaincre un jeune dragon vert en 1013 CV. La chanson rythmée qu'il composa pour l'occasion, « Le Combat Vert de Treize », est encore jouée dans de nombreuses tavernes du Mitan Occidental.
+
+PARAMÈTRES :
+
+Capacités de charge:
+- Émotion, courage deux fois par jour (les alliés reçoivent +1 au TAC0, +3 aux dégâts, +5 points de vie temporaires et sont immunisés à la terreur)
+  Portée : personnelle
+  Durée : 1 heure
+  Zone d'effet : rayon de 2,10 mètres
+
+Poids : 3~
+@1131  = ~Cape des âmes en peine~
+@1132  = ~La Cape des Âmes en Peine
+Cette cape incroyablement lourde a été offerte par Sœur Calliana pour remercier les héros ayant sauvé la Voix de Durdel Anatha. Elle fut à l'origine portée par un nécromancien pénitent, honteux de la manière dont il s'était servi de l'âme des morts. Gris sombre, la cape est constituée de cinq couches de laine épaisse.
+
+PARAMÈTRES :
+
+Capacités d'équipement :
+- sagesse : +1
+
+Poids : 80~
+@1141  = ~Cyclocône~
+@1142  = ~Le Cyclocône
+Ce couvre-chef qui n'a rien d'un casque est un puissant objet pour magicien. Le mage Bemban d'Immersye appréciait tout particulièrement ce modèle, tant pour son aspect que pour sa puissance. Nombre de magiciens se fabriquèrent leur propre cyclocône, mais ce chapeau pointu leur attira vite la raillerie des aventuriers. Sur la fin de sa vie, Bemban devint sénile, et il finit par léguer la majorité de sa fortune à divers mages, dans l'espoir qu'ils continueraient de fabriquer son chapeau préféré.
+
+PARAMÈTRES :
+
+Capacités d'équipement :
+- classe d'armure : +1
+
+Capacités de charge :
+- Tourbillon
+  Crée un tourbillon qui inflige 2d8 dégâts contondants et 2d8 dégâts tranchants ; les créatures entrant en contact avec le tourbillon doivent réussir un jet de sauvegarde contre les souffles sous peine d'être étourdies pendant 2 rounds ; les créatures ayant 2 dés de vie ou moins sont tuées instantanément, tandis que les élémentaires et les créatures de taille gigantesque sont immunisées
+  Portée : 30 mètres
+  Zone d'effet : spécial
+
+Poids :  1~
+@1151  = ~Symbole de Corellon Larethian~
+@1152  = ~Le Symbole de Corellon Larethian
+Le symbole magique de Corellon Larethian, dieu des elfes, était donné à la plupart des guerriers de la Main de la Seldarine. Il évoque la bataille épique qui opposa Corellon à Gruumsh le Borgne. Quiconque l'arbore se sent particulièrement apte à affronter les orques.
+
+PARAMÈTRES :
+
+Capacités d'équipement :
+- TAC0 : +2
+
+Poids : 0~
+@1161  = ~Chanceleuse +1~
+@1162  = ~Chanceleuse
+Cette arme puissante forgée par le magicien Retland de Port-Ponant était souvent utilisée par les fiers-à-bras qu'il employait. Malgré la haute éducation que Retland avait reçue, il n'était rien de plus qu'un racketteur. Ses hommes, les Gars du Pavé, intimidèrent et menacèrent les divers quartiers de Port-Ponant une décennie durant, jusqu'à ce qu'un magicien dévoué à Tyr, Alistar Lavell, rassemble ses alliés pour défaire le gang. Une fois Retland et ses hommes vaincus, Alistar fit don de Chanceleuse au clergé de Tyr, qui la confia à un prêtre errant.
+
+PARAMÈTRES :
+
+Capacités de combat :
+- 5 % de chances d'étourdir la cible pendant 2 rounds à chaque coup au but
+
+TAC0 : +1
+Dégâts : 1d6 +1 (contondant)
+Facteur de vitesse :  4
+Type de compétence : gourdin
+Type : arme à une main
+Nécessite : 5 en force
+
+Poids :  3~
+@1171  = ~Contresort +2~
+@1172  = ~Contresort
+Naradon, mercenaire de Thesk, était connu pour sa faculté à se débarrasser rapidement des mages adverses, même quand ceux-ci étaient plus nombreux que lui. Il a obtenu cette réputation avec l'aide de trois objets : des bottes de rapidité, des potions de rapidité et sa fidèle épée courte, Contresort. Contrairement à beaucoup d'armes magiques, cette dernière n'a pas une histoire faite de meurtres et de secrets. Naradon prit sa retraite à l'âge de trente-deux ans, mais les nombreuses potions de rapidité qu'il avait ingérées le rattrapèrent et il mourut de vieillesse quatre ans plus tard. Son unique héritier n'avait nulle envie de devenir aventurier et il vendit l'arme à un célèbre monte-en-l'air. L'épée se reconnaît au martin-pêcheur sculpté sur son pommeau.
+
+PARAMÈTRES :
+
+Capacités d'équipement :
+- résistance à la magie : +5 %
+- jets de sauvegarde contre les sorts : +1
+
+Capacités de combat :
+- 50 % des coups au but empêchent la victime de jeter des sorts pendant 2 rounds
+
+TAC0 : +2
+Dégâts : 1d6 +2 (perforant)
+Facteur de vitesse : 1
+Type de compétence : épée courte
+Type : arme à une main
+Nécessite : 5
+
+Poids : 1~
+@1181  = ~Épée d'Erevain +2~
+@1182  = ~L'Épée d'Erevain
+Cette épée large appartenait à Erevain Noirfourreau, elfe errant d'Evereska. Elle a été forgée en 1221 CV par les Grismanteaux d'Evereska. Elle était assez inhabituelle chez les elfes, qui préfèrent généralement des épées plus légères.
+
+PARAMÈTRES :
+
+Capacités d'équipement :
+- résistance à l'acide : +10 %
+- jets de sauvegarde contre les bâtons/baguettes : +2
+
+TAC0 : +2
+Dégâts : 2d4 +2 (tranchant)
+Facteur de vitesse : 5
+Type de compétence : épée longue
+Type : arme à une main
+Nécessite : 6 en force
+
+Poids : 4~
+@1191  = ~Tueuse de foi +2~
+@1192  = ~Tueuse de Foi
+L'histoire de cette hache d'armes à l'air on ne peut plus normal est courte mais surprenante. S'il faut en croire les philosophes de la magie, Tueuse de Foi aurait été enchantée par l'athéisme de son possesseur, le guerrier Erion le Sceptique. Erion était un homme plus que rare à Féérûne, puisqu'il niait l'existence des dieux et de la magie divine. Il devint célèbre par les tentatives qu'il fit pour démontrer que les prêtres étaient des charlatans et leur magie une variante de celle utilisée par les magiciens. Les sages pensent que la haine qu'Erion vouait aux gens d'Église aurait conféré des pouvoirs à son arme. Les prêtres de Séluné à Port-Ponant ont conservé la hache après avoir tué Erion en état de légitime défense. On pense actuellement qu'Erion fait parti des athées utilisés comme pierres de construction pour le Château aux Ossements de Myrkul.
+
+PARAMÈTRES :
+
+Capacités d'équipement :
+- résistance à la magie : +5 %
+
+Capacités de combat :
+- 5 % de chances de lancer une Dissipation de la magie à chaque coup au but
+
+TAC0 : +2
+Dégâts : 1d8 +2 (tranchant)
+Facteur de vitesse : 5
+Type de compétence : hache
+Type : arme à une main
+Nécessite : 10 en force
+
+Poids : 5~
+@1201  = ~Billes de force +2~
+@1202  = ~Billes de Force
+Projectiles très appréciés des prêtres, les billes de force permettent d'immobiliser la cible sans lui faire de mal. Elles sont particulièrement utilisées par les clergés d'Eldath, Heaum et Ilmater.
+
+PARAMÈTRES :
+
+Capacités de combat :
+- la cible est affectée par Sphère d'Otiluke pendant 7 rounds (jet de sauvegarde contre les sorts pour annuler)
+
+Dégâts : 1d4 +3
+Type de dégâts : projectiles
+Arme à distance : fronde
+
+Poids : 0~
+@1211  = ~Flèches immobilisantes~
+@1212  = ~Flèches Immobilisantes
+Employées presque exclusivement par les rôdeurs eldathi du Mitan Occidental de Féérûne, les flèches immobilisantes sont appréciées pour leur faculté à retenir une proie sans lui faire trop mal. Bien que surtout utilisées contre les animaux incontrôlables, elles sont très efficaces contre les humanoïdes malfaisants. Elles s'ornent fréquemment de fleurs et rubans bleus et verts pour montrer qu'elles ont été créées par les prêtres pacifistes d'Eldath. Cela les rend moins efficaces au combat.
+
+PARAMÈTRES :
+
+Capacités de combat :
+- Enchevêtrement sur la cible pendant 4 rounds
+
+TAC0 : -1
+Dégâts : 1d6 -1 (projectile)
+Arme à distance : arc
+
+Poids : 0~
+@1221  = ~Intercepteuse +1~
+@1222  = ~L'Intercepteuse
+Cette épée longue fut forgée pour le rôdeur Kelhanion de Soubar en 1272 CV. Ne portant qu'une armure légère et n'utilisant jamais de bouclier, Kelhanion voulait une arme capable de le protéger au combat. Intercepteuse fut forgée par l'une de ses connaissances, le mage Peth d'Elturel. Conformément aux souhaits du rôdeur, l'épée a l'air on ne peut plus normale : sa lame sobre en acier s'achève par une garde similaire. Sa poignée est recouverte de peau d'ogre noire et huilée. Elle possède un instinct empathique très réduit qui lui permet de bouger dans la main de son porteur pour parer les attaques. Intercepteuse disparut quand Kelhanion fut massacré par une douzaine de trolls dans la forêt de l'Écorce de Troll.
+
+PARAMÈTRES :
+
+Capacités d'équipement :
+- classe d'armure : +2 (sauf contre les projectiles)
+
+TAC0 : +1
+Dégâts : 1d8 +1 (tranchant)
+Facteur de vitesse : 4
+Type de compétence : épée longue
+Type : arme à une main
+Nécessite : 6 en force
+
+Poids : 4~
+@1231  = ~Épée de Kresselack +1~
+@1232  = ~L'Épée de Kresselack
+Le roi barbare Kresselak a utilisé cette épée pour conquérir les terres du Nord, mais personne ne sait comment il l'a acquise. La plupart des historiens s'accordent pour dire qu'il l'a récupérée lors de l'une de ses conquêtes. Cela étant, des rumeurs persistantes laissent entendre que l'épée aurait été créée par un puissant magicien sur ordre de Kresselack lui-même. Personne ne saura jamais la vérité sur cette affaire.
+
+PARAMÈTRES :
+
+Capacités d'équipement :
+- résistance au froid : +10 %
+
+TAC0 : +1
+Dégâts : 1d10 +1 (tranchant)
+Facteur de vitesse : 8
+Type de compétence : épée à deux mains
+Type : arme à deux mains
+Nécessite : 14 en force
+
+Poids : 12~
+@1241  = ~Cimeterre porte-bonheur~
+@1242  = ~Le Cimeterre Porte-Bonheur
+Cette arme appartenait à un célèbre joueur professionnel de Zakhara, Kadan Ibn-Kadur. On pense qu'elle lui permit de remporter de nombreux paris stupides qu'il aurait dû perdre. Kadan perdit toutefois le cimeterre quand il croisa la route du tristement célèbre Nido Ochita Inazuma à l'ouest de Féérûne. Inazuma était le fils d'un chevalier du Cormyr et d'une noble dame de Kara-Tur. Il prétendait que sa mère avait été frappée par la foudre à deux reprises tandis qu'elle le portait dans son ventre, une fois alors qu'elle venait de tomber enceinte, et la seconde juste avant de donner naissance à Inazuma. Selon la légende, Inazuma serait né sur la tranche de la Pièce du Destin, la méthode mystique qu'utilisent Tymora et Bashaba afin de déterminer si l'individu sera chanceux ou malchanceux tout au long de son existence. Les sages pensent que la pièce concernant Inazuma tomba sur la tranche, l'immunisant contre les effets de la chance et de la malchance. Quand il croisa Kadan, il ne fallut pas longtemps pour que le zakharien parie son cimeterre et le perde au profit d'Inazuma.
+
+PARAMÈTRES :
+
+Capacités d'équipement :
+- le possesseur est toujours sous l'effet du sort Chance (+1 à tous les jets)
+
+Capacités de combat :
+- Chance une fois par jour
+  Portée : 4,5 mètres
+  Durée : 3 rounds
+  Zone d'effet : 1 créature
+
+TAC0 : +2
+Dégâts : 1d8 +2 (perforant)
+Facteur de vitesse :  4
+Type de compétence : cimeterre / wakizashi / ninjatō
+Type : arme à une main
+Nécessite : 8 en force
+
+Poids :  4~
+@1251  = ~Lyre de progression~
+@1252  = ~La Lyre de Progression
+La lyre de progression fut créée par un barde, Sédini Paletto, qui enseignait la musique à de jeunes bardes en des temps difficiles. Cet instrument, dont il ne se séparait jamais, lui permettait de repousser ceux qui les attaquaient, ses élèves et lui. À l'automne de sa vie, il donna la lyre à son meilleur disciple, Galwen Alaman, qui enseigna à son tour plusieurs années durant avant de devenir aventurier. On pense qu'il a perdu la lyre dans un marais après l'avoir accidentellement laissée tomber.
+
+PARAMÈTRES :
+
+Capacités d'équipement :
+- quand un barde la coince sous son bras gauche, cette lyre lui permet de mémoriser 2 sorts supplémentaires de niveau 2 et 1 sort supplémentaire de niveau 3
+
+Poids : 2
+~
+@1261  = ~Corjoyeux~
+@1262  = ~Corjoyeux
+Corjoyeux appartenait autrefois à un barde, la demi-elfe Prophia Feudecuivre. Elle ne s'en séparait jamais. Malgré ses pouvoirs modestes, Corjoyeux est l'un des objets magiques de Féérûne qui ont le plus voyagé. On pense que Prophia l'a emmené avec elle dans plusieurs plans élémentaires, mais aussi aux Élysées, à Baator, à l'Épine Dorsale du Monde et aux lointaines marches de Wa. Corjoyeux a diverti les pachas de Calimshan, calmé la colère des fanatiques de Zakhara, ou encore redonné courage à un équipage perdu sur la mer des Étoiles Déchues. Prophia l'a égaré dans le grand désert d'Anauroch.
+
+PARAMÈTRES :
+
+Capacités de charge :
+- Bénédiction une fois par jour (les alliés dans la zone d'effet reçoivent un bonus de +1 aux jets d'attaque et de sauvegarde contre la terreur, et voient leur moral augmenter)
+  Portée : personnelle
+  Durée : 6 rounds
+  Zone d'effet : rayon de 4,50 mètres
+
+Poids : 1~
+@1271  = ~Bâton du courroux de la nature~
+@1272  = ~Le Bâton du Courroux de la Nature
+Ce bâton ferré a été créé par un groupe de druides de Sylvanus particulièrement virulents dans le but de faire connaître la colère de la nature à ceux qui détruisent les forêts et n'ont aucun respect pour les druides. Les Sylvanites utilisaient principalement leur bâton contre les prêtres de Malar et des autres Dieux de la Fureur.
+
+PARAMÈTRES :
+
+Capacités de charge :
+- Enchevêtrement (jet de sauvegarde contre les sorts à chaque round pour annuler)
+  Portée : champ visuel de l'utilisateur
+  Durée : 1 tour
+  Zone d'effet : rayon de 3,60 mètres
+
+- Colonne de feu
+  Dégâts : 6d8 dégâts de feu (jet de sauvegarde contre les sorts pour moitié)
+  Portée : champ visuel de l'utilisateur
+  Zone d'effet : rayon de 1,50 mètres
+
+TAC0 : +1
+Dégâts : 1d6 +1 (contondant)
+Facteur de vitesse : 3
+Type de compétence : bâton
+Type : arme à deux mains
+Nécessite : 5 en force
+
+Poids : 3~
+@1281  = ~Poings enflammés de Lin Mei~
+@1282  = ~Les Poings Enflammés de Lin Mei
+On disait de Lin Mei qu'elle était une jeune femme d'une exquise beauté, mais au tempérament incendiaire. Lorsque sa famille la pressa de se trouver un mari, elle organisa un concours pour tous les hommes de la région : quiconque serait capable de la battre en combat singulier pourrait l'épouser. Des hommes venus des quatre coins de Kara-Tur se pressèrent pour relever le défi, mais aucun d'entre eux ne put la vaincre, alors même qu'elle combattait sans autre arme que ses mains nues. Tous les prétendants, déçus, rentrèrent chez eux, sauf un : un jeune homme au regard brillant, propriétaire d'une paire de bracelets dorés qu'il lui offrit. Il lui dit alors : « Nul ne peut dompter votre passion, et tous ceux qui s'y essaieront ne comprendront jamais votre cœur. Que ces ornements puissent vous rappeler que votre âme n'appartient qu'à vous seule, et qu'elle ne saurait être soumise par un autre. » Lin Mei n'a jamais épousé cet homme, mais elle partit avec lui le jour même en quête d'aventure. Il passèrent le reste de leur vie ensemble, et formèrent un couple plus uni que n'importe quel mari et femme. Après de longues années, les deux amants finirent par prendre leur retraite, et Lin Mei disparut sans grand bruit des annales de l'Histoire. Ces bracelets qu'elle a toujours portés sont tout ce qu'il reste d'elle. Ils brûlent encore de sa fougue insoumise.
+
+PARAMÈTRES :
+
+Capacités de combat :
+- +2 au TAC0 lorsque le porteur combat à mains nues
+- 25 % de chances d'infliger 1d2 points de dégâts de feu à chaque coup au but lorsque le porteur combat à mains nues
+
+Capacités de charge :
+- Mains ardentes une fois par jour
+
+Poids : 2~
+@1291  = ~Pierre ionique bleue et écarlate~
+@1292  = ~Pierre Ionique Bleue et Écarlate
+Nombre d'histoires ont été contées au sujet de l'ascension du chef Geraq au sein de sa tribu des gobelins Tourne-Pivot. D'aucunes insistent sur son talent inné pour la stratégie, qui lui permettait de nourrir sa tribu pendant des semaines avec le butin d'une seule rapine, tandis que d'autres mettent l'accent sur sa connaissance des arts noirs. La vérité est à la fois plus intéressante et moins palpitante que ça : la source du pouvoir de Geraq provenait d'une curieuse pierre qu'il gardait toujours sur lui. Nul ne sait où il l'avait trouvé, ni ce qu'il en est advenu après la mystérieuse disparition de Geraq, mais celui qui la tient dans sa main peut entendre des murmures prodiguant toute l'expertise que Geraq a accumulée il y a des siècles. Bien entendu, les murmures sont prononcés en langue gobeline, ce qui les rend plutôt inutiles pour les races humanoïdes. Malgré cela, la pierre offre tout de même une meilleure compréhension du monde à qui la possède.
+
+PARAMÈTRES :
+
+Capacités d'équipement :
+- intelligence : +1
+
+Poids : 0~
+@1301  = ~Gardien de la paix~
+@1302  = ~Le Gardien de la Paix
+Un solide barman de Port-Ponant nommé Tad le Juste a commandé cette arme pour s'occuper de ses clients trop dissipés. Tad se contentait généralement de taper sur son comptoir à l'aide de son gourdin, mais il lui arrivait de devoir joindre la mêlée générale pour rétablir « l'ordre ». On prétend qu'il aurait assommé tant de malfrats que nul voleur de Port-Ponant n'aurait pu prétendre qu'il n'avait jamais connu la caresse de Gardien de la Paix. L'un d'eux, Goujenfer, supporta très mal la chose. Par une nuit de brouillard, il lança ses chiens sur Tad le Juste. Ce dernier tua plus de la moitié de ses agresseurs canins avant de succomber à la meute. Goujenfer conserva le gourdin, qu'il installa chez lui en guise d'avertissement à qui voudrait l'énerver.
+
+PARAMÈTRES :
+
+TAC0 : +3
+Dégâts : 1d6 +3 (contondant)
+Facteur de vitesse : 2
+Type de compétence : gourdin
+Type : arme à une main
+Nécessite : 5 en force
+
+Poids : 1~
+@1311  = ~Tisonnier de Microbe~
+@1312  = ~Le Tisonnier de Microbe
+Microbe était le plus petit gobelin de la tribu la plus insignifiante qui ait jamais existé. Mais il compensait sa taille restreinte par une intelligence remarquable. Au cours d'un raid contre une caravane de marchandises, il découvrit une lance magique dans l'un des chariots. Il la prit aussitôt et la modifia de manière à augmenter la gravité des blessures infligées.
+
+PARAMÈTRES :
+
+TAC0 : +3
+Dégâts : 1d8 +3 (perforant)
+Facteur de rapidité : 8
+Type de compétence : lance
+Type : arme à deux mains
+Nécessite : 5 en force
+
+Poids : 5~
+@1321  = ~Bottes d'ombre~
+@1322  = ~Bottes d'Ombre
+À y regarder de plus près, ces bottes n'ont pas l'air d'exister pleinement sur le plan physique. Leur porteur semble se fondre dans l'ombre et ne plus faire de bruit quand il se déplace.
+
+PARAMÈTRES :
+
+Capacités d'équipement :
+- classe d'armure : +1
+- déplacement silencieux : +15 %
+- se cacher dans l'ombre : +15 %
+
+Poids : 5~
+@1331  = ~Bâton de la Main~
+@1332  = ~Bâton de la Main
+Cet objet a été créé au cours de l'âge d'or, par les elfes de la Main de la Seldarine et les nains de Profondorn. Il a été taillé avec un soin infini, suite à quoi des runes elfiques ont été gravées à sa surface. Les magiciens de la Main n'aimaient généralement pas combattre au corps à corps, mais ce bâton était le symbole de leur pouvoir et de leur union.
+
+PARAMÈTRES :
+
+TAC0 : +3
+Dégâts : 1d6 +3 (contondant)
+Facteur de vitesse : 4
+Type de compétence : bâton
+Type : arme à deux mains
+Nécessite : 5 en force
+
+Poids : 4~
+@1341  = ~Fronde d'Edley~
+@1342  = ~La Fronde d'Edley
+Cette arme appartenait au guerrier-roublard petit-homme Edley Bruisson. Certains le considéraient comme un bandit, mais d'autres voyaient en lui un héros. Bien que la société des petites-gens lui ait assigné une image de voyou et de mauvais exemple pour la jeunesse, nombreux sont ceux qui l'admiraient en secret. Les aventures comiques qui l'ont conduit à fréquenter des elfes et des humains sont racontées dans les ballades de Waren Oiseaunoir.
+
+PARAMÈTRES :
+
+TAC0 : +3
+Dégâts : +2 (projectile)
+Facteur de vitesse : 4
+Type de compétence : fronde
+Type : arme à une main
+Nécessite : 3 en force
+
+Poids : 0~
+@1351  = ~Symbole de Solonor Thelandira~
+@1352  = ~Le symbole de Solonor Thelandira
+Le symbole magique du dieu elfe Solonor Thelandira était donné à la plupart des archers de la Main de la Seldarine. Il leur permettait d'atteindre plus fréquemment leur cible.
+
+PARAMÈTRES :
+
+Capacités d'équipement :
+- TAC0 : +2 avec les armes à projectiles
+
+Poids : 0~
+@1361  = ~Fourreau d'épines~
+@1362  = ~Le Fourreau d'Épines
+Le nom inquiétant de cette arme vient du fait que son premier propriétaire avait pour habitude de la planter dans le dos de ses adversaires. Sa longue lame effilée a été conçue pour perforer les armures. Bélédor, assassin de Calimport, s'en est servi pour tuer des dizaines de personnes avant de succomber au poison d'un serviteur payé pour l'éliminer.
+
+PARAMÈTRES :
+
+TAC0 : +5
+Dégâts : 1d4 +1 (perforant)
+Facteur de vitesse : 1
+Type de compétence : dague
+Type : arme à une main
+Nécessite : 4 en force
+
+Poids : 1~
+@1371  = ~Bâton de la jubilation des pendus~
+@1372  = ~Le Bâton de la Jubilation des Pendus
+Ce sinistre bâton, de sinistre réputation, fut sculpté dans le bois de l'Arbre du Mort : un vieux peuplier noir situé en marge d'un hameau perdu des Sélénae auquel les criminels étaient pendus. Toute sorte de bandits, meurtriers, voleurs et autres se balancèrent à ses grosses branches noueuses, pour le plus grand plaisir de Mordigan, le fossoyeur. Ce dernier se livrait en secret à la nécromancie, et profitait allègrement de toute occasion qui se présentait de pratiquer son art. Il enterrait les cadavres des criminels à proximité du peuplier et invoquait les sombres puissances du Plan Négatif pour accomplir un acte funeste à l'encontre du peuplier noir. Il lui a octroyé une sorte de semi-conscience et la capacité de se nourrir des restes de ceux qui se balancèrent à ses branches. Des racines noires descendirent jusque dans les chairs putréfiées et, de façon assez alarmante, les visages torturés des macchabées apparurent peu à peu dans les nœuds tortueux du tronc... À la plus grande surprise des villageois, le puissant bâton magique sculpté par le vil Mordigan finit par causer leur perte. Et c'est ainsi que les pendus de l'Arbre du Mort eurent leur vengeance.
+
+PARAMÈTRES :
+
+Capacités d'équipement :
+- charisme : -2
+
+Capacités de charge :
+- Animation des morts trois fois par jour (invoque 1d6 squelettes ou zombies)
+  Portée : 6 mètres
+  Durée : 8 heures
+
+TAC0 : +1
+Dégâts : 1d6 +1 (contondant)
+Facteur de vitesse : 4
+Type de compétence : bâton
+Type : arme à deux mains
+Nécessite : 5 en force
+
+Poids : 2~
+@1381  = ~Brasfidèle~
+@1382  = ~Le Brasfidèle
+Ce petit bouclier fut créé pour être offert par le chef du clan Marteaudeguerre à l'un de ses fidèles serviteurs. Ce dernier, Wurdar Fortbrassin, avait défendu la famille du chef contre un yéti. Wurdar porta fièrement le bouclier pendant dix ans, avant de périr sous les coups des orques dans l'Épine Dorsale du Monde. Son sacrifice permit à plusieurs membres importants du clan de s'enfuir.
+
+PARAMÈTRES :
+
+Capacités d'équipement :
+- classe d'armure : +2
+- ne protège pas contre les projectiles
+
+Poids : 4~
+@1391  = ~Carreaux de silence~
+@1392  = ~Carreaux de Silence
+Les érudits reconnaissent aisément ces carreaux magiques en raison de leur fonction et de leur décoration. La célèbre Bande de la Clé rassemblait des guerriers-mages qui arrachaient les textes magiques des mains des magiciens malfaisants. Ils préféraient utiliser des arbalètes plutôt que des arcs, car il est possible de les armer à l'avance, ce qui permet de les utiliser plus rapidement. Le chef de la Bande, un moustachu plutôt maigre du nom d'Héglyf, avait demandé à des prêtres de Déneïr de lui préparer ces carreaux en grande quantité. L'empennage vert et jaune des projectiles est aisément reconnaissable.
+
+PARAMÈTRES :
+
+Capacités de combat :
+- la cible est réduite au silence (jet de sauvegarde contre les sorts pour annuler)
+
+TAC0 : +1
+Dégâts : 1d8 +1 (projectiles)
+Arme à distance : arbalète
+
+Poids : 0~
+@1401  = ~Turodahel~
+@1402  = ~Turodahel
+Forgée en 1021 CV pour Makael l'Affûté, l'épée Turodahel a un passé sanglant. Makael était un mercenaire louant ses services à quiconque pouvait le payer. Rusé et astucieux, il a utilisé ses talents et la puissance de Turodahel plus de trois décennies durant. Ce n'est qu'après sa mort, due à une maladie magique, que des légendes ont commencé à circuler à son sujet. Les sages actuels pensent que Makael a dû tuer plus de cinq cents adversaires à l'aide de son épée au cours de sa carrière. Et pourtant, on sait qu'il n'était pas particulièrement fort ou résistant. Les gens s'accordent à penser que son épée devait grandement l'aider. Sa tombe fut profanée quelques années après son enterrement.
+Au cours des décennies qui ont suivi, guerriers et voleurs de la mer de Lune et des Vaux ont multiplié meurtres et complots pour s'approprier l'épée légendaire de Makael. Un prêtre de Baine a volé le crâne du mercenaire pour obtenir des renseignements sur l'arme. Lorsqu'on lui a demandé quel était le pouvoir de son épée, l'esprit de Makael a répondu par un seul mot : « turodahel ». Le prêtre de Baine a dû se plonger dans ses grimoires plusieurs mois durant avant de trouver une traduction de ce terme. Dans la langue de l'ancienne Néthéril, « turodahel » signifie approximativement « le pouvoir de la discrétion ».
+
+
+PARAMÈTRES :
+
+Capacités d'équipement :
+- intelligence : +1
+
+TAC0 : +2
+Dégâts : 1d8 +2 (tranchant)
+Facteur de vitesse : 3
+Type de compétence : épée longue
+Type : arme à une main
+Nécessite : 6 en force
+
+Poids : 5~
+@1411  = ~Marteau de guerre sanctifié~
+@1412  = ~Marteau de Guerre Sanctifié
+Comme tous les autres marteaux, celui-ci est intégralement en acier. Sa tête capable de broyer les os de n'importe quelle créature a été montée sur un manche de 45 cm de long. Il bénéficie d'enchantements mineurs qui accroissent encore son efficacité.
+
+PARAMÈTRES :
+
+Capacités d'équipement :
+- permet de mémoriser un sort de prêtre supplémentaire de niveau 1
+
+TAC0 : +1
+Dégâts : 1d4 +2 (contondant)
+Facteur de vitesse : 3
+Type de compétence : marteau de guerre
+Type : arme à une main
+Nécessite : 9 en force
+
+Poids : 6~
+@1421  = ~Flèches marteaux~
+@1422  = ~Flèches Marteaux
+Ces flèches ont été ouvragées par un maître-artisan, et de minuscules runes magiques sont visibles à sa surface. Leur création a manifestement demandé beaucoup de temps et, même si cela n'est pas apparent au premier coup d'œil, une lueur bleutée semble émaner des runes.
+
+PARAMÈTRES :
+
+Dégâts : 1d2 (projectile), +1d6 (contondant)
+Arme à distance : arc
+
+Poids : 0~
+@1431  = ~Dague électrique~
+@1432  = ~La dague électrique
+Comme la plupart des dagues, celle-ci possède une lame pointue à double tranchant. Les enchantements dont elle a bénéficié augmentent son efficacité.
+
+PARAMÈTRES :
+
+Capacités de combat :
+- 50 % de chances d'infliger +1d3 dégâts d'électricité à chaque coup au but
+
+TAC0 : +1
+Dégâts : 1d4 +1 (perforant)
+Facteur de vitesse : 2 
+Type de compétence : dague
+Type : arme à une main
+Nécessite : 3 en force
+
+Poids : 1~
+@1441  = ~Fléchettes aveuglantes~
+@1442  = ~Fléchettes Aveuglantes
+La fléchette est un petit projectile facilement dissimulable, lancé plutôt que catapulté par un arc ou une autre arme à distance. De minuscules runes argentées ont été gravées sur celles-ci afin de les rendre plus puissantes.
+
+PARAMÈTRES :
+
+Capacités de combat :
+- 25% de chances d'aveugler la cible pendant 2 secondes
+
+TAC0 : +2
+Dégâts : 1d3 +2 (projectiles)
+Facteur de vitesse : 2
+Type de compétence : fléchette
+Type : arme à une main
+
+Poids : 0~
+@1451  = ~Fléau tordu~
+@1452  = ~Le Fléau Tordu
+Le fléau d'armes est une solide poignée en bois attachée à une tringle en fer, une baguette de bois comportant des pointes, ou une boule en fer pointue. La poignée et l'équipement qui l'accompagne sont reliés par une charnière ou une chaîne. Cette arme servait à l'origine à battre le grain.
+
+PARAMÈTRES :
+
+Capacités de combat :
+- 50 % de chances d'infliger +1d4 points de dégâts perforants à chaque coup au but
+
+TAC0 : +1
+Dégâts : 1d6 +2 (contondant)
+Facteur de vitesse : 7
+Type de compétence : fléau d'armes / morgenstern
+Type : arme à une main
+Nécessite : 11 en force
+
+Poids : 15~
+@1461  = ~Défenseuse~
+@1462  = ~Hallebarde Gardienne : La Défenseuse
+De loin l'arme d'hast la plus ancienne et la plus répandue, la hallebarde se compose d'une hache en forme de couperet montée sur un bâton mesurant en moyenne 1,80 mètre de long. La hache est équilibrée à l'arrière par un barbillon et surmontée d'une pointe acérée, généralement de forme quadrangulaire. Le barbillon est parfois remplacé par un crochet utilisé pour faire tomber l'ennemi de cheval. La hallebarde est en réalité un croisement entre la lance et la hache.
+
+PARAMÈTRES :
+
+Capacités d'équipement :
+- classe d'armure : +1
+- résistance aux dégâts tranchants : +10 %
+- résistance aux dégâts perforants : +10 %
+
+TAC0 : +1
+Dégâts : 1d10 +1 (perforant)
+Facteur de vitesse : 8
+Type de compétence : hallebarde
+Type : arme à deux mains
+Nécessite : 13 en force
+
+Poids : 14~
+@1471  = ~Arbalète lourde de défense~
+@1472  = ~Arbalète Lourde de Défense
+Une arbalète est un arc monté en croix sur un manche en métal ou en bois, appelé alors un arbrier. L'arc est généralement fabriqué en bois de frêne ou d'if. L'arbalète décoche un carreau lourd (également appelé simplement carreau). L'arbrier luit d'un léger éclat bleuté.
+
+PARAMÈTRES :
+
+Capacités d'équipement :
+- classe d'armure : +1
+- résistance à la magie : +10 %
+
+TAC0 : +4
+Dégâts : +4 (projectile)
+Facteur de vitesse : 9
+Type de compétence : arbalète
+Type : arme à deux mains
+Nécessite : 11 en force
+
+Poids : 12~
+@1481  = ~Arc long d'action~
+@1482  = ~Arc Long d'Action
+L'arc long est similaire à l'arc court, sauf que la branche est pratiquement aussi grande que l'archer, généralement entre 1,80 m et 2 m. Il a une plus grande portée que l'arc court, mais une rapidité de tir inférieure. Celui-ci jouit de propriétés magiques, qui lui confèrent un air de perfection. 
+
+PARAMÈTRES :
+
+Capacités d'équipement :
+- dextérité : +1
+
+TAC0 : +3
+Dégâts : +2 (projectile)
+Facteur de vitesse : 6
+Type de compétence : arc long
+Type : arme à deux mains
+Nécessite : 12 en force
+
+Poids : 3~
+@1491  = ~Arbalète légère gardienne~
+@1492  = ~Arbalète Légère : Gardienne
+Une arbalète est un arc monté en croix sur un manche en métal ou en bois, appelé alors un arbrier. L'arc est généralement fabriqué en bois de frêne ou d'if. L'arbalète décoche un carreau lourd (également appelé simplement carreau).  L'arbrier luit d'un léger éclat bleuté.
+
+PARAMÈTRES :
+
+Capacités d'équipement :
+- classe d'armure : +1
+- résistance aux dégâts projectiles : +10 %
+
+TAC0 : +4
+Dégâts : +2 (projectile)
+Facteur de vitesse : 5
+Type de compétence : arbalète
+Type : arme à deux mains
+Nécessite : 8 en force
+
+Poids : 7~
+@1501  = ~Armure de plates d'ombre des roches~
+@1502  = ~Les plaques rigides qui protègent les ombres des roches sont assez faciles à travailler pour constituer des armures pour humanoïdes. Celles-ci ont été transformées en armure de plates noire par des forgerons duergars. Habitués à travailler l'exosquelette des ombres des roches, les nains gris ont traité et renforcé l'armure.
+
+Classe d'armure : 2 (-2 contre les armes tranchantes)
+Nécessite : 12 en force
+
+Poids : 40~
+@1511  = ~Morgenstern électrique~
+@1512  = ~Morgenstern Électrique
+La morgenstern est un manche en bois couronné d'une tête en métal constituée d'une gaine de fer cloutée. Les morgensterns mesurent environ 1,20 m. Ce modèle possède une tête en or, renforcée par magie pour être moins malléable que le métal dont elle est issue.
+
+PARAMÈTRES :
+
+Capacités de combat :
+- 50 % de chances d'infliger +2d4 dégâts électriques à chaque coup au but
+- 10 % de chances d'étourdir pendant 3 secondes à chaque coup au but
+
+TAC0 : +1
+Dégâts : 2d4 +1 (contondant)
+Facteur de vitesse : 6
+Type de compétence : fléau d'armes / morgenstern
+Type : arme à une main
+Nécessite : 11 en force
+
+Poids : 10~
+@1521  = ~Anneau de force~
+@1522  = ~L'Anneau de Force
+Un anneau est une fine lanière de métal précieux. Il sert en général d'ornement. Plus rares, certains sont enchantés et permettent à quiconque les porte d'user de la magie qu'ils contiennent. Ils sont de ce fait très recherchés par les aventuriers. Sans raison particulière, cet anneau paraît chaud au toucher.
+
+PARAMÈTRES :
+
+Capacités d'équipement :
+- force : +1
+- dextérité : -1
+
+Poids : 0~
+@1531  = ~Robe de fusion~
+@1532  = ~La Robe de Fusion
+Depuis l'époque de Néthéril, les mages ont appris à conférer de nombreuses propriétés magiques aux objets de tous les jours. L'un de leurs objets favoris est la robe de magicien. Légère et peu onéreuse, elle conserve bien les enchantements dont on la dote, ce qui en fait un objet rêvé. Seuls les magiciens (monoclassés, multiclassés ou à classes jumelées) sont toutefois capables de la porter, en raison de la relation qu'ils entretiennent avec la magie.
+
+PARAMÈTRES :
+
+Capacités d'équipement :
+- classe d'armure : +2
+- résistance à la magie : +5 %
+- score de connaissance : +5
+- permet de mémoriser un sort de magicien de niveau 1 supplémentaire
+
+Poids : 4~
+@1541  = ~Besantine en cuir renforcé~
+@1542  = ~La besantine a peu de choses en commun avec une armure de cuir normale. L'armure de cuir est une protection renforcée, la besantine est souple et comporte des centaines de rivets. Ces derniers sont tellement rapprochés qu'ils forment une couche flexible de métal dur qui permet de contrer toute attaque cinglante et tranchante. Le renforcement de cuir souple n'est rien de plus qu'un moyen de maintenir les rivets en place. 
+
+PARAMÈTRES :
+
+Capacités d'équipement :
+- résistance aux dégâts contondants : +35 %
+
+Classe d'armure : 6 (5 contre les armes perforantes et les projectiles, 4 contre les armes tranchantes)
+Nécessite : 6 en force
+
+Poids : 15~
+@1551  = ~Potion de transfert d'aptitude~
+@1552  = ~Les potions se trouvent généralement dans des flasques ou des fioles en céramique, cristal, verre ou métal. Ces flasques ou autres récipients contiennent généralement suffisamment de liquide pour fournir à une personne une dose complète et ainsi obtenir les effets désirés.
+
+PARAMÈTRES :
+
+Charisme : +1
+Dextérité : -1
+Durée : permanente
+
+Poids : 1~
+@1561  = ~Potion de transfert de force~
+@1562  = ~Les potions se trouvent généralement dans des flasques ou des fioles en céramique, cristal, verre ou métal. Ces flasques ou autres récipients contiennent généralement suffisamment de liquide pour fournir à une personne une dose complète et ainsi obtenir les effets désirés.
+
+PARAMÈTRES :
+
+Dextérité : +1
+Force : -1
+Durée : permanente
+
+Poids : 1~
+@1571  = ~Potion de transfert d'énergie vitale~
+@1572  = ~Les potions se trouvent généralement dans des flasques ou des fioles en céramique, cristal, verre ou métal. Ces flasques ou autres récipients contiennent généralement suffisamment de liquide pour fournir à une personne une dose complète et ainsi obtenir les effets désirés.
+
+PARAMÈTRES :
+
+Force : +1
+Constitution : -1
+Durée : permanente
+
+Poids : 1~
+@1581  = ~Baguette des nombreux projectiles de Pemby~
+@1582  = ~La Baguette des Nombreux Projectiles de Pemby
+L'enchanteresse demi-elfe Pemby Nuagedesoie était connue pour sa jovialité et son goût pour les hommes. De son vivant, elle créa un certain nombre de bâtons et baguettes. Elle gardait celle-ci en permanence pour se protéger. Quand elle fut tuée par un amant possessif en 1103 CV, l'objet revint à un autre de ses nombreux courtisans, le voleur Tamlock d'Eauprofonde. Ce dernier la vengea quelques années plus tard, en tuant son meurtrier au cours d'un duel... grâce à une lame empoisonnée en toute discrétion.
+
+PARAMÈTRES :
+
+Capacités de charge :
+- Projectile magique (créé 3 projectiles qui infligent chacun 1d4 +1 dégâts magiques)
+  Portée : 21 mètres
+  Zone d'effet : 1 créature
+
+Nécessite : 9 en intelligence
+
+Poids : 1~
+@1591  = ~Œil de porc~
+@1592  = ~Œil de Porc
+Œil de Porc est une arme splendide au nom moqueur, une épée elfe forgée pour tuer les orques. Même si son nom exact est Gruumshacan, presque tous ceux qui la connaissent l'appellent Œil de Porc. Ce nom est une allusion au coup de grâce auquel Corellon Laretian, dieu des elfes, creva un œil à Gruumsh, principal dieu du panthéon orque. L'Œil d'orque pris dans une sphère de verre qui sert de pommeau à l'arme facilite l'identification de cette dernière. L'épée fut forgée en 239 CV par un forgeron et enchanteur elfe du nom de Shenarr Caith. Après avoir enchanté l'arme, il la donna à son cousin, Velaic Caith, qui s'en servit tant et plus contre les orques de la région de Cormanthyr. Son fils Tredain et son petit-fils Galesic firent eut aussi usage de l'arme plusieurs siècles durant. Finalement, les Caith décidèrent d'émigrer vers Éternelle Rencontre. Comme Gruumshacan n'était pas la lame de lune de la famille, elle fut échangée contre une partie des fonds nécessaires pour transformer le vieux Shenarr en baelnorn. Les ultimes paroles de Shenarr indiquent qu'il était extrêmement amusé à l'idée que sa fidèle l'épée ait fini par l'aider à défier la mort.
+
+PARAMÈTRES :
+
+Capacités de combat :
+- les orques touchés ont 50 % de chances d'être aveuglés pendant 8 secondes
+
+TAC0 : +2, +4 contre les orques
+Dégâts : 1d6 +2, +4 contre les orques
+Type de dégâts : perforant
+Facteur de vitesse :  1
+Type de compétence : épée courte
+Type : arme à une main
+Nécessite : 5 en force
+
+Poids :  3~
+@1601  = ~Héraut de la misère~
+@1602  = ~Le Héraut de la Misère
+Ce fléau d'armes a été béni par les prêtres de Grummsh, le dieu orque, afin d'annihiler les ennemis elfes et nains que leurs armées affrontaient. Le grand prêtre de la Légion des Ossements le conserva, jusqu'à ce qu'il soit tué lors de l'assaut contre la Main de la Seldarine. Le fléau est de conception très simple. Son manche, qui ressemble à un fémur d'elfe, est recouvert de peau d'elfe tannée. Une solide chaîne le relie à une boule hérissée de pointes. L'arme tout entière est en fer météorique, ce qui montre bien que les orques sont capables de produire de beaux objets.
+
+PARAMÈTRES :
+
+Capacités de combat :
+- 10 % des coups au but rendent la cible paniquée pendant 4 rounds (jet de sauvegarde contre les sorts pour annuler)
+- cette arme est en fer froid, et blesse les créatures qui ne peuvent être blessées que par ce type de matériau
+
+TAC0 : +3, +4 contre les elfes
+Dégâts : 1d6 +4, +5 contre les elfes
+Type de dégâts : contondant
+Facteur de vitesse : 5
+Type de compétence : fléau d'armes / morgenstern
+Type : arme à une main
+Nécessite : 13 en force
+
+Poids : 13~
+@1611  = ~Broiraignée~
+@1612  = ~Broiraignée
+Cette arme fut fabriquée par un prêtre petit-homme qui avait une peur panique des araignées. Il se nommait Caligope et son pire ennemi était un magicien elfe noir appelé Eil-Makar, dont la tour s'entourait d'un labyrinthe de haies patrouillé par des araignées géantes. D'autres arachnéides monstrueuses défendaient la tour proprement dite. Pendant plus d'un an, Caligope refusa de regarder le repaire de son ennemi. Finalement, il décida de créer un gourdin qui lui permettrait d'affronter ses craintes. L'arme résultante fut baptisée « Le Broyeur d'Araignées Malfaisantes de la Mort », ou plus simplement Broiraignée. Caligope parvint à dérober les trésors d'Eil-Makar, laissant derrière lui des dizaines d'araignées mortes.
+
+PARAMÈTRES :
+
+TAC0 : +2, +4 contre les araignées
+Dégâts : 1d6 +2, +4 contre les araignées
+Type de dégâts : contondant
+Facteur de vitesse :  3
+Type de compétence : gourdin
+Type : arme à une main
+Nécessite : 5 en force
+
+Poids : 2~
+@1621  = ~Vérité de Benorg~
+@1622  = ~La Vérité de Benorg
+Cette arme a été ouvragée par un maître-artisan et de minuscules runes magiques sont visibles à sa surface. Sa création a manifestement demandé beaucoup de temps et, même si cela n'est pas apparent au premier coup d'œil, une lueur bleutée semble émaner des runes.
+
+PARAMÈTRES :
+
+Capacités d'équipement :
+- classe d'armure : +1
+
+Capacités de combat :
+- 10 % de chances d'étourdir la cible chaque pendant 4 secondes à chaque coup au but
+
+TAC0 : +3
+Dégâts : 1d8 +3 (tranchant)
+Facteur de vitesse : 7
+Type de compétence : hache
+Type : arme à une main
+Nécessite : 10 en force
+
+Poids : 7~
+@1631  = ~Casque du patriote~
+@1632  = ~Le Casque du Patriote
+Ce casque a été porté par le guerrier nain Danel Givredargent, roi et martyre de la cité-état perdue de Rochedargent. Les exploits de Danel ne sont pas aussi connus que ceux d'autres héros nains, mais sans doute est-ce dû au fait que son royaume a disparu avec lui. Sa nation a terriblement souffert lorsque trolls et géants du froid l'ont attaquée voici plus de mille ans, au cours de la presque oubliée « Guerre du Sang Caillé ». Le conflit opposant les monstres au clan de Rochedargent se prolongea quinze années durant. Danel ne tenta jamais de fuir, de rechercher l'aide des nations voisines ou d'abandonner les siens. Malgré la désertion de nombre de ses sujets, il demeura à Rochedargent jusqu'à la fin. À la veille de l'ultime bataille, il s'adressa aux siens en ces termes : « Quand vous verrez disparaître le panache de mon casque, vous saurez que les nôtres ne plient pas comme l'or, mais qu'ils cassent comme le fer ». Dès le début du combat, Danel chargea les lignes adverses et se retrouva opposé à une dizaine de trolls. Quand son panache disparut sous les griffes des monstres, tous les hommes, femmes et enfants de Rochedargent enjambèrent les barricades pour emporter dans la mort autant de trolls et de géants qu'ils le pouvaient. Des tonneaux d'huile enflammée furent renversés dans le palais de Danel et les autres quartiers de la cité, embrasant nains, trolls et géants. Les monstres remportèrent finalement la victoire, mais qui se révéla au bout du compte fatalement vaine. Quand le combat s'acheva, la cité n'était plus que ruines, d'où ils ne tirèrent ni trésor, ni esclaves, ni nourriture. Nombre de trolls moururent de faim au cours de l'hiver et, quand ils se retournèrent contre leurs alliés géants pour se nourrir, leur armée se désagrégea à tout jamais.
+
+PARAMÈTRES :
+
+Capacités d'équipement :
+- classe d'armure : +2
+- protège contre les coups critiques
+
+Poids : 3~
+@1641  = ~Aimée de Besha la Noire~
+@1642  = ~L'Aimée de Besha la Noire
+Cette arme fut créée par une magicienne aussi belle que cruelle, qui vénérait la Vierge de l'Infortune, Beshaba. Elle se nommait Rédani et était connue tant pour ses aptitudes magiques que par son grand pouvoir de séduction. Elle offrait toujours l'Aimée de Besha la Noire à son amant préféré du moment, sans lui dire qu'elle avait placé un anneau d'appel sur la masse d'armes. Quand elle se lassait de son favori, ce qui lui arrivait systématiquement, elle confiait au remplaçant de ce dernier un autre anneau d'appel lié à celui de la masse et chargeait l'homme de tuer son prédécesseur. Le nouvel amant n'avait qu'à utiliser le pouvoir de l'anneau et la masse d'armes venait directement dans sa main. Un jour, Rédani finit par confier l'anneau d'appel à la mauvaise personne quand elle chargea Gural de Chessenta de tuer son ancien amant. Gural, prêtre de Hoar déguisé, avait fait le serment de venger un homme dont il avait ramassé le crâne au bord d'une route. Malheureusement pour Rédani, les prêtres de Hoar ne reculent devant rien pour venger un défunt ; dans ce cas, Gundal anima tous les amants morts de Rédani, qui lui arrachèrent les membres un par un.
+
+PARAMÈTRES :
+
+Capacités de combat :
+- 10 % des coups réussis font perdre 4 points de chance à la cible
+
+TAC0 : +3
+Dégâts : 1d6 +4 (contondant)
+Facteur de vitesse : 5
+Type de compétence : masse d'armes
+Type : arme à une main
+Nécessite : 10 en force
+
+Poids :  7~
+//
+//
+
+
+/* =============== *
+ *  WeiDU prompts  *
+ * =============== */
+@-1000= "Le mod %TP2_FILE_NAME% contient"
+@-1001= "composants optionnels distincts.
+Pour gagner du temps, vous pouvez choisir ce que vous souhaitez faire d'eux
+au niveau general plutot que de repondre aux questions pour chacun.
+"
+@-1002= "Que faut-il faire de tous les composants qui NE sont PAS ENCORE installes ?
+Les [I]nstaller, les [S]auter, dem[A]nder pour chacun ? "
+@-1003= "Que faut-il faire de tous les composants qui sont DEJA installes ?
+Les [R]einstaller, les s[U]pprimer, les [S]auter, dem[A]nder pour chacun ? "
+
+@-1004= "S'IL VOUS PLAIT, envoyez par e-mail le fichier"
+@-1005= "a"
+
+@-1006= "Installer le composant ["
+@-1007= "] ?
+[R]einstaller, co[N]server, s[U]pprimer ou [Q]uitter ? "
+@-1008= "] ?
+[I]nstaller, [N]e pas installer ou [Q]uitter ? "
+
+@-1009= "Entrez une partie du nom du module : "
+
+@-1010= "Reinstallation du composant ["
+@-1011= "] "
+@-1012= "Reinstallation dans la langue"
+
+@-1013= "Suppression de l'ancienne installation de ["
+@-1014= "] au prealable..."
+@-1015= "SUPPRESSION REUSSIE DE L'ANCIEN"
+
+@-1016= "Installation en cours"
+@-1017= "ERREUR pendant l'installation de ["
+@-1018= "], retour a l'etat anterieur"
+@-1019= "INSTALLATION REUSSIE"
+@-1020= "Saute"
+@-1021= "Suppression de ["
+@-1022= "] (composant #"
+@-1023= ")"
+@-1024= "SUPPRESSION REUSSIE DE ["
+
+@-1025= "] ?
+[R]einstaller, co[N]server, s[U]pprimer, [Q]uitter ou choisir un parmi :"
+@-1026= "] ?
+[N]e pas installer, [Q]uitter ou choisir un parmi :"
+@-1027= " (installe actuellement)"
+
+@-1028= "Souhaitez-vous afficher les composants de ["
+@-1029= "] ?
+[Y]Oui, [N]on ? "
+
+@-1030= "] ?
+choisir un parmi :"
+@-1031= "] ?
+[R]einstaller, co[N]server, [Q]uitter ou choisir un parmi :"
+@-1032= "INSTALLATION ECHOUEE A CAUSE D'ERREURS"
+@-1033= "INSTALLATION AVEC DES ALERTES"
+@-1034= "Souhaitez-vous afficher les instructions (ReadMe) ? [Y]Oui [N]on"
+@-1035= "Dans la langue"
+
+@-1036= "Saute le GROUPE ["
+@-1037= "] pour cause d'absence des pre-requis."
+
+@-1038= "dem[A]nder pour chaque composant, tout [S]auter, ou choisir une selection pre-definie :"
+@-1039= "dem[A]nder pour chaque composant, [R]einstaller la configuration courante, tout s[U]pprimer, tout [S]auter, ou choisir une selection pre-definie :"
+
+@-1040= "
+Veuillez choisir la langue dans laquelle vous souhaitez jouer au jeu.
+Si par la suite vous desirez jouer au jeu dans une langue differente, il vous
+faudra editer le fichier weidu.conf et reinstaller vos mods.
+"
+@-1041= "Tcheque"
+@-1042= "Allemand"
+@-1043= "Anglais"
+@-1044= "Espagnol"
+@-1045= "Francais"
+@-1046= "Italien"
+@-1047= "Polonais"
+@-1048= "Portugais"
+@-1049= "Turc"
+@-1050= "Japonais"
+@-1051= "Coreen"
+@-1052= "Chinois simplifie"
+@-1053= "Russe"
+@-1054= "Ukrainien"
+
+@-1060= "
+Ce jeu est disponible en plusieurs langues mais WeiDU ne sait pas laquelle a ete choisie quand ce mod a ete installe.
+
+Veuillez indiquer quelle langue du jeu a ete utilisee quand vous avez installe ce mod. Votre choix servira jusqu'a ce que WeiDU s'arrete mais ne sera pas memorise.
+"
+@-1061= "
+Utilisation de"
+@-1062= " et "
+
+@-1063= "INSTALLATION ABANDONNEE"
+@-1064= "Abandon de l'installation de ["
+@-1065= "], retour a l'etat anterieur"
