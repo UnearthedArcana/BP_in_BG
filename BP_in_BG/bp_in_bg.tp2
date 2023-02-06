@@ -8,6 +8,12 @@ LANGUAGE
   ~english~
   ~bp_in_bg/lang/english/setup.tra~
 
+LANGUAGE  
+  ~French~
+  ~french~
+  ~bp_in_bg/lang/english/setup.tra~
+  ~bp_in_bg/lang/french/setup.tra~
+
 //do stuff__________________________________________________________________________
 //
 BEGIN @100
