@@ -15,7 +15,7 @@ Global("TIER","GLOBAL",1)
 StartStore("BPELAN01",LastTalkedToBy(Myself))
 ~ EXIT
   IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #29516 /* ~I'd like to see your goods.~ */ DO ~SetGlobal("OPENING","LOCALS",1)
-StartStore("D5ELAN01",LastTalkedToBy(Myself))
+StartStore("D5ELAN03",LastTalkedToBy(Myself))
 ~ EXIT
   IF ~~ THEN REPLY #29517 /* ~You don't seem to belong here.~ */ DO ~SetGlobal("OPENING","LOCALS",1)
 
@@ -38,7 +38,7 @@ END
 IF ~~ THEN BEGIN 2 // from: 0.2 1.2
   SAY #29524 /* ~Do not test my patience with your primitive attempts at humor. I am of the rakshasa, a people ancient before yours learned to scratch out a spark on flints. Do not forget that I am Baeloth's guest, while you are his slave.~ [BPH103] */
   IF ~ Global("BPINBG","GLOBAL",0) ~ THEN REPLY #29525 /* ~Show me your goods.~ */ DO ~StartStore("BPELAN01",LastTalkedToBy(Myself)) ~ EXIT
-  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #29525 /* ~Show me your goods.~ */ DO ~StartStore("D5ELAN01",LastTalkedToBy(Myself)) ~ EXIT
+  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #29525 /* ~Show me your goods.~ */ DO ~StartStore("D5ELAN03",LastTalkedToBy(Myself)) ~ EXIT
   IF ~~ THEN REPLY #29526 /* ~I've had it with you.~ */ EXIT
 END
 
@@ -60,7 +60,7 @@ END
 IF ~~ THEN BEGIN 6 // from: 5.0
   SAY #29530 /* ~Now, shall I begin fitting you for a burial shroud?~ [BPH107] */
   IF ~ Global("BPINBG","GLOBAL",0) ~ THEN REPLY #29531 /* ~Let's see these boots, cloaks, and girdles.~ */ DO ~StartStore("BPELAN01",LastTalkedToBy(Myself)) ~ EXIT
-  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #29531 /* ~Let's see these boots, cloaks, and girdles.~ */ DO ~StartStore("D5ELAN01",LastTalkedToBy(Myself)) ~ EXIT
+  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #29531 /* ~Let's see these boots, cloaks, and girdles.~ */ DO ~StartStore("D5ELAN03",LastTalkedToBy(Myself)) ~ EXIT
   IF ~~ THEN REPLY #29532 /* ~Forget it. I'm done here.~ */ EXIT
 END
 
@@ -74,7 +74,7 @@ Global("TIER","GLOBAL",2)
 StartStore("BPELAN02",LastTalkedToBy(Myself))
 ~ EXIT
   IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #29264 /* ~What do you have for sale?~ */ DO ~SetGlobal("OPENING","LOCALS",2)
-StartStore("D5ELAN02",LastTalkedToBy(Myself))
+StartStore("D5ELAN03",LastTalkedToBy(Myself))
 ~ EXIT
   IF ~~ THEN REPLY #29534 /* ~What's your problem with me?~ */ DO ~SetGlobal("OPENING","LOCALS",2)
 
@@ -94,7 +94,7 @@ END
 IF ~~ THEN BEGIN 9 // from: 8.0 8.1 8.2
   SAY #29540 /* ~Oh, you would be surprised at how easily one becomes carried away while appraising a mortal for alterations. Now then, shall I take your measurements for a new garment?~ [BPH203] */
   IF ~ Global("BPINBG","GLOBAL",0) ~ THEN REPLY #29541 /* ~I suppose I do need some new things. Show me your stock.~ */ DO ~StartStore("BPELAN02",LastTalkedToBy(Myself)) ~ EXIT
-  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #29541 /* ~I suppose I do need some new things. Show me your stock.~ */ DO ~StartStore("D5ELAN02",LastTalkedToBy(Myself)) ~ EXIT
+  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #29541 /* ~I suppose I do need some new things. Show me your stock.~ */ DO ~StartStore("D5ELAN03",LastTalkedToBy(Myself)) ~ EXIT
   IF ~~ THEN REPLY #29542 /* ~It's really saying something that you're only the second creepiest vendor at this booth.~ */ GOTO 10
   IF ~~ THEN REPLY #29543 /* ~On second thought, these old things are still good enough for a while longer.~ */ EXIT
 END
@@ -107,7 +107,7 @@ END
 IF ~~ THEN BEGIN 11 // from: 10.0
   SAY #29545 /* ~The ghastly wretch can speak the common tongue well enough, but it pains the monster to be reduced to what it considers such a crude form of communication.~ [BPH205] */
   IF ~ Global("BPINBG","GLOBAL",0) ~ THEN REPLY #29546 /* ~Ew. Just show me your stock.~ */ DO ~StartStore("BPELAN02",LastTalkedToBy(Myself)) ~ EXIT
-  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #29546 /* ~Ew. Just show me your stock.~ */ DO ~StartStore("D5ELAN02",LastTalkedToBy(Myself)) ~ EXIT
+  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #29546 /* ~Ew. Just show me your stock.~ */ DO ~StartStore("D5ELAN03",LastTalkedToBy(Myself)) ~ EXIT
   IF ~~ THEN REPLY #29547 /* ~I see now why you and Baeloth are friends.~ */ EXIT
   IF ~~ THEN REPLY #29548 /* ~That's enough nightmare fuel for one day. Have fun scaring the other customers.~ */ EXIT
 END
@@ -228,7 +228,7 @@ IF ~  True()
 ~ EXIT
   IF ~  Global("OPENING","LOCALS",1)
         Global("BPINBG","GLOBAL",1) 
-~ THEN REPLY #29561 /* ~Just show me your latest clothes.~ */ DO ~StartStore("D5ELAN01",LastTalkedToBy(Myself))
+~ THEN REPLY #29561 /* ~Just show me your latest clothes.~ */ DO ~StartStore("D5ELAN03",LastTalkedToBy(Myself))
 ~ EXIT
   IF ~  Global("OPENING","LOCALS",2)
         Global("BPINBG","GLOBAL",0) 
@@ -236,7 +236,7 @@ IF ~  True()
 ~ EXIT
   IF ~  Global("OPENING","LOCALS",2)
         Global("BPINBG","GLOBAL",1) 
-~ THEN REPLY #29561 /* ~Just show me your latest clothes.~ */ DO ~StartStore("D5ELAN02",LastTalkedToBy(Myself))
+~ THEN REPLY #29561 /* ~Just show me your latest clothes.~ */ DO ~StartStore("D5ELAN03",LastTalkedToBy(Myself))
 ~ EXIT
   IF ~  GlobalGT("OPENING","LOCALS",2)
         Global("BPINBG","GLOBAL",0) 

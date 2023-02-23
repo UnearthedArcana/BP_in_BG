@@ -45,7 +45,7 @@ END
 IF ~~ THEN BEGIN 5 // from: 3.0 4.0
   SAY #229327 /* ~Now, can I sell you some light armor?~ [BPE109] */
   IF ~ Global("BPINBG","GLOBAL",0) ~ THEN REPLY #229328 /* ~Yes, show me what you have for sale.~ */ DO ~StartStore("BPBREN01",LastTalkedToBy(Myself)) ~ EXIT
-  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #229328 /* ~Yes, show me what you have for sale.~ */ DO ~StartStore("D5BREN01",LastTalkedToBy(Myself)) ~ EXIT
+  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #229328 /* ~Yes, show me what you have for sale.~ */ DO ~StartStore("D5BREN03",LastTalkedToBy(Myself)) ~ EXIT
   IF ~~ THEN REPLY #229329 /* ~No, I'd best be moving on.~ */ EXIT
 END
 
@@ -59,7 +59,7 @@ Global("TIER","GLOBAL",2)
 StartStore("BPBREN02",LastTalkedToBy(Myself))
 ~ EXIT
   IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #229331 /* ~I need armor. Show me your stock.~ */ DO ~SetGlobal("OPENING","LOCALS",2)
-StartStore("D5BREN02",LastTalkedToBy(Myself))
+StartStore("D5BREN03",LastTalkedToBy(Myself))
 ~ EXIT
   IF ~~ THEN REPLY #229332 /* ~What's wrong between you and Magda? Are you seeing someone else?~ */ DO ~SetGlobal("OPENING","LOCALS",2)
 
@@ -85,7 +85,7 @@ END
 IF ~~ THEN BEGIN 9 // from: 7.0 7.1 8.0 8.1
   SAY #229340 /* ~I've already said too much. I'm supposed to sell you armor. Do you want any?~ [BPE204] */
   IF ~ Global("BPINBG","GLOBAL",0) ~ THEN REPLY #229328 /* ~Yes, show me what you have for sale.~ */ DO ~StartStore("BPBREN02",LastTalkedToBy(Myself)) ~ EXIT
-  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #229328 /* ~Yes, show me what you have for sale.~ */ DO ~StartStore("D5BREN02",LastTalkedToBy(Myself)) ~ EXIT
+  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #229328 /* ~Yes, show me what you have for sale.~ */ DO ~StartStore("D5BREN03",LastTalkedToBy(Myself)) ~ EXIT
   IF ~~ THEN REPLY #229341 /* ~No, we're done here.~ */ EXIT
 END
 
@@ -298,7 +298,7 @@ IF ~  True()
 ~ EXIT
   IF ~  Global("OPENING","LOCALS",1)
         Global("BPINBG","GLOBAL",1) 
-~ THEN REPLY #229368 /* ~Let's take a look at your new armor.~ */ DO ~StartStore("D5BREN01",LastTalkedToBy(Myself))
+~ THEN REPLY #229368 /* ~Let's take a look at your new armor.~ */ DO ~StartStore("D5BREN03",LastTalkedToBy(Myself))
 ~ EXIT
   IF ~  Global("OPENING","LOCALS",2)
         Global("BPINBG","GLOBAL",0) 
@@ -306,7 +306,7 @@ IF ~  True()
 ~ EXIT
   IF ~  Global("OPENING","LOCALS",2)
         Global("BPINBG","GLOBAL",1) 
-~ THEN REPLY #229368 /* ~Let's take a look at your new armor.~ */ DO ~StartStore("D5BREN02",LastTalkedToBy(Myself))
+~ THEN REPLY #229368 /* ~Let's take a look at your new armor.~ */ DO ~StartStore("D5BREN03",LastTalkedToBy(Myself))
 ~ EXIT
   IF ~  GlobalGT("OPENING","LOCALS",2)
         Global("BPINBG","GLOBAL",0) 

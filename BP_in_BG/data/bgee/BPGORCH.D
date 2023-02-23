@@ -15,7 +15,7 @@ Global("TIER","GLOBAL",1)
 StartStore("BPGORC01",LastTalkedToBy(Myself))
 ~ EXIT
   IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #29437 /* ~Show me what you have for sale.~ */ DO ~SetGlobal("OPENING","LOCALS",1)
-StartStore("D5GORC01",LastTalkedToBy(Myself))
+StartStore("D5GORC03",LastTalkedToBy(Myself))
 ~ EXIT
   IF ~~ THEN REPLY #29642 /* ~Has Baeloth abducted you, too?~ */ DO ~SetGlobal("OPENING","LOCALS",1)
 
@@ -30,13 +30,13 @@ IF ~~ THEN BEGIN 1 // from: 0.1
   IF ~~ THEN REPLY #29645 /* ~Your entire clan?! Why aren't you at Baeloth's throat?~ */ GOTO 2
   IF ~~ THEN REPLY #29646 /* ~You must want revenge.~ */ GOTO 2
   IF ~ Global("BPINBG","GLOBAL",0) ~ THEN REPLY #29647 /* ~This sounds like something that isn't my problem. Now show me that armor.~ */ DO ~StartStore("BPGORC01",LastTalkedToBy(Myself)) ~ EXIT
-  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #29647 /* ~This sounds like something that isn't my problem. Now show me that armor.~ */ DO ~StartStore("D5GORC01",LastTalkedToBy(Myself)) ~ EXIT
+  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #29647 /* ~This sounds like something that isn't my problem. Now show me that armor.~ */ DO ~StartStore("D5GORC03",LastTalkedToBy(Myself)) ~ EXIT
 END
 
 IF ~~ THEN BEGIN 2 // from: 1.0 1.1
   SAY #29648 /* ~Laduguer will punish Baeloth in due time. Until then, his cruel spells prevent us from rebelling. Some days I wish he'd vaporized me along with the others. At least I wouldn't have to suffer this humiliation! Now, what do you want?~ [BPD103] */
   IF ~ Global("BPINBG","GLOBAL",0) ~ THEN REPLY #29649 /* ~Let's have a look at this heavy armor.~ */ DO ~StartStore("BPGORC01",LastTalkedToBy(Myself)) ~ EXIT
-  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #29649 /* ~Let's have a look at this heavy armor.~ */ DO ~StartStore("D5GORC01",LastTalkedToBy(Myself)) ~ EXIT
+  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #29649 /* ~Let's have a look at this heavy armor.~ */ DO ~StartStore("D5GORC03",LastTalkedToBy(Myself)) ~ EXIT
   IF ~~ THEN REPLY #29650 /* ~I need nothing at the moment. Farewell.~ */ EXIT
 END
 
@@ -50,7 +50,7 @@ Global("TIER","GLOBAL",2)
 StartStore("BPGORC02",LastTalkedToBy(Myself))
 ~ EXIT
   IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #29652 /* ~I need armor. What do you have?~ */ DO ~SetGlobal("OPENING","LOCALS",2)
-StartStore("D5GORC02",LastTalkedToBy(Myself))
+StartStore("D5GORC03",LastTalkedToBy(Myself))
 ~ EXIT
   IF ~~ THEN REPLY #29653 /* ~Baeloth underestimated us.~ */ DO ~SetGlobal("OPENING","LOCALS",2)
 
@@ -68,21 +68,21 @@ IF ~~ THEN BEGIN 4 // from: 3.1
   IF ~~ THEN REPLY #29656 /* ~Do you know how we could take the fight to Baeloth?~ */ GOTO 6
   IF ~~ THEN REPLY #29657 /* ~What happened when you fought Baeloth?~ */ GOTO 5
   IF ~ Global("BPINBG","GLOBAL",0) ~ THEN REPLY #29652 /* ~I need armor. What do you have?~ */ DO ~StartStore("BPGORC02",LastTalkedToBy(Myself)) ~ EXIT
-  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #29652 /* ~I need armor. What do you have?~ */ DO ~StartStore("D5GORC02",LastTalkedToBy(Myself)) ~ EXIT
+  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #29652 /* ~I need armor. What do you have?~ */ DO ~StartStore("D5GORC03",LastTalkedToBy(Myself)) ~ EXIT
 END
 
 IF ~~ THEN BEGIN 5 // from: 3.2 4.1
   SAY #29658 /* ~We duergar tried to fight him, but his spells were too powerful for us to resist. Funny, not everyone was at that battle. I still wonder what became of Thardek just before and during the battle. He returned only when it was over and Baeloth had already placed me here to serve his gladiators.~ [BPD203] */
   IF ~~ THEN REPLY #29656 /* ~Do you know how we could take the fight to Baeloth?~ */ GOTO 6
   IF ~ Global("BPINBG","GLOBAL",0) ~ THEN REPLY #29659 /* ~Interesting... Now, let's see some of that armor.~ */ DO ~StartStore("BPGORC02",LastTalkedToBy(Myself)) ~ EXIT
-  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #29659 /* ~Interesting... Now, let's see some of that armor.~ */ DO ~StartStore("D5GORC02",LastTalkedToBy(Myself)) ~ EXIT
+  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #29659 /* ~Interesting... Now, let's see some of that armor.~ */ DO ~StartStore("D5GORC03",LastTalkedToBy(Myself)) ~ EXIT
   IF ~~ THEN REPLY #29660 /* ~Interesting... Now I must be moving on.~ */ EXIT
 END
 
 IF ~~ THEN BEGIN 6 // from: 4.0 5.0
   SAY #29661 /* ~Perhaps you could force his hand by depleting his supply of minions, but he continually brings in more and more exotic creatures.~ [BPD204] */
   IF ~ Global("BPINBG","GLOBAL",0) ~ THEN REPLY #29662 /* ~I need equipment, what do you have for sale?~ */ DO ~StartStore("BPGORC02",LastTalkedToBy(Myself)) ~ EXIT
-  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #29662 /* ~I need equipment, what do you have for sale?~ */ DO ~StartStore("D5GORC02",LastTalkedToBy(Myself)) ~ EXIT
+  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #29662 /* ~I need equipment, what do you have for sale?~ */ DO ~StartStore("D5GORC03",LastTalkedToBy(Myself)) ~ EXIT
   IF ~~ THEN REPLY #29663 /* ~Thanks. That's all for now.~ */ EXIT
 END
 
@@ -242,7 +242,7 @@ IF ~  True()
 ~ EXIT
   IF ~  Global("OPENING","LOCALS",1)
         Global("BPINBG","GLOBAL",1) 
-~ THEN REPLY #29691 /* ~Let's take a look at your best new armor.~ */ DO ~StartStore("D5GORC01",LastTalkedToBy(Myself))
+~ THEN REPLY #29691 /* ~Let's take a look at your best new armor.~ */ DO ~StartStore("D5GORC03",LastTalkedToBy(Myself))
 ~ EXIT
   IF ~  Global("OPENING","LOCALS",2)
         Global("BPINBG","GLOBAL",0) 
@@ -250,7 +250,7 @@ IF ~  True()
 ~ EXIT
   IF ~  Global("OPENING","LOCALS",2)
         Global("BPINBG","GLOBAL",1) 
-~ THEN REPLY #29691 /* ~Let's take a look at your best new armor.~ */ DO ~StartStore("D5GORC02",LastTalkedToBy(Myself))
+~ THEN REPLY #29691 /* ~Let's take a look at your best new armor.~ */ DO ~StartStore("D5GORC03",LastTalkedToBy(Myself))
 ~ EXIT
   IF ~  GlobalGT("OPENING","LOCALS",2)
         Global("BPINBG","GLOBAL",0) 

@@ -15,7 +15,7 @@ Global("TIER","GLOBAL",1)
 StartStore("BPTHAR01",LastTalkedToBy(Myself))
 ~ EXIT
   IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #229437 /* ~Show me what you have for sale.~ */ DO ~SetGlobal("OPENING","LOCALS",1)
-StartStore("D5THAR01",LastTalkedToBy(Myself))
+StartStore("D5THAR03",LastTalkedToBy(Myself))
 ~ EXIT
   IF ~~ THEN REPLY #229837 /* ~Come now, we're both in the same predicament. What's the harm in being friendly?~ */ DO ~SetGlobal("OPENING","LOCALS",1)
 
@@ -33,7 +33,7 @@ IF ~~ THEN BEGIN 1 // from: 0.1
   IF ~~ THEN REPLY #229841 /* ~I doubt it. Baeloth may have captured me, but he enslaved you first.~ */ GOTO 2
   IF ~~ THEN REPLY #229842 /* ~Bold words for a slave of the drow.~ */ GOTO 2
   IF ~ Global("BPINBG","GLOBAL",0) ~ THEN REPLY #229843 /* ~Delightful as I find your sparkling banter, I came here to buy weapons.~ */ DO ~StartStore("BPTHAR01",LastTalkedToBy(Myself)) ~ EXIT
-  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #229843 /* ~Delightful as I find your sparkling banter, I came here to buy weapons.~ */ DO ~StartStore("D5THAR01",LastTalkedToBy(Myself)) ~ EXIT
+  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #229843 /* ~Delightful as I find your sparkling banter, I came here to buy weapons.~ */ DO ~StartStore("D5THAR03",LastTalkedToBy(Myself)) ~ EXIT
   IF ~~ THEN REPLY #229844 /* ~I don't need this abuse. I'll take my business elsewhere.~ */ EXIT
 END
 
@@ -47,7 +47,7 @@ END
 IF ~~ THEN BEGIN 3 // from: 2.0
   SAY #229849 /* ~Through trickery and foul magic, of course. You did notice he's a drow, didn't you?~ [BPC104] */
   IF ~ Global("BPINBG","GLOBAL",0) ~ THEN REPLY #229850 /* ~I noticed. Now, about those weapons you have for sale...~ */ DO ~StartStore("BPTHAR01",LastTalkedToBy(Myself)) ~ EXIT
-  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #229850 /* ~I noticed. Now, about those weapons you have for sale...~ */ DO ~StartStore("D5THAR01",LastTalkedToBy(Myself)) ~ EXIT
+  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #229850 /* ~I noticed. Now, about those weapons you have for sale...~ */ DO ~StartStore("D5THAR03",LastTalkedToBy(Myself)) ~ EXIT
   IF ~~ THEN REPLY #229851 /* ~You said you're less a slave than I am. What did you mean by that?~ */ GOTO 4
   IF ~~ THEN REPLY #229852 /* ~How can you put up with a drow master? I don't understand why you people haven't overthrown him.~ */ GOTO 5
 END
@@ -55,9 +55,9 @@ END
 IF ~~ THEN BEGIN 4 // from: 2.1 3.1
   SAY #229853 /* ~I meant only that... arrg, never mind what I meant! You are as much an intruder as Baeloth. This territory belongs to my people, the duergar!~ [BPC105] */
   IF ~ Global("BPINBG","GLOBAL",0) ~ THEN REPLY #229854 /* ~Forget I said anything. Now what do you have for sale?~ */ DO ~StartStore("BPTHAR01",LastTalkedToBy(Myself)) ~ EXIT
-  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #229854 /* ~Forget I said anything. Now what do you have for sale?~ */ DO ~StartStore("D5THAR01",LastTalkedToBy(Myself)) ~ EXIT
+  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #229854 /* ~Forget I said anything. Now what do you have for sale?~ */ DO ~StartStore("D5THAR03",LastTalkedToBy(Myself)) ~ EXIT
   IF ~ Global("BPINBG","GLOBAL",0) ~ THEN REPLY #229855 /* ~Interesting. Now, let's do some trade.~ */ DO ~StartStore("BPTHAR01",LastTalkedToBy(Myself)) ~ EXIT
-  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #229855 /* ~Interesting. Now, let's do some trade.~ */ DO ~StartStore("D5THAR01",LastTalkedToBy(Myself)) ~ EXIT
+  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #229855 /* ~Interesting. Now, let's do some trade.~ */ DO ~StartStore("D5THAR03",LastTalkedToBy(Myself)) ~ EXIT
   IF ~~ THEN REPLY #229856 /* ~Curious. You've given me something to think about. Farewell... for now.~ */ EXIT
 END
 
@@ -65,30 +65,30 @@ IF ~~ THEN BEGIN 5 // from: 3.2
   SAY #229857 /* ~What do you mean, "you people"?~ [BPC106] */
   IF ~~ THEN REPLY #229858 /* ~I meant, of course, the brave and powerful duergar people.~ */ GOTO 6
   IF ~ Global("BPINBG","GLOBAL",0) ~ THEN REPLY #229859 /* ~My apologies. I didn't mean anything. Maybe we should stop talking and just bargain for some of your goods.~ */ DO ~StartStore("BPTHAR01",LastTalkedToBy(Myself)) ~ EXIT
-  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #229859 /* ~My apologies. I didn't mean anything. Maybe we should stop talking and just bargain for some of your goods.~ */ DO ~StartStore("D5THAR01",LastTalkedToBy(Myself)) ~ EXIT
+  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #229859 /* ~My apologies. I didn't mean anything. Maybe we should stop talking and just bargain for some of your goods.~ */ DO ~StartStore("D5THAR03",LastTalkedToBy(Myself)) ~ EXIT
   IF ~~ THEN REPLY #229860 /* ~What, the duergar? Those coal-smudged, tunnel-crawling rejects of the noble dwarven race?~ */ GOTO 7
 END
 
 IF ~~ THEN BEGIN 6 // from: 5.0
   SAY #229861 /* ~You flatter just like the drow. Now, have you come to do business? I've no stomach for your banter.~ [BPC107] */
   IF ~ Global("BPINBG","GLOBAL",0) ~ THEN REPLY #229862 /* ~Yes, I'd like to shop.~ */ DO ~StartStore("BPTHAR01",LastTalkedToBy(Myself)) ~ EXIT
-  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #229862 /* ~Yes, I'd like to shop.~ */ DO ~StartStore("D5THAR01",LastTalkedToBy(Myself)) ~ EXIT
+  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #229862 /* ~Yes, I'd like to shop.~ */ DO ~StartStore("D5THAR03",LastTalkedToBy(Myself)) ~ EXIT
   IF ~~ THEN REPLY #229367 /* ~I'll be on my way.~ */ EXIT
 END
 
 IF ~~ THEN BEGIN 7 // from: 5.2
   SAY #229863 /* ~I'd drive a pick through that soft skull of yours! That is, if Baeloth didn't command otherwise. Now, buy something or bother me no more!~ [BPC108] */
   IF ~ Global("BPINBG","GLOBAL",0) ~ THEN REPLY #229525 /* ~Show me your goods.~ */ DO ~StartStore("BPTHAR01",LastTalkedToBy(Myself)) ~ EXIT
-  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #229525 /* ~Show me your goods.~ */ DO ~StartStore("D5THAR01",LastTalkedToBy(Myself)) ~ EXIT
+  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #229525 /* ~Show me your goods.~ */ DO ~StartStore("D5THAR03",LastTalkedToBy(Myself)) ~ EXIT
   IF ~~ THEN REPLY #229367 /* ~I'll be on my way.~ */ EXIT
 END
 
 IF ~~ THEN BEGIN 8 // from: 2.2
   SAY #229864 /* ~Don't be stupid! Baeloth's arcane powers are greater than you might imagine from his insipid demeanor. With that damned djinn Najim at his side, Baeloth is unstoppable.~ [BPC109] */
   IF ~ Global("BPINBG","GLOBAL",0) ~ THEN REPLY #229865 /* ~Well, when the going gets tough, the tough go shopping. Show me what you have for sale.~ */ DO ~StartStore("BPTHAR01",LastTalkedToBy(Myself)) ~ EXIT
-  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #229865 /* ~Well, when the going gets tough, the tough go shopping. Show me what you have for sale.~ */ DO ~StartStore("D5THAR01",LastTalkedToBy(Myself)) ~ EXIT
+  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #229865 /* ~Well, when the going gets tough, the tough go shopping. Show me what you have for sale.~ */ DO ~StartStore("D5THAR03",LastTalkedToBy(Myself)) ~ EXIT
   IF ~ Global("BPINBG","GLOBAL",0) ~ THEN REPLY #229866 /* ~Unstoppable, you say? Perhaps we should simply bide our time. Until then, let's see what you have to sell.~ */ DO ~StartStore("BPTHAR01",LastTalkedToBy(Myself)) ~ EXIT
-  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #229866 /* ~Unstoppable, you say? Perhaps we should simply bide our time. Until then, let's see what you have to sell.~ */ DO ~StartStore("D5THAR01",LastTalkedToBy(Myself)) ~ EXIT
+  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #229866 /* ~Unstoppable, you say? Perhaps we should simply bide our time. Until then, let's see what you have to sell.~ */ DO ~StartStore("D5THAR03",LastTalkedToBy(Myself)) ~ EXIT
   IF ~~ THEN REPLY #229867 /* ~Maybe he is unstoppable... for now. I'll bide my time.~ */ EXIT
 END
 
@@ -102,7 +102,7 @@ Global("TIER","GLOBAL",2)
 StartStore("BPTHAR02",LastTalkedToBy(Myself))
 ~ EXIT
   IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #229869 /* ~I need weapons. Show me what you have.~ */ DO ~SetGlobal("OPENING","LOCALS",2)
-StartStore("D5THAR02",LastTalkedToBy(Myself))
+StartStore("D5THAR03",LastTalkedToBy(Myself))
 ~ EXIT
   IF ~~ THEN REPLY #229870 /* ~Perhaps. And perhaps you could fashion a blade that would cut Baeloth down.~ */ DO ~SetGlobal("OPENING","LOCALS",2)
 
@@ -137,7 +137,7 @@ END
 IF ~~ THEN BEGIN 14 // from: 11.0
   SAY #229878 /* ~Now, are you here to buy some weapons or talk my ear off? What'll it be?~ [BPC206] */
   IF ~ Global("BPINBG","GLOBAL",0) ~ THEN REPLY #229504 /* ~Show me your wares.~ */ DO ~StartStore("BPTHAR02",LastTalkedToBy(Myself)) ~ EXIT
-  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #229504 /* ~Show me your wares.~ */ DO ~StartStore("D5THAR02",LastTalkedToBy(Myself)) ~ EXIT
+  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #229504 /* ~Show me your wares.~ */ DO ~StartStore("D5THAR03",LastTalkedToBy(Myself)) ~ EXIT
   IF ~~ THEN REPLY #229879 /* ~That's all for now.~ */ EXIT
 END
 
@@ -243,7 +243,7 @@ IF ~  True()
 ~ EXIT
   IF ~  Global("OPENING","LOCALS",1)
         Global("BPINBG","GLOBAL",1) 
-~ THEN REPLY #229892 /* ~Let me see your weapons.~ */ DO ~StartStore("D5THAR01",LastTalkedToBy(Myself))
+~ THEN REPLY #229892 /* ~Let me see your weapons.~ */ DO ~StartStore("D5THAR03",LastTalkedToBy(Myself))
 ~ EXIT
   IF ~  Global("OPENING","LOCALS",2)
         Global("BPINBG","GLOBAL",0) 
@@ -251,7 +251,7 @@ IF ~  True()
 ~ EXIT
   IF ~  Global("OPENING","LOCALS",2)
         Global("BPINBG","GLOBAL",1) 
-~ THEN REPLY #229892 /* ~Let me see your weapons.~ */ DO ~StartStore("D5THAR02",LastTalkedToBy(Myself))
+~ THEN REPLY #229892 /* ~Let me see your weapons.~ */ DO ~StartStore("D5THAR03",LastTalkedToBy(Myself))
 ~ EXIT
   IF ~  GlobalGT("OPENING","LOCALS",2)
         Global("BPINBG","GLOBAL",0) 

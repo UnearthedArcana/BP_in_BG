@@ -15,7 +15,7 @@ Global("TIER","GLOBAL",1)
 StartStore("BPMAGD01",LastTalkedToBy(Myself))
 ~ EXIT
   IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #29264 /* ~What do you have for sale?~ */ DO ~SetGlobal("OPENING","LOCALS",1)
-StartStore("D5MAGD01",LastTalkedToBy(Myself))
+StartStore("D5MAGD03",LastTalkedToBy(Myself))
 ~ EXIT
   IF ~~ THEN REPLY #29716 /* ~What's a duergar like you doing in a place like this? Oh, wait. Never mind. With a sour face like yours, you fit right in.~ */ DO ~SetGlobal("OPENING","LOCALS",1)
 
@@ -43,7 +43,7 @@ IF ~~ THEN BEGIN 3 // from: 1.1 2.0 2.1 2.2
   SAY #29726 /* ~Did you come here for gossip or arms?~ [BPB104] */
   IF ~~ THEN REPLY #29727 /* ~Gossip, really. But I see you're all out, so farewell.~ */ EXIT
   IF ~ Global("BPINBG","GLOBAL",0) ~ THEN REPLY #29728 /* ~For arms, of course. Show me what weapons you have for sale.~ */ DO ~StartStore("BPMAGD01",LastTalkedToBy(Myself)) ~ EXIT
-  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #29728 /* ~For arms, of course. Show me what weapons you have for sale.~ */ DO ~StartStore("D5MAGD01",LastTalkedToBy(Myself)) ~ EXIT
+  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #29728 /* ~For arms, of course. Show me what weapons you have for sale.~ */ DO ~StartStore("D5MAGD03",LastTalkedToBy(Myself)) ~ EXIT
 END
 
 IF ~~ THEN BEGIN 4 // from: 1.2
@@ -61,7 +61,7 @@ END
 IF ~~ THEN BEGIN 6 // from: 5.0
   SAY #29734 /* ~If I were not so starved for conversation, I would pay you in kind for your insolence. TOO BAD THERE ISN'T A MAN HERE TO STAND UP FOR ME. I'M WAITING... Ugh, it's no use. Now, do you intend to buy something or just continue to annoy me?~ [BPB107] */
   IF ~ Global("BPINBG","GLOBAL",0) ~ THEN REPLY #29437 /* ~Show me what you have for sale.~ */ DO ~StartStore("BPMAGD01",LastTalkedToBy(Myself)) ~ EXIT
-  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #29437 /* ~Show me what you have for sale.~ */ DO ~StartStore("D5MAGD01",LastTalkedToBy(Myself)) ~ EXIT
+  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #29437 /* ~Show me what you have for sale.~ */ DO ~StartStore("D5MAGD03",LastTalkedToBy(Myself)) ~ EXIT
   IF ~~ THEN REPLY #29735 /* ~Maybe I'll come back when it's a better time.~ */ EXIT
 END
 
@@ -92,7 +92,7 @@ Global("TIER","GLOBAL",2)
 StartStore("BPMAGD02",LastTalkedToBy(Myself))
 ~ EXIT
   IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #29662 /* ~I need equipment, what do you have for sale?~ */ DO ~SetGlobal("OPENING","LOCALS",2)
-StartStore("D5MAGD02",LastTalkedToBy(Myself))
+StartStore("D5MAGD03",LastTalkedToBy(Myself))
 ~ EXIT
   IF ~~ THEN REPLY #29743 /* ~Are you and Brendak having a spat?~ */ DO ~SetGlobal("OPENING","LOCALS",2)
 
@@ -134,7 +134,7 @@ END
 IF ~~ THEN BEGIN 16 // from: 13.0 14.0 15.0
   SAY #29756 /* ~Listen, do you want to buy some weapons or not?~ [BPB207] */
   IF ~ Global("BPINBG","GLOBAL",0) ~ THEN REPLY #29757 /* ~Yes, please show me what you've got, ma'am.~ */ DO ~StartStore("BPMAGD02",LastTalkedToBy(Myself)) ~ EXIT
-  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #29757 /* ~Yes, please show me what you've got, ma'am.~ */ DO ~StartStore("D5MAGD02",LastTalkedToBy(Myself)) ~ EXIT
+  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #29757 /* ~Yes, please show me what you've got, ma'am.~ */ DO ~StartStore("D5MAGD03",LastTalkedToBy(Myself)) ~ EXIT
   IF ~~ THEN REPLY #29758 /* ~No, I'd best be moving along.~ */ EXIT
 END
 
@@ -281,7 +281,7 @@ IF ~  True()
 ~ EXIT
   IF ~  Global("OPENING","LOCALS",1)
         Global("BPINBG","GLOBAL",1) 
-~ THEN REPLY #29264 /* ~What do you have for sale?~ */ DO ~StartStore("D5MAGD01",LastTalkedToBy(Myself))
+~ THEN REPLY #29264 /* ~What do you have for sale?~ */ DO ~StartStore("D5MAGD03",LastTalkedToBy(Myself))
 ~ EXIT
   IF ~  Global("OPENING","LOCALS",2)
         Global("BPINBG","GLOBAL",0) 
@@ -289,7 +289,7 @@ IF ~  True()
 ~ EXIT
   IF ~  Global("OPENING","LOCALS",2)
         Global("BPINBG","GLOBAL",1) 
-~ THEN REPLY #29264 /* ~What do you have for sale?~ */ DO ~StartStore("D5MAGD02",LastTalkedToBy(Myself))
+~ THEN REPLY #29264 /* ~What do you have for sale?~ */ DO ~StartStore("D5MAGD03",LastTalkedToBy(Myself))
 ~ EXIT
   IF ~  Global("OPENING","LOCALS",3)
         Global("BPINBG","GLOBAL",0) 

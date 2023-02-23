@@ -17,7 +17,7 @@ StartStore("BPCONC01",LastTalkedToBy(Myself))
 ~ EXIT
   IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #229241 /* ~Show me your potions.~ */ DO ~SetGlobal("BellowSpokenTo","GLOBAL",1)
 SetGlobal("OPENING","LOCALS",1)
-StartStore("D5CONC01",LastTalkedToBy(Myself))
+StartStore("D5CONC03",LastTalkedToBy(Myself))
 ~ EXIT
   IF ~~ THEN REPLY #229242 /* ~Your friend is a giant talking mushroom?~ */ DO ~SetGlobal("BellowSpokenTo","GLOBAL",1)
 
@@ -41,7 +41,7 @@ IF ~~ THEN BEGIN 2 // from: 1.0
   IF ~~ THEN REPLY #229246 /* ~His name is "the Concocter"?~ */ GOTO 3
   IF ~~ THEN REPLY #229247 /* ~How did you two end up here?~ */ GOTO 5
   IF ~ Global("BPINBG","GLOBAL",0) ~ THEN REPLY #229248 /* ~You said something about selling potions. I'm buying.~ */ DO ~StartStore("BPCONC01",LastTalkedToBy(Myself)) ~ EXIT
-  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #229248 /* ~You said something about selling potions. I'm buying.~ */ DO ~StartStore("D5CONC01",LastTalkedToBy(Myself)) ~ EXIT
+  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #229248 /* ~You said something about selling potions. I'm buying.~ */ DO ~StartStore("D5CONC03",LastTalkedToBy(Myself)) ~ EXIT
   IF ~~ THEN REPLY #229249 /* ~This is too absurd. I'm off.~ */ EXIT
 END
 
@@ -53,7 +53,7 @@ END
 IF ~~ THEN BEGIN 4 // from: 3.0
   SAY #229251 /* ~His full name is closer to "Keen-Scentin' Concocter of Marvelous Draughts." And even that's not his real name, which even I can't fully understand.~ [BPF105] */
   IF ~ Global("BPINBG","GLOBAL",0) ~ THEN REPLY #229252 /* ~You say he can make potions? Let's see them.~ */ DO ~StartStore("BPCONC01",LastTalkedToBy(Myself)) ~ EXIT
-  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #229252 /* ~You say he can make potions? Let's see them.~ */ DO ~StartStore("D5CONC01",LastTalkedToBy(Myself)) ~ EXIT
+  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #229252 /* ~You say he can make potions? Let's see them.~ */ DO ~StartStore("D5CONC03",LastTalkedToBy(Myself)) ~ EXIT
   IF ~~ THEN REPLY #229253 /* ~How did you end up here?~ */ GOTO 5
   IF ~~ THEN REPLY #229254 /* ~On second thought, I don't want any mushroom-man-made potions right now.~ */ EXIT
 END
@@ -67,7 +67,7 @@ IF ~~ THEN BEGIN 6 // from: 5.0
   SAY #229256 /* ~The drow would have slain us both, but when he learned of the Concocter's talent for potions, he brought us here to support his "entertainment."~ [BPF107] */
   IF ~~ THEN REPLY #229257 /* ~Why haven't you and the other captives fought back?~ */ GOTO 7
   IF ~ Global("BPINBG","GLOBAL",0) ~ THEN REPLY #229258 /* ~That's quite a tale. Now how about you sell me some potions.~ */ DO ~StartStore("BPCONC01",LastTalkedToBy(Myself)) ~ EXIT
-  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #229258 /* ~That's quite a tale. Now how about you sell me some potions.~ */ DO ~StartStore("D5CONC01",LastTalkedToBy(Myself)) ~ EXIT
+  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #229258 /* ~That's quite a tale. Now how about you sell me some potions.~ */ DO ~StartStore("D5CONC03",LastTalkedToBy(Myself)) ~ EXIT
   IF ~~ THEN REPLY #229259 /* ~Thanks for the information. It's time for me to go.~ */ EXIT
 END
 
@@ -84,7 +84,7 @@ END
 IF ~~ THEN BEGIN 9 // from: 8.0
   SAY #229263 /* ~In the meantime, can I help you find a potion? They're all still warm!~ [BPF110] */
   IF ~ Global("BPINBG","GLOBAL",0) ~ THEN REPLY #229264 /* ~What do you have for sale?~ */ DO ~StartStore("BPCONC01",LastTalkedToBy(Myself)) ~ EXIT
-  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #229264 /* ~What do you have for sale?~ */ DO ~StartStore("D5CONC01",LastTalkedToBy(Myself)) ~ EXIT
+  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #229264 /* ~What do you have for sale?~ */ DO ~StartStore("D5CONC03",LastTalkedToBy(Myself)) ~ EXIT
   IF ~~ THEN REPLY #229265 /* ~No, I've got all I need for now.~ */ EXIT
 END
 
@@ -98,7 +98,7 @@ Global("TIER","GLOBAL",2)
 StartStore("BPCONC02",LastTalkedToBy(Myself))
 ~ EXIT
   IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #229267 /* ~That's just what I need, more potions. Show me what you've got.~ */ DO ~SetGlobal("OPENING","LOCALS",2)
-StartStore("D5CONC02",LastTalkedToBy(Myself))
+StartStore("D5CONC03",LastTalkedToBy(Myself))
 ~ EXIT
   IF ~~ THEN REPLY #229268 /* ~I suppose you enjoy all this fighting. It must sell plenty of potions.~ */ DO ~SetGlobal("OPENING","LOCALS",2)
 
@@ -123,7 +123,7 @@ IF ~~ THEN BEGIN 12 // from: 10.2
   IF ~~ THEN REPLY #229275 /* ~That's totally disgusting.~ */ GOTO 13
   IF ~~ THEN REPLY #229276 /* ~So I've been drinking the Concocter's—?~ */ GOTO 14
   IF ~ Global("BPINBG","GLOBAL",0) ~ THEN REPLY #229277 /* ~I don't want to think about it. Just sell me some potions.~ */ DO ~StartStore("BPCONC02",LastTalkedToBy(Myself)) ~ EXIT
-  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #229277 /* ~I don't want to think about it. Just sell me some potions.~ */ DO ~StartStore("D5CONC02",LastTalkedToBy(Myself)) ~ EXIT
+  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #229277 /* ~I don't want to think about it. Just sell me some potions.~ */ DO ~StartStore("D5CONC03",LastTalkedToBy(Myself)) ~ EXIT
 END
 
 IF ~~ THEN BEGIN 13 // from: 12.0 12.1
@@ -149,7 +149,7 @@ END
 IF ~~ THEN BEGIN 17 // from: 13.0 14.0 15.0 16.0
   SAY #229282 /* ~Now, can we put some new potions in you today?~ [BPF208] */
   IF ~ Global("BPINBG","GLOBAL",0) ~ THEN REPLY #229283 /* ~Yes, show me what you have.~ */ DO ~StartStore("BPCONC02",LastTalkedToBy(Myself)) ~ EXIT
-  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #229283 /* ~Yes, show me what you have.~ */ DO ~StartStore("D5CONC02",LastTalkedToBy(Myself)) ~ EXIT
+  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #229283 /* ~Yes, show me what you have.~ */ DO ~StartStore("D5CONC03",LastTalkedToBy(Myself)) ~ EXIT
   IF ~~ THEN REPLY #229284 /* ~No, thanks. I'll be on my way.~ */ EXIT
 END
 
@@ -311,11 +311,11 @@ IF ~  True()
 ~ EXIT
   IF ~  Global("OPENING","LOCALS",1)
         Global("BPINBG","GLOBAL",1) 
-~ THEN REPLY #229312 /* ~I could use some more potions.~ */ DO ~StartStore("D5CONC01",LastTalkedToBy(Myself))
+~ THEN REPLY #229312 /* ~I could use some more potions.~ */ DO ~StartStore("D5CONC02",LastTalkedToBy(Myself))
 ~ EXIT
   IF ~  Global("OPENING","LOCALS",2)
         Global("BPINBG","GLOBAL",1) 
-~ THEN REPLY #229312 /* ~I could use some more potions.~ */ DO ~StartStore("D5CONC02",LastTalkedToBy(Myself))
+~ THEN REPLY #229312 /* ~I could use some more potions.~ */ DO ~StartStore("D5CONC03",LastTalkedToBy(Myself))
 ~ EXIT
   IF ~  GlobalGT("OPENING","LOCALS",2)
         Global("BPINBG","GLOBAL",1) 

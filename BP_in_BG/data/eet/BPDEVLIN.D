@@ -15,7 +15,7 @@ Global("TIER","GLOBAL",1)
 StartStore("BPDEVL01",LastTalkedToBy(Myself))
 ~ EXIT
   IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #229392 /* ~I need ranged weaponry and ammunition. What do you have for sale?~ */ DO ~SetGlobal("OPENING","LOCALS",1)
-StartStore("D5DEVL01",LastTalkedToBy(Myself))
+StartStore("D5DEVL03",LastTalkedToBy(Myself))
 ~ EXIT
   IF ~~ THEN REPLY #229393 /* ~How did you come to be here, elf?~ */ DO ~SetGlobal("OPENING","LOCALS",1)
 
@@ -35,7 +35,7 @@ END
 IF ~~ THEN BEGIN 2 // from: 1.0 1.1 1.2
   SAY #229399 /* ~F-f-forget I said anything! Please! J-j-just... buy something before he c-come-comes over. I—I don't wish to annoy him further...~ [BPJ103] */
   IF ~ Global("BPINBG","GLOBAL",0) ~ THEN REPLY #229392 /* ~I need ranged weaponry and ammunition. What do you have for sale?~ */ DO ~StartStore("BPDEVL01",LastTalkedToBy(Myself)) ~ EXIT
-  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #229392 /* ~I need ranged weaponry and ammunition. What do you have for sale?~ */ DO ~StartStore("D5DEVL01",LastTalkedToBy(Myself)) ~ EXIT
+  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #229392 /* ~I need ranged weaponry and ammunition. What do you have for sale?~ */ DO ~StartStore("D5DEVL03",LastTalkedToBy(Myself)) ~ EXIT
 END
 
 IF ~  GlobalLT("OPENING","LOCALS",2)
@@ -48,7 +48,7 @@ Global("TIER","GLOBAL",2)
 StartStore("BPDEVL02",LastTalkedToBy(Myself))
 ~ EXIT
   IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #229392 /* ~I need ranged weaponry and ammunition. What do you have for sale?~ */ DO ~SetGlobal("OPENING","LOCALS",2)
-StartStore("D5DEVL02",LastTalkedToBy(Myself))
+StartStore("D5DEVL03",LastTalkedToBy(Myself))
 ~ EXIT
   IF ~~ THEN REPLY #229401 /* ~Maybe I'm the one toying with him. Maybe you should think about that and tell me what you know of his weaknesses.~ */ DO ~SetGlobal("OPENING","LOCALS",2)
 
@@ -66,7 +66,7 @@ END
 IF ~~ THEN BEGIN 5 // from: 3.2 4.0
   SAY #229404 /* ~N-n-no! I don't dare cross him again. His sav-sav-sav-savagery knows no—knows no bounds! Please, hurry and—and take what you—you—you need before he sees us t-talking!~ [BPJ203] */
   IF ~ Global("BPINBG","GLOBAL",0) ~ THEN REPLY #229392 /* ~I need ranged weaponry and ammunition. What do you have for sale?~ */ DO ~StartStore("BPDEVL02",LastTalkedToBy(Myself)) ~ EXIT
-  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #229392 /* ~I need ranged weaponry and ammunition. What do you have for sale?~ */ DO ~StartStore("D5DEVL02",LastTalkedToBy(Myself)) ~ EXIT
+  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #229392 /* ~I need ranged weaponry and ammunition. What do you have for sale?~ */ DO ~StartStore("D5DEVL03",LastTalkedToBy(Myself)) ~ EXIT
   IF ~~ THEN REPLY #229405 /* ~Why would he care that you're talking to me?~ */ GOTO 6
   IF ~~ THEN REPLY #229406 /* ~I don't need anything right now. Farewell.~ */ EXIT
   IF ~~ THEN REPLY #229407 /* ~I'll come back when you've grown a spine.~ */ EXIT
@@ -75,7 +75,7 @@ END
 IF ~~ THEN BEGIN 6 // from: 5.1
   SAY #229408 /* ~It's n-n-not you, it's m-m-me. Baeloth has a special place in his b-b-black heart for torturing me. He g-g-g—he gladly takes any excuse to place me in the—the... the... the... the pain room.~ [BPJ204] */
   IF ~ Global("BPINBG","GLOBAL",0) ~ THEN REPLY #229392 /* ~I need ranged weaponry and ammunition. What do you have for sale?~ */ DO ~StartStore("BPDEVL02",LastTalkedToBy(Myself)) ~ EXIT
-  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #229392 /* ~I need ranged weaponry and ammunition. What do you have for sale?~ */ DO ~StartStore("D5DEVL02",LastTalkedToBy(Myself)) ~ EXIT
+  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #229392 /* ~I need ranged weaponry and ammunition. What do you have for sale?~ */ DO ~StartStore("D5DEVL03",LastTalkedToBy(Myself)) ~ EXIT
   IF ~~ THEN REPLY #229409 /* ~That sounds bad. I understand why you're frightened.~ */ GOTO 7
   IF ~~ THEN REPLY #231482 /* ~Man up, Devlin! Or elf up, or whatever it is you do. Don't be such a coward.~ */ GOTO 7
   IF ~~ THEN REPLY #229410 /* ~I don't have time for this.~ */ EXIT
@@ -84,7 +84,7 @@ END
 IF ~~ THEN BEGIN 7 // from: 6.1 6.2
   SAY #229411 /* ~P-p-please, just t-t-tell me what you need, and g-g-g-go.~ [BPJ205] */
   IF ~ Global("BPINBG","GLOBAL",0) ~ THEN REPLY #229392 /* ~I need ranged weaponry and ammunition. What do you have for sale?~ */ DO ~StartStore("BPDEVL02",LastTalkedToBy(Myself)) ~ EXIT
-  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #229392 /* ~I need ranged weaponry and ammunition. What do you have for sale?~ */ DO ~StartStore("D5DEVL02",LastTalkedToBy(Myself)) ~ EXIT
+  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #229392 /* ~I need ranged weaponry and ammunition. What do you have for sale?~ */ DO ~StartStore("D5DEVL03",LastTalkedToBy(Myself)) ~ EXIT
   IF ~~ THEN REPLY #229412 /* ~What a pathetic sight you are.~ */ EXIT
   IF ~~ THEN REPLY #215320 /* ~Goodbye.~ */ EXIT
 END
@@ -225,7 +225,7 @@ IF ~  True()
 ~ EXIT
   IF ~  Global("OPENING","LOCALS",1)
         Global("BPINBG","GLOBAL",1) 
-~ THEN REPLY #229437 /* ~Show me what you have for sale.~ */ DO ~StartStore("D5DEVL01",LastTalkedToBy(Myself))
+~ THEN REPLY #229437 /* ~Show me what you have for sale.~ */ DO ~StartStore("D5DEVL03",LastTalkedToBy(Myself))
 ~ EXIT
   IF ~  Global("OPENING","LOCALS",2)
         Global("BPINBG","GLOBAL",0) 
@@ -233,7 +233,7 @@ IF ~  True()
 ~ EXIT
   IF ~  Global("OPENING","LOCALS",2)
         Global("BPINBG","GLOBAL",1) 
-~ THEN REPLY #229437 /* ~Show me what you have for sale.~ */ DO ~StartStore("D5DEVL02",LastTalkedToBy(Myself))
+~ THEN REPLY #229437 /* ~Show me what you have for sale.~ */ DO ~StartStore("D5DEVL03",LastTalkedToBy(Myself))
 ~ EXIT
   IF ~  GlobalGT("OPENING","LOCALS",2)
         Global("BPINBG","GLOBAL",0) 

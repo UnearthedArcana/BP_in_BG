@@ -15,7 +15,7 @@ Global("TIER","GLOBAL",1)
 StartStore("BPXITH01",LastTalkedToBy(Myself))
 ~ EXIT
   IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #229905 /* ~I need rings, wands, and amulets. What do you have for sale?~ [BP_29965] */ DO ~SetGlobal("OPENING","LOCALS",1)
-StartStore("D5XITH01",LastTalkedToBy(Myself))
+StartStore("D5XITH03",LastTalkedToBy(Myself))
 ~ EXIT
   IF ~~ THEN REPLY #229906 /* ~You're an illithid, right?~ */ DO ~SetGlobal("OPENING","LOCALS",1)
 
@@ -34,7 +34,7 @@ END
 IF ~~ THEN BEGIN 2 // from: 1.0 1.1
   SAY #229390 /* ~...~ [BPI101] */
   IF ~ Global("BPINBG","GLOBAL",0) ~ THEN REPLY #229905 /* ~I need rings, wands, and amulets. What do you have for sale?~ [BP_29965] */ DO ~StartStore("BPXITH01",LastTalkedToBy(Myself)) ~ EXIT
-  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #229905 /* ~I need rings, wands, and amulets. What do you have for sale?~ [BP_29965] */ DO ~StartStore("D5XITH01",LastTalkedToBy(Myself)) ~ EXIT
+  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #229905 /* ~I need rings, wands, and amulets. What do you have for sale?~ [BP_29965] */ DO ~StartStore("D5XITH03",LastTalkedToBy(Myself)) ~ EXIT
   IF ~~ THEN REPLY #229910 /* ~These one-sided conversations sure are boring. I'm going to find someone who talks.~ */ EXIT
 END
 
@@ -48,7 +48,7 @@ Global("TIER","GLOBAL",2)
 StartStore("BPXITH02",LastTalkedToBy(Myself))
 ~ EXIT
   IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #229905 /* ~I need rings, wands, and amulets. What do you have for sale?~ [BP_29965] */ DO ~SetGlobal("OPENING","LOCALS",2)
-StartStore("D5XITH02",LastTalkedToBy(Myself))
+StartStore("D5XITH03",LastTalkedToBy(Myself))
 ~ EXIT
   IF ~~ THEN REPLY #229912 /* ~I can see you staring daggers at Baeloth. You look like you want to say something.~ */ DO ~SetGlobal("OPENING","LOCALS",2)
 
@@ -70,7 +70,7 @@ END
 IF ~~ THEN BEGIN 5 // from: 3.2 4.0 4.1
   SAY #229911 /* ~...~ [BPI201] */
   IF ~ Global("BPINBG","GLOBAL",0) ~ THEN REPLY #229905 /* ~I need rings, wands, and amulets. What do you have for sale?~ [BP_29965] */ DO ~StartStore("BPXITH02",LastTalkedToBy(Myself)) ~ EXIT
-  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #229905 /* ~I need rings, wands, and amulets. What do you have for sale?~ [BP_29965] */ DO ~StartStore("D5XITH02",LastTalkedToBy(Myself)) ~ EXIT
+  IF ~ Global("BPINBG","GLOBAL",1) ~ THEN REPLY #229905 /* ~I need rings, wands, and amulets. What do you have for sale?~ [BP_29965] */ DO ~StartStore("D5XITH03",LastTalkedToBy(Myself)) ~ EXIT
   IF ~~ THEN REPLY #229916 /* ~Sigh. You can't say I didn't try to be friendly.~ */ EXIT
 END
 
@@ -167,7 +167,7 @@ IF ~  True()
 ~ EXIT
   IF ~  Global("OPENING","LOCALS",1)
         Global("BPINBG","GLOBAL",1) 
-~ THEN REPLY #229935 /* ~Just show me your rings and things.~ */ DO ~StartStore("D5XITH01",LastTalkedToBy(Myself))
+~ THEN REPLY #229935 /* ~Just show me your rings and things.~ */ DO ~StartStore("D5XITH03",LastTalkedToBy(Myself))
 ~ EXIT
   IF ~  Global("OPENING","LOCALS",2)
         Global("BPINBG","GLOBAL",0) 
@@ -175,7 +175,7 @@ IF ~  True()
 ~ EXIT
   IF ~  Global("OPENING","LOCALS",2)
         Global("BPINBG","GLOBAL",1) 
-~ THEN REPLY #229935 /* ~Just show me your rings and things.~ */ DO ~StartStore("D5XITH02",LastTalkedToBy(Myself))
+~ THEN REPLY #229935 /* ~Just show me your rings and things.~ */ DO ~StartStore("D5XITH03",LastTalkedToBy(Myself))
 ~ EXIT
   IF ~  GlobalGT("OPENING","LOCALS",2)
         Global("BPINBG","GLOBAL",0) 
