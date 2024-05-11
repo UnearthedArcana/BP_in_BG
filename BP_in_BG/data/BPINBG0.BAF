@@ -16,8 +16,6 @@ THEN
 		LeaveAreaLUAPanic("OH9310","",[906.702],N)
 		LeaveAreaLUA("OH9310","",[906.702],N)
 		CreateVisualEffectObject("spdimndr",Myself)
-		CreateItem("BPRNG1",0,0,0)  // Slave Ring
-		FillSlot(SLOT_RING_RIGHT)
 		ActionOverride(Player1,ApplySpellRES("OHLOST",Player1))  // Find Familiar
 		TakePartyGold(200000)
 		SetGlobal("OH9310_ENTERED","OH9310",1)
@@ -41,49 +39,4 @@ THEN
 		CreateCreature("BPREFF01",[805.644],S)  // Referee - No such index
 		CreateCreature("BPREFF01",[802.412],S)  // Referee - No such index
 		SetGlobal("BPINTRO","GLOBAL",2)
-END
-
-IF
-	True()
-THEN
-	RESPONSE #100
-		CutSceneId(Player2)
-		CreateItem("BPRNG1",0,0,0)  // Slave Ring
-		FillSlot(SLOT_RING_RIGHT)
-END
-
-IF
-	True()
-THEN
-	RESPONSE #100
-		CutSceneId(Player3)
-		CreateItem("BPRNG1",0,0,0)  // Slave Ring
-		FillSlot(SLOT_RING_RIGHT)
-END
-
-IF
-	True()
-THEN
-	RESPONSE #100
-		CutSceneId(Player4)
-		CreateItem("BPRNG1",0,0,0)  // Slave Ring
-		FillSlot(SLOT_RING_RIGHT)
-END
-
-IF
-	True()
-THEN
-	RESPONSE #100
-		CutSceneId(Player5)
-		CreateItem("BPRNG1",0,0,0)  // Slave Ring
-		FillSlot(SLOT_RING_RIGHT)
-END
-
-IF
-	True()
-THEN
-	RESPONSE #100
-		CutSceneId(Player6)
-		CreateItem("BPRNG1",0,0,0)  // Slave Ring
-		FillSlot(SLOT_RING_RIGHT)
 END

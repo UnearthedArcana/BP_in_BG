@@ -11,6 +11,16 @@ COPY ~%MOD_FOLDER%/data/iwd_items/shared~ ~override~
 // add the items
 //
 
+ACTION_IF (FILE_EXISTS_IN_GAME ~boot11.itm~) BEGIN
+  COPY_EXISTING ~boot11.itm~ ~override~
+    WRITE_LONG 0x34 3000
+END
+
+ACTION_IF (FILE_EXISTS_IN_GAME ~belt10.itm~) BEGIN
+  COPY_EXISTING ~belt10.itm~ ~override~
+    WRITE_LONG 0x34 8000
+END
+
 ACTION_IF !(FILE_EXISTS_IN_GAME ~amulbar.itm~) BEGIN
  COPY ~%MOD_FOLDER%/data/iwd_items/amulbar.itm~ ~override~
   SAY NAME2 @1011
@@ -49,6 +59,12 @@ ACTION_IF !(FILE_EXISTS_IN_GAME ~beltbon.itm~) BEGIN
    SAY DESC @1052
    LPF ALTER_EFFECT INT_VAR match_opcode = 146 STR_VAR match_resource = ~sppr323~ resource = EVAL ~%spell_res%~ END
  END
+END
+
+ACTION_IF !(FILE_EXISTS_IN_GAME ~bess.itm~) BEGIN
+ COPY ~%MOD_FOLDER%/data/iwd_items/bess.itm~ ~override~
+  SAY NAME2 @1641
+  SAY DESC @1642
 END
 
 ACTION_IF !(FILE_EXISTS_IN_GAME ~biteme.itm~) BEGIN
@@ -119,12 +135,14 @@ ACTION_IF !(FILE_EXISTS_IN_GAME ~corello.itm~) BEGIN
  COPY ~%MOD_FOLDER%/data/iwd_items/corello.itm~ ~override~
   SAY NAME2 @1151
   SAY DESC @1152
+  WRITE_LONG 0x34 1500
 END
 
 ACTION_IF !(FILE_EXISTS_IN_GAME ~dazer.itm~) BEGIN
  COPY ~%MOD_FOLDER%/data/iwd_items/dazer.itm~ ~override~
   SAY NAME2 @1161
   SAY DESC @1162
+  WRITE_LONG 0x34 3000
 END
 
 ACTION_IF !(FILE_EXISTS_IN_GAME ~diver.itm~) BEGIN
@@ -149,6 +167,15 @@ ACTION_IF !(FILE_EXISTS_IN_GAME ~force.itm~) BEGIN
  COPY ~%MOD_FOLDER%/data/iwd_items/force.itm~ ~override~
   SAY NAME2 @1201
   SAY DESC @1202
+  WRITE_LONG 0x34 15
+END
+
+ACTION_IF !(FILE_EXISTS_IN_GAME ~helmpat.itm~) BEGIN
+ COPY ~%MOD_FOLDER%/data/iwd_items/helmpat.itm~ ~override~
+  SAY NAME1 @1631
+  SAY NAME2 @1631
+  SAY DESC @1632
+  WRITE_LONG 0x34 2500
 END
 
 ACTION_IF !(FILE_EXISTS_IN_GAME ~holdfst.itm~) BEGIN
@@ -167,6 +194,7 @@ ACTION_IF !(FILE_EXISTS_IN_GAME ~kreswrd.itm~) BEGIN
  COPY ~%MOD_FOLDER%/data/iwd_items/kreswrd.itm~ ~override~
   SAY NAME2 @1231
   SAY DESC @1232
+  WRITE_LONG 0x34 2500
 END
 
 ACTION_IF !(FILE_EXISTS_IN_GAME ~lucky.itm~) BEGIN
@@ -179,6 +207,7 @@ ACTION_IF !(FILE_EXISTS_IN_GAME ~lyre.itm~) BEGIN
  COPY ~%MOD_FOLDER%/data/iwd_items/lyre.itm~ ~override~
   SAY NAME2 @1251
   SAY DESC @1252
+  WRITE_LONG 0x34 4000
 END
 
 ACTION_IF !(FILE_EXISTS_IN_GAME ~mhorn.itm~) BEGIN
@@ -209,6 +238,7 @@ ACTION_IF !(FILE_EXISTS_IN_GAME ~peaceke.itm~) BEGIN
  COPY ~%MOD_FOLDER%/data/iwd_items/peaceke.itm~ ~override~
   SAY NAME2 @1301
   SAY DESC @1302
+  WRITE_LONG 0x34 8000
 END
 
 ACTION_IF !(FILE_EXISTS_IN_GAME ~poker.itm~) BEGIN
@@ -241,6 +271,7 @@ ACTION_IF !(FILE_EXISTS_IN_GAME ~solonor.itm~) BEGIN
  COPY ~%MOD_FOLDER%/data/iwd_items/solonor.itm~ ~override~
   SAY NAME2 @1351
   SAY DESC @1352
+  WRITE_LONG 0x34 750
 END
 
 ACTION_IF !(FILE_EXISTS_IN_GAME ~spine.itm~) BEGIN
@@ -265,6 +296,7 @@ ACTION_IF !(FILE_EXISTS_IN_GAME ~trnbolt.itm~) BEGIN
  COPY ~%MOD_FOLDER%/data/iwd_items/trnbolt.itm~ ~override~
   SAY NAME2 @1391
   SAY DESC @1392
+  WRITE_LONG 0x34 30
 END
 
 ACTION_IF !(FILE_EXISTS_IN_GAME ~turodah.itm~) BEGIN
@@ -277,6 +309,14 @@ ACTION_IF !(FILE_EXISTS_IN_GAME ~u1ham2a.itm~) BEGIN
  COPY ~%MOD_FOLDER%/data/iwd_items/u1ham2a.itm~ ~override~
   SAY NAME2 @1411
   SAY DESC @1412
+  WRITE_LONG 0x34 2000
+END
+
+ACTION_IF !(FILE_EXISTS_IN_GAME ~u1hax4B.itm~) BEGIN
+ COPY ~%MOD_FOLDER%/data/iwd_items/u1hax4B.itm~ ~override~
+  SAY NAME2 @1621
+  SAY DESC @1622
+  WRITE_ASCII 0x3a ~D51HAX4B~ #8
 END
 
 ACTION_IF !(FILE_EXISTS_IN_GAME ~uarow2a.itm~) BEGIN
@@ -290,6 +330,7 @@ ACTION_IF !(FILE_EXISTS_IN_GAME ~udagg2a.itm~) BEGIN
   SAY NAME2 @1431
   SAY DESC @1432
   WRITE_ASCII 0x3a ~D5DAGG2A~ #8
+  WRITE_LONG 0x34 2000
 END
 
 ACTION_IF !(FILE_EXISTS_IN_GAME ~udart3b.itm~) BEGIN
@@ -310,6 +351,7 @@ ACTION_IF !(FILE_EXISTS_IN_GAME ~uhalb3a.itm~) BEGIN
   SAY NAME2 @1461
   SAY DESC @1462
   WRITE_ASCII 0x3a ~D5HALB3A~ #8
+  WRITE_LONG 0x34 2000
 END
 
 ACTION_IF !(FILE_EXISTS_IN_GAME ~uhxbw3a.itm~) BEGIN
@@ -335,8 +377,10 @@ END
 
 ACTION_IF !(FILE_EXISTS_IN_GAME ~umhulk.itm~) BEGIN
  COPY ~%MOD_FOLDER%/data/iwd_items/umhulk.itm~ ~override~
+  SAY NAME1 @1501
   SAY NAME2 @1501
   SAY DESC @1502
+  WRITE_LONG 0x34 5000
 END
 
 ACTION_IF !(FILE_EXISTS_IN_GAME ~umstr2b.itm~) BEGIN
@@ -344,6 +388,7 @@ ACTION_IF !(FILE_EXISTS_IN_GAME ~umstr2b.itm~) BEGIN
   SAY NAME2 @1511
   SAY DESC @1512
   WRITE_ASCII 0x3a ~D5MSTR2B~ #8
+  WRITE_LONG 0x34 3600
 END
 
 ACTION_IF !(FILE_EXISTS_IN_GAME ~uring3b.itm~) BEGIN
@@ -407,25 +452,6 @@ ACTION_IF !(FILE_EXISTS_IN_GAME ~zzs6sc.itm~) BEGIN
  COPY ~%MOD_FOLDER%/data/iwd_items/zzs6sc.itm~ ~override~
   SAY NAME2 @1611
   SAY DESC @1612
-END
-
-ACTION_IF !(FILE_EXISTS_IN_GAME ~u1hax4B.itm~) BEGIN
- COPY ~%MOD_FOLDER%/data/iwd_items/u1hax4B.itm~ ~override~
-  SAY NAME2 @1621
-  SAY DESC @1622
-  WRITE_ASCII 0x3a ~D51HAX4B~ #8
-END
-
-ACTION_IF !(FILE_EXISTS_IN_GAME ~helmpat.itm~) BEGIN
- COPY ~%MOD_FOLDER%/data/iwd_items/helmpat.itm~ ~override~
-  SAY NAME2 @1631
-  SAY DESC @1632
-END
-
-ACTION_IF !(FILE_EXISTS_IN_GAME ~bess.itm~) BEGIN
- COPY ~%MOD_FOLDER%/data/iwd_items/bess.itm~ ~override~
-  SAY NAME2 @1641
-  SAY DESC @1642
 END
 
 END	//	end define function

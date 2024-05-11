@@ -14,18 +14,7 @@ IF ~  Global("BA_BEGIN","GLOBAL",0)
 
 ~ THEN DO ~SetGlobal("BA_BEGIN","GLOBAL",1)
 
-~ EXTERN ~NEERAJ~ 907
-  IF ~  Global("C0AuraBAELOTH0","GLOBAL",0)
-
-InParty("C0Aura")
-
-InMyArea("C0Aura")
-
-!StateCheck("C0Aura",CD_STATE_NOTVALID)
-
-~ THEN DO ~SetGlobal("C0AuraBAELOTH0","GLOBAL",1)
-
-~ EXTERN ~C0AURAJ~ 186
+~ EXTERN ~NEERAJ~ 893
 END
 
 IF ~~ THEN BEGIN 1 // from: 0.0
@@ -53,7 +42,7 @@ IF ~~ THEN BEGIN 3 // from: 2.0
 ~ THEN REPLY #231868 /* ~Die, drow!~ */ GOTO 28
   IF ~  InParty("NEERA")
 
-~ THEN REPLY #231866 /* ~I'm afraid I don't.~ */ EXTERN ~NEERAJ~ 908
+~ THEN REPLY #231866 /* ~I'm afraid I don't.~ */ EXTERN ~NEERAJ~ 894
   IF ~  InParty("NEERA")
 
 ~ THEN REPLY #231867 /* ~Where on earth did you come from?~ */ GOTO 4
@@ -76,7 +65,7 @@ IF ~~ THEN BEGIN 4 // from: 3.1 3.4
 ~ THEN REPLY #231868 /* ~Die, drow!~ */ GOTO 28
   IF ~  InParty("NEERA")
 
-~ THEN REPLY #231870 /* ~As pleasant as you are, I'm afraid I don't know where an Underdark entrance can be located.~ */ EXTERN ~NEERAJ~ 908
+~ THEN REPLY #231870 /* ~As pleasant as you are, I'm afraid I don't know where an Underdark entrance can be located.~ */ EXTERN ~NEERAJ~ 894
   IF ~  InParty("NEERA")
 
 ~ THEN REPLY #231871 /* ~Who are you, exactly?~ */ GOTO 6
@@ -95,7 +84,7 @@ IF ~~ THEN BEGIN 5 // from: 3.0 4.0
 ~ THEN REPLY #231868 /* ~Die, drow!~ */ GOTO 28
   IF ~  InParty("NEERA")
 
-~ THEN REPLY #231876 /* ~And who might, ah, yourself be?~ */ EXTERN ~NEERAJ~ 909
+~ THEN REPLY #231876 /* ~And who might, ah, yourself be?~ */ EXTERN ~NEERAJ~ 895
   IF ~  InParty("NEERA")
 
 ~ THEN REPLY #231868 /* ~Die, drow!~ */ GOTO 28
@@ -137,7 +126,7 @@ IF ~~ THEN BEGIN 9 // from:
   SAY #231887 /* ~Oh my, tough crowd! In any case, it seems that I am in a bit of a bind. I am unable to return to my home, and I am bare to the boundless barbarism of the surface world!~ [bab008f] */
   IF ~  InParty("NEERA")
 
-~ THEN REPLY #231888 /* ~That's a shame, a nice guy like you mixed up in a situation like this.~ */ EXTERN ~NEERAJ~ 910
+~ THEN REPLY #231888 /* ~That's a shame, a nice guy like you mixed up in a situation like this.~ */ EXTERN ~NEERAJ~ 896
   IF ~  !InParty("NEERA")
 
 ~ THEN REPLY #231888 /* ~That's a shame, a nice guy like you mixed up in a situation like this.~ */ GOTO 11
@@ -154,7 +143,7 @@ IF ~~ THEN BEGIN 10 // from: 6.0 6.1
 ~ THEN REPLY #231868 /* ~Die, drow!~ */ GOTO 28
   IF ~  InParty("NEERA")
 
-~ THEN REPLY #231890 /* ~That's a shame. How could such a nice guy like you get mixed up in a situation like this?~ */ EXTERN ~NEERAJ~ 910
+~ THEN REPLY #231890 /* ~That's a shame. How could such a nice guy like you get mixed up in a situation like this?~ */ EXTERN ~NEERAJ~ 896
   IF ~  InParty("NEERA")
 
 ~ THEN REPLY #231868 /* ~Die, drow!~ */ GOTO 28
@@ -173,10 +162,10 @@ IF ~~ THEN BEGIN 11 // from: 9.1 10.0
 ~ THEN REPLY #231868 /* ~Die, drow!~ */ GOTO 28
   IF ~  InParty("NEERA")
 
-~ THEN REPLY #231893 /* ~By the gods, if my eyes continue to roll at this speed, they'll begin to smoke!~ */ EXTERN ~NEERAJ~ 911
+~ THEN REPLY #231893 /* ~By the gods, if my eyes continue to roll at this speed, they'll begin to smoke!~ */ EXTERN ~NEERAJ~ 897
   IF ~  InParty("NEERA")
 
-~ THEN REPLY #231894 /* ~Perhaps they will be. Carry on, then.~ */ EXTERN ~NEERAJ~ 911
+~ THEN REPLY #231894 /* ~Perhaps they will be. Carry on, then.~ */ EXTERN ~NEERAJ~ 897
   IF ~  InParty("NEERA")
 
 ~ THEN REPLY #231868 /* ~Die, drow!~ */ GOTO 28
@@ -218,7 +207,7 @@ IF ~~ THEN BEGIN 17 // from: 16.0
 ~ THEN GOTO 18
   IF ~  InParty("NEERA")
 
-~ THEN EXTERN ~NEERAJ~ 912
+~ THEN EXTERN ~NEERAJ~ 898
 END
 
 IF ~~ THEN BEGIN 18 // from: 17.0
@@ -263,7 +252,7 @@ IF ~~ THEN BEGIN 21 // from: 20.0
 ~ THEN REPLY #231918 /* ~There it is! Fine. Whatever. Welcome aboard.~ */ EXTERN ~EDWINJ~ 516
   IF ~  InParty("NEERA")
 
-~ THEN REPLY #231918 /* ~There it is! Fine. Whatever. Welcome aboard.~ */ EXTERN ~NEERAJ~ 913
+~ THEN REPLY #231918 /* ~There it is! Fine. Whatever. Welcome aboard.~ */ EXTERN ~NEERAJ~ 899
   IF ~~ THEN REPLY #231919 /* ~I'm afraid I can't take you with me.~ */ GOTO 26
   IF ~~ THEN REPLY #231868 /* ~Die, drow!~ */ GOTO 28
 END

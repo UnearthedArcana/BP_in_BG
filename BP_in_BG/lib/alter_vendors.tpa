@@ -5,30 +5,42 @@ DEFINE_ACTION_FUNCTION adjust_stores BEGIN
 // add bp-in-bg versions of stores, with  fewer copies of stuff
 //
 
-COPY ~%MOD_FOLDER%/data/stores/d5bren01.sto~ ~override~
-COPY ~%MOD_FOLDER%/data/stores/d5bren02.sto~ ~override~
-COPY ~%MOD_FOLDER%/data/stores/d5bren03.sto~ ~override~
-COPY ~%MOD_FOLDER%/data/stores/d5conc01.sto~ ~override~
-COPY ~%MOD_FOLDER%/data/stores/d5conc02.sto~ ~override~
-COPY ~%MOD_FOLDER%/data/stores/d5conc03.sto~ ~override~
-COPY ~%MOD_FOLDER%/data/stores/d5devl01.sto~ ~override~
-COPY ~%MOD_FOLDER%/data/stores/d5devl02.sto~ ~override~
-COPY ~%MOD_FOLDER%/data/stores/d5devl03.sto~ ~override~
-COPY ~%MOD_FOLDER%/data/stores/d5elan01.sto~ ~override~
-COPY ~%MOD_FOLDER%/data/stores/d5elan02.sto~ ~override~
-COPY ~%MOD_FOLDER%/data/stores/d5elan03.sto~ ~override~
-COPY ~%MOD_FOLDER%/data/stores/d5gorc01.sto~ ~override~
-COPY ~%MOD_FOLDER%/data/stores/d5gorc02.sto~ ~override~
-COPY ~%MOD_FOLDER%/data/stores/d5gorc03.sto~ ~override~
-COPY ~%MOD_FOLDER%/data/stores/d5magd01.sto~ ~override~
-COPY ~%MOD_FOLDER%/data/stores/d5magd02.sto~ ~override~
-COPY ~%MOD_FOLDER%/data/stores/d5magd03.sto~ ~override~
-COPY ~%MOD_FOLDER%/data/stores/d5thar01.sto~ ~override~
-COPY ~%MOD_FOLDER%/data/stores/d5thar02.sto~ ~override~
-COPY ~%MOD_FOLDER%/data/stores/d5thar03.sto~ ~override~
-COPY ~%MOD_FOLDER%/data/stores/d5xith01.sto~ ~override~
-COPY ~%MOD_FOLDER%/data/stores/d5xith02.sto~ ~override~
-COPY ~%MOD_FOLDER%/data/stores/d5xith03.sto~ ~override~
+ACTION_FOR_EACH store IN 
+	~bpding01~
+	~d5bren01~
+	~d5bren02~
+	~d5bren03~
+	~d5conc01~
+	~d5conc02~
+	~d5conc03~
+	~d5devl01~
+	~d5devl02~
+	~d5devl03~
+	~d5elan01~
+	~d5elan02~
+	~d5elan03~
+	~d5gorc01~
+	~d5gorc02~
+	~d5gorc03~
+	~d5magd01~
+	~d5magd02~
+	~d5magd03~
+	~d5thar01~
+	~d5thar02~
+	~d5thar03~
+	~d5xith01~
+	~d5xith02~
+	~d5xith03~
+BEGIN
+  COPY ~%MOD_FOLDER%/data/stores/%store%.sto~ ~override~
+    READ_LONG 0x0c nam
+  ACTION_IF (GAME_IS ~eet~) BEGIN
+    OUTER_SPRINT nu_nam ~2%nam%~
+    COPY_EXISTING ~%store%.sto~ ~override~
+      WRITE_LONG 0x0c ~%nu_nam%~
+    BUT_ONLY
+  END
+END
 
 //
 // remove some high-end stuff from bp-in-bg stores
@@ -160,15 +172,15 @@ COPY_EXISTING ~d5devl03.sto~ ~override~
   ADD_STORE_ITEM ~trnbolt~ LAST #20 #0 #0 ~IDENTIFIED~ #3
   ADD_STORE_ITEM ~force~ LAST #20 #0 #0 ~IDENTIFIED~ #3
   ADD_STORE_ITEM ~udart3b~ LAST #20 #0 #0 ~IDENTIFIED~ #3
-  ADD_STORE_ITEM ~bardic~ LAST #5 #0 #0 ~IDENTIFIED~ #1
-  PATCH_IF (FILE_EXISTS_IN_GAME ~~) BEGIN
+  ADD_STORE_ITEM ~misc3i~ LAST #5 #0 #0 ~IDENTIFIED~ #1
+  PATCH_IF (FILE_EXISTS_IN_GAME ~cittern.itm~) BEGIN
     ADD_STORE_ITEM ~cittern~ LAST #0 #0 #0 ~IDENTIFIED~ #1
   END
   ADD_STORE_ITEM ~lyre~ LAST #0 #0 #0 ~IDENTIFIED~ #1
   ADD_STORE_ITEM ~mhorn~ LAST #0 #0 #0 ~IDENTIFIED~ #1
 
 COPY_EXISTING ~d5elan03.sto~ ~override~
-  PATCH_IF (FILE_EXISTS_IN_GAME ~~) BEGIN
+  PATCH_IF (FILE_EXISTS_IN_GAME ~beltbon.itm~) BEGIN
     ADD_STORE_ITEM ~beltbon~ LAST #0 #0 #0 ~IDENTIFIED~ #1
   END
   ADD_STORE_ITEM ~bootman~ LAST #0 #0 #0 ~IDENTIFIED~ #1
@@ -177,7 +189,7 @@ COPY_EXISTING ~d5elan03.sto~ ~override~
   ADD_STORE_ITEM ~ohbrac01~ LAST #0 #0 #0 ~IDENTIFIED~ #1
   ADD_STORE_ITEM ~clckbs~ LAST #0 #0 #0 ~IDENTIFIED~ #1
   ADD_STORE_ITEM ~urobe1a~ LAST #0 #0 #0 ~IDENTIFIED~ #1
-  PATCH_IF (FILE_EXISTS_IN_GAME ~~) BEGIN
+  PATCH_IF (FILE_EXISTS_IN_GAME ~cone.itm~) BEGIN
     ADD_STORE_ITEM ~cone~ LAST #5 #0 #0 ~IDENTIFIED~ #1
   END
   ADD_STORE_ITEM ~ohioun02~ LAST #0 #0 #0 ~IDENTIFIED~ #1

@@ -6,7 +6,7 @@ DEFINE_ACTION_FUNCTION scripts_dialogues BEGIN
 //
 
 ACTION_IF (GAME_IS ~eet~) BEGIN
-  COMPILE ~%MOD_FOLDER%/data/eet/baeloth.d~
+//  COMPILE ~%MOD_FOLDER%/data/eet/baeloth.d~
   COMPILE ~%MOD_FOLDER%/data/eet/baelothp.d~
   COMPILE ~%MOD_FOLDER%/data/eet/bpnajim.d~
   COMPILE ~%MOD_FOLDER%/data/eet/bpbaelot.d~
@@ -15,7 +15,7 @@ ACTION_IF (GAME_IS ~eet~) BEGIN
   COMPILE ~%MOD_FOLDER%/data/eet/OH9350.baf~
 END
 ELSE BEGIN
-  COMPILE ~%MOD_FOLDER%/data/bgee/baeloth.d~
+//  COMPILE ~%MOD_FOLDER%/data/bgee/baeloth.d~
   COMPILE ~%MOD_FOLDER%/data/bgee/baelothp.d~
   COMPILE ~%MOD_FOLDER%/data/bgee/bpnajim.d~
   COMPILE ~%MOD_FOLDER%/data/bgee/bpbaelot.d~
@@ -25,6 +25,38 @@ ELSE BEGIN
 END
 
 COMPILE ~%MOD_FOLDER%/data/BPINBG0.baf~
+
+<<<<<<<< d5/baeloth+.d
+APPEND BAELOTH 
+
+IF ~~ THEN BEGIN d5_bae_1
+  SAY @203 /* ~Riiight... um, adventures, you say? Why yes, I believe I can provide you with, er, adventures. Riches, glory, fame, that sort of thing? Cheering masses and adoring fans? Surely that's what you are interested in, yes? I have a device here which can whisk you away to such rewards. It is all very consensual, I assure you. It only works if you 'opt in.'~ */ 
+  IF ~~ THEN REPLY @204 /* ~Yes, that sounds great.~ */ GOTO d5_bae_2
+  IF ~~ THEN REPLY @205 /* ~On second thought, that all sounds a bit too exciting for me. I'm not sure I'm willing to go along with you.~ */ GOTO 5
+END
+
+IF ~~ THEN BEGIN d5_bae_2
+  SAY @206 /* ~Fantastic! Oh, this recruiting trip was much quicker than I expected. Now be good dears and just grab hold of this perfectly harmless glowing gem. All at once, yes, that's it. And away we go!~ */ 
+  IF ~~ THEN DO ~SetGlobal("BPINBG","GLOBAL",1) 
+SetGlobal("BPINTRO","GLOBAL",2)
+ClearAllActions()
+StartMovie("BLACKPIT")
+StartCutSceneMode()
+StartCutScene("BPINBG0") 
+~ EXIT
+END
+
+END
+
+EXTEND_BOTTOM BAELOTH 3 
+	IF ~~ THEN REPLY @201 /* ~I don't, but I would be interested in knowing that as well! I hear there are great adventures to be had there.~ */ GOTO d5_bae_1
+END
+
+EXTEND_BOTTOM BAELOTH 4 
+	IF ~~ THEN REPLY @202 /* ~Ah. I am actually interested in the Underdark. I hear there are great adventures to be had there!~ */ GOTO d5_bae_1
+END
+>>>>>>>>
+COMPILE ~d5/baeloth+.d~
 
 ACTION_IF (FILE_EXISTS_IN_GAME ~bdbaelot.dlg~) BEGIN
   ACTION_IF (GAME_IS ~eet~) BEGIN
