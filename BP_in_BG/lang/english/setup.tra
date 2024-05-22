@@ -9,7 +9,7 @@
 @100 = ~add access to the Black Pits in BGEE/EET~
 @101 = ~must be installed in a game containing the Black Pits campaign~
 // 
-// Baeloth teleportation dialogue pieces
+// Baeloth teleportation dialogue pieces from beta
 //
 @201 = ~I don't, but I would be interested in knowing that as well! I hear there are great adventures to be had there.~
 @202 = ~Ah. I am actually interested in the Underdark. I hear there are great adventures to be had there!~
@@ -22,17 +22,96 @@
 @209 = ~~
 @210 = ~~
 //
+// ambush scene - Baeloth not in party
+//
+/*
+@301 = ~Greetings mortals. I apologize for interrupting your journey. But I am bound to inform you that you will now become the property of Baeloth the Entertainer. Please ready yourself for transport.~
+@302 = ~Baeloth and I have already met.~
+@303 = ~Transport? What are you talking about?~
+@304 = ~Allow me to elucidate. My name is Baeloth, the Entertainer. I operate an establishment in which warriors wet their weapons on woesome foes, while the wealthy watch and wager. And so, everyone wins! Almost!~
+@305 = ~I don't understand anything you just said.~
+@306 = ~You... arrange fights? For sport?~
+@307 = ~I coopt courageous champions for compelling combat against chilling creatures, to captivate crowds!~
+@308 = ~Uh, one more time please.~
+@309 = ~I arrange fights for sport.~
+@310 = ~Ah, our convoluted conversationalist commences to comprehend. That's swell.~
+@311 = ~I suppose we may have met before, but now we have business together!~
+@312 = ~You see, you have been brought to my attention as a potential player, with budding brawniness, fallow flair, quiescient capacity. To be honest, I don't quite see it. But hey, why not. My customers love nothing better than an unimpressive underdog who transcends my tests to triumph! Or, nearly so!~
+@313 = ~So why don't you come on down (to the Underdark)! You are the next contestants in the fight for life, in the Black Pits!~
+@314 = ~I don't have time for this. I am not going anywhere with you, I need to get to Baldur's Gate.~
+@315 = ~Baeloth, you and your companion are no doubt powerful. But I have business to attend to. Perhaps a monetary donation would help you see your way to harassing someone else?~
+@316 = ~Ah! I see. You still don't understand. Your business means bubkus. Your interests, in vain. Hope for your future: futile! You have been chosen. You are coming with us. End of story. This conversation is just me being polite. And honestly, I don't much enjoy being polite.~
+@317 = ~You want to see me fight, then? I have fought many, and I am still here. I'll fight you and your genie, and ~
+@318 = ~Listen, Baeloth, I don't know who you think you have ambushed. But I am not mere mortal surfacer to be kidnapped on a whim. The blood of a god runs my veins - and not a nice god, but the god of murder. Prophecy says I will fight on the Sword Coast - not in some squalid arena in the Underdark. Maybe you can overpower me now - fine. But you will be crossing not just me, but divine destiny. I will do everything in my power, as long as I live and maybe a good while after, to tear down everything you have, everything you are. Maybe you will gain some short-lived wealth, but in the end you will be humiliated and destroyed. The very heavens will see to it. It is not in your interest to take this risk. Walk away now, and I will forget we met this day.~
+@319 = ~~
+@320 = ~~
+*/
+//
+// ambush scene - Baeloth not in party
+//
+@300 = ~Najim~
+@301 = ~Greetings mortals. I apologize for interrupting your journey. But I am bound to inform you that you will now be bound to the will of Baeloth the Entertainer. Please ready yourself for transport.~
+@302 = ~Baeloth and I have already met.~
+@303 = ~Transport? What are you talking about?~
+@304 = ~Good aft- er, I'm not sure what you call this. You surfacers' obsession with the time of day is endearingly imbecilic. Good whatever time this is. Please pardon the my familiar's direct demeanor. You are <CHARNAME>, yes? Someone is proposing a pretty price for your pelt. Though I must say, you don't look very impressive.~
+@305 = ~You are late to the party, Baeloth. I already know it was Sarevok who has been hiring assassins to chase me. More importantly, none has been successful. Try to take me out, and you will end up like them.~
+@306 = ~Oh? I must say, I don't care much who sets the price. I just notice what circulates in certain circles of nasty ne'er-do-wells. Someone with the whole underworld after them, who can yet survive a while - these sorts of folks fit my purposes quite well. Nobody misses them; nobody to come looking. Quite well indeed.~
+@307 = ~Oh but you need not worry, I am not here to collect some banal bounty or edict of assassination. In fact I have bought out your contracts - you will be molested no more by malignant murderers. Instead, I present an invitation! Instead of facing death, you will come with us, to be champions, in courageous combat against chilling creatures, to the captivation of cavernous crowds! It will be truly heroic!~
+@308 = ~And THEN you will die!~
+@309 = ~You want me to fight for you?~
+@310 = ~I don't understand.~
+@311 = ~You will come with me, to my underground arena and battle beasts for the benefit of paying patrons. There we will question your quiescent capacities, and see if you can transcend my tests and triumph! Up to a point, anyway.~
+@312 = ~I am not going to do that. I need to get to Baldur's Gate.~
+@313 = ~I am not going to do anything for you, drow, least of all fight for sport.~
+@314 = ~Oh but you are. The deal is done, the contracts canceled. You are a wanted criminal and presumed cadaver in the catacombs under Candlekeep. Your surface life is over, but your life in the Black Pits is about to begin. It will be short, but glorious! (But also, short.) As my genie instructed, please ready yourselves - you ARE coming with us.~
+@315 = ~You want to see me fight? Let's see what you are made of! I will face whatever you can throw at me - better than you have attacked me and failed. I will go through your Black Pits, and more! I am ready to fight! Let's go!~
+@316 = ~You don't understand. Until recently even I didn't understand. It turns out the blood of a god runs in my veins - the god of murder, no less. Prophecy says my place is here, on the Sword Coast, and this is where I am staying. If you get in my way you will cross not just me, but destiny itself. I promise will do everything in my considerable power, as long as I live and maybe a good while after, to tear down all you have, all you are. You will be humiliated and destroyed. The very heavens will see to it. Do you comprehend? hear me when I tell you: I am NOT going to your Black Pits, and that is final.~
+@317 = ~I like that enthusiasm! But please, save it for the stadium! It is cute that you want to challenge me, but as I keep trying to explain, you are not up to it. Hmm... maybe showing is better than telling. Have you ever seen what Otiluke's Resilient Sphere can do when up-cast as a 9th-level spell? Wait, do you even have metamagic yet? Oh that's right, you're about ten years too early for that. Too bad!~
+@318 = ~What prophecy?! Wait - the blood of a god, you say? You mean THAT god of murder? The Bhaal one? Since when did he have any children? I didn't know the old boy got around like that...~
+@319 = ~According to the prophet Alaundo, the spawn of the lord of murder are fated to come into their inherita-~
+@320 = ~Oh shut up, Najim! Just, hold on for a second. This is... I did not have this information before. I am a 'risk/reward' kind of guy, you see, and this tips the scales a bit. I think, you know what, let's just forget the whole thing, shall we? My friend and I will just, ah, wander off this way, and you, well, good luck storming the Gate.~
+@321 = ~Let's go Najim. NOW.~
+@330 = ~Quckened, maximized, empowered...~
+//
+// ambush scene - Baeloth in party
+//
+@400 = ~Baeloth~
+@401 = ~~
+@402 = ~Baeloth? Uh... do you know this person? What is going on?~
+@403 = ~~
+@404 = ~Ah, I suppose I should come clean - confess, even! You see, you have done what so few have before you: you impressed me! I have seen you face many challenges, seen you persevere and come out on top - covered in blood yet righteous in your victory! That's exactly the kind of moxie that will serve you well in my fighting pits.~ // reply 
+@405 = ~~
+@406 = ~~
+@407 = ~You will be a champion, in courageous combat against chilling creatures, to the captivation of cavernous crowds! Your quiescent capacities will be questioned, and we will see if you can transcend my tests and triumph! Up to a point, anyway. It will be glorious! And profitable!~ // reply 312, 413
+@408 = ~~
+@409 = ~~
+@410 = ~~
+@411 = ~~
+@412 = ~~
+@413 = ~I don't understand. I thought you were on my team. We need to go after Sarevok - I need your assistance.~
+@414 = ~Sorry, I know how this looks, and... well, it is pretty much exactly how it looks. The traitorous turn of a 'til-now-trusted tactitian! Oh, my fans will eat this one up! Sorry about the whole Sarevok thing, but realistically, the guy has been several steps ahead of you for a long time. You are simply no match for him. He can have that pathetic surfacer city, and you will have a new life - brief, barbaric, but brilliant! Even if, let's not forget, quite brief! I think you will do quite well in my fighting arena.~
+@415 = ~~
+@416 = ~Baeloth, you know who I am now, WHAT I am. The blood of a god runs in my veins - the god of murder, no less. Prophecy says my place is here, on the Sword Coast, and this is where I am staying. If you get in my way you will cross not just me, but destiny itself. I promise will do everything in my considerable power, as long as I live and maybe a good while after, to tear down all you have, all you are. You will be humiliated and destroyed. The very heavens will see to it. Do you comprehend? hear me when I tell you: I am NOT going to your Black Pits, and that is final.~
+@417 = ~~
+@418 = ~But, you don't even know how to use your gifts yet. There are supposed to be scores of you - surely the prophecy won't mind if I nab one or two to the Underdark...~
+@419 = ~Oh shut up, Najim! Just, just hold on for a second. This is... I didn't quite think about it from that angle. Er, okay, let's do this. Let's chalk this up to a joke in poor taste, and go on our way, yes? Let's just forget about the Black Pits. For now. I mean, uh, onward, my leader!~
+@420 = ~~
+@421 = ~~
+@422 = ~Oh no Baeloth, it isn't that simple. You don't try to stab me in the back and then pretend nothing happened. Defend yourself!~
+@423 = ~That's right Baeloth - fall in. And don't ever again forget who is in charge here.~
+@424 = ~Er, yes. Najim, you are not needed at present. Run along and tend to the arena in my absence.~
+@425 = ~Very well.~
+//
 // IWD items
 // 
 // iwd item text
-
 @1011 = ~Barrier Amulet~
 @1012 = ~This powerful amulet was crafted by the enchanter Celemon of Calimport in 727 DR. He crafted ten such amulets on commission before jealous rivals killed him and attempted to duplicate the procedure. His colleagues were not as talented as Celemon and destroyed their laboratory and themselves when a mishap occurred. The formula was destroyed as well. This particular amulet was owned by the elven warrior-mage Pelan Rainwind. It was lost when he was killed by giants in the Spine of the World somewhere around 840 DR.
 
 STATISTICS:
 
 Charge abilities:
-– Stoneskin and Minor Globe Of Invulnerability
+– Stoneskin and Minor Globe of Invulnerability
   Stoneskin absorbs up to 1d4+2 physical blows; the globe prevents spells up to 3rd level from entering
   Duration: Stoneskin lasts 8 hours; the globe lasts 8 rounds
   Area of Effect: The user

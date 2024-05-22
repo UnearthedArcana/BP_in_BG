@@ -1,0 +1,564 @@
+
+DEFINE_ACTION_FUNCTION bp_ambush BEGIN
+
+// set prefixes
+
+ACTION_IF (GAME_IS ~eet~) BEGIN
+  OUTER_SPRINT bg1_area_prefix ~BG~
+  OUTER_SPRINT bp_movie_name ~BGBLACKP~
+END
+ELSE BEGIN
+  OUTER_SPRINT bg1_area_prefix ~AR~
+  OUTER_SPRINT bp_movie_name ~BLACKPIT~
+END
+
+
+// replace dialogues for getting to BP and for gold/XP rewards when there
+
+ACTION_IF (GAME_IS ~eet~) BEGIN
+//  COMPILE ~%MOD_FOLDER%/data/eet/baeloth.d~
+//  COMPILE ~%MOD_FOLDER%/data/eet/baelothp.d~
+  COMPILE ~%MOD_FOLDER%/data/eet/bpnajim.d~
+  COMPILE ~%MOD_FOLDER%/data/eet/bpbaelot.d~
+//  COMPILE ~%MOD_FOLDER%/data/eet/BPINBGZ.baf~
+  COMPILE ~%MOD_FOLDER%/data/eet/OH9310.baf~
+  COMPILE ~%MOD_FOLDER%/data/eet/OH9350.baf~
+  ACTION_IF (FILE_EXISTS_IN_GAME ~bdbaelot.dlg~) BEGIN
+    COMPILE ~%MOD_FOLDER%/data/eet/bdbaelot.d~
+  END
+  COPY ~%MOD_FOLDER%/data/eet/D5BPBG.are~ ~override~
+END
+ELSE BEGIN
+//  COMPILE ~%MOD_FOLDER%/data/bgee/baeloth.d~
+//  COMPILE ~%MOD_FOLDER%/data/bgee/baelothp.d~
+  COMPILE ~%MOD_FOLDER%/data/bgee/bpnajim.d~
+  COMPILE ~%MOD_FOLDER%/data/bgee/bpbaelot.d~
+//  COMPILE ~%MOD_FOLDER%/data/bgee/BPINBGZ.baf~
+  COMPILE ~%MOD_FOLDER%/data/bgee/OH9310.baf~
+  COMPILE ~%MOD_FOLDER%/data/bgee/OH9350.baf~
+  ACTION_IF (FILE_EXISTS_IN_GAME ~bdbaelot.dlg~) BEGIN
+    COMPILE ~%MOD_FOLDER%/data/bgee/bdbaelot.d~
+  END
+  COPY ~%MOD_FOLDER%/data/bgee/D5BPBG.are~ ~override~
+END
+
+/*
+COPY ~%MOD_FOLDER%/data/D5BPBG.are~ ~override~
+COPY ~%MOD_FOLDER%/data/D55800.wed~ ~override~
+COPY ~%MOD_FOLDER%/data/D55800.tis~ ~override~
+ACTION_IF (FILE_EXISTS_IN_GAME ~BG5800HT.BMP~) BEGIN
+  COPY ~%MOD_FOLDER%/data/BG5800HT.BMP~ ~override~
+END
+ACTION_IF (FILE_EXISTS_IN_GAME ~BG5800LM.BMP~) BEGIN
+  COPY ~%MOD_FOLDER%/data/BG5800LM.BMP~ ~override~  
+END
+ACTION_IF (FILE_EXISTS_IN_GAME ~BG5800SR.BMP~) BEGIN
+  COPY ~%MOD_FOLDER%/data/BG5800SR.BMP~ ~override~  
+END
+*/
+
+COPY ~%MOD_FOLDER%/data/d5baelo.cre~ ~override~
+  SAY 0x08 @400
+  SAY 0x0c @400
+COPY ~%MOD_FOLDER%/data/d5najim.cre~ ~override~
+  SAY 0x08 @300
+  SAY 0x0c @300
+
+
+// add new area and set up travel
+
+COPY_EXISTING ~D5BPBG.are~ ~override~
+ /* add travel region that links to new area */
+  LAUNCH_PATCH_FUNCTION  ~fj_are_structure~
+    INT_VAR
+    fj_type         = 2    //travel - kind of trigger area
+    fj_box_left     = 325  // x coordinate
+    fj_box_top      = 1   // y coordinate
+    fj_box_right    = 1279 // x coordinate
+    fj_box_bottom   = 80  // y coordinate
+    fj_cursor_idx   = 34   //door - mouse cursor symbol
+    fj_flags        = 4
+    fj_vertex_0     = 325 + (1 << 16) //start with the lowest point: x coodinate - y coordinate
+    fj_vertex_1     = 1279 + (1 << 16)
+    fj_vertex_2     = 1279 + (80 << 16)
+    fj_vertex_3     = 325 + (80 << 16)
+    STR_VAR
+    fj_structure_type   = ~region~
+    fj_name             = ~d5bpent1~ //name of this travel region so you can address it via script etc.
+    fj_destination_area = EVAL ~%bg1_area_prefix%2800~ //name of the destination area
+    fj_destination_name = ~EXIT2700~ //name of exitpoint in destination area
+  END
+  LAUNCH_PATCH_FUNCTION  ~fj_are_structure~
+    INT_VAR
+    fj_type         = 2    //travel - kind of trigger area
+    fj_box_left     = 1200  // x coordinate
+    fj_box_top      = 1   // y coordinate
+    fj_box_right    = 1279 // x coordinate
+    fj_box_bottom   = 3520 // y coordinate
+    fj_cursor_idx   = 959  //door - mouse cursor symbol
+    fj_flags        = 4
+    fj_vertex_0     = 1200 + (1 << 16) //start with the lowest point: x coodinate - y coordinate
+    fj_vertex_1     = 1279 + (1 << 16)
+    fj_vertex_2     = 1279 + (959 << 16)
+    fj_vertex_3     = 1200 + (959 << 16)
+    STR_VAR
+    fj_structure_type   = ~region~
+    fj_name             = ~d5bpent2~ //name of this travel region so you can address it via script etc.
+    fj_destination_area = EVAL ~%bg1_area_prefix%2800~ //name of the destination area
+    fj_destination_name = ~EXIT2700~ //name of exitpoint in destination area
+  END
+  LAUNCH_PATCH_FUNCTION  ~fj_are_structure~
+    INT_VAR
+    fj_loc_x       = 600 //x coordinate where the group will spawn
+    fj_loc_y       = 80  //y coordinate where the group will spawn
+    fj_orientation = 14  // SE - face direction in which group is looking after coming through
+    STR_VAR
+    fj_structure_type = entrance
+    fj_name           = FR2626 //name of this new exitpoint so it can be referenced for the travel region of the other area
+  END
+BUT_ONLY
+
+COPY_EXISTING ~%bg1_area_prefix%2626.are~ ~override~
+ /* add travel region that links to new area */
+  LAUNCH_PATCH_FUNCTION  ~fj_are_structure~
+    INT_VAR
+    fj_type         = 2    //travel - kind of trigger area
+    fj_box_left     = 4955 // x coordinate
+    fj_box_top      = 3130 // y coordinate
+    fj_box_right    = 5119 // x coordinate
+    fj_box_bottom   = 3520 // y coordinate
+    fj_cursor_idx   = 34   //door - mouse cursor symbol
+    fj_flags        = 4
+    fj_vertex_0     = 4955 + (3130 << 16) //start with the lowest point: x coodinate - y coordinate
+    fj_vertex_1     = 5119 + (3130 << 16)
+    fj_vertex_2     = 5119 + (3520 << 16)
+    fj_vertex_3     = 4955 + (3520 << 16)
+    STR_VAR
+    fj_structure_type   = region
+    fj_name             = d5bpamb //name of this travel region so you can address it via script etc.
+    fj_destination_area = D5BPBG //name of the destination area
+    fj_destination_name = FR2626 //name of exitpoint in destination area
+  END
+BUT_ONLY
+
+
+// candlekeep exterior script to activate ambush
+
+<<<<<<<< d5/d52626+.baf
+IF
+	GlobalLT("CHAPTER","GLOBAL",7)
+	Global("D5_Ambush_NotYet","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("D5_Ambush_NotYet","GLOBAL",1)
+		TriggerActivation("d5bpamb",FALSE)
+END
+
+IF
+	GlobalGT("CHAPTER","GLOBAL",6)
+	Global("D5_BP_Ambush","GLOBAL",0)
+	Global("D5_Ambush_Trigger","GLOBAL",0)
+THEN
+	RESPONSE #100
+	SetGlobal("D5_Ambush_Trigger","GLOBAL",1)
+	TriggerActivation("d5bpamb",TRUE)
+END
+
+IF
+	Global("D5_BP_Ambush","GLOBAL",1)
+	Global("D5_Ambush_Done","GLOBAL",0)
+THEN
+	RESPONSE #100
+	SetGlobal("D5_Ambush_Done","GLOBAL",1)
+	TriggerActivation("d5bpamb",FALSE)
+END
+>>>>>>>>
+COPY ~d5/d52626+.baf~ ~weidu_external/%MOD_FOLDER%/compile/%bg1_area_prefix%2626.baf~
+ACTION_IF (FILE_EXISTS_IN_GAME ~%bg1_area_prefix%3202.bcs~) BEGIN
+  EXTEND_TOP ~%bg1_area_prefix%2626.BCS~ ~weidu_external/%MOD_FOLDER%/compile/%bg1_area_prefix%2626.baf~
+END
+ACTION_IF !(FILE_EXISTS_IN_GAME ~%bg1_area_prefix%2626.bcs~) BEGIN
+  COMPILE ~weidu_external/%MOD_FOLDER%/compile/%bg1_area_prefix%2626.baf~
+END
+
+
+// ambush map
+
+<<<<<<<< d5/d5bpbg.baf
+IF
+	InParty("Baeloth")  // Baeloth
+	Global("D5_BP_Ambush","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("D5_BP_InPartyAmbush","GLOBAL",1)
+		SetGlobal("D5_BP_Ambush","GLOBAL",1)
+		Wait(1)
+		CreateCreature("D5Najim",[800.265],NW)  // Najim
+		ActionOverride("D5Najim",CreateVisualEffectObject("spdimndr",Myself))
+		MoveViewPoint([800.265],VERY_FAST)
+END
+
+IF
+	!InParty("Baeloth")  // Baeloth
+	Global("D5_BP_Ambush","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("D5_BP_OutPartyAmbush","GLOBAL",1)
+		SetGlobal("D5_BP_Ambush","GLOBAL",1)
+		Wait(1)
+		CreateCreature("D5Najim",[800.265],NW)  // Najim
+		CreateCreature("D5Baelo",[800.360],NW)  // Baeloth
+		ActionOverride("D5Najim",CreateVisualEffectObject("spdimndr",Myself))
+		ActionOverride("D5Baelo",CreateVisualEffectObject("spdimndr",Myself))
+		MoveViewPoint([800.265],VERY_FAST)
+END
+
+IF
+	InMyArea("D5Najim")  // Najim
+	Global("D5_BP_Ambush","GLOBAL",1)
+	Global("D5_BP_Najim_Talk","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("D5_BP_Najim_Talk","GLOBAL",1)
+		Wait(4)
+		ActionOverride("D5Najim",StartDialogueNoSet(Player1))
+END
+
+>>>>>>>>
+COPY ~d5/d5bpbg.baf~ ~weidu_external/%MOD_FOLDER%/compile/d5bpbg.baf~
+COMPILE ~weidu_external/%MOD_FOLDER%/compile/d5bpbg.baf~
+
+
+<<<<<<<< d5/bpinbga.baf
+IF
+	True()
+THEN
+	RESPONSE #100
+		CutSceneId("Baeloth")
+		DisplayStringHead(Myself,@330)
+		CreateVisualEffectObject("ICRMPARI",Myself)
+		ForceSpell(Player1,CUTSCENE_DAMAGE_1B)
+		Wait(1)
+		ActionOverride(Player1,CreateVisualEffectObject("minorglb",Player1))
+		ActionOverride(Player2,CreateVisualEffectObject("minorglb",Player2))
+		ActionOverride(Player3,CreateVisualEffectObject("minorglb",Player3))
+		ActionOverride(Player4,CreateVisualEffectObject("minorglb",Player4))
+		ActionOverride(Player5,CreateVisualEffectObject("minorglb",Player5))
+		ActionOverride(Player6,CreateVisualEffectObject("minorglb",Player6))
+		Wait(2)
+		FadeToColor([30.0],0)
+		Wait(1)
+		ClearAllActions()
+		StartMovie("%bp_movie_name%")
+		StartCutScene("BPINBG0")
+END
+>>>>>>>>
+COPY ~d5/bpinbga.baf~ ~weidu_external/%MOD_FOLDER%/compile/bpinbga.baf~
+COMPILE ~weidu_external/%MOD_FOLDER%/compile/bpinbga.baf~ EVALUATE_BUFFER
+
+<<<<<<<< d5/bpinbgb.baf
+IF
+	True()
+THEN
+	RESPONSE #100
+		CutSceneId("D5Baelo")
+		DisplayStringHead(Myself,@330)
+		CreateVisualEffectObject("ICRMPARI",Myself)
+		ForceSpell(Player1,CUTSCENE_DAMAGE_1B)
+		Wait(1)
+		ActionOverride(Player1,CreateVisualEffectObject("minorglb",Player1))
+		ActionOverride(Player2,CreateVisualEffectObject("minorglb",Player2))
+		ActionOverride(Player3,CreateVisualEffectObject("minorglb",Player3))
+		ActionOverride(Player4,CreateVisualEffectObject("minorglb",Player4))
+		ActionOverride(Player5,CreateVisualEffectObject("minorglb",Player5))
+		ActionOverride(Player6,CreateVisualEffectObject("minorglb",Player6))
+		Wait(2)
+		FadeToColor([30.0],0)
+		Wait(1)
+		ClearAllActions()
+		StartMovie("%bp_movie_name%")
+		StartCutScene("BPINBG0")
+END
+>>>>>>>>
+COPY ~d5/bpinbgb.baf~ ~weidu_external/%MOD_FOLDER%/compile/bpinbgb.baf~
+COMPILE ~weidu_external/%MOD_FOLDER%/compile/bpinbgb.baf~ EVALUATE_BUFFER
+
+<<<<<<<< d5/bpinbg0.baf
+IF
+	True()
+THEN
+	RESPONSE #100
+		CutSceneId(Player1)
+		FadeFromColor([30.0],0)
+		ActionOverride(Player2,LeaveAreaLUA("OH9310","",[839.761],N))
+		ActionOverride(Player2,CreateVisualEffectObject("spdimndr",Player2))
+		ActionOverride(Player3,LeaveAreaLUA("OH9310","",[999.692],N))
+		ActionOverride(Player3,CreateVisualEffectObject("spdimndr",Player3))
+		ActionOverride(Player4,LeaveAreaLUA("OH9310","",[903.753],N))
+		ActionOverride(Player4,CreateVisualEffectObject("spdimndr",Player4))
+		ActionOverride(Player5,LeaveAreaLUA("OH9310","",[959.714],N))
+		ActionOverride(Player5,CreateVisualEffectObject("spdimndr",Player5))
+		ActionOverride(Player6,LeaveAreaLUA("OH9310","",[974.764],N))
+		ActionOverride(Player6,CreateVisualEffectObject("spdimndr",Player6))
+		LeaveAreaLUAPanic("OH9310","",[906.702],N)
+		LeaveAreaLUA("OH9310","",[906.702],N)
+		CreateVisualEffectObject("spdimndr",Myself)
+		ActionOverride(Player1,ApplySpellRES("OHLOST",Player1))  // Find Familiar
+		TakePartyGold(200000)
+		SetGlobal("OH9310_ENTERED","OH9310",1)
+		Explore()
+		CreateVisualEffect("spsdimpa",[472.400])
+		CreateCreature("BPDUER02",[472.400],S)  // Duergar
+		CreateVisualEffect("spsdimpa",[472.400])
+		CreateCreature("BPDUER02",[472.400],S)  // Duergar
+		CreateVisualEffect("spsdimpa",[472.400])
+		CreateCreature("BPDUER02",[472.400],S)  // Duergar
+		CreateVisualEffect("spsdimpa",[472.400])
+		CreateCreature("BPDUER02",[472.400],S)  // Duergar
+		CreateVisualEffect("spsdimpa",[472.400])
+		CreateCreature("BPDUER02",[472.400],S)  // Duergar
+		CreateVisualEffect("spsdimpa",[472.400])
+		CreateCreature("BPDUER02",[472.400],S)  // Duergar
+		EndCutSceneMode()
+		CreateCreature("BPREFF01",[603.538],S)  // Referee - No such index
+		CreateCreature("BPREFF01",[443.391],S)  // Referee - No such index
+		CreateCreature("BPREFF01",[382.634],S)  // Referee - No such index
+		CreateCreature("BPREFF01",[805.644],S)  // Referee - No such index
+		CreateCreature("BPREFF01",[802.412],S)  // Referee - No such index
+//		SetGlobal("BPINTRO","GLOBAL",2)
+END
+>>>>>>>>
+COPY ~d5/bpinbg0.baf~ ~weidu_external/%MOD_FOLDER%/compile/bpinbg0.baf~
+COMPILE ~weidu_external/%MOD_FOLDER%/compile/bpinbg0.baf~
+
+<<<<<<<< d5/bpinbgz.baf
+IF
+	True()
+THEN
+	RESPONSE #100
+		CutSceneId(Player1)
+		ActionOverride(Player2,LeaveAreaLUA("%bg1_area_prefix%2300","",[1185.3625],N))
+		ActionOverride(Player2,CreateVisualEffectObject("spdimndr",Player2))
+		ActionOverride(Player3,LeaveAreaLUA("%bg1_area_prefix%2300","",[1055.3650],N))
+		ActionOverride(Player3,CreateVisualEffectObject("spdimndr",Player3))
+		ActionOverride(Player4,LeaveAreaLUA("%bg1_area_prefix%2300","",[1145.3685],N))
+		ActionOverride(Player4,CreateVisualEffectObject("spdimndr",Player4))
+		ActionOverride(Player5,LeaveAreaLUA("%bg1_area_prefix%2300","",[1015.3720],N))
+		ActionOverride(Player5,CreateVisualEffectObject("spdimndr",Player5))
+		ActionOverride(Player6,LeaveAreaLUA("%bg1_area_prefix%2300","",[1095.3745],N))
+		ActionOverride(Player6,CreateVisualEffectObject("spdimndr",Player6))
+		LeaveAreaLUAPanic("%bg1_area_prefix%2300","",[1100.3600],N)
+		LeaveAreaLUA("%bg1_area_prefix%2300","",[1100.3600],N)
+		CreateVisualEffectObject("spdimndr",Myself)
+		DestroyItem("BPRNG1")
+		AddXPObject(Player1,5000)
+		AddXPObject(Player2,5000)
+		AddXPObject(Player3,5000)
+		AddXPObject(Player4,5000)
+		AddXPObject(Player5,5000)
+		AddXPObject(Player6,5000)
+		Deactivate("BAELOTH")
+		ActionOverride(Player1,ApplySpellRES("OHLOST",Player1))  // Find Familiar
+		EndCutSceneMode()
+END
+
+IF
+	True()
+THEN
+	RESPONSE #100
+		CutSceneId(Player2)
+		DestroyItem("BPRNG1")
+END
+
+IF
+	True()
+THEN
+	RESPONSE #100
+		CutSceneId(Player3)
+		DestroyItem("BPRNG1")
+END
+
+IF
+	True()
+THEN
+	RESPONSE #100
+		CutSceneId(Player4)
+		DestroyItem("BPRNG1")
+END
+
+IF
+	True()
+THEN
+	RESPONSE #100
+		CutSceneId(Player5)
+		DestroyItem("BPRNG1")
+END
+
+IF
+	True()
+THEN
+	RESPONSE #100
+		CutSceneId(Player6)
+		DestroyItem("BPRNG1")
+END
+>>>>>>>>
+COPY ~d5/bpinbgz.baf~ ~weidu_external/%MOD_FOLDER%/compile/bpinbgz.baf~
+COMPILE ~weidu_external/%MOD_FOLDER%/compile/bpinbgz.baf~ EVALUATE_BUFFER
+
+
+// dialogues
+
+<<<<<<<< d5/nubaelo.d
+BEGIN ~D5NAJIM~
+
+IF ~Global("D5_Ambush_Trigger","GLOBAL",1)~ BEGIN d5najim_0
+  SAY @301
+  IF ~Global("D5_BP_OutPartyAmbush","GLOBAL",1)~ REPLY @302 EXTERN D5BAELO d5nubae_0
+  IF ~Global("D5_BP_OutPartyAmbush","GLOBAL",1)~ REPLY @303 EXTERN D5BAELO d5nubae_0
+  IF ~Global("D5_BP_InPartyAmbush","GLOBAL",1)~ REPLY @402 EXTERN BAELOTHJ d5olbae_0
+  IF ~Global("D5_BP_InPartyAmbush","GLOBAL",1)~ REPLY @303 EXTERN BAELOTHJ d5olbae_0
+END
+
+IF ~~ BEGIN d5najim_1
+  SAY @319
+  IF ~Global("D5_BP_OutPartyAmbush","GLOBAL",1)~ EXTERN D5BAELO d5nubae_8
+  IF ~Global("D5_BP_InPartyAmbush","GLOBAL",1)~ EXTERN BAELOTHJ d5olbae_5
+END
+
+IF ~~ BEGIN d5najim_2
+  SAY @425
+  IF ~~ DO ~ActionOverride("D5Najim",EscapeArea())~ EXIT
+END
+
+BEGIN ~D5BAELO~
+
+IF ~~ BEGIN d5nubae_0
+  SAY @304
+  IF ~~ REPLY @305 GOTO d5nubae_1
+END
+
+IF ~~ BEGIN d5nubae_1
+  SAY @306
+  IF ~~ GOTO d5nubae_2
+END
+
+IF ~~ BEGIN d5nubae_2
+  SAY @307
+  IF ~~ GOTO d5nubae_3
+END
+
+IF ~~ BEGIN d5nubae_3
+  SAY @308
+  IF ~~ REPLY @309 GOTO d5nubae_4
+  IF ~~ REPLY @310 GOTO d5nubae_4
+END
+
+IF ~~ BEGIN d5nubae_4
+  SAY @311
+  IF ~~ REPLY @312 GOTO d5nubae_5
+  IF ~~ REPLY @313 GOTO d5nubae_5
+END
+
+IF ~~ BEGIN d5nubae_5
+  SAY @314
+  IF ~~ REPLY @315 GOTO d5nubae_6
+  IF ~~ REPLY @316 GOTO d5nubae_7
+END
+
+IF ~~ BEGIN d5nubae_6						//	capture cut scene
+  SAY @317
+  IF ~~ DO ~SetGlobal("D5_BP_InPartyAmbush","GLOBAL",2)
+  			SetGlobal("BPINBG","GLOBAL",1)
+  			SetGlobal("BPINTRO","GLOBAL",2)
+  			ClearAllActions()
+  			StartCutSceneMode()
+  			StartCutSceneEx("BPINBGB",FALSE)~ EXIT
+END
+
+IF ~~ BEGIN d5nubae_7
+  SAY @318
+  IF ~~ EXTERN D5NAJIM d5najim_1
+END
+
+IF ~~ BEGIN d5nubae_8
+  SAY @320
+  IF ~~ GOTO d5nubae_9
+END
+
+IF ~~ BEGIN d5nubae_9						//	run away cut scene
+  SAY @321
+  IF ~~ DO ~ActionOverride("D5Baelo",EscapeArea()) ActionOverride("D5Najim",EscapeArea())~ EXIT
+END
+
+APPEND BAELOTHJ
+
+IF ~~ BEGIN d5olbae_0
+  SAY @404
+  IF ~~ GOTO d5olbae_1
+END
+
+IF ~~ BEGIN d5olbae_1
+  SAY @407
+  IF ~~ REPLY @312 GOTO d5olbae_2
+  IF ~~ REPLY @413 GOTO d5olbae_2
+END
+
+IF ~~ BEGIN d5olbae_2
+  SAY @414
+  IF ~~ REPLY @315 GOTO d5olbae_3
+  IF ~~ REPLY @416 GOTO d5olbae_4
+END
+
+IF ~~ BEGIN d5olbae_3						//	capture cut scene
+  SAY @317
+  IF ~~ DO ~ActionOverride("Baeloth",MoveToPoint([800.360]))
+  			ActionOverride("Baeloth",LeaveParty())
+  			SetGlobal("D5_BP_InPartyAmbush","GLOBAL",2)
+  			SetGlobal("BPINBG","GLOBAL",1)
+  			SetGlobal("BPINTRO","GLOBAL",2)
+  			ClearAllActions()
+  			StartCutSceneMode()
+  			StartCutSceneEx("BPINBGA",FALSE)~ EXIT		
+END
+
+IF ~~ BEGIN d5olbae_4
+  SAY @418
+  IF ~~ EXTERN D5NAJIM d5najim_1
+END
+
+IF ~~ BEGIN d5olbae_5
+  SAY @419
+  IF ~~ REPLY @423 GOTO d5olbae_6
+END
+
+IF ~~ BEGIN d5olbae_6
+  SAY @424
+  IF ~~ EXTERN D5NAJIM d5najim_2
+END
+
+END
+
+>>>>>>>>
+COPY ~d5/nubaelo.d~ ~weidu_external/%MOD_FOLDER%/compile/nubaelo.d~
+COMPILE ~weidu_external/%MOD_FOLDER%/compile/nubaelo.d~
+
+
+// fix larswood
+
+COPY_EXISTING ~bainvi.bcs~ ~override~
+	DECOMPILE_AND_PATCH BEGIN
+		SPRINT textToReplace ~\(XPGT(Player1,10000)\)~
+		COUNT_REGEXP_INSTANCES ~%textToReplace%~ num_matches
+		PATCH_IF (num_matches > 0) BEGIN
+			REPLACE_TEXTUALLY ~%textToReplace%~ ~\1 Global("D5_BP_Ambush","GLOBAL",0)~
+			PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
+		END ELSE BEGIN
+			PATCH_WARN ~WARNING: could not find %textToReplace% in %SOURCE_FILESPEC%~
+		END
+	END
+IF_EXISTS BUT_ONLY
+
+//___________________________________________________________________________________
+//
+
+END	//	end define function

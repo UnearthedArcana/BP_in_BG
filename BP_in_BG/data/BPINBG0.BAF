@@ -1,8 +1,53 @@
+/*
+BPINBGA:
+
+IF
+	True()
+THEN
+	RESPONSE #100
+		CutSceneId("Baeloth")
+		ActionOverride(Player1,CreateVisualEffectObject("spdimndr",Player1))
+		ActionOverride(Player2,CreateVisualEffectObject("spdimndr",Player2))
+		ActionOverride(Player3,CreateVisualEffectObject("spdimndr",Player3))
+		ActionOverride(Player4,CreateVisualEffectObject("spdimndr",Player4))
+		ActionOverride(Player5,CreateVisualEffectObject("spdimndr",Player5))
+		ActionOverride(Player6,CreateVisualEffectObject("spdimndr",Player6))
+		Wait(2)
+		FadeToColor([30.0],0)
+		Wait(1)
+		ClearAllActions()
+		StartMovie("BLACKPIT")
+		StartCutScene("BPINBG0")
+END
+
+BPINBGB:
+
+IF
+	True()
+THEN
+	RESPONSE #100
+		CutSceneId("D5Baelo")
+		ActionOverride(Player1,CreateVisualEffectObject("spdimndr",Player1))
+		ActionOverride(Player2,CreateVisualEffectObject("spdimndr",Player2))
+		ActionOverride(Player3,CreateVisualEffectObject("spdimndr",Player3))
+		ActionOverride(Player4,CreateVisualEffectObject("spdimndr",Player4))
+		ActionOverride(Player5,CreateVisualEffectObject("spdimndr",Player5))
+		ActionOverride(Player6,CreateVisualEffectObject("spdimndr",Player6))
+		Wait(2)
+		FadeToColor([30.0],0)
+		Wait(1)
+		ClearAllActions()
+		StartMovie("BLACKPIT")
+		StartCutScene("BPINBG0")
+END
+*/
+
 IF
 	True()
 THEN
 	RESPONSE #100
 		CutSceneId(Player1)
+		FadeFromColor([30.0],0)
 		ActionOverride(Player2,LeaveAreaLUA("OH9310","",[839.761],N))
 		ActionOverride(Player2,CreateVisualEffectObject("spdimndr",Player2))
 		ActionOverride(Player3,LeaveAreaLUA("OH9310","",[999.692],N))
@@ -38,5 +83,5 @@ THEN
 		CreateCreature("BPREFF01",[382.634],S)  // Referee - No such index
 		CreateCreature("BPREFF01",[805.644],S)  // Referee - No such index
 		CreateCreature("BPREFF01",[802.412],S)  // Referee - No such index
-		SetGlobal("BPINTRO","GLOBAL",2)
+//		SetGlobal("BPINTRO","GLOBAL",2)
 END

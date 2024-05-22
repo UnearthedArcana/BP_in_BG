@@ -1,7 +1,7 @@
 BACKUP ~weidu_external/backup/bp_in_bg~
 AUTHOR ~SubtleD~
 
-VERSION ~0.9.5~ 
+VERSION ~0.9.8~ 
 
 LANGUAGE
   ~English~
@@ -22,9 +22,9 @@ REQUIRE_PREDICATE GAME_IS ~bgee eet~ @101
 
 INCLUDE ~%MOD_FOLDER%/lib/misc_functions.tpa~
 
-INCLUDE ~%MOD_FOLDER%/lib/bpbg_scripts.tpa~
+INCLUDE ~%MOD_FOLDER%/lib/bpbg_core.tpa~
 
-LAF scripts_dialogues END
+LAF bp_ambush END
 
 INCLUDE ~%MOD_FOLDER%/lib/add_iwd_items.tpa~
 
@@ -34,7 +34,47 @@ INCLUDE ~%MOD_FOLDER%/lib/alter_vendors.tpa~
 
 LAF adjust_stores END
 
+/*
 INCLUDE ~%MOD_FOLDER%/lib/bpbg_ring.tpa~
 
 LAF adjust_rings END
+*/
 
+/*
+PLAN FOR v1:
+
+- / if post-Candlekeep chapter and GV=0, change the exit boundary for Candlekeep
+	...if GV=1, disable the new exit
+	...exit goes to new ambush area
+
+- / copy in new ambush area, make script for it
+	...set a GV for entering the area
+	...make a save file upon entering area
+	...make Najim appear (and B if not in party)
+
+- / make sure B doesn't appear in Larswood if GV=1
+
+- / make clone of baeloth just for this purpose
+	...only if not in party
+
+- new dialogue for B and Najim
+	...weight # -1, only if that GV=1
+	...one version if B = in party
+	...another version if not
+	..."Come on down (to the Underdark)! You're the next contestant in the fight for life!"
+	...give an option not to go "I don't want to fight in your contests. And you don't want to try me." (disclose heritage)
+	...and an option to go "you want to see me fight? I'll give you a fight!"
+
+- if B in party, LeaveParty() and...not sure what to do about gear
+	...maybe just add a RoW to the ring store and call it quits
+
+- make cut scene for Baeloth capturing party; or just adapt BPinBG0.af
+	...add party-wide otiluke's sphere effect (really just the visual) to BPinBG0.baf before fade/leave
+
+- make cut scene for Baeloth leaving
+
+- make cut scene for Baeloth staying in the party and Najim leaving
+
+- / make clones of the IWD gear with my modder prefix
+
+*/
