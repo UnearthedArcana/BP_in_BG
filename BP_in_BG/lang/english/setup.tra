@@ -19,33 +19,6 @@
 @206 = ~Fantastic! Oh, this recruiting trip was much quicker than I expected. Now be a good dear and just grab hold of this perfectly harmless glowing gem. All at once, yes, that's it. And away we go!~
 @207 = ~When last we met, I think you mentioned something about adventuring in the underdark?~
 @208 = ~Why... yes! I believe I can provide you with, er, astounding adventures! Riches, recognition, righteous reward, that sort of thing? Cheering crowds and fawning fans? Surely that's what you are interested in, yes? I have a device here which can whisk you there in the wink of an eye. It is all very consensual, I assure you. It only works if you 'opt in.'~
-@209 = ~~
-@210 = ~~
-//
-// ambush scene - Baeloth not in party
-//
-/*
-@301 = ~Greetings mortals. I apologize for interrupting your journey. But I am bound to inform you that you will now become the property of Baeloth the Entertainer. Please ready yourself for transport.~
-@302 = ~Baeloth and I have already met.~
-@303 = ~Transport? What are you talking about?~
-@304 = ~Allow me to elucidate. My name is Baeloth, the Entertainer. I operate an establishment in which warriors wet their weapons on woesome foes, while the wealthy watch and wager. And so, everyone wins! Almost!~
-@305 = ~I don't understand anything you just said.~
-@306 = ~You... arrange fights? For sport?~
-@307 = ~I coopt courageous champions for compelling combat against chilling creatures, to captivate crowds!~
-@308 = ~Uh, one more time please.~
-@309 = ~I arrange fights for sport.~
-@310 = ~Ah, our convoluted conversationalist commences to comprehend. That's swell.~
-@311 = ~I suppose we may have met before, but now we have business together!~
-@312 = ~You see, you have been brought to my attention as a potential player, with budding brawniness, fallow flair, quiescient capacity. To be honest, I don't quite see it. But hey, why not. My customers love nothing better than an unimpressive underdog who transcends my tests to triumph! Or, nearly so!~
-@313 = ~So why don't you come on down (to the Underdark)! You are the next contestants in the fight for life, in the Black Pits!~
-@314 = ~I don't have time for this. I am not going anywhere with you, I need to get to Baldur's Gate.~
-@315 = ~Baeloth, you and your companion are no doubt powerful. But I have business to attend to. Perhaps a monetary donation would help you see your way to harassing someone else?~
-@316 = ~Ah! I see. You still don't understand. Your business means bubkus. Your interests, in vain. Hope for your future: futile! You have been chosen. You are coming with us. End of story. This conversation is just me being polite. And honestly, I don't much enjoy being polite.~
-@317 = ~You want to see me fight, then? I have fought many, and I am still here. I'll fight you and your genie, and ~
-@318 = ~Listen, Baeloth, I don't know who you think you have ambushed. But I am not mere mortal surfacer to be kidnapped on a whim. The blood of a god runs my veins - and not a nice god, but the god of murder. Prophecy says I will fight on the Sword Coast - not in some squalid arena in the Underdark. Maybe you can overpower me now - fine. But you will be crossing not just me, but divine destiny. I will do everything in my power, as long as I live and maybe a good while after, to tear down everything you have, everything you are. Maybe you will gain some short-lived wealth, but in the end you will be humiliated and destroyed. The very heavens will see to it. It is not in your interest to take this risk. Walk away now, and I will forget we met this day.~
-@319 = ~~
-@320 = ~~
-*/
 //
 // ambush scene - Baeloth not in party
 //
@@ -76,27 +49,14 @@
 // ambush scene - Baeloth in party
 //
 @400 = ~Baeloth~
-@401 = ~~
 @402 = ~Baeloth? Uh... do you know this person? What is going on?~
-@403 = ~~
 @404 = ~Ah, I suppose I should come clean - confess, even! You see, you have done what so few have before you: you impressed me! I have seen you face many challenges, seen you persevere and come out on top - covered in blood yet righteous in your victory! That's exactly the kind of moxie that will serve you well in my fighting pits.~ // reply 
-@405 = ~~
-@406 = ~~
 @407 = ~You will be a champion, in courageous combat against chilling creatures, to the captivation of cavernous crowds! Your quiescent capacities will be questioned, and we will see if you can transcend my tests and triumph! Up to a point, anyway. It will be glorious! And profitable!~ // reply 312, 413
-@408 = ~~
-@409 = ~~
-@410 = ~~
-@411 = ~~
-@412 = ~~
 @413 = ~I don't understand. I thought you were on my team. We need to go after Sarevok - I need your assistance.~
 @414 = ~Sorry, I know how this looks, and... well, it is pretty much exactly how it looks. The traitorous turn of a 'til-now-trusted tactitian! Oh, my fans will eat this one up! Sorry about the whole Sarevok thing, but realistically, the guy has been several steps ahead of you for a long time. You are simply no match for him. He can have that pathetic surfacer city, and you will have a new life - brief, barbaric, but brilliant! Even if, let's not forget, quite brief! I think you will do quite well in my fighting arena.~
-@415 = ~~
 @416 = ~Baeloth, you know who I am now, WHAT I am. The blood of a god runs in my veins - the god of murder, no less. Prophecy says my place is here, on the Sword Coast, and this is where I am staying. If you get in my way you will cross not just me, but destiny itself. I promise will do everything in my considerable power, as long as I live and maybe a good while after, to tear down all you have, all you are. You will be humiliated and destroyed. The very heavens will see to it. Do you comprehend? hear me when I tell you: I am NOT going to your Black Pits, and that is final.~
-@417 = ~~
 @418 = ~But, you don't even know how to use your gifts yet. There are supposed to be scores of you - surely the prophecy won't mind if I nab one or two to the Underdark...~
 @419 = ~Oh shut up, Najim! Just, just hold on for a second. This is... I didn't quite think about it from that angle. Er, okay, let's do this. Let's chalk this up to a joke in poor taste, and go on our way, yes? Let's just forget about the Black Pits. For now. I mean, uh, onward, my leader!~
-@420 = ~~
-@421 = ~~
 @422 = ~Oh no Baeloth, it isn't that simple. You don't try to stab me in the back and then pretend nothing happened. Defend yourself!~
 @423 = ~That's right Baeloth - fall in. And don't ever again forget who is in charge here.~
 @424 = ~Er, yes. Najim, you are not needed at present. Run along and tend to the arena in my absence.~
@@ -1038,4 +998,3 @@ Requires:
 Weight: 7~
 //
 //
-
