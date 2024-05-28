@@ -1,13 +1,13 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<title>Campagne des Fosses Noires dans BGEE</title>
+# Campagne des Fosses Noires dans BGEE
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <link rel="stylesheet" href="style/g3readme_cam.css" type="text/css" />
 <link href="style/g3icon.ico" rel="icon" type="image/bmp" />
 </head>
 <body>
-<h1>Rendez vous dans les Fosses Noires pendant la campagne de BG1, pour BGEE, SoD et EET.</h1>
+<h1>Affrontez  les Fosses Noires pendant la campagne de BG1, pour BGEE, SoD et EET.</h1>
 <div class="section">
   <p><strong>Author:</strong> <a href="http://forums.gibberlings3.net/index.php?showuser=6306">Duns Scotus, the SubtleDoctor</a><br />
 </p>
@@ -17,9 +17,11 @@
 </div>
 <h2>Présentation générale</h2>
 <div class="section">
-  <p>Ce mod ajoute quelques lignes de dialogue lors de votre première rencontre avec Baeloth dans BGEE. Traditionnellement, son dialogue sous entend qu'il est apparu à la surface juste après avoir perdu son domaine, l'arène de combat des Fosses noires en l'Ombre-Terre. Cependant, si vous choisissez une des nouvelles lignes de dialogue, en tant qu'aventurier crédule et désireux de faire ses preuves, alors l'histoire est modifiée ; Baeloth est à la surface pour une campagne de recrutement, à la recherche d'un groupe de héros qu'il pourra duper pour qu'ils deviennent ses marionnettes. Si vous le laissez vous entraîner dans son histoire, alors votre groupe sera téléporté dans les Fosses Noires et devra se battre pour sa vie. La seule issue pour revenir à la surface et à la campagne BG1 est de réussir à passer les épreuves qui vous attendent.</p>
-  <p>Il est vivement et fortement recommandé de ne pas vous rendre aux Fosses noires avant que votre groupe n'ait atteint le niveau 5, voire même le niveau 7. Les derniers combats peuvent être particulièrement difficiles pour un groupe de faible niveau.</p>
-  <p><b>Remarque importante :</b> Parce que le mod change nécessairement le timing et l'histoire de Baeloth, et en raison du déroulement de l'aventure des Fosses noires, Baeloth ne pourra pas rejoindre votre groupe si vous décidez de vous rendre aux Fosses noires. Il disparaîtra donc de la campagne BG1 et ne pourra pas rejoindre Charname dans la campagne de Siege of Dragonspear.</p>
+  <p>Ce mod ajoute une nouvelle rencontre avec Baeloth dans BGEE. Vous aurez l'occasion de choisir entre provoquer le combat et par extension accepter de vous rendre dans les Fosses Noires ou intimider Baeloth si vous ne souhaitez pas vous rendre dans les Fosses Noires.
+  Selon si Baeloth se trouve dans votre groupe ou non le dialogue sera différent. 
+  Si vous le laissez vous entraîner dans son histoire, alors votre groupe sera téléporté dans les Fosses Noires et devra se battre pour sa vie. La seule issue pour revenir à la surface et à la campagne BG1 est de réussir à passer les épreuves qui vous attendent.</p>
+  <p>Son apparition à lieu au chapitre 7 après les catacombes de Château-Suif. Les premiers combats seront facile mais les suivants sont conçu pour des groupe de niveau 8 à 10. À ce moment de la campagne vous serez probablement au niveau 7 lors de votre départ pour les Fosses Noires.</p>
+  <p><b>Remarque importante :</b> Parce que le mod transforme Baeloth en adversaire, il ne pourra pas rejoindre votre groupe si vous décidez de vous rendre aux Fosses noires. Il disparaîtra donc de la campagne BG1 et ne pourra pas rejoindre Charname dans la campagne de Siege of Dragonspear.</p>
   <p>Ce mod ne modifie pas la campagne indépendante des Fosses noires, si vous la commencez directement de la manière traditionnelle avec une équipe personnalisée. Mais si vous vous y rendez depuis la campagne de Baldur's Gate, alors il y aura quelques changements :
   <ul>
     <li>Il n'y aura pas d’expérience de quête octroyée entre les combats.</li>
@@ -28,6 +30,7 @@
     <li>Les vendeurs présent dans les Fosses Noires ne vendront pas autant de copies de la plupart des articles.</li>
     <li>Certains des articles seront <b>retirés</b> des magasins des vendeurs présent dans les Fosses Noires.</li>
     <li>En revanche, un certain nombre de nouveaux objets seront ajoutés à leurs magasins à partir du troisième acte, principalement des objets de puissance modérée provenant d'Icewind Dale.</li>
+    <li>En vous rendant dans les Fosses noires de cette façon, vous n'obtiendrez PAS d'anneaux de quête comme dans l'extension. Cela signifie que les membres du groupe peuvent mourir dans l'arène ! Il y a cinq parchemins de Résurrection à acheter auprès de Dinguer le Fou, mais soyez prudent ! En outre, si un membre du groupe meurt au cours d'un combat, même si vous pouvez le ressusciter à votre retour dans BG1, n'oubliez pas de récupérer son équipement dans l'arène !</li>
   </ul>
 </div>
 <h2>Installation</h2>
