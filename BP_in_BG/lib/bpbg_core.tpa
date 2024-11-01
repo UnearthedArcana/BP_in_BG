@@ -558,6 +558,72 @@ COPY_EXISTING ~bainvi.bcs~ ~override~
 	END
 IF_EXISTS BUT_ONLY
 
+
+// remove baeloth afterward
+
+<<<<<<<< d5/baeloth+.baf
+IF
+	GlobalGT("CHAPTER","GLOBAL",6)
+	Global("BPINBG","GLOBAL",1)
+	GlobalGT("BAELOTH_DEFEATED","GLOBAL",0)
+THEN
+	RESPONSE #100
+		DestroySelf()
+END
+>>>>>>>>
+COPY ~d5/baeloth+.baf~ ~weidu_external/%MOD_FOLDER%/compile/baeloth+.baf~
+EXTEND_TOP ~baeloth.bcs~ ~weidu_external/%MOD_FOLDER%/compile/baeloth+.baf~
+
+COPY_EXISTING ~%bg1_area_prefix%2300.bcs~ ~override~
+	DECOMPILE_AND_PATCH BEGIN
+		SPRINT textToReplace ~\(!InPartyAllowDead("BAELOTH")\)~
+		COUNT_REGEXP_INSTANCES ~%textToReplace%~ num_matches
+		PATCH_IF (num_matches > 0) BEGIN
+			REPLACE_TEXTUALLY ~%textToReplace%~ ~\1 Global("BPINBG","GLOBAL",0)~
+			PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
+		END ELSE BEGIN
+			PATCH_WARN ~WARNING: could not find %textToReplace% in %SOURCE_FILESPEC%~
+		END
+	END
+IF_EXISTS BUT_ONLY
+
+
+// no auto-rest after fights
+
+ACTION_IF (FILE_EXISTS_IN_GAME ~bphub.bcs~) BEGIN
+  COPY_EXISTING ~bphub.bcs~ ~override~
+    DECOMPILE_AND_PATCH BEGIN
+		SPRINT textToReplace ~\(Global("BP_AUTOSAVE","GLOBAL",1)\)~
+		COUNT_REGEXP_INSTANCES ~%textToReplace%~ num_matches
+		PATCH_IF (num_matches > 0) BEGIN
+			REPLACE_TEXTUALLY ~%textToReplace%~ ~\1	AreaCheckObject("OH9360",Player1)
+	Global("BPINBG","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("BP_AUTOSAVE","GLOBAL",2)
+		SetGlobal("BP_TRIGGER_DIALOG","GLOBAL",1)
+		Wait(1)
+		ApplySpellRES("BPDISPEL",Player1)
+		ApplySpellRES("BPDISPEL",Player2)
+		ApplySpellRES("BPDISPEL",Player3)
+		ApplySpellRES("BPDISPEL",Player4)
+		ApplySpellRES("BPDISPEL",Player5)
+		ApplySpellRES("BPDISPEL",Player6)
+		ActionOverride("BPBAELOT",ApplySpell("BPBAELOT",RESTORE_FULL_HEALTH))
+		ActionOverride("BPNAJIM",ApplySpell("BPNAJIM",RESTORE_FULL_HEALTH))
+END
+
+IF
+	Global("BP_AUTOSAVE","GLOBAL",1)
+	Global("BPINBG","GLOBAL",0) ~
+			PATCH_PRINT ~Patching: %num_matches% matches found in %SOURCE_FILESPEC% for REPLACE_TEXTUALLY: %textToReplace%~
+		END ELSE BEGIN
+			PATCH_PRINT ~WARNING: could not find %textToReplace% in %SOURCE_FILESPEC%~
+		END
+    END
+  BUT_ONLY
+END
+
 //___________________________________________________________________________________
 //
 
