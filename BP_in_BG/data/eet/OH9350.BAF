@@ -724,7 +724,7 @@ THEN
 		SmallWait(65)
 		Activate("BPBAELOT")  // Baeloth
 		SmallWait(15)
-		DisplayStringHead("BPBAELOT",29945)  // No sleeping on the job! And don't forget to collect your equipment. Anything left in the arena will be fed to the otyugh.
+		DisplayStringHead("BPBAELOT",229945)  // No sleeping on the job! And don't forget to collect your equipment. Anything left in the arena will be fed to the otyugh.
 		ActionOverride("BPBAELOT",SetSequence(SEQ_CAST))
 		SmallWait(15)
 		PlaySound("EFF_M07")

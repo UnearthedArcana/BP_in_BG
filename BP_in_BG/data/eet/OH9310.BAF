@@ -659,14 +659,14 @@ THEN
 		SetGlobal("SUMMONED_BEHOLDER","OH9310",1)
 		StartCutSceneMode()
 		ClearAllActions()
-		ActionOverride("BPBAELOT",DisplayStringHead(Myself,29938))  // Enough! Ghlouralk, I shall give you anything you desire if you kill these insolent fools!
+		ActionOverride("BPBAELOT",DisplayStringHead(Myself,229938))  // Enough! Ghlouralk, I shall give you anything you desire if you kill these insolent fools!
 		Wait(2)
 		CreateVisualEffect("spdimndr",[346.387])
 		PlaySound("EFF_M13")
 		Wait(4)
 		CreateCreature("BPGHLOUR",[346.387],S)  // Ghlouralk
 		Wait(2)
-		ActionOverride("BPGHLOUR",DisplayStringHead(Myself,29939))  // Anything, mageling? As you wish.
+		ActionOverride("BPGHLOUR",DisplayStringHead(Myself,229939))  // Anything, mageling? As you wish.
 		ActionOverride("BPGHLOUR",ChangeAIScript("BPSIGHT",OVERRIDE))
 		ActionOverride("BPGHLOUR",ChangeAIScript("BPBEHOLD",RACE))
 		ActionOverride("BPGHLOUR",Enemy())
@@ -687,7 +687,7 @@ IF
 THEN
 	RESPONSE #80
 		Wait(5)
-		ActionOverride("BPBAELOT",DisplayStringHead(Myself,29940))  // Assist me, you worthless automatons!
+		ActionOverride("BPBAELOT",DisplayStringHead(Myself,229940))  // Assist me, you worthless automatons!
 		SetGlobalTimer("SUMMON_HELP","OH9310",TEN_ROUNDS)
 		CreateVisualEffect("spdimndr",[717.437])
 		CreateVisualEffect("spdimndr",[525.591])
@@ -720,13 +720,13 @@ IF
 		!AreaCheckObject("OH9310","BPGHLOUR")  // Ghlouralk
 THEN
 	RESPONSE #100
-		DisplayStringHead("BPBAELOT",29213)  // No... My captives triumph over me? Me? Baeloth the Entertainer? This is all a terrible cliché, unworthy of... my final enter... entertain...
+		DisplayStringHead("BPBAELOT",229213)  // No... My captives triumph over me? Me? Baeloth the Entertainer? This is all a terrible cliché, unworthy of... my final enter... entertain...
 		SetGlobal("BAELOTH_DEFEATED","GLOBAL",1)
 		SetGlobal("TIER","GLOBAL",4)
 		Wait(10)
 		Kill("BPBAELOT")  // Baeloth
 		Wait(1)
-		DisplayStringHead(Player1,29941)  // You feel a sense of relief as you are released from the grip of Baeloth's geas.
+		DisplayStringHead(Player1,229941)  // You feel a sense of relief as you are released from the grip of Baeloth's geas.
 		ApplySpell(Player1,FORCE_DISPEL_MAGIC)  // SPIN866.SPL (Dispel Magic)
 		ApplySpell(Player2,FORCE_DISPEL_MAGIC)  // SPIN866.SPL (Dispel Magic)
 		ApplySpell(Player3,FORCE_DISPEL_MAGIC)  // SPIN866.SPL (Dispel Magic)
@@ -773,7 +773,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobal("NAJIM_SHOUT1","OH9310",1)
-		DisplayStringHead("BPNAJIM",29942)  // Come NOW, mortal. I will not remain here any longer.
+		DisplayStringHead("BPNAJIM",229942)  // Come NOW, mortal. I will not remain here any longer.
 		Continue()
 END
 
@@ -845,15 +845,15 @@ IF
 	GlobalTimerExpired("BP_ENDTIMER","OH9310")
 THEN
 	RESPONSE #34
-		DisplayStringHead("BPNAJIM",29942)  // Come NOW, mortal. I will not remain here any longer.
+		DisplayStringHead("BPNAJIM",229942)  // Come NOW, mortal. I will not remain here any longer.
 		SetGlobalTimer("BP_ENDTIMER","OH9310",9)
 		Continue()
 	RESPONSE #33
-		DisplayStringHead("BPMAGDA",29943)  // Leave, <CHARNAME>! You cannot hope to defeat all of the duergar.
+		DisplayStringHead("BPMAGDA",229943)  // Leave, <CHARNAME>! You cannot hope to defeat all of the duergar.
 		SetGlobalTimer("BP_ENDTIMER","OH9310",9)
 		Continue()
 	RESPONSE #33
-		DisplayStringHead("BPBRENDA",29944)  // Make your escape, you fool! My brethren will not suffer the presence of an outsider any longer!
+		DisplayStringHead("BPBRENDA",229944)  // Make your escape, you fool! My brethren will not suffer the presence of an outsider any longer!
 		SetGlobalTimer("BP_ENDTIMER","OH9310",9)
 		Continue()
 END
@@ -922,7 +922,7 @@ THEN
 		SmallWait(65)
 		Activate("BPBAELOT")  // Baeloth
 		SmallWait(15)
-		DisplayStringHead("BPBAELOT",29945)  // No sleeping on the job! And don't forget to collect your equipment. Anything left in the arena will be fed to the otyugh.
+		DisplayStringHead("BPBAELOT",229945)  // No sleeping on the job! And don't forget to collect your equipment. Anything left in the arena will be fed to the otyugh.
 		ActionOverride("BPBAELOT",SetSequence(SEQ_CAST))
 		SmallWait(15)
 		PlaySound("EFF_M07")
@@ -1010,7 +1010,7 @@ THEN
 		CreateCreature("BPNAJIM",[627.534],S)  // Najim
 		ActionOverride("BPNAJIM",DialogueInterrupt(FALSE))
 		Wait(3)
-		DisplayStringHead("BPNAJIM",29946)  // You have qualified.
+		DisplayStringHead("BPNAJIM",229946)  // You have qualified.
 		Wait(1)
 		ActionOverride(Player1,CreateVisualEffectObject("spdimndr",Player1))
 		PlaySound("EFF_M13")

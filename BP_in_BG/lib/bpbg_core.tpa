@@ -144,24 +144,44 @@ BUT_ONLY
 
 // candlekeep exterior script to activate ambush
 
+<<<<<<<< d5/d52619+.baf
+IF
+	GlobalGT("CHAPTER","GLOBAL",4)
+	GlobalLT("CHAPTER","GLOBAL",10)
+	Global("D5_BP_Ambush_Trigger","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("D5_BP_Ambush_Trigger","GLOBAL",1)
+		Continue()
+END
+>>>>>>>>
+COPY ~d5/d52619+.baf~ ~weidu_external/%MOD_FOLDER%/compile/%bg1_area_prefix%2619.baf~
+ACTION_IF (FILE_EXISTS_IN_GAME ~%bg1_area_prefix%2619.bcs~) BEGIN
+  EXTEND_TOP ~%bg1_area_prefix%2619.BCS~ ~weidu_external/%MOD_FOLDER%/compile/%bg1_area_prefix%2619.baf~
+END
+ACTION_IF !(FILE_EXISTS_IN_GAME ~%bg1_area_prefix%2619.bcs~) BEGIN
+  COMPILE ~weidu_external/%MOD_FOLDER%/compile/%bg1_area_prefix%2619.baf~
+END
+
 <<<<<<<< d5/d52626+.baf
 IF
-	GlobalLT("CHAPTER","GLOBAL",7)
 	Global("D5_Ambush_NotYet","GLOBAL",0)
+	Global("D5_BP_Ambush_Trigger","GLOBAL",0)
 THEN
 	RESPONSE #100
 		SetGlobal("D5_Ambush_NotYet","GLOBAL",1)
 		TriggerActivation("d5bpamb",FALSE)
+		Continue()
 END
 
 IF
-	GlobalGT("CHAPTER","GLOBAL",6)
 	Global("D5_BP_Ambush","GLOBAL",0)
-	Global("D5_Ambush_Trigger","GLOBAL",0)
+	Global("D5_BP_Ambush_Trigger","GLOBAL",1)
 THEN
 	RESPONSE #100
-	SetGlobal("D5_Ambush_Trigger","GLOBAL",1)
-	TriggerActivation("d5bpamb",TRUE)
+		SetGlobal("D5_BP_Ambush_Trigger","GLOBAL",2)
+		TriggerActivation("d5bpamb",TRUE)
+		Continue()
 END
 
 IF
@@ -169,12 +189,13 @@ IF
 	Global("D5_Ambush_Done","GLOBAL",0)
 THEN
 	RESPONSE #100
-	SetGlobal("D5_Ambush_Done","GLOBAL",1)
-	TriggerActivation("d5bpamb",FALSE)
+		SetGlobal("D5_Ambush_Done","GLOBAL",1)
+		TriggerActivation("d5bpamb",FALSE)
+		Continue()
 END
 >>>>>>>>
 COPY ~d5/d52626+.baf~ ~weidu_external/%MOD_FOLDER%/compile/%bg1_area_prefix%2626.baf~
-ACTION_IF (FILE_EXISTS_IN_GAME ~%bg1_area_prefix%3202.bcs~) BEGIN
+ACTION_IF (FILE_EXISTS_IN_GAME ~%bg1_area_prefix%2626.bcs~) BEGIN
   EXTEND_TOP ~%bg1_area_prefix%2626.BCS~ ~weidu_external/%MOD_FOLDER%/compile/%bg1_area_prefix%2626.baf~
 END
 ACTION_IF !(FILE_EXISTS_IN_GAME ~%bg1_area_prefix%2626.bcs~) BEGIN
