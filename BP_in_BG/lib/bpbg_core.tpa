@@ -432,7 +432,7 @@ COMPILE ~weidu_external/%MOD_FOLDER%/compile/bpinbgz.baf~ EVALUATE_BUFFER
 <<<<<<<< d5/nubaelo.d
 BEGIN ~D5NAJIM~
 
-IF ~Global("D5_Ambush_Trigger","GLOBAL",1)~ BEGIN d5najim_0
+IF ~GlobalGT("D5_BP_Ambush_Trigger","GLOBAL",0) Global("BPINBG","GLOBAL",0) Global("BAELOTH_DEFEATED","GLOBAL",0)~ BEGIN d5najim_0
   SAY @301
   IF ~Global("D5_BP_OutPartyAmbush","GLOBAL",1)~ REPLY @302 EXTERN D5BAELO d5nubae_0
   IF ~Global("D5_BP_OutPartyAmbush","GLOBAL",1)~ REPLY @303 EXTERN D5BAELO d5nubae_0
@@ -584,7 +584,7 @@ IF_EXISTS BUT_ONLY
 
 <<<<<<<< d5/baeloth+.baf
 IF
-	GlobalGT("CHAPTER","GLOBAL",6)
+	GlobalGT("CHAPTER","GLOBAL",4)
 	Global("BPINBG","GLOBAL",1)
 	GlobalGT("BAELOTH_DEFEATED","GLOBAL",0)
 THEN

@@ -1,17 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-# Campagne des Fosses Noires dans BGEE
+<meta charset="UTF-8">
+<title>Campagne des Fosses Noires dans BGEE</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <link rel="stylesheet" href="style/g3readme_cam.css" type="text/css" />
 <link href="style/g3icon.ico" rel="icon" type="image/bmp" />
 </head>
 <body>
-<h1>Affrontez  les Fosses Noires pendant la campagne de BG1, pour BGEE, SoD et EET.</h1>
+<h1>Affrontez les Fosses Noires pendant la campagne de BG1, pour BGEE, SoD et EET.</h1>
 <div class="section">
   <p><strong>Author:</strong> <a href="http://forums.gibberlings3.net/index.php?showuser=6306">Duns Scotus, the SubtleDoctor</a><br />
 </p>
-  <p><strong> Version 0.9 </strong><br />
+  <p><strong> Version 1.2 </strong><br />
     <strong> Languages:</strong> English, French<br />
     <strong>Platforms: </strong>Windows, Mac OS X</p>
 </div>
@@ -24,7 +25,7 @@
   <p><b>Remarque importante :</b> Parce que le mod transforme Baeloth en adversaire, il ne pourra pas rejoindre votre groupe si vous décidez de vous rendre aux Fosses noires. Il disparaîtra donc de la campagne BG1 et ne pourra pas rejoindre Charname dans la campagne de Siege of Dragonspear.</p>
   <p>Ce mod ne modifie pas la campagne indépendante des Fosses noires, si vous la commencez directement de la manière traditionnelle avec une équipe personnalisée. Mais si vous vous y rendez depuis la campagne de Baldur's Gate, alors il y aura quelques changements :
   <ul>
-    <li>Il n'y aura pas d’expérience de quête octroyée entre les combats.</li>
+    <li>Il n'y aura pas d'expérience de quête octroyée entre les combats.</li>
     <li>(Cependant, vous gagnerez toujours de l'XP en battant vos adversaires).</li>
     <li>L'or que vous recevez en récompense pour avoir gagné des combats est <b>substantiellement</b> diminué. (Environ 1/4.)</li>
     <li>Les vendeurs présent dans les Fosses Noires ne vendront pas autant de copies de la plupart des articles.</li>
@@ -38,7 +39,7 @@
   <p><strong>Windows:</strong><br />
     L'archive du mod doit être extraite dans votre répertoire de jeu (ou simplement décompressée et copiée à cet endroit). Si elle est correctement extraite, vous devriez avoir un dossier "BP_in_BG" et "setup-Bp_in_BG.exe" dans votre dossier de jeu. Pour installer, il suffit de double-cliquer sur "setup-Bp_in_BG.exe" et de suivre les instructions à l'écran.</p>
   <p><strong>MacOS:</strong><br />
-    Ce mod n'est pas fourni avec un installateur MacOS. Le moyen le plus simple de l'installer est de placer le dossier du mod dans le répertoire de votre jeu, puis d'utiliser <a href="https://github.com/subtledoctor/MacOS_Weidu_Launcher/releases">le Weidu Launcher</a> (MWL). Il suffit de double-cliquer sur le MWL, de choisir "Bp_in_BG" dans la liste, puis de suivre les instructions à l'écran.</p>
+    Ce mod n'est pas fourni avec un installateur MacOS. Le moyen le plus simple de l'installer est de placer le dossier du mod dans le répertoire de votre jeu, puis d'utiliser <a href="https://github.com/subtledoctor/MacOS_Weidu_Launcher/releases">Le Weidu Launcher</a> (MWL). Il suffit de double-cliquer sur le MWL, de choisir "Bp_in_BG" dans la liste, puis de suivre les instructions à l'écran.</p>
 </div>
 <h2>Compatibilité</h2>
 <div class="section">
@@ -47,7 +48,7 @@
 
 <h2>Informations</h2>
 <div class="section">
-  <p>Ce mod a été créé par SubtleDoctor. Vous pouvez visiter <a href="http://forums.gibberlings3.net/index.php">The Gibberlings Three</a> pour obtenir des informations sur Bp_in_BG et de nombreux autres mods.</p>
+  <p>Ce mod a été créé par SubtleDoctor. Vous pouvez visiter <a href="http://forums.gibberlings3.net/index.php">The Gibberlings Three</a> pour obtenir des informations sur Bp_in_BG et de nombreux autres mods</p>
 </div>
 <h2>Thanks and Acknowledgements</h2>
 <div class="section">
