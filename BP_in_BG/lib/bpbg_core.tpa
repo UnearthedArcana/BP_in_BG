@@ -448,7 +448,7 @@ END
 
 IF ~~ BEGIN d5najim_2
   SAY @425
-  IF ~~ DO ~ActionOverride("D5Najim",EscapeArea())~ EXIT
+  IF ~~ DO ~SetGlobal("BPINBGAVOID","GLOBAL",1) ActionOverride("D5Najim",EscapeArea())~ EXIT
 END
 
 BEGIN ~D5BAELO~
@@ -508,7 +508,7 @@ END
 
 IF ~~ BEGIN d5nubae_9						//	run away cut scene
   SAY @321
-  IF ~~ DO ~ActionOverride("D5Baelo",EscapeArea()) ActionOverride("D5Najim",EscapeArea())~ EXIT
+  IF ~~ DO ~SetGlobal("BPINBGRUN","GLOBAL",1) ActionOverride("D5Baelo",EscapeArea()) ActionOverride("D5Najim",EscapeArea())~ EXIT
 END
 
 APPEND BAELOTHJ
